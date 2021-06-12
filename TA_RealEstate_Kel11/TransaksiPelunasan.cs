@@ -16,5 +16,12 @@ namespace TA_RealEstate_Kel11
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MenuKasir kasir = new MenuKasir();
+            kasir.Visible = true;
+            this.Dispose();
+        }
     }
 }
