@@ -40,6 +40,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCari = new System.Windows.Forms.Button();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -152,6 +153,13 @@
             this.btnCari.UseVisualStyleBackColor = true;
             this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(101, 88);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(139, 20);
+            this.txtNama.TabIndex = 136;
+            // 
             // FormJabatan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -159,6 +167,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(307, 385);
+            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dataGridView1);
@@ -194,5 +203,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCari;
+        private CharTextBox txtNama;
     }
 }
