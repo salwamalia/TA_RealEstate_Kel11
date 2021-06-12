@@ -67,9 +67,9 @@ namespace TA_RealEstate_Kel11
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("idJabatan", txtID.Text);
-            insert.Parameters.AddWithValue("Jabatan", txtNama.Text);
+            //insert.Parameters.AddWithValue("Jabatan", txtNama.Text);
 
-            if (txtID.Text == "" || txtNama.Text == "")
+            if (txtID.Text == "" /* || txtNama.Text == ""*/)
             {
                 MessageBox.Show("Data tersebut Harus diisi !!");
             }
@@ -106,7 +106,7 @@ namespace TA_RealEstate_Kel11
 
                 da.Fill(dt);
 
-                txtNama.Text = dt.Rows[0]["jabatan"].ToString();
+                //txtNama.Text = dt.Rows[0]["jabatan"].ToString();
 
                 myConnection.Close();
             }
@@ -128,7 +128,7 @@ namespace TA_RealEstate_Kel11
             Update.CommandType = CommandType.StoredProcedure;
 
             Update.Parameters.AddWithValue("idJabatan", txtID.Text);
-            Update.Parameters.AddWithValue("jabatan", txtNama.Text);
+            //Update.Parameters.AddWithValue("jabatan", txtNama.Text);
 
             try
             {
@@ -188,7 +188,7 @@ namespace TA_RealEstate_Kel11
         private void clear()
         {
             txtID.Clear();
-            txtNama.Clear();
+            //txtNama.Clear();
         }
 
         private void FormJabatan_Load(object sender, EventArgs e)
