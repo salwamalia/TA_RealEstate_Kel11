@@ -62,7 +62,6 @@
             this.Simpan = new System.Windows.Forms.Button();
             this.txtUkuran = new System.Windows.Forms.TextBox();
             this.txtOwner = new System.Windows.Forms.TextBox();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProperty)).BeginInit();
             this.SuspendLayout();
@@ -397,13 +396,6 @@
             this.txtOwner.Size = new System.Drawing.Size(100, 20);
             this.txtOwner.TabIndex = 155;
             // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(102, 217);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(178, 20);
-            this.numberTextBox1.TabIndex = 156;
-            // 
             // FormProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -411,7 +403,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(681, 563);
-            this.Controls.Add(this.numberTextBox1);
             this.Controls.Add(this.txtOwner);
             this.Controls.Add(this.txtUkuran);
             this.Controls.Add(this.btnBatal);
@@ -487,6 +478,5 @@
         private System.Windows.Forms.RadioButton rbKolam;
         private System.Windows.Forms.RadioButton rbBalkon;
         private System.Windows.Forms.TextBox txtOwner;
-        private NumberTextBox numberTextBox1;
     }
 }

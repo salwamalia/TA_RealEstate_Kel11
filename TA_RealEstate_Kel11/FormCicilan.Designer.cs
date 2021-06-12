@@ -43,8 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox2 = new TA_RealEstate_Kel11.NumberTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgFormCicilan)).BeginInit();
             this.SuspendLayout();
             // 
@@ -183,20 +181,6 @@
             this.textBox1.Size = new System.Drawing.Size(139, 20);
             this.textBox1.TabIndex = 150;
             // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(126, 128);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(94, 20);
-            this.numberTextBox1.TabIndex = 151;
-            // 
-            // numberTextBox2
-            // 
-            this.numberTextBox2.Location = new System.Drawing.Point(126, 165);
-            this.numberTextBox2.Name = "numberTextBox2";
-            this.numberTextBox2.Size = new System.Drawing.Size(139, 20);
-            this.numberTextBox2.TabIndex = 152;
-            // 
             // FormCicilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,8 +188,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(549, 283);
-            this.Controls.Add(this.numberTextBox2);
-            this.Controls.Add(this.numberTextBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -247,7 +229,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
-        private NumberTextBox numberTextBox1;
-        private NumberTextBox numberTextBox2;
     }
 }

@@ -43,8 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
-            this.txtPhone = new TA_RealEstate_Kel11.NumberTextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.btnCari = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgFormOwner)).BeginInit();
@@ -190,20 +188,6 @@
             this.label2.TabIndex = 126;
             this.label2.Text = "ID";
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(121, 103);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(178, 20);
-            this.txtNama.TabIndex = 133;
-            // 
-            // txtPhone
-            // 
-            this.txtPhone.Location = new System.Drawing.Point(121, 140);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(178, 20);
-            this.txtPhone.TabIndex = 134;
-            // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(121, 174);
@@ -230,8 +214,6 @@
             this.ClientSize = new System.Drawing.Size(698, 339);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtPhone);
-            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAlamat);
@@ -272,8 +254,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private CharTextBox txtNama;
-        private NumberTextBox txtPhone;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnCari;
     }

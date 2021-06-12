@@ -44,7 +44,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgProperty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -190,13 +189,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // charTextBox1
-            // 
-            this.charTextBox1.Location = new System.Drawing.Point(122, 98);
-            this.charTextBox1.Name = "charTextBox1";
-            this.charTextBox1.Size = new System.Drawing.Size(182, 20);
-            this.charTextBox1.TabIndex = 122;
-            // 
             // FormPropertyImages
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -204,7 +196,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(680, 400);
-            this.Controls.Add(this.charTextBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -248,6 +239,5 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private CharTextBox charTextBox1;
     }
 }

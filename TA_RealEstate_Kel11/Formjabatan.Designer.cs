@@ -39,7 +39,6 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.btnCari = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -143,13 +142,6 @@
             this.label1.TabIndex = 116;
             this.label1.Text = "Form Jabatan";
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(101, 88);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(139, 20);
-            this.txtNama.TabIndex = 134;
-            // 
             // btnCari
             // 
             this.btnCari.Location = new System.Drawing.Point(246, 61);
@@ -168,7 +160,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(307, 385);
             this.Controls.Add(this.btnCari);
-            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label8);
@@ -202,7 +193,6 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private CharTextBox txtNama;
         private System.Windows.Forms.Button btnCari;
     }
 }

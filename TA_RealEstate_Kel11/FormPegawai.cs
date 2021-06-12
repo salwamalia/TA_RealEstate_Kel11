@@ -74,12 +74,12 @@ namespace TA_RealEstate_Kel11
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("idPegawai", txtID.Text);
-            insert.Parameters.AddWithValue("nama", txtNama.Text);
+            //insert.Parameters.AddWithValue("nama", txtNama.Text);
             insert.Parameters.AddWithValue("username", txtUsername.Text);
             insert.Parameters.AddWithValue("password", txtPass.Text);
             insert.Parameters.AddWithValue("jabatan", cmbJabatan.SelectedValue.ToString());
 
-            if (txtID.Text == "" || txtNama.Text == "" || txtUsername.Text == "" || txtPass.Text == "" || cmbJabatan.Text == "")
+            if (txtID.Text == "" || /*txtNama.Text == "" || */ txtUsername.Text == "" || txtPass.Text == "" || cmbJabatan.Text == "")
             {
                 MessageBox.Show("Data tersebut Harus diisi !!", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -116,7 +116,7 @@ namespace TA_RealEstate_Kel11
 
                 da.Fill(dt);
 
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
+                //txtNama.Text = dt.Rows[0]["nama"].ToString();
                 txtUsername.Text = dt.Rows[0]["username"].ToString();
                 txtPass.Text = dt.Rows[0]["password"].ToString();
                 cmbJabatan.SelectedValue = dt.Rows[0]["jabatan"].ToString();
@@ -139,7 +139,7 @@ namespace TA_RealEstate_Kel11
             Update.CommandType = CommandType.StoredProcedure;
 
             Update.Parameters.AddWithValue("idPegawai", txtID.Text);
-            Update.Parameters.AddWithValue("nama", txtNama.Text);
+            //Update.Parameters.AddWithValue("nama", txtNama.Text);
             Update.Parameters.AddWithValue("username", txtUsername.Text);
             Update.Parameters.AddWithValue("password", txtPass.Text);
             Update.Parameters.AddWithValue("jabatan", cmbJabatan.SelectedValue.ToString());
@@ -198,7 +198,7 @@ namespace TA_RealEstate_Kel11
         private void clear()
         {
             txtID.Clear();
-            txtNama.Clear();
+            //txtNama.Clear();
             txtUsername.Clear();
             txtPass.Clear();
             cmbJabatan.SelectedIndex = -1;

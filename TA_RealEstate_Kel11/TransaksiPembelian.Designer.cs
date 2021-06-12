@@ -74,10 +74,6 @@
             this.btnCariCicilan = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.dgCicilan = new System.Windows.Forms.DataGridView();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox2 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox3 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox4 = new TA_RealEstate_Kel11.NumberTextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgClient)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -339,10 +335,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.numberTextBox4);
-            this.groupBox1.Controls.Add(this.numberTextBox3);
-            this.groupBox1.Controls.Add(this.numberTextBox2);
-            this.groupBox1.Controls.Add(this.numberTextBox1);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.txtIDCicilan);
             this.groupBox1.Controls.Add(this.txtIDProperty);
@@ -560,34 +552,6 @@
             this.dgCicilan.Size = new System.Drawing.Size(272, 143);
             this.dgCicilan.TabIndex = 122;
             // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(334, 62);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(100, 24);
-            this.numberTextBox1.TabIndex = 161;
-            // 
-            // numberTextBox2
-            // 
-            this.numberTextBox2.Location = new System.Drawing.Point(334, 102);
-            this.numberTextBox2.Name = "numberTextBox2";
-            this.numberTextBox2.Size = new System.Drawing.Size(148, 24);
-            this.numberTextBox2.TabIndex = 162;
-            // 
-            // numberTextBox3
-            // 
-            this.numberTextBox3.Location = new System.Drawing.Point(334, 137);
-            this.numberTextBox3.Name = "numberTextBox3";
-            this.numberTextBox3.Size = new System.Drawing.Size(148, 24);
-            this.numberTextBox3.TabIndex = 163;
-            // 
-            // numberTextBox4
-            // 
-            this.numberTextBox4.Location = new System.Drawing.Point(334, 173);
-            this.numberTextBox4.Name = "numberTextBox4";
-            this.numberTextBox4.Size = new System.Drawing.Size(148, 24);
-            this.numberTextBox4.TabIndex = 164;
-            // 
             // TransaksiPembelian
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,9 +637,5 @@
         private System.Windows.Forms.TextBox txtIDCicilan;
         private System.Windows.Forms.TextBox txtIDProperty;
         private System.Windows.Forms.Label label11;
-        private NumberTextBox numberTextBox4;
-        private NumberTextBox numberTextBox3;
-        private NumberTextBox numberTextBox2;
-        private NumberTextBox numberTextBox1;
     }
 }

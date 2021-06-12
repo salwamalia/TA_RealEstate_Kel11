@@ -44,7 +44,6 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.cmbJabatan = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -199,13 +198,6 @@
             this.txtPass.Size = new System.Drawing.Size(178, 20);
             this.txtPass.TabIndex = 138;
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(116, 112);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(176, 20);
-            this.txtNama.TabIndex = 139;
-            // 
             // txtUsername
             // 
             this.txtUsername.Location = new System.Drawing.Point(116, 150);
@@ -230,7 +222,6 @@
             this.ClientSize = new System.Drawing.Size(697, 309);
             this.Controls.Add(this.cmbJabatan);
             this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.txtPass);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnHapus);
@@ -273,7 +264,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSimpan;
         private System.Windows.Forms.TextBox txtPass;
-        private CharTextBox txtNama;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.ComboBox cmbJabatan;
     }

@@ -70,13 +70,13 @@ namespace TA_RealEstate_Kel11
 
 
             insert.Parameters.AddWithValue("idPemilik", txtID.Text);
-            insert.Parameters.AddWithValue("nama", txtNama.Text);
-            insert.Parameters.AddWithValue("telepon", txtPhone.Text);
+            //insert.Parameters.AddWithValue("nama", txtNama.Text);
+            //insert.Parameters.AddWithValue("telepon", txtPhone.Text);
             insert.Parameters.AddWithValue("email", txtEmail.Text);
             insert.Parameters.AddWithValue("alamat", txtAlamat.Text);
 
 
-            if (txtNama.Text == "" || txtPhone.Text == "")
+            /*if (txtNama.Text == "" || txtPhone.Text == "")
             {
                 MessageBox.Show("Harus diisi !!");
             }
@@ -93,7 +93,7 @@ namespace TA_RealEstate_Kel11
                 {
                     MessageBox.Show("Unable to save " + ex.Message);
                 }
-            }
+            } */
 
             txtID.Text = IDOtomatis();
 
@@ -122,7 +122,7 @@ namespace TA_RealEstate_Kel11
             } */
         }
 
-        public bool verifTextBoxes()
+        /*public bool verifTextBoxes()
         {
             string name = txtNama.Text.Trim();
             string phone = txtPhone.Text.Trim();
@@ -135,7 +135,7 @@ namespace TA_RealEstate_Kel11
             {
                 return true;
             }
-        }
+        }*/
 
         private void btnCari_Click(object sender, EventArgs e)
         {
@@ -151,8 +151,8 @@ namespace TA_RealEstate_Kel11
 
                 da.Fill(dt);
 
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-                txtPhone.Text = dt.Rows[0]["telepon"].ToString();
+                //txtNama.Text = dt.Rows[0]["nama"].ToString();
+                //txtPhone.Text = dt.Rows[0]["telepon"].ToString();
                 txtEmail.Text = dt.Rows[0]["email"].ToString();
                 txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
 
@@ -182,8 +182,8 @@ namespace TA_RealEstate_Kel11
         private void clear()
         {
             txtID.Clear();
-            txtNama.Clear();
-            txtPhone.Clear();
+            //txtNama.Clear();
+            //txtPhone.Clear();
             txtEmail.Clear();
             txtAlamat.Clear();
         }

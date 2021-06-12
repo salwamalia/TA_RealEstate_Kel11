@@ -43,8 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgFormClient = new System.Windows.Forms.DataGridView();
             this.btnBatal = new System.Windows.Forms.Button();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgFormClient)).BeginInit();
             this.SuspendLayout();
@@ -185,20 +183,6 @@
             this.btnBatal.Text = "Batal";
             this.btnBatal.UseVisualStyleBackColor = true;
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(105, 117);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(178, 20);
-            this.txtNama.TabIndex = 117;
-            // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(105, 154);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(178, 20);
-            this.numberTextBox1.TabIndex = 118;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(105, 187);
@@ -214,8 +198,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(690, 352);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.numberTextBox1);
-            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dgFormClient);
             this.Controls.Add(this.label8);
@@ -255,8 +237,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgFormClient;
         private System.Windows.Forms.Button btnBatal;
-        private TA_RealEstate_Kel11.CharTextBox txtNama;
-        private NumberTextBox numberTextBox1;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -41,7 +41,6 @@
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.Simpan = new System.Windows.Forms.Button();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,13 +162,6 @@
             this.Simpan.UseVisualStyleBackColor = true;
             this.Simpan.Click += new System.EventHandler(this.Simpan_Click);
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(105, 125);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(163, 20);
-            this.txtNama.TabIndex = 149;
-            // 
             // FormPropertyTypes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,7 +169,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(564, 307);
-            this.Controls.Add(this.txtNama);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.btnHapus);
             this.Controls.Add(this.btnUpdate);
@@ -214,6 +205,5 @@
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button Simpan;
-        private CharTextBox txtNama;
     }
 }

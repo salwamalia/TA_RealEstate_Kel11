@@ -70,10 +70,10 @@ namespace TA_RealEstate_Kel11
 
 
             insert.Parameters.AddWithValue("idTipe", txtID.Text);
-            insert.Parameters.AddWithValue("nama", txtNama.Text);
+            //insert.Parameters.AddWithValue("nama", txtNama.Text);
             insert.Parameters.AddWithValue("deskripsi", txtDeskripsi.Text);
 
-            if (txtNama.Text == "")
+            /*if (txtNama.Text == "")
             {
                 MessageBox.Show("Harus diisi !!");
             }
@@ -90,7 +90,7 @@ namespace TA_RealEstate_Kel11
                 {
                     MessageBox.Show("Unable to save " + ex.Message);
                 }
-            }
+            }*/
 
             txtID.Text = IDOtomatis();
         }
@@ -100,10 +100,10 @@ namespace TA_RealEstate_Kel11
             try
             {
                 string id = txtID.Text;
-                string name = txtNama.Text;
+                //string name = txtNama.Text;
                 string description = txtDeskripsi.Text;
 
-                if (!name.Trim().Equals(""))
+                /*if (!name.Trim().Equals(""))
                 {
                     if (pType.updateType(id, name, description))
                     {
@@ -117,7 +117,7 @@ namespace TA_RealEstate_Kel11
                 else
                 {
                     MessageBox.Show("Silahkan Ubah Type untuk DiUpdate", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                } */
             }
             catch
             {
@@ -158,7 +158,7 @@ namespace TA_RealEstate_Kel11
         private void clear()
         {
             txtID.Clear();
-            txtNama.Clear();
+            //txtNama.Clear();
             txtDeskripsi.Clear();
         }
 

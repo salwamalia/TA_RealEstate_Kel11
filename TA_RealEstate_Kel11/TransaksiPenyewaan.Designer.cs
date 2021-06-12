@@ -77,10 +77,6 @@
             this.btnHapus = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnSimpan = new System.Windows.Forms.Button();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox2 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox3 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.numberTextBox4 = new TA_RealEstate_Kel11.NumberTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgCicilan)).BeginInit();
@@ -95,10 +91,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.numberTextBox4);
-            this.groupBox1.Controls.Add(this.numberTextBox3);
-            this.groupBox1.Controls.Add(this.numberTextBox2);
-            this.groupBox1.Controls.Add(this.numberTextBox1);
             this.groupBox1.Controls.Add(this.label17);
             this.groupBox1.Controls.Add(this.txtIDCicilan);
             this.groupBox1.Controls.Add(this.txtLamaSewa);
@@ -595,34 +587,6 @@
             this.btnSimpan.Text = "Simpan";
             this.btnSimpan.UseVisualStyleBackColor = true;
             // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(337, 102);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(100, 24);
-            this.numberTextBox1.TabIndex = 170;
-            // 
-            // numberTextBox2
-            // 
-            this.numberTextBox2.Location = new System.Drawing.Point(337, 135);
-            this.numberTextBox2.Name = "numberTextBox2";
-            this.numberTextBox2.Size = new System.Drawing.Size(148, 24);
-            this.numberTextBox2.TabIndex = 171;
-            // 
-            // numberTextBox3
-            // 
-            this.numberTextBox3.Location = new System.Drawing.Point(337, 165);
-            this.numberTextBox3.Name = "numberTextBox3";
-            this.numberTextBox3.Size = new System.Drawing.Size(148, 24);
-            this.numberTextBox3.TabIndex = 172;
-            // 
-            // numberTextBox4
-            // 
-            this.numberTextBox4.Location = new System.Drawing.Point(337, 194);
-            this.numberTextBox4.Name = "numberTextBox4";
-            this.numberTextBox4.Size = new System.Drawing.Size(148, 24);
-            this.numberTextBox4.TabIndex = 173;
-            // 
             // TransaksiPenyewaan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -712,9 +676,5 @@
         private System.Windows.Forms.Button btnHapus;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnSimpan;
-        private NumberTextBox numberTextBox4;
-        private NumberTextBox numberTextBox3;
-        private NumberTextBox numberTextBox2;
-        private NumberTextBox numberTextBox1;
     }
 }
