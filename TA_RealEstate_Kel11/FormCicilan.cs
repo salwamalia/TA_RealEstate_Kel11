@@ -16,17 +16,5 @@ namespace TA_RealEstate_Kel11
         {
             InitializeComponent();
         }
-
-        private void FormCicilan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            MenuAdmin adm = new MenuAdmin();
-            adm.Visible = true;
-            this.Dispose();
-        }
     }
 }

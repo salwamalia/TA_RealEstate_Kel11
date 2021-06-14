@@ -16,12 +16,5 @@ namespace TA_RealEstate_Kel11
         {
             InitializeComponent();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MenuAdmin adm = new MenuAdmin();
-            adm.Visible = true;
-            this.Dispose();
-        }
     }
 }

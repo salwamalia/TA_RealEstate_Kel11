@@ -70,6 +70,54 @@
     <Compile Include="Classes\FUNC.cs" />
     <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Classes\PROPERTY_TYPE.cs" />
+    <Compile Include="FormCicilan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCicilan.Designer.cs">
+      <DependentUpon>FormCicilan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJabatan.Designer.cs">
+      <DependentUpon>FormJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKategoriBayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKategoriBayar.Designer.cs">
+      <DependentUpon>FormKategoriBayar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawai.Designer.cs">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPemilik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPemilik.Designer.cs">
+      <DependentUpon>FormPemilik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProperty.Designer.cs">
+      <DependentUpon>FormProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPropertyTipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPropertyTipe.Designer.cs">
+      <DependentUpon>FormPropertyTipe.cs</DependentUpon>
+    </Compile>
     <Compile Include="LaporanPembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,42 +154,6 @@
     <Compile Include="MenuManager.Designer.cs">
       <DependentUpon>MenuManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCicilan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCicilan.Designer.cs">
-      <DependentUpon>FormCicilan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormJabatan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormJabatan.Designer.cs">
-      <DependentUpon>FormJabatan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPegawai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPegawai.Designer.cs">
-      <DependentUpon>FormPegawai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProperty-Types.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProperty-Types.Designer.cs">
-      <DependentUpon>FormProperty-Types.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormClient.Designer.cs">
-      <DependentUpon>FormClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProperty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProperty.Designer.cs">
-      <DependentUpon>FormProperty.cs</DependentUpon>
-    </Compile>
     <Compile Include="NumberTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -155,12 +167,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>REALESTATE.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Splash.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Splash.Designer.cs">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="FormCicilan.resx">
+      <DependentUpon>FormCicilan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJabatan.resx">
+      <DependentUpon>FormJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKategoriBayar.resx">
+      <DependentUpon>FormKategoriBayar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawai.resx">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPemilik.resx">
+      <DependentUpon>FormPemilik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProperty.resx">
+      <DependentUpon>FormProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPropertyTipe.resx">
+      <DependentUpon>FormPropertyTipe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LaporanPembelian.resx">
       <DependentUpon>LaporanPembelian.cs</DependentUpon>
     </EmbeddedResource>
@@ -179,24 +209,6 @@
     <EmbeddedResource Include="MenuManager.resx">
       <DependentUpon>MenuManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCicilan.resx">
-      <DependentUpon>FormCicilan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormJabatan.resx">
-      <DependentUpon>FormJabatan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPegawai.resx">
-      <DependentUpon>FormPegawai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormClient.resx">
-      <DependentUpon>FormClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProperty-Types.resx">
-      <DependentUpon>FormProperty-Types.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProperty.resx">
-      <DependentUpon>FormProperty.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -206,9 +218,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Splash.resx">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

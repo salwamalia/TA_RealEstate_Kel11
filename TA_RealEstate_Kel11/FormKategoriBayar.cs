@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TA_RealEstate_Kel11
 {
-    public partial class FormProperty : Form
+    public partial class FormKategoriBayar : Form
     {
-        public FormProperty()
+        public FormKategoriBayar()
         {
             InitializeComponent();
         }
