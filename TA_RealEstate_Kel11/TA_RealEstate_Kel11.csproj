@@ -156,10 +156,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RealEstate.designer.cs">
+    <Compile Include="REALESTATE.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RealEstate.dbml</DependentUpon>
+      <DependentUpon>REALESTATE.dbml</DependentUpon>
     </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
@@ -263,13 +263,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="RealEstate.dbml">
+    <None Include="REALESTATE.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>RealEstate.designer.cs</LastGenOutput>
+      <LastGenOutput>REALESTATE.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="RealEstate.dbml.layout">
-      <DependentUpon>RealEstate.dbml</DependentUpon>
+    <None Include="REALESTATE.dbml.layout">
+      <DependentUpon>REALESTATE.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
