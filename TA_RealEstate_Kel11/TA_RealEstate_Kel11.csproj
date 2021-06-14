@@ -194,7 +194,7 @@
     <EmbeddedResource Include="FormCicilan.resx">
       <DependentUpon>FormCicilan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formjabatan.resx">
+    <EmbeddedResource Include="FormJabatan.resx">
       <DependentUpon>FormJabatan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawai.resx">
