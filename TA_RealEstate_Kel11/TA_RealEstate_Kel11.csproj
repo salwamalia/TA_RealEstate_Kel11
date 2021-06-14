@@ -70,54 +70,6 @@
     <Compile Include="Classes\FUNC.cs" />
     <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Classes\PROPERTY_TYPE.cs" />
-    <Compile Include="FormCicilan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormCicilan.Designer.cs">
-      <DependentUpon>FormCicilan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormJabatan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormJabatan.Designer.cs">
-      <DependentUpon>FormJabatan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormPegawai.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormPegawai.Designer.cs">
-      <DependentUpon>FormPegawai.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProperty-Types.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProperty-Types.Designer.cs">
-      <DependentUpon>FormProperty-Types.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormOwner.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormOwner.Designer.cs">
-      <DependentUpon>FormOwner.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormClient.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormClient.Designer.cs">
-      <DependentUpon>FormClient.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormProperty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormProperty.Designer.cs">
-      <DependentUpon>FormProperty.cs</DependentUpon>
-    </Compile>
     <Compile Include="LaporanPembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,11 +94,53 @@
     <Compile Include="MenuKasir.Designer.cs">
       <DependentUpon>MenuKasir.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuManager.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuManager.Designer.cs">
       <DependentUpon>MenuManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCicilan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCicilan.Designer.cs">
+      <DependentUpon>FormCicilan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormJabatan.Designer.cs">
+      <DependentUpon>FormJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPegawai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPegawai.Designer.cs">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProperty-Types.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProperty-Types.Designer.cs">
+      <DependentUpon>FormProperty-Types.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClient.Designer.cs">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProperty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProperty.Designer.cs">
+      <DependentUpon>FormProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="NumberTextBox.cs">
       <SubType>Component</SubType>
@@ -167,54 +161,6 @@
     <Compile Include="Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransaksiPelunasan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPelunasan.Designer.cs">
-      <DependentUpon>TransaksiPelunasan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransaksiPembayaran.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPembayaran.Designer.cs">
-      <DependentUpon>TransaksiPembayaran.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransaksiPembelian.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPembelian.Designer.cs">
-      <DependentUpon>TransaksiPembelian.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransaksiPenyewaan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPenyewaan.Designer.cs">
-      <DependentUpon>TransaksiPenyewaan.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="FormCicilan.resx">
-      <DependentUpon>FormCicilan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormJabatan.resx">
-      <DependentUpon>FormJabatan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormPegawai.resx">
-      <DependentUpon>FormPegawai.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormClient.resx">
-      <DependentUpon>FormClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormOwner.resx">
-      <DependentUpon>FormOwner.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProperty-Types.resx">
-      <DependentUpon>FormProperty-Types.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormProperty.resx">
-      <DependentUpon>FormProperty.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LaporanPembelian.resx">
       <DependentUpon>LaporanPembelian.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,8 +173,29 @@
     <EmbeddedResource Include="MenuKasir.resx">
       <DependentUpon>MenuKasir.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuManager.resx">
       <DependentUpon>MenuManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCicilan.resx">
+      <DependentUpon>FormCicilan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormJabatan.resx">
+      <DependentUpon>FormJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPegawai.resx">
+      <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClient.resx">
+      <DependentUpon>FormClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProperty-Types.resx">
+      <DependentUpon>FormProperty-Types.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProperty.resx">
+      <DependentUpon>FormProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -241,18 +208,6 @@
     </Compile>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPelunasan.resx">
-      <DependentUpon>TransaksiPelunasan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPembayaran.resx">
-      <DependentUpon>TransaksiPembayaran.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPembelian.resx">
-      <DependentUpon>TransaksiPembelian.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPenyewaan.resx">
-      <DependentUpon>TransaksiPenyewaan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
