@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnCari = new System.Windows.Forms.Button();
             this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
+            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -160,6 +161,13 @@
             this.txtNama.Size = new System.Drawing.Size(139, 20);
             this.txtNama.TabIndex = 136;
             // 
+            // charTextBox1
+            // 
+            this.charTextBox1.Location = new System.Drawing.Point(101, 90);
+            this.charTextBox1.Name = "charTextBox1";
+            this.charTextBox1.Size = new System.Drawing.Size(139, 20);
+            this.charTextBox1.TabIndex = 136;
+            // 
             // FormJabatan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +175,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(307, 385);
-            this.Controls.Add(this.txtNama);
+            this.Controls.Add(this.charTextBox1);
             this.Controls.Add(this.btnCari);
             this.Controls.Add(this.btnBatal);
             this.Controls.Add(this.dataGridView1);
@@ -204,5 +212,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCari;
         private CharTextBox txtNama;
+        private CharTextBox charTextBox1;
     }
 }

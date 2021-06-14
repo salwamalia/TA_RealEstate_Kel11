@@ -18,8 +18,8 @@ namespace TA_RealEstate_Kel11
             InitializeComponent();
         }
 
-        SqlConnection Connection = new SqlConnection(@"Data Source=LAPTOP-L1AODT95;Initial Catalog=TARealEstateKel11;Integrated Security=True");
-
+        SqlConnection Connection = new SqlConnection(@"Data Source=WINDOWS-LD56BQV;Initial Catalog=RealEstate;Integrated Security=True");
+   
         private void btnKeluar_Click(object sender, EventArgs e)
         {
             Application.Exit();

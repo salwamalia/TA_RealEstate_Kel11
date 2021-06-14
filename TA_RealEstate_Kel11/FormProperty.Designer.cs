@@ -42,17 +42,6 @@
             this.cbTipe = new System.Windows.Forms.ComboBox();
             this.btnCariID = new System.Windows.Forms.Button();
             this.btnCariOwner = new System.Windows.Forms.Button();
-            this.updownKamarTidur = new System.Windows.Forms.DomainUpDown();
-            this.updownKamarMandi = new System.Windows.Forms.DomainUpDown();
-            this.updownTahun = new System.Windows.Forms.DomainUpDown();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbTaman = new System.Windows.Forms.RadioButton();
-            this.rbGarasi = new System.Windows.Forms.RadioButton();
-            this.rbKolam = new System.Windows.Forms.RadioButton();
-            this.rbBalkon = new System.Windows.Forms.RadioButton();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnSemuaProperty = new System.Windows.Forms.Button();
             this.btnGambarProperty = new System.Windows.Forms.Button();
             this.dgProperty = new System.Windows.Forms.DataGridView();
@@ -62,7 +51,6 @@
             this.Simpan = new System.Windows.Forms.Button();
             this.txtUkuran = new System.Windows.Forms.TextBox();
             this.txtOwner = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProperty)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,131 +183,6 @@
             this.btnCariOwner.Text = "Pilih Owner";
             this.btnCariOwner.UseVisualStyleBackColor = true;
             // 
-            // updownKamarTidur
-            // 
-            this.updownKamarTidur.Location = new System.Drawing.Point(411, 116);
-            this.updownKamarTidur.Name = "updownKamarTidur";
-            this.updownKamarTidur.Size = new System.Drawing.Size(64, 20);
-            this.updownKamarTidur.TabIndex = 50;
-            this.updownKamarTidur.Text = "0";
-            // 
-            // updownKamarMandi
-            // 
-            this.updownKamarMandi.Location = new System.Drawing.Point(411, 149);
-            this.updownKamarMandi.Name = "updownKamarMandi";
-            this.updownKamarMandi.Size = new System.Drawing.Size(64, 20);
-            this.updownKamarMandi.TabIndex = 51;
-            this.updownKamarMandi.Text = "0";
-            // 
-            // updownTahun
-            // 
-            this.updownTahun.Location = new System.Drawing.Point(411, 180);
-            this.updownTahun.Name = "updownTahun";
-            this.updownTahun.Size = new System.Drawing.Size(64, 20);
-            this.updownTahun.TabIndex = 52;
-            this.updownTahun.Text = "0";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.rbTaman);
-            this.groupBox1.Controls.Add(this.rbGarasi);
-            this.groupBox1.Controls.Add(this.rbKolam);
-            this.groupBox1.Controls.Add(this.rbBalkon);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox1.Location = new System.Drawing.Point(483, 76);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(187, 180);
-            this.groupBox1.TabIndex = 53;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Fitur";
-            // 
-            // rbTaman
-            // 
-            this.rbTaman.AutoSize = true;
-            this.rbTaman.BackColor = System.Drawing.Color.Transparent;
-            this.rbTaman.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTaman.Location = new System.Drawing.Point(25, 142);
-            this.rbTaman.Name = "rbTaman";
-            this.rbTaman.Size = new System.Drawing.Size(108, 22);
-            this.rbTaman.TabIndex = 157;
-            this.rbTaman.TabStop = true;
-            this.rbTaman.Text = "Taman Kecil";
-            this.rbTaman.UseVisualStyleBackColor = false;
-            // 
-            // rbGarasi
-            // 
-            this.rbGarasi.AutoSize = true;
-            this.rbGarasi.BackColor = System.Drawing.Color.Transparent;
-            this.rbGarasi.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbGarasi.Location = new System.Drawing.Point(25, 104);
-            this.rbGarasi.Name = "rbGarasi";
-            this.rbGarasi.Size = new System.Drawing.Size(70, 22);
-            this.rbGarasi.TabIndex = 156;
-            this.rbGarasi.TabStop = true;
-            this.rbGarasi.Text = "Garasi";
-            this.rbGarasi.UseVisualStyleBackColor = false;
-            // 
-            // rbKolam
-            // 
-            this.rbKolam.AutoSize = true;
-            this.rbKolam.BackColor = System.Drawing.Color.Transparent;
-            this.rbKolam.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbKolam.Location = new System.Drawing.Point(25, 66);
-            this.rbKolam.Name = "rbKolam";
-            this.rbKolam.Size = new System.Drawing.Size(124, 22);
-            this.rbKolam.TabIndex = 155;
-            this.rbKolam.TabStop = true;
-            this.rbKolam.Text = "Kolam Renang";
-            this.rbKolam.UseVisualStyleBackColor = false;
-            // 
-            // rbBalkon
-            // 
-            this.rbBalkon.AutoSize = true;
-            this.rbBalkon.BackColor = System.Drawing.Color.Transparent;
-            this.rbBalkon.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbBalkon.Location = new System.Drawing.Point(25, 25);
-            this.rbBalkon.Name = "rbBalkon";
-            this.rbBalkon.Size = new System.Drawing.Size(72, 22);
-            this.rbBalkon.TabIndex = 154;
-            this.rbBalkon.TabStop = true;
-            this.rbBalkon.Text = "Balkon";
-            this.rbBalkon.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(306, 116);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 20);
-            this.label9.TabIndex = 56;
-            this.label9.Text = "Kamar Tidur";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(306, 149);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(102, 20);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Kamar Mandi";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(306, 180);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(54, 20);
-            this.label10.TabIndex = 58;
-            this.label10.Text = "Tahun";
-            // 
             // btnSemuaProperty
             // 
             this.btnSemuaProperty.Location = new System.Drawing.Point(355, 272);
@@ -412,13 +275,6 @@
             this.Controls.Add(this.dgProperty);
             this.Controls.Add(this.btnGambarProperty);
             this.Controls.Add(this.btnSemuaProperty);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.updownTahun);
-            this.Controls.Add(this.updownKamarMandi);
-            this.Controls.Add(this.updownKamarTidur);
             this.Controls.Add(this.btnCariOwner);
             this.Controls.Add(this.btnCariID);
             this.Controls.Add(this.cbTipe);
@@ -436,8 +292,6 @@
             this.Name = "FormProperty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProperty";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgProperty)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -458,13 +312,6 @@
         private System.Windows.Forms.ComboBox cbTipe;
         private System.Windows.Forms.Button btnCariID;
         private System.Windows.Forms.Button btnCariOwner;
-        private System.Windows.Forms.DomainUpDown updownKamarTidur;
-        private System.Windows.Forms.DomainUpDown updownKamarMandi;
-        private System.Windows.Forms.DomainUpDown updownTahun;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button btnSemuaProperty;
         private System.Windows.Forms.Button btnGambarProperty;
         private System.Windows.Forms.DataGridView dgProperty;
@@ -473,10 +320,6 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button Simpan;
         private System.Windows.Forms.TextBox txtUkuran;
-        private System.Windows.Forms.RadioButton rbTaman;
-        private System.Windows.Forms.RadioButton rbGarasi;
-        private System.Windows.Forms.RadioButton rbKolam;
-        private System.Windows.Forms.RadioButton rbBalkon;
         private System.Windows.Forms.TextBox txtOwner;
     }
 }
