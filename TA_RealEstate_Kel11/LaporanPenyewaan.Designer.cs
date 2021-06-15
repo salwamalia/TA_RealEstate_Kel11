@@ -37,18 +37,14 @@
             this.btnLapSewa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapBeli = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.c = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dgLapBeli = new System.Windows.Forms.DataGridView();
-            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnPDF = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dgLapBeli = new System.Windows.Forms.DataGridView();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgLapBeli)).BeginInit();
-            this.bunifuGradientPanel4.SuspendLayout();
-            this.bunifuGradientPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -66,7 +62,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(972, 122);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(800, 122);
             this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // bunifuTileButton1
@@ -83,7 +79,7 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 41;
             this.bunifuTileButton1.LabelText = "Manager";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(854, 0);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(682, 0);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
@@ -116,7 +112,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 435);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 328);
             this.bunifuGradientPanel2.TabIndex = 3;
             // 
             // bunifuFlatButton1
@@ -228,8 +224,9 @@
             // 
             this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.Controls.Add(this.bunifuGradientPanel4);
-            this.bunifuGradientPanel3.Controls.Add(this.c);
+            this.bunifuGradientPanel3.Controls.Add(this.btnExcel);
+            this.bunifuGradientPanel3.Controls.Add(this.btnPDF);
+            this.bunifuGradientPanel3.Controls.Add(this.bunifuCustomLabel2);
             this.bunifuGradientPanel3.Controls.Add(this.dgLapBeli);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
@@ -239,62 +236,8 @@
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(784, 435);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(612, 328);
             this.bunifuGradientPanel3.TabIndex = 5;
-            // 
-            // c
-            // 
-            this.c.BackColor = System.Drawing.Color.Transparent;
-            this.c.Dock = System.Windows.Forms.DockStyle.Top;
-            this.c.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c.Location = new System.Drawing.Point(0, 0);
-            this.c.Name = "c";
-            this.c.Size = new System.Drawing.Size(784, 49);
-            this.c.TabIndex = 134;
-            this.c.Text = "Laporan Penyewaan";
-            this.c.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // dgLapBeli
-            // 
-            this.dgLapBeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLapBeli.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgLapBeli.Location = new System.Drawing.Point(0, 171);
-            this.dgLapBeli.Name = "dgLapBeli";
-            this.dgLapBeli.Size = new System.Drawing.Size(784, 264);
-            this.dgLapBeli.TabIndex = 133;
-            // 
-            // bunifuGradientPanel4
-            // 
-            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
-            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel4.Controls.Add(this.bunifuGradientPanel5);
-            this.bunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 107);
-            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
-            this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(784, 64);
-            this.bunifuGradientPanel4.TabIndex = 136;
-            // 
-            // bunifuGradientPanel5
-            // 
-            this.bunifuGradientPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel5.BackgroundImage")));
-            this.bunifuGradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel5.Controls.Add(this.btnExcel);
-            this.bunifuGradientPanel5.Controls.Add(this.btnPDF);
-            this.bunifuGradientPanel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuGradientPanel5.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel5.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel5.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel5.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel5.Location = new System.Drawing.Point(515, 0);
-            this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
-            this.bunifuGradientPanel5.Quality = 10;
-            this.bunifuGradientPanel5.Size = new System.Drawing.Size(269, 64);
-            this.bunifuGradientPanel5.TabIndex = 0;
             // 
             // btnExcel
             // 
@@ -303,11 +246,10 @@
             this.btnExcel.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnExcel.ActiveForecolor = System.Drawing.Color.White;
             this.btnExcel.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExcel.BackColor = System.Drawing.Color.Transparent;
             this.btnExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.BackgroundImage")));
             this.btnExcel.ButtonText = "Import to Excel";
             this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnExcel.IdleBorderThickness = 1;
@@ -315,11 +257,11 @@
             this.btnExcel.IdleFillColor = System.Drawing.Color.White;
             this.btnExcel.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnExcel.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.Location = new System.Drawing.Point(-1, 0);
+            this.btnExcel.Location = new System.Drawing.Point(343, 61);
             this.btnExcel.Margin = new System.Windows.Forms.Padding(5);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(135, 64);
-            this.btnExcel.TabIndex = 138;
+            this.btnExcel.Size = new System.Drawing.Size(135, 36);
+            this.btnExcel.TabIndex = 136;
             this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPDF
@@ -329,11 +271,10 @@
             this.btnPDF.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnPDF.ActiveForecolor = System.Drawing.Color.White;
             this.btnPDF.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPDF.BackColor = System.Drawing.Color.Transparent;
             this.btnPDF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPDF.BackgroundImage")));
             this.btnPDF.ButtonText = "Import to PDF";
             this.btnPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPDF.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnPDF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPDF.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnPDF.IdleBorderThickness = 1;
@@ -341,18 +282,39 @@
             this.btnPDF.IdleFillColor = System.Drawing.Color.White;
             this.btnPDF.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnPDF.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.Location = new System.Drawing.Point(134, 0);
+            this.btnPDF.Location = new System.Drawing.Point(135, 61);
             this.btnPDF.Margin = new System.Windows.Forms.Padding(5);
             this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(135, 64);
-            this.btnPDF.TabIndex = 137;
+            this.btnPDF.Size = new System.Drawing.Size(135, 36);
+            this.btnPDF.TabIndex = 135;
             this.btnPDF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(0, 0);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(612, 49);
+            this.bunifuCustomLabel2.TabIndex = 134;
+            this.bunifuCustomLabel2.Text = "Laporan Penyewaan";
+            this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgLapBeli
+            // 
+            this.dgLapBeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgLapBeli.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgLapBeli.Location = new System.Drawing.Point(0, 98);
+            this.dgLapBeli.Name = "dgLapBeli";
+            this.dgLapBeli.Size = new System.Drawing.Size(612, 230);
+            this.dgLapBeli.TabIndex = 133;
             // 
             // LaporanPenyewaan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 557);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -362,8 +324,6 @@
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgLapBeli)).EndInit();
-            this.bunifuGradientPanel4.ResumeLayout(false);
-            this.bunifuGradientPanel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -378,11 +338,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLapSewa;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapBeli;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
-        private Bunifu.Framework.UI.BunifuCustomLabel c;
-        private System.Windows.Forms.DataGridView dgLapBeli;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel5;
         private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;
         private Bunifu.Framework.UI.BunifuThinButton2 btnPDF;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private System.Windows.Forms.DataGridView dgLapBeli;
     }
 }

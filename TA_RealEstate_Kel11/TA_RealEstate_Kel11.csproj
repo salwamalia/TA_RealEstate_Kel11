@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\BDL\PRG2\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\..\Praktikum\AGIT\itextsharp.dll</HintPath>
@@ -70,12 +70,6 @@
     <Compile Include="Classes\FUNC.cs" />
     <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Classes\PROPERTY_TYPE.cs" />
-    <Compile Include="Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard.Designer.cs">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCicilan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,31 +162,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="REALESTATE.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>REALESTATE.dbml</DependentUpon>
     </Compile>
-    <Compile Include="TransaksiPembelian.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPembelian.Designer.cs">
-      <DependentUpon>TransaksiPembelian.cs</DependentUpon>
-    </Compile>
-    <Compile Include="TransaksiPenyewaan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiPenyewaan.Designer.cs">
-      <DependentUpon>TransaksiPenyewaan.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="Dashboard.resx">
-      <DependentUpon>Dashboard.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCicilan.resx">
       <DependentUpon>FormCicilan.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,15 +211,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPembelian.resx">
-      <DependentUpon>TransaksiPembelian.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiPenyewaan.resx">
-      <DependentUpon>TransaksiPenyewaan.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

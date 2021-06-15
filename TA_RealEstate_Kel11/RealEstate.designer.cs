@@ -2797,7 +2797,7 @@ namespace TA_RealEstate_Kel11
 		
 		private string _idProperty;
 		
-		private string _jenisSewa;
+		private System.DateTime _mulaiSewa;
 		
 		private int _lamaSewa;
 		
@@ -2837,8 +2837,8 @@ namespace TA_RealEstate_Kel11
     partial void OnidTSewaChanged();
     partial void OnidPropertyChanging(string value);
     partial void OnidPropertyChanged();
-    partial void OnjenisSewaChanging(string value);
-    partial void OnjenisSewaChanged();
+    partial void OnmulaiSewaChanging(System.DateTime value);
+    partial void OnmulaiSewaChanged();
     partial void OnlamaSewaChanging(int value);
     partial void OnlamaSewaChanged();
     partial void OnidClientChanging(string value);
@@ -2915,22 +2915,22 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_jenisSewa", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string jenisSewa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mulaiSewa", DbType="Date NOT NULL")]
+		public System.DateTime mulaiSewa
 		{
 			get
 			{
-				return this._jenisSewa;
+				return this._mulaiSewa;
 			}
 			set
 			{
-				if ((this._jenisSewa != value))
+				if ((this._mulaiSewa != value))
 				{
-					this.OnjenisSewaChanging(value);
+					this.OnmulaiSewaChanging(value);
 					this.SendPropertyChanging();
-					this._jenisSewa = value;
-					this.SendPropertyChanged("jenisSewa");
-					this.OnjenisSewaChanged();
+					this._mulaiSewa = value;
+					this.SendPropertyChanged("mulaiSewa");
+					this.OnmulaiSewaChanged();
 				}
 			}
 		}
