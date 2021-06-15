@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28307.1433
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TA_RealEstate_Kel11", "TA_RealEstate_Kel11\TA_RealEstate_Kel11.csproj", "{32DB8A2C-357E-48A9-B6BB-850131D65731}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Image", "Image", "{C6AE36CB-C22B-404B-8BEA-44E8853566FF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\logo-template-design_1289-160.jpg = ..\..\logo-template-design_1289-160.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

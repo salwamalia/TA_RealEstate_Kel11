@@ -63,6 +63,7 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.numberTextBox2 = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
@@ -494,6 +495,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.numberTextBox2);
             this.panel1.Controls.Add(this.txtAlamat);
             this.panel1.Controls.Add(this.bunifuCustomLabel8);
             this.panel1.Controls.Add(this.bunifuCustomLabel7);
@@ -743,6 +745,13 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1008, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
+            // numberTextBox2
+            // 
+            this.numberTextBox2.Location = new System.Drawing.Point(238, 137);
+            this.numberTextBox2.Name = "numberTextBox2";
+            this.numberTextBox2.Size = new System.Drawing.Size(181, 20);
+            this.numberTextBox2.TabIndex = 151;
+            // 
             // FormClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -797,5 +806,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private NumberTextBox numberTextBox1;
         private System.Windows.Forms.TextBox txtAlamat;
+        private NumberTextBox numberTextBox2;
     }
 }
