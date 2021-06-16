@@ -42,5 +42,15 @@ namespace TA_RealEstate_Kel11.Properties {
                 return ((string)(this["RealEstateConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True")]
+        public string REALESTATEConnectionString2 {
+            get {
+                return ((string)(this["REALESTATEConnectionString2"]));
+            }
+        }
     }
 }

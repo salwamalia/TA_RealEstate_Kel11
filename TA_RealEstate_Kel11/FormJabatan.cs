@@ -57,7 +57,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string id = txtID.Text;
+            /*string id = txtID.Text;
             string nama = txtNama.Text;
 
             var data = new jabatan
@@ -67,10 +67,10 @@ namespace TA_RealEstate_Kel11
             };
 
             dc.jabatans.InsertOnSubmit(data);
-            dc.SubmitChanges();
+            dc.SubmitChanges(); 
             MessageBox.Show("Save Succesfully");
             txtID.Clear();
-            txtNama.Clear();
+            txtNama.Clear(); */
             txtID.Text = IDOtomatis();
         }
 
