@@ -1,5 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RealEstate" Class="REALESTATEDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=WINDOWS-LD56BQV;Initial Catalog=RealEstate;Integrated Security=True" SettingsObjectName="TA_RealEstate_Kel11.Properties.Settings" SettingsPropertyName="RealEstateConnectionString1" Provider="System.Data.SqlClient" />
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="REALESTATE" Class="REALESTATEDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True" SettingsObjectName="TA_RealEstate_Kel11.Properties.Settings" SettingsPropertyName="REALESTATEConnectionString2" Provider="System.Data.SqlClient" />
   <Table Name="dbo.client" Member="clients">
     <Type Name="client">
       <Column Name="idClient" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -94,6 +94,7 @@
       <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="harga" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPembelian" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
+      <Association Name="tPembelian_tDetailPembelian" Member="tPembelian" ThisKey="idTBeli" OtherKey="idTBeli" Type="tPembelian" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tDetailPenyewaan" Member="tDetailPenyewaans">
@@ -118,6 +119,7 @@
       <Column Name="dp" Type="System.Decimal" DbType="Money" CanBeNull="true" />
       <Column Name="total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
       <Column Name="statusBayar" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="tPembelian_tDetailPembelian" Member="tDetailPembelian" ThisKey="idTBeli" OtherKey="idTBeli" Type="tDetailPembelian" Cardinality="One" />
       <Association Name="client_tPembelian" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
       <Association Name="kategoriBayar_tPembelian" Member="kategoriBayar" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="kategoriBayar" IsForeignKey="true" />
       <Association Name="kategoriCicilan_tPembelian" Member="kategoriCicilan" ThisKey="idCicilan" OtherKey="idCicilan" Type="kategoriCicilan" IsForeignKey="true" />
@@ -129,7 +131,7 @@
     <Type Name="tPenyewaan">
       <Column Name="idTSewa" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="mulaiSewa" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="jenisSewa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="lamaSewa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idClient" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="namaClient" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
