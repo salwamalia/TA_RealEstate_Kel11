@@ -59,17 +59,17 @@
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel2
@@ -659,33 +659,6 @@
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
-            // dgJabatan
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgJabatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgJabatan.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgJabatan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgJabatan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgJabatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgJabatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgJabatan.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgJabatan.DoubleBuffered = true;
-            this.dgJabatan.EnableHeadersVisualStyles = false;
-            this.dgJabatan.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgJabatan.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dgJabatan.Location = new System.Drawing.Point(548, 0);
-            this.dgJabatan.Name = "dgJabatan";
-            this.dgJabatan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgJabatan.Size = new System.Drawing.Size(309, 440);
-            this.dgJabatan.TabIndex = 0;
-            // 
             // btnJabatan
             // 
             this.btnJabatan.Activecolor = System.Drawing.Color.Transparent;
@@ -796,6 +769,33 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1045, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
+            // dgJabatan
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgJabatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgJabatan.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgJabatan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgJabatan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgJabatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgJabatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgJabatan.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgJabatan.DoubleBuffered = true;
+            this.dgJabatan.EnableHeadersVisualStyles = false;
+            this.dgJabatan.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgJabatan.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgJabatan.Location = new System.Drawing.Point(548, 0);
+            this.dgJabatan.Name = "dgJabatan";
+            this.dgJabatan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgJabatan.Size = new System.Drawing.Size(309, 440);
+            this.dgJabatan.TabIndex = 0;
+            // 
             // FormPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -811,9 +811,9 @@
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -839,7 +839,6 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgJabatan;
         private Bunifu.Framework.UI.BunifuFlatButton btnJabatan;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
@@ -854,5 +853,6 @@
         private System.Windows.Forms.ComboBox cbJabatan;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCari;
         private System.Windows.Forms.TextBox txtJenisKel;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgJabatan;
     }
 }
