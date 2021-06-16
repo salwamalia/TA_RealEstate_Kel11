@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TA_RealEstate_Kel11
 {
-    public partial class TransaksiPembelian : Form
+    public partial class TransaksiBeli : Form
     {
-        public TransaksiPembelian()
+        public TransaksiBeli()
         {
             InitializeComponent();
         }

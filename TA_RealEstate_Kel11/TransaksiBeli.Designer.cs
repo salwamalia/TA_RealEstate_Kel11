@@ -1,6 +1,6 @@
 ﻿namespace TA_RealEstate_Kel11
 {
-    partial class TransaksiPembelian
+    partial class TransaksiBeli
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransaksiPembelian));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransaksiBeli));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -38,10 +38,12 @@
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgPembelian = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
+            this.bunifuGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPembelian)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,8 +62,8 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1264, 122);
-            this.bunifuGradientPanel1.TabIndex = 2;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1027, 122);
+            this.bunifuGradientPanel1.TabIndex = 3;
             // 
             // bunifuTileButton1
             // 
@@ -77,7 +79,7 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 41;
             this.bunifuTileButton1.LabelText = "Kasir";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(1146, 0);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(909, 0);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
@@ -110,8 +112,8 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 532);
-            this.bunifuGradientPanel2.TabIndex = 3;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 435);
+            this.bunifuGradientPanel2.TabIndex = 4;
             // 
             // btnLogout
             // 
@@ -218,15 +220,33 @@
             this.btnPembelian.Textcolor = System.Drawing.Color.White;
             this.btnPembelian.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // bunifuGradientPanel3
+            // 
+            this.bunifuGradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.Controls.Add(this.dgPembelian);
+            this.bunifuGradientPanel3.Controls.Add(this.bunifuCustomLabel2);
+            this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(839, 435);
+            this.bunifuGradientPanel3.TabIndex = 5;
+            // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(188, 122);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(1076, 49);
-            this.bunifuCustomLabel2.TabIndex = 136;
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(839, 49);
+            this.bunifuCustomLabel2.TabIndex = 137;
             this.bunifuCustomLabel2.Text = "Pembelian";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -251,25 +271,25 @@
             this.dgPembelian.EnableHeadersVisualStyles = false;
             this.dgPembelian.HeaderBgColor = System.Drawing.Color.SeaGreen;
             this.dgPembelian.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dgPembelian.Location = new System.Drawing.Point(188, 482);
+            this.dgPembelian.Location = new System.Drawing.Point(0, 263);
             this.dgPembelian.Name = "dgPembelian";
             this.dgPembelian.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgPembelian.Size = new System.Drawing.Size(1076, 172);
-            this.dgPembelian.TabIndex = 137;
+            this.dgPembelian.Size = new System.Drawing.Size(839, 172);
+            this.dgPembelian.TabIndex = 138;
             // 
-            // TransaksiPembelian
+            // TransaksiBeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 654);
-            this.Controls.Add(this.dgPembelian);
-            this.Controls.Add(this.bunifuCustomLabel2);
+            this.ClientSize = new System.Drawing.Size(1027, 557);
+            this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Name = "TransaksiPembelian";
-            this.Text = "FormPembelian";
+            this.Name = "TransaksiBeli";
+            this.Text = "TransaksiBeli";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgPembelian)).EndInit();
             this.ResumeLayout(false);
 
@@ -284,6 +304,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
         private Bunifu.Framework.UI.BunifuFlatButton btnPenyewaan;
         private Bunifu.Framework.UI.BunifuFlatButton btnPembelian;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgPembelian;
     }
