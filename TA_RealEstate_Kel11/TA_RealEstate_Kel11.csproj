@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
-      <HintPath>..\..\..\..\..\..\..\..\BDL\PRG2\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>..\..\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\..\Praktikum\AGIT\itextsharp.dll</HintPath>
@@ -99,6 +99,12 @@
     </Compile>
     <Compile Include="FormPegawai.Designer.cs">
       <DependentUpon>FormPegawai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransaksiPembelian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransaksiPembelian.Designer.cs">
+      <DependentUpon>TransaksiPembelian.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPemilik.cs">
       <SubType>Form</SubType>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawai.resx">
       <DependentUpon>FormPegawai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransaksiPembelian.resx">
+      <DependentUpon>TransaksiPembelian.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPemilik.resx">
       <DependentUpon>FormPemilik.cs</DependentUpon>
