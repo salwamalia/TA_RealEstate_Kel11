@@ -148,34 +148,6 @@ namespace TA_RealEstate_Kel11
             txtID.Text = IDOtomatis();
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM pegawai WHERE idPegawai ='" + txtID.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-                txtJenisKel.Text= dt.Rows[0]["jeniskelamin"].ToString();
-                txtUser.Text = dt.Rows[0]["username"].ToString();
-                txtPass.Text = dt.Rows[0]["password"].ToString();
-                cbJabatan.SelectedItem = dt.Rows[0]["idJabatan"].ToString();
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error ! " + ex.Message);
-            }
-        }
-
         private void btnBatal_Click(object sender, EventArgs e)
         {
            clear();
@@ -257,6 +229,34 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
+        }
+
+        private void btnCariPegawai_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                myConnection.Open();
+
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM pegawai WHERE idPegawai ='" + txtCariPegawai.Text + "'", myConnection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                txtNama.Text = dt.Rows[0]["nama"].ToString();
+                txtJenisKel.Text = dt.Rows[0]["jeniskelamin"].ToString();
+                txtUser.Text = dt.Rows[0]["username"].ToString();
+                txtPass.Text = dt.Rows[0]["password"].ToString();
+                cbJabatan.SelectedItem = dt.Rows[0]["idJabatan"].ToString();
+
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error ! " + ex.Message);
+            }
         }
     }
 }

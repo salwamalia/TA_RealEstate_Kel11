@@ -161,34 +161,7 @@ namespace TA_RealEstate_Kel11
             txtID.Clear();
             txtNama.Clear();
         }
-
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            var st = from s in dc.propertyTipes where s.idTipe == txtID.Text select s;
-            DataGridViewTipe.DataSource = st;
-
-            try
-            {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM propertyTipe WHERE idTipe ='" + txtID.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Data tersebut Tidak ada!");
-            }
-        }
-
+        
         void LoadData()
         {
             var st = from tb in dc.propertyTipes select tb;
@@ -256,6 +229,33 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
+        }
+
+        private void btnCari_Click_1(object sender, EventArgs e)
+        {
+            var st = from s in dc.propertyTipes where s.idTipe == txtID.Text select s;
+            DataGridViewTipe.DataSource = st;
+
+            try
+            {
+                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                myConnection.Open();
+
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM propertyTipe WHERE idTipe ='" + txtCariTipe.Text + "'", myConnection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                txtNama.Text = dt.Rows[0]["nama"].ToString();
+
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Data tersebut Tidak ada!");
+            }
         }
     }
 }
