@@ -155,6 +155,7 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Textcolor = System.Drawing.Color.White;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCicilan
             // 
@@ -190,6 +191,7 @@
             this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCicilan.Textcolor = System.Drawing.Color.White;
             this.btnCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCicilan.Click += new System.EventHandler(this.btnCicilan_Click);
             // 
             // btnKategoriBayar
             // 
@@ -225,6 +227,7 @@
             this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKategoriBayar.Textcolor = System.Drawing.Color.White;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKategoriBayar.Click += new System.EventHandler(this.btnKategoriBayar_Click);
             // 
             // btnTipeProperty
             // 
@@ -260,6 +263,7 @@
             this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipeProperty.Textcolor = System.Drawing.Color.White;
             this.btnTipeProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipeProperty.Click += new System.EventHandler(this.btnTipeProperty_Click);
             // 
             // btnProperty
             // 
@@ -295,6 +299,7 @@
             this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProperty.Textcolor = System.Drawing.Color.White;
             this.btnProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnClient
             // 
@@ -330,6 +335,7 @@
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClient.Textcolor = System.Drawing.Color.White;
             this.btnClient.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPemilik
             // 
@@ -365,6 +371,7 @@
             this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPemilik.Textcolor = System.Drawing.Color.White;
             this.btnPemilik.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPemilik.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // btnPegawai
             // 
@@ -400,6 +407,7 @@
             this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPegawai.Textcolor = System.Drawing.Color.White;
             this.btnPegawai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
             // 
             // btnJabatan
             // 
@@ -435,6 +443,7 @@
             this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnJabatan.Textcolor = System.Drawing.Color.White;
             this.btnJabatan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJabatan.Click += new System.EventHandler(this.btnJabatan_Click);
             // 
             // bunifuGradientPanel3
             // 
@@ -460,6 +469,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "MenuAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdmin";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);

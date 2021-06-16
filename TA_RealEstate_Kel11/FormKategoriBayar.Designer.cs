@@ -49,6 +49,7 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -57,7 +58,6 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
@@ -551,6 +551,14 @@
             this.panel1.Size = new System.Drawing.Size(487, 365);
             this.panel1.TabIndex = 144;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(205, 103);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(184, 57);
+            this.textBox1.TabIndex = 145;
+            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -677,14 +685,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(984, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(205, 103);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 57);
-            this.textBox1.TabIndex = 145;
-            // 
             // FormKategoriBayar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,6 +694,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FormKategoriBayar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKategoriBayar";
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.panel1.ResumeLayout(false);

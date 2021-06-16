@@ -238,6 +238,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "MenuManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuManager";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);

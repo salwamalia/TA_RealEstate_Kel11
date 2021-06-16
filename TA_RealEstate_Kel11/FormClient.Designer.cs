@@ -752,6 +752,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FormClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClient";
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

@@ -15,7 +15,7 @@ namespace TA_RealEstate_Kel11.Classes
         //get all type
         public DataTable getAllTypes()
         {
-            SqlCommand command = new SqlCommand("SELECT * FROM propertyType");
+            SqlCommand command = new SqlCommand("SELECT * FROM propertyTipe");
 
             return func.getData(command);
         }
@@ -35,13 +35,12 @@ namespace TA_RealEstate_Kel11.Classes
         }
 
         //Update a new type
-        public Boolean updateType(string id, string name, string description)
+        public Boolean updateType(string id, string name)
         {
-            SqlCommand command = new SqlCommand("UPDATE propertyType SET nama=@nm, deskripsi=@dscr WHERE idTipe=@id");
+            SqlCommand command = new SqlCommand("UPDATE propertyTipe SET nama=@nm WHERE idTipe=@id");
 
             command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
             command.Parameters.Add("@nm", SqlDbType.VarChar).Value = name;
-            command.Parameters.Add("@dscr", SqlDbType.VarChar).Value = description;
 
             return func.ExecQuery(command);
         }
@@ -49,7 +48,7 @@ namespace TA_RealEstate_Kel11.Classes
         //delete a new type
         public Boolean deleteType(string id)
         {
-            SqlCommand command = new SqlCommand("DELETE FROM propertyType WHERE idTipe=@id");
+            SqlCommand command = new SqlCommand("DELETE FROM propertyTipe WHERE idTipe=@id");
 
             command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
 
