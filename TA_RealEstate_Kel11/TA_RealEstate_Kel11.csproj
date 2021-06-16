@@ -130,6 +130,12 @@
     <Compile Include="LaporanPenyewaan.Designer.cs">
       <DependentUpon>LaporanPenyewaan.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,12 +147,6 @@
     </Compile>
     <Compile Include="MenuKasir.Designer.cs">
       <DependentUpon>MenuKasir.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuManager.cs">
       <SubType>Form</SubType>
@@ -197,14 +197,14 @@
     <EmbeddedResource Include="LaporanPenyewaan.resx">
       <DependentUpon>LaporanPenyewaan.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuAdmin.resx">
       <DependentUpon>MenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuKasir.resx">
       <DependentUpon>MenuKasir.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuManager.resx">
       <DependentUpon>MenuManager.cs</DependentUpon>

@@ -52,7 +52,7 @@
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
@@ -479,7 +479,7 @@
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.charTextBox1);
+            this.panel1.Controls.Add(this.txtNama);
             this.panel1.Controls.Add(this.btnSimpan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 49);
@@ -591,12 +591,12 @@
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // charTextBox1
+            // txtNama
             // 
-            this.charTextBox1.Location = new System.Drawing.Point(187, 91);
-            this.charTextBox1.Name = "charTextBox1";
-            this.charTextBox1.Size = new System.Drawing.Size(190, 20);
-            this.charTextBox1.TabIndex = 139;
+            this.txtNama.Location = new System.Drawing.Point(187, 91);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(190, 20);
+            this.txtNama.TabIndex = 139;
             // 
             // btnSimpan
             // 
@@ -622,6 +622,7 @@
             this.btnSimpan.Size = new System.Drawing.Size(61, 29);
             this.btnSimpan.TabIndex = 140;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -672,6 +673,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FormJabatan";
             this.Text = "FormJabatann";
+            this.Load += new System.EventHandler(this.FormJabatan_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel3.ResumeLayout(false);
@@ -703,7 +705,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private System.Windows.Forms.TextBox txtID;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
-        private CharTextBox charTextBox1;
+        private CharTextBox txtNama;
         private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
