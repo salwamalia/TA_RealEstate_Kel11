@@ -246,7 +246,7 @@
             this.btnExcel.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnExcel.ActiveForecolor = System.Drawing.Color.White;
             this.btnExcel.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.BackColor = System.Drawing.SystemColors.Control;
+            this.btnExcel.BackColor = System.Drawing.Color.Transparent;
             this.btnExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.BackgroundImage")));
             this.btnExcel.ButtonText = "Import to Excel";
             this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -271,7 +271,7 @@
             this.btnPDF.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnPDF.ActiveForecolor = System.Drawing.Color.White;
             this.btnPDF.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPDF.BackColor = System.Drawing.Color.Transparent;
             this.btnPDF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPDF.BackgroundImage")));
             this.btnPDF.ButtonText = "Import to PDF";
             this.btnPDF.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -319,7 +319,6 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "LaporanPenyewaan";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LaporanPenyewaan";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);

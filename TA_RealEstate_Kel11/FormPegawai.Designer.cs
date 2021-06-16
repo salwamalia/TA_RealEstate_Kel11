@@ -35,6 +35,7 @@
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKategoriBayar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,16 +49,13 @@
             this.btnPegawai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtJenisKel = new System.Windows.Forms.TextBox();
-            this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.cbJabatan = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbJenisKel = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -65,6 +63,7 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.cbJabatan = new System.Windows.Forms.ComboBox();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
@@ -108,7 +107,6 @@
             this.btnHapus.Size = new System.Drawing.Size(68, 29);
             this.btnHapus.TabIndex = 143;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // bunifuCustomLabel4
             // 
@@ -145,7 +143,13 @@
             this.btnUpdate.Size = new System.Drawing.Size(68, 29);
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // charTextBox1
+            // 
+            this.charTextBox1.Location = new System.Drawing.Point(247, 67);
+            this.charTextBox1.Name = "charTextBox1";
+            this.charTextBox1.Size = new System.Drawing.Size(209, 20);
+            this.charTextBox1.TabIndex = 139;
             // 
             // btnLogout
             // 
@@ -181,7 +185,6 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Textcolor = System.Drawing.Color.White;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCicilan
             // 
@@ -217,7 +220,6 @@
             this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCicilan.Textcolor = System.Drawing.Color.White;
             this.btnCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCicilan.Click += new System.EventHandler(this.btnCicilan_Click);
             // 
             // btnKategoriBayar
             // 
@@ -253,7 +255,6 @@
             this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKategoriBayar.Textcolor = System.Drawing.Color.White;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKategoriBayar.Click += new System.EventHandler(this.btnKategoriBayar_Click);
             // 
             // btnTipeProperty
             // 
@@ -289,7 +290,6 @@
             this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipeProperty.Textcolor = System.Drawing.Color.White;
             this.btnTipeProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTipeProperty.Click += new System.EventHandler(this.btnTipeProperty_Click);
             // 
             // btnProperty
             // 
@@ -325,7 +325,6 @@
             this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProperty.Textcolor = System.Drawing.Color.White;
             this.btnProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnClient
             // 
@@ -361,7 +360,6 @@
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClient.Textcolor = System.Drawing.Color.White;
             this.btnClient.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPemilik
             // 
@@ -397,7 +395,6 @@
             this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPemilik.Textcolor = System.Drawing.Color.White;
             this.btnPemilik.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPemilik.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -434,7 +431,6 @@
             this.btnBatal.Size = new System.Drawing.Size(67, 29);
             this.btnBatal.TabIndex = 142;
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // txtID
             // 
@@ -477,7 +473,6 @@
             this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPegawai.Textcolor = System.Drawing.Color.White;
             this.btnPegawai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
             // 
             // bunifuGradientPanel3
             // 
@@ -494,20 +489,19 @@
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(857, 440);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(857, 422);
             this.bunifuGradientPanel3.TabIndex = 9;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.txtJenisKel);
-            this.panel1.Controls.Add(this.btnCari);
             this.panel1.Controls.Add(this.cbJabatan);
             this.panel1.Controls.Add(this.bunifuCustomLabel8);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.txtUser);
             this.panel1.Controls.Add(this.bunifuCustomLabel7);
             this.panel1.Controls.Add(this.bunifuCustomLabel6);
+            this.panel1.Controls.Add(this.cbJenisKel);
             this.panel1.Controls.Add(this.bunifuCustomLabel5);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.btnBatal);
@@ -515,58 +509,13 @@
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.txtNama);
+            this.panel1.Controls.Add(this.charTextBox1);
             this.panel1.Controls.Add(this.btnSimpan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(548, 391);
+            this.panel1.Size = new System.Drawing.Size(548, 373);
             this.panel1.TabIndex = 144;
-            // 
-            // txtJenisKel
-            // 
-            this.txtJenisKel.Location = new System.Drawing.Point(247, 113);
-            this.txtJenisKel.Name = "txtJenisKel";
-            this.txtJenisKel.Size = new System.Drawing.Size(209, 20);
-            this.txtJenisKel.TabIndex = 155;
-            // 
-            // btnCari
-            // 
-            this.btnCari.ActiveBorderThickness = 1;
-            this.btnCari.ActiveCornerRadius = 20;
-            this.btnCari.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCari.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.BackColor = System.Drawing.Color.Transparent;
-            this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
-            this.btnCari.ButtonText = "Cari";
-            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.IdleBorderThickness = 1;
-            this.btnCari.IdleCornerRadius = 20;
-            this.btnCari.IdleFillColor = System.Drawing.Color.White;
-            this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.Location = new System.Drawing.Point(474, 21);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(67, 29);
-            this.btnCari.TabIndex = 154;
-            this.btnCari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
-            // 
-            // cbJabatan
-            // 
-            this.cbJabatan.FormattingEnabled = true;
-            this.cbJabatan.Items.AddRange(new object[] {
-            "JBT01",
-            "JBT02",
-            "JBT03"});
-            this.cbJabatan.Location = new System.Drawing.Point(247, 250);
-            this.cbJabatan.Name = "cbJabatan";
-            this.cbJabatan.Size = new System.Drawing.Size(209, 21);
-            this.cbJabatan.TabIndex = 153;
             // 
             // bunifuCustomLabel8
             // 
@@ -615,6 +564,14 @@
             this.bunifuCustomLabel6.Text = "Username";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cbJenisKel
+            // 
+            this.cbJenisKel.FormattingEnabled = true;
+            this.cbJenisKel.Location = new System.Drawing.Point(247, 113);
+            this.cbJenisKel.Name = "cbJenisKel";
+            this.cbJenisKel.Size = new System.Drawing.Size(209, 21);
+            this.cbJenisKel.TabIndex = 147;
+            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -625,13 +582,6 @@
             this.bunifuCustomLabel5.TabIndex = 146;
             this.bunifuCustomLabel5.Text = "Jenis Kelamin";
             this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(247, 67);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(209, 20);
-            this.txtNama.TabIndex = 139;
             // 
             // btnSimpan
             // 
@@ -657,7 +607,6 @@
             this.btnSimpan.Size = new System.Drawing.Size(61, 29);
             this.btnSimpan.TabIndex = 140;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // dgJabatan
             // 
@@ -683,7 +632,7 @@
             this.dgJabatan.Location = new System.Drawing.Point(548, 0);
             this.dgJabatan.Name = "dgJabatan";
             this.dgJabatan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgJabatan.Size = new System.Drawing.Size(309, 440);
+            this.dgJabatan.Size = new System.Drawing.Size(309, 422);
             this.dgJabatan.TabIndex = 0;
             // 
             // btnJabatan
@@ -720,7 +669,6 @@
             this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnJabatan.Textcolor = System.Drawing.Color.White;
             this.btnJabatan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJabatan.Click += new System.EventHandler(this.btnJabatan_Click);
             // 
             // bunifuGradientPanel2
             // 
@@ -743,7 +691,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 440);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 422);
             this.bunifuGradientPanel2.TabIndex = 8;
             // 
             // bunifuTileButton1
@@ -796,18 +744,24 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1045, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
+            // cbJabatan
+            // 
+            this.cbJabatan.FormattingEnabled = true;
+            this.cbJabatan.Location = new System.Drawing.Point(247, 250);
+            this.cbJabatan.Name = "cbJabatan";
+            this.cbJabatan.Size = new System.Drawing.Size(209, 21);
+            this.cbJabatan.TabIndex = 153;
+            // 
             // FormPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1045, 562);
+            this.ClientSize = new System.Drawing.Size(1045, 544);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FormPegawai";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPegawai";
-            this.Load += new System.EventHandler(this.FormPegawai_Load);
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -824,7 +778,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
-        private CharTextBox txtNama;
+        private CharTextBox charTextBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
         private Bunifu.Framework.UI.BunifuFlatButton btnCicilan;
         private Bunifu.Framework.UI.BunifuFlatButton btnKategoriBayar;
@@ -849,10 +803,9 @@
         private System.Windows.Forms.TextBox txtUser;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.ComboBox cbJenisKel;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private System.Windows.Forms.ComboBox cbJabatan;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnCari;
-        private System.Windows.Forms.TextBox txtJenisKel;
     }
 }

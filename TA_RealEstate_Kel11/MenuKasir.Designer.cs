@@ -33,10 +33,10 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -109,75 +109,20 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 328);
             this.bunifuGradientPanel2.TabIndex = 2;
             // 
-            // btnLogout
+            // bunifuGradientPanel3
             // 
-            this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.BorderRadius = 0;
-            this.btnLogout.ButtonText = "Logout";
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
-            this.btnLogout.Iconimage_right = null;
-            this.btnLogout.Iconimage_right_Selected = null;
-            this.btnLogout.Iconimage_Selected = null;
-            this.btnLogout.IconMarginLeft = 0;
-            this.btnLogout.IconMarginRight = 0;
-            this.btnLogout.IconRightVisible = true;
-            this.btnLogout.IconRightZoom = 0D;
-            this.btnLogout.IconVisible = true;
-            this.btnLogout.IconZoom = 90D;
-            this.btnLogout.IsTab = false;
-            this.btnLogout.Location = new System.Drawing.Point(0, 98);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLogout.selected = false;
-            this.btnLogout.Size = new System.Drawing.Size(188, 49);
-            this.btnLogout.TabIndex = 3;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Textcolor = System.Drawing.Color.White;
-            this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnPenyewaan
-            // 
-            this.btnPenyewaan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPenyewaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPenyewaan.BorderRadius = 0;
-            this.btnPenyewaan.ButtonText = "Penyewaan";
-            this.btnPenyewaan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPenyewaan.DisabledColor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPenyewaan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPenyewaan.Iconimage")));
-            this.btnPenyewaan.Iconimage_right = null;
-            this.btnPenyewaan.Iconimage_right_Selected = null;
-            this.btnPenyewaan.Iconimage_Selected = null;
-            this.btnPenyewaan.IconMarginLeft = 0;
-            this.btnPenyewaan.IconMarginRight = 0;
-            this.btnPenyewaan.IconRightVisible = true;
-            this.btnPenyewaan.IconRightZoom = 0D;
-            this.btnPenyewaan.IconVisible = true;
-            this.btnPenyewaan.IconZoom = 90D;
-            this.btnPenyewaan.IsTab = false;
-            this.btnPenyewaan.Location = new System.Drawing.Point(0, 49);
-            this.btnPenyewaan.Name = "btnPenyewaan";
-            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPenyewaan.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPenyewaan.selected = false;
-            this.btnPenyewaan.Size = new System.Drawing.Size(188, 49);
-            this.btnPenyewaan.TabIndex = 2;
-            this.btnPenyewaan.Text = "Penyewaan";
-            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPenyewaan.Textcolor = System.Drawing.Color.White;
-            this.btnPenyewaan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
+            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
+            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
+            this.bunifuGradientPanel3.Quality = 10;
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(612, 328);
+            this.bunifuGradientPanel3.TabIndex = 3;
             // 
             // btnPembelian
             // 
@@ -214,20 +159,75 @@
             this.btnPembelian.Textcolor = System.Drawing.Color.White;
             this.btnPembelian.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuGradientPanel3
+            // btnPenyewaan
             // 
-            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
-            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
-            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
-            this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(612, 328);
-            this.bunifuGradientPanel3.TabIndex = 3;
+            this.btnPenyewaan.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPenyewaan.BorderRadius = 0;
+            this.btnPenyewaan.ButtonText = "Penyewaan";
+            this.btnPenyewaan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPenyewaan.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnPenyewaan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPenyewaan.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPenyewaan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPenyewaan.Iconimage")));
+            this.btnPenyewaan.Iconimage_right = null;
+            this.btnPenyewaan.Iconimage_right_Selected = null;
+            this.btnPenyewaan.Iconimage_Selected = null;
+            this.btnPenyewaan.IconMarginLeft = 0;
+            this.btnPenyewaan.IconMarginRight = 0;
+            this.btnPenyewaan.IconRightVisible = true;
+            this.btnPenyewaan.IconRightZoom = 0D;
+            this.btnPenyewaan.IconVisible = true;
+            this.btnPenyewaan.IconZoom = 90D;
+            this.btnPenyewaan.IsTab = false;
+            this.btnPenyewaan.Location = new System.Drawing.Point(0, 49);
+            this.btnPenyewaan.Name = "btnPenyewaan";
+            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPenyewaan.selected = false;
+            this.btnPenyewaan.Size = new System.Drawing.Size(188, 49);
+            this.btnPenyewaan.TabIndex = 2;
+            this.btnPenyewaan.Text = "Penyewaan";
+            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPenyewaan.Textcolor = System.Drawing.Color.White;
+            this.btnPenyewaan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.BorderRadius = 0;
+            this.btnLogout.ButtonText = "Logout";
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
+            this.btnLogout.Iconimage_right = null;
+            this.btnLogout.Iconimage_right_Selected = null;
+            this.btnLogout.Iconimage_Selected = null;
+            this.btnLogout.IconMarginLeft = 0;
+            this.btnLogout.IconMarginRight = 0;
+            this.btnLogout.IconRightVisible = true;
+            this.btnLogout.IconRightZoom = 0D;
+            this.btnLogout.IconVisible = true;
+            this.btnLogout.IconZoom = 90D;
+            this.btnLogout.IsTab = false;
+            this.btnLogout.Location = new System.Drawing.Point(0, 98);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogout.selected = false;
+            this.btnLogout.Size = new System.Drawing.Size(188, 49);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLogout.Textcolor = System.Drawing.Color.White;
+            this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // MenuKasir
             // 
@@ -238,7 +238,6 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "MenuKasir";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuKasir";
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);

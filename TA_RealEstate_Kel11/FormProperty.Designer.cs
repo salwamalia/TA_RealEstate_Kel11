@@ -49,13 +49,8 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbTipe = new System.Windows.Forms.ComboBox();
-            this.txtUkuran = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -65,6 +60,11 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
+            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtUkuran = new System.Windows.Forms.TextBox();
+            this.cbTipe = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
@@ -565,36 +565,6 @@
             this.panel1.Size = new System.Drawing.Size(550, 427);
             this.panel1.TabIndex = 144;
             // 
-            // cbTipe
-            // 
-            this.cbTipe.FormattingEnabled = true;
-            this.cbTipe.Location = new System.Drawing.Point(271, 112);
-            this.cbTipe.Name = "cbTipe";
-            this.cbTipe.Size = new System.Drawing.Size(160, 21);
-            this.cbTipe.TabIndex = 158;
-            // 
-            // txtUkuran
-            // 
-            this.txtUkuran.Location = new System.Drawing.Point(271, 156);
-            this.txtUkuran.Name = "txtUkuran";
-            this.txtUkuran.Size = new System.Drawing.Size(160, 20);
-            this.txtUkuran.TabIndex = 157;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(271, 237);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 71);
-            this.textBox1.TabIndex = 156;
-            // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(271, 322);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(160, 20);
-            this.numberTextBox1.TabIndex = 155;
-            // 
             // bunifuCustomLabel9
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
@@ -616,17 +586,6 @@
             this.bunifuCustomLabel8.TabIndex = 153;
             this.bunifuCustomLabel8.Text = "Gambar";
             this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(128, 232);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(69, 26);
-            this.bunifuCustomLabel7.TabIndex = 152;
-            this.bunifuCustomLabel7.Text = "Fasilitas";
-            this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomLabel6
             // 
@@ -765,6 +724,47 @@
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 1;
             // 
+            // numberTextBox1
+            // 
+            this.numberTextBox1.Location = new System.Drawing.Point(271, 322);
+            this.numberTextBox1.Name = "numberTextBox1";
+            this.numberTextBox1.Size = new System.Drawing.Size(160, 20);
+            this.numberTextBox1.TabIndex = 155;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(128, 232);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(69, 26);
+            this.bunifuCustomLabel7.TabIndex = 152;
+            this.bunifuCustomLabel7.Text = "Fasilitas";
+            this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(271, 237);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(160, 71);
+            this.textBox1.TabIndex = 156;
+            // 
+            // txtUkuran
+            // 
+            this.txtUkuran.Location = new System.Drawing.Point(271, 156);
+            this.txtUkuran.Name = "txtUkuran";
+            this.txtUkuran.Size = new System.Drawing.Size(160, 20);
+            this.txtUkuran.TabIndex = 157;
+            // 
+            // cbTipe
+            // 
+            this.cbTipe.FormattingEnabled = true;
+            this.cbTipe.Location = new System.Drawing.Point(271, 112);
+            this.cbTipe.Name = "cbTipe";
+            this.cbTipe.Size = new System.Drawing.Size(160, 21);
+            this.cbTipe.TabIndex = 158;
+            // 
             // FormProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -774,7 +774,6 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FormProperty";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProperty";
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -34,21 +34,20 @@
             this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.cbJenisKel = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtID = new System.Windows.Forms.TextBox();
-            this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
+            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbJenisKel = new System.Windows.Forms.ComboBox();
+            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
+            this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPegawai = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -63,6 +62,7 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
@@ -133,151 +133,37 @@
             this.panel1.Size = new System.Drawing.Size(613, 419);
             this.panel1.TabIndex = 147;
             // 
-            // textBox1
+            // btnSimpan
             // 
-            this.textBox1.Location = new System.Drawing.Point(278, 235);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 76);
-            this.textBox1.TabIndex = 150;
+            this.btnSimpan.ActiveBorderThickness = 1;
+            this.btnSimpan.ActiveCornerRadius = 20;
+            this.btnSimpan.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSimpan.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.BackColor = System.Drawing.Color.Transparent;
+            this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
+            this.btnSimpan.ButtonText = "Simpan";
+            this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.IdleBorderThickness = 1;
+            this.btnSimpan.IdleCornerRadius = 20;
+            this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
+            this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.Location = new System.Drawing.Point(123, 332);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(61, 29);
+            this.btnSimpan.TabIndex = 140;
+            this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // bunifuCustomLabel8
+            // charTextBox1
             // 
-            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(128, 229);
-            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
-            this.bunifuCustomLabel8.Size = new System.Drawing.Size(84, 26);
-            this.bunifuCustomLabel8.TabIndex = 149;
-            this.bunifuCustomLabel8.Text = "Alamat";
-            this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel7
-            // 
-            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(128, 195);
-            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
-            this.bunifuCustomLabel7.Size = new System.Drawing.Size(72, 26);
-            this.bunifuCustomLabel7.TabIndex = 148;
-            this.bunifuCustomLabel7.Text = "Email";
-            this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel6
-            // 
-            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(128, 153);
-            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(84, 26);
-            this.bunifuCustomLabel6.TabIndex = 147;
-            this.bunifuCustomLabel6.Text = "Telepon";
-            this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(278, 159);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(181, 20);
-            this.numberTextBox1.TabIndex = 146;
-            // 
-            // cbJenisKel
-            // 
-            this.cbJenisKel.FormattingEnabled = true;
-            this.cbJenisKel.Location = new System.Drawing.Point(278, 116);
-            this.cbJenisKel.Name = "cbJenisKel";
-            this.cbJenisKel.Size = new System.Drawing.Size(181, 21);
-            this.cbJenisKel.TabIndex = 145;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(128, 111);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(111, 26);
-            this.bunifuCustomLabel5.TabIndex = 144;
-            this.bunifuCustomLabel5.Text = "Jenis Kelamin";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel3
-            // 
-            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(128, 23);
-            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
-            this.bunifuCustomLabel3.Size = new System.Drawing.Size(84, 26);
-            this.bunifuCustomLabel3.TabIndex = 136;
-            this.bunifuCustomLabel3.Text = "ID Pemilik";
-            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnBatal
-            // 
-            this.btnBatal.ActiveBorderThickness = 1;
-            this.btnBatal.ActiveCornerRadius = 20;
-            this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
-            this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
-            this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
-            this.btnBatal.ButtonText = "Batal";
-            this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.IdleBorderThickness = 1;
-            this.btnBatal.IdleCornerRadius = 20;
-            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
-            this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(392, 332);
-            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(67, 29);
-            this.btnBatal.TabIndex = 142;
-            this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(278, 29);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(181, 20);
-            this.txtID.TabIndex = 138;
-            // 
-            // btnHapus
-            // 
-            this.btnHapus.ActiveBorderThickness = 1;
-            this.btnHapus.ActiveCornerRadius = 20;
-            this.btnHapus.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.ActiveForecolor = System.Drawing.Color.White;
-            this.btnHapus.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.BackColor = System.Drawing.Color.Transparent;
-            this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
-            this.btnHapus.ButtonText = "Hapus";
-            this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.IdleBorderThickness = 1;
-            this.btnHapus.IdleCornerRadius = 20;
-            this.btnHapus.IdleFillColor = System.Drawing.Color.White;
-            this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(300, 332);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(68, 29);
-            this.btnHapus.TabIndex = 143;
-            this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(128, 65);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(64, 26);
-            this.bunifuCustomLabel4.TabIndex = 137;
-            this.bunifuCustomLabel4.Text = "Nama";
-            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.charTextBox1.Location = new System.Drawing.Point(278, 71);
+            this.charTextBox1.Name = "charTextBox1";
+            this.charTextBox1.Size = new System.Drawing.Size(181, 20);
+            this.charTextBox1.TabIndex = 139;
             // 
             // btnUpdate
             // 
@@ -304,37 +190,143 @@
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // charTextBox1
+            // bunifuCustomLabel4
             // 
-            this.charTextBox1.Location = new System.Drawing.Point(278, 71);
-            this.charTextBox1.Name = "charTextBox1";
-            this.charTextBox1.Size = new System.Drawing.Size(181, 20);
-            this.charTextBox1.TabIndex = 139;
+            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(128, 65);
+            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
+            this.bunifuCustomLabel4.Size = new System.Drawing.Size(64, 26);
+            this.bunifuCustomLabel4.TabIndex = 137;
+            this.bunifuCustomLabel4.Text = "Nama";
+            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnSimpan
+            // btnHapus
             // 
-            this.btnSimpan.ActiveBorderThickness = 1;
-            this.btnSimpan.ActiveCornerRadius = 20;
-            this.btnSimpan.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.ActiveForecolor = System.Drawing.Color.White;
-            this.btnSimpan.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.BackColor = System.Drawing.Color.Transparent;
-            this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
-            this.btnSimpan.ButtonText = "Simpan";
-            this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.IdleBorderThickness = 1;
-            this.btnSimpan.IdleCornerRadius = 20;
-            this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
-            this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(123, 332);
-            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(61, 29);
-            this.btnSimpan.TabIndex = 140;
-            this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHapus.ActiveBorderThickness = 1;
+            this.btnHapus.ActiveCornerRadius = 20;
+            this.btnHapus.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.ActiveForecolor = System.Drawing.Color.White;
+            this.btnHapus.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.BackColor = System.Drawing.Color.Transparent;
+            this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
+            this.btnHapus.ButtonText = "Hapus";
+            this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.IdleBorderThickness = 1;
+            this.btnHapus.IdleCornerRadius = 20;
+            this.btnHapus.IdleFillColor = System.Drawing.Color.White;
+            this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.Location = new System.Drawing.Point(300, 332);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(68, 29);
+            this.btnHapus.TabIndex = 143;
+            this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(278, 29);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(181, 20);
+            this.txtID.TabIndex = 138;
+            // 
+            // btnBatal
+            // 
+            this.btnBatal.ActiveBorderThickness = 1;
+            this.btnBatal.ActiveCornerRadius = 20;
+            this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
+            this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.BackColor = System.Drawing.Color.Transparent;
+            this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
+            this.btnBatal.ButtonText = "Batal";
+            this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.IdleBorderThickness = 1;
+            this.btnBatal.IdleCornerRadius = 20;
+            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
+            this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.Location = new System.Drawing.Point(392, 332);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(67, 29);
+            this.btnBatal.TabIndex = 142;
+            this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel3
+            // 
+            this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(128, 23);
+            this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
+            this.bunifuCustomLabel3.Size = new System.Drawing.Size(84, 26);
+            this.bunifuCustomLabel3.TabIndex = 136;
+            this.bunifuCustomLabel3.Text = "ID Pemilik";
+            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel5
+            // 
+            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(128, 111);
+            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
+            this.bunifuCustomLabel5.Size = new System.Drawing.Size(111, 26);
+            this.bunifuCustomLabel5.TabIndex = 144;
+            this.bunifuCustomLabel5.Text = "Jenis Kelamin";
+            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbJenisKel
+            // 
+            this.cbJenisKel.FormattingEnabled = true;
+            this.cbJenisKel.Location = new System.Drawing.Point(278, 116);
+            this.cbJenisKel.Name = "cbJenisKel";
+            this.cbJenisKel.Size = new System.Drawing.Size(181, 21);
+            this.cbJenisKel.TabIndex = 145;
+            // 
+            // numberTextBox1
+            // 
+            this.numberTextBox1.Location = new System.Drawing.Point(278, 159);
+            this.numberTextBox1.Name = "numberTextBox1";
+            this.numberTextBox1.Size = new System.Drawing.Size(181, 20);
+            this.numberTextBox1.TabIndex = 146;
+            // 
+            // bunifuCustomLabel6
+            // 
+            this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(128, 153);
+            this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(84, 26);
+            this.bunifuCustomLabel6.TabIndex = 147;
+            this.bunifuCustomLabel6.Text = "Telepon";
+            this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(128, 195);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(72, 26);
+            this.bunifuCustomLabel7.TabIndex = 148;
+            this.bunifuCustomLabel7.Text = "Email";
+            this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuCustomLabel8
+            // 
+            this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(128, 229);
+            this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
+            this.bunifuCustomLabel8.Size = new System.Drawing.Size(84, 26);
+            this.bunifuCustomLabel8.TabIndex = 149;
+            this.bunifuCustomLabel8.Text = "Alamat";
+            this.bunifuCustomLabel8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuGradientPanel3
             // 
@@ -744,6 +736,14 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1110, 122);
             this.bunifuGradientPanel1.TabIndex = 8;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(278, 235);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(181, 76);
+            this.textBox1.TabIndex = 150;
+            // 
             // FormPemilik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -753,7 +753,6 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Name = "FormPemilik";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPemilik";
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -28,13 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPropertyTipe));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -50,10 +49,7 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.DataGridViewTipe = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
@@ -62,7 +58,6 @@
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewTipe)).BeginInit();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -70,19 +65,19 @@
             // 
             // dgJabatan
             // 
-            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgJabatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgJabatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgJabatan.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgJabatan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgJabatan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgJabatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgJabatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgJabatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgJabatan.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgJabatan.DoubleBuffered = true;
@@ -92,7 +87,7 @@
             this.dgJabatan.Location = new System.Drawing.Point(518, 0);
             this.dgJabatan.Name = "dgJabatan";
             this.dgJabatan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgJabatan.Size = new System.Drawing.Size(309, 441);
+            this.dgJabatan.Size = new System.Drawing.Size(309, 470);
             this.dgJabatan.TabIndex = 0;
             // 
             // btnUpdate
@@ -119,7 +114,13 @@
             this.btnUpdate.Size = new System.Drawing.Size(68, 29);
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // charTextBox1
+            // 
+            this.charTextBox1.Location = new System.Drawing.Point(188, 91);
+            this.charTextBox1.Name = "charTextBox1";
+            this.charTextBox1.Size = new System.Drawing.Size(215, 20);
+            this.charTextBox1.TabIndex = 139;
             // 
             // btnSimpan
             // 
@@ -145,7 +146,6 @@
             this.btnSimpan.Size = new System.Drawing.Size(61, 29);
             this.btnSimpan.TabIndex = 140;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
             // 
             // btnLogout
             // 
@@ -181,7 +181,6 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Textcolor = System.Drawing.Color.White;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCicilan
             // 
@@ -217,7 +216,6 @@
             this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCicilan.Textcolor = System.Drawing.Color.White;
             this.btnCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCicilan.Click += new System.EventHandler(this.btnCicilan_Click);
             // 
             // btnKategoriBayar
             // 
@@ -253,7 +251,6 @@
             this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKategoriBayar.Textcolor = System.Drawing.Color.White;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKategoriBayar.Click += new System.EventHandler(this.btnKategoriBayar_Click);
             // 
             // btnTipeProperty
             // 
@@ -289,7 +286,6 @@
             this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipeProperty.Textcolor = System.Drawing.Color.White;
             this.btnTipeProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTipeProperty.Click += new System.EventHandler(this.btnTipeProperty_Click);
             // 
             // btnProperty
             // 
@@ -325,7 +321,6 @@
             this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProperty.Textcolor = System.Drawing.Color.White;
             this.btnProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnClient
             // 
@@ -361,7 +356,6 @@
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClient.Textcolor = System.Drawing.Color.White;
             this.btnClient.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPemilik
             // 
@@ -397,7 +391,6 @@
             this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPemilik.Textcolor = System.Drawing.Color.White;
             this.btnPemilik.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPemilik.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // btnPegawai
             // 
@@ -433,7 +426,6 @@
             this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPegawai.Textcolor = System.Drawing.Color.White;
             this.btnPegawai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
             // 
             // btnBatal
             // 
@@ -459,7 +451,6 @@
             this.btnBatal.Size = new System.Drawing.Size(67, 29);
             this.btnBatal.TabIndex = 142;
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
             // txtID
             // 
@@ -492,7 +483,6 @@
             this.btnHapus.Size = new System.Drawing.Size(68, 29);
             this.btnHapus.TabIndex = 143;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // bunifuCustomLabel4
             // 
@@ -539,78 +529,23 @@
             this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnJabatan.Textcolor = System.Drawing.Color.White;
             this.btnJabatan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnJabatan.Click += new System.EventHandler(this.btnJabatan_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.DataGridViewTipe);
-            this.panel1.Controls.Add(this.btnCari);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.btnBatal);
             this.panel1.Controls.Add(this.txtID);
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.txtNama);
+            this.panel1.Controls.Add(this.charTextBox1);
             this.panel1.Controls.Add(this.btnSimpan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(518, 392);
+            this.panel1.Size = new System.Drawing.Size(518, 421);
             this.panel1.TabIndex = 144;
-            // 
-            // DataGridViewTipe
-            // 
-            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridViewTipe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle35;
-            this.DataGridViewTipe.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.DataGridViewTipe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewTipe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle36.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle36.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewTipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle36;
-            this.DataGridViewTipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewTipe.DoubleBuffered = true;
-            this.DataGridViewTipe.EnableHeadersVisualStyles = false;
-            this.DataGridViewTipe.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.DataGridViewTipe.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.DataGridViewTipe.Location = new System.Drawing.Point(131, 193);
-            this.DataGridViewTipe.Name = "DataGridViewTipe";
-            this.DataGridViewTipe.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridViewTipe.Size = new System.Drawing.Size(242, 150);
-            this.DataGridViewTipe.TabIndex = 145;
-            // 
-            // btnCari
-            // 
-            this.btnCari.ActiveBorderThickness = 1;
-            this.btnCari.ActiveCornerRadius = 20;
-            this.btnCari.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCari.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.BackColor = System.Drawing.Color.Transparent;
-            this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
-            this.btnCari.ButtonText = "Cari";
-            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.IdleBorderThickness = 1;
-            this.btnCari.IdleCornerRadius = 20;
-            this.btnCari.IdleFillColor = System.Drawing.Color.White;
-            this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.Location = new System.Drawing.Point(420, 45);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(67, 29);
-            this.btnCari.TabIndex = 144;
-            this.btnCari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -622,13 +557,6 @@
             this.bunifuCustomLabel3.TabIndex = 136;
             this.bunifuCustomLabel3.Text = "ID Tipe";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(188, 91);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(215, 20);
-            this.txtNama.TabIndex = 139;
             // 
             // bunifuGradientPanel3
             // 
@@ -645,7 +573,7 @@
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(827, 441);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(827, 470);
             this.bunifuGradientPanel3.TabIndex = 9;
             // 
             // bunifuCustomLabel2
@@ -681,7 +609,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 441);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 470);
             this.bunifuGradientPanel2.TabIndex = 8;
             // 
             // bunifuTileButton1
@@ -738,19 +666,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 563);
+            this.ClientSize = new System.Drawing.Size(1015, 592);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.MaximizeBox = false;
             this.Name = "FormPropertyTipe";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPropertyTipe";
-            this.Load += new System.EventHandler(this.FormPropertyTipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewTipe)).EndInit();
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
@@ -762,7 +686,7 @@
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgJabatan;
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
-        private CharTextBox txtNama;
+        private CharTextBox charTextBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
         private Bunifu.Framework.UI.BunifuFlatButton btnCicilan;
@@ -785,7 +709,5 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnCari;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid DataGridViewTipe;
     }
 }
