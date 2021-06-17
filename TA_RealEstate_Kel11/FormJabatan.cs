@@ -24,8 +24,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -56,8 +56,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InputJabatan", myConnection);
@@ -98,8 +98,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -131,7 +131,8 @@ namespace TA_RealEstate_Kel11
         {
             if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
 
                 //delete command
@@ -167,8 +168,8 @@ namespace TA_RealEstate_Kel11
 
             try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 

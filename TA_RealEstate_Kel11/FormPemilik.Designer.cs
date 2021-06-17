@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPemilik));
-            this.dgPemilik = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbPerempuan = new System.Windows.Forms.RadioButton();
+            this.rbLaki = new System.Windows.Forms.RadioButton();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -43,6 +45,7 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -50,6 +53,7 @@
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -65,47 +69,17 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.rbLaki = new System.Windows.Forms.RadioButton();
-            this.rbPerempuan = new System.Windows.Forms.RadioButton();
-            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).BeginInit();
+            this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.dgPemilik = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
+            this.bunifuGradientPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgPemilik
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgPemilik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgPemilik.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgPemilik.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgPemilik.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgPemilik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgPemilik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPemilik.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgPemilik.DoubleBuffered = true;
-            this.dgPemilik.EnableHeadersVisualStyles = false;
-            this.dgPemilik.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgPemilik.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dgPemilik.Location = new System.Drawing.Point(613, 0);
-            this.dgPemilik.Name = "dgPemilik";
-            this.dgPemilik.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgPemilik.Size = new System.Drawing.Size(309, 528);
-            this.dgPemilik.TabIndex = 145;
-            this.dgPemilik.Click += new System.EventHandler(this.dgPemilik_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -114,7 +88,7 @@
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(0, 0);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(613, 49);
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(922, 49);
             this.bunifuCustomLabel2.TabIndex = 146;
             this.bunifuCustomLabel2.Text = "Pemilik";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,6 +96,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.bunifuGradientPanel5);
             this.panel1.Controls.Add(this.rbPerempuan);
             this.panel1.Controls.Add(this.rbLaki);
             this.panel1.Controls.Add(this.txtEmail);
@@ -143,8 +118,37 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 49);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(613, 479);
+            this.panel1.Size = new System.Drawing.Size(922, 564);
             this.panel1.TabIndex = 147;
+            // 
+            // rbPerempuan
+            // 
+            this.rbPerempuan.AutoSize = true;
+            this.rbPerempuan.Location = new System.Drawing.Point(290, 203);
+            this.rbPerempuan.Name = "rbPerempuan";
+            this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
+            this.rbPerempuan.TabIndex = 155;
+            this.rbPerempuan.TabStop = true;
+            this.rbPerempuan.Text = "Perempuan";
+            this.rbPerempuan.UseVisualStyleBackColor = true;
+            // 
+            // rbLaki
+            // 
+            this.rbLaki.AutoSize = true;
+            this.rbLaki.Location = new System.Drawing.Point(198, 203);
+            this.rbLaki.Name = "rbLaki";
+            this.rbLaki.Size = new System.Drawing.Size(64, 17);
+            this.rbLaki.TabIndex = 154;
+            this.rbLaki.TabStop = true;
+            this.rbLaki.Text = "Laki-laki";
+            this.rbLaki.UseVisualStyleBackColor = true;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(638, 155);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(181, 20);
+            this.txtEmail.TabIndex = 153;
             // 
             // bunifuGradientPanel4
             // 
@@ -159,7 +163,7 @@
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(613, 92);
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(922, 92);
             this.bunifuGradientPanel4.TabIndex = 152;
             // 
             // groupBox1
@@ -170,7 +174,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 92);
+            this.groupBox1.Size = new System.Drawing.Size(922, 92);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cari Pemilik";
@@ -221,7 +225,7 @@
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(289, 316);
+            this.txtAlamat.Location = new System.Drawing.Point(638, 192);
             this.txtAlamat.Multiline = true;
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(181, 76);
@@ -231,7 +235,7 @@
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(139, 310);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(488, 186);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel8.TabIndex = 149;
@@ -242,7 +246,7 @@
             // 
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(139, 276);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(488, 152);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(72, 26);
             this.bunifuCustomLabel7.TabIndex = 148;
@@ -253,18 +257,25 @@
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(139, 234);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(488, 110);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel6.TabIndex = 147;
             this.bunifuCustomLabel6.Text = "Telepon";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtTelepon
+            // 
+            this.txtTelepon.Location = new System.Drawing.Point(638, 116);
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
+            this.txtTelepon.TabIndex = 146;
+            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(139, 192);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(48, 198);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(111, 26);
             this.bunifuCustomLabel5.TabIndex = 144;
@@ -275,7 +286,7 @@
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(139, 104);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(48, 110);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel3.TabIndex = 136;
@@ -300,7 +311,7 @@
             this.btnBatal.IdleFillColor = System.Drawing.Color.White;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(403, 413);
+            this.btnBatal.Location = new System.Drawing.Point(562, 283);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(67, 29);
@@ -310,7 +321,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(289, 110);
+            this.txtID.Location = new System.Drawing.Point(198, 116);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(181, 20);
             this.txtID.TabIndex = 138;
@@ -333,19 +344,18 @@
             this.btnHapus.IdleFillColor = System.Drawing.Color.White;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(311, 413);
+            this.btnHapus.Location = new System.Drawing.Point(470, 283);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(68, 29);
             this.btnHapus.TabIndex = 143;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
             // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(139, 146);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(48, 152);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(64, 26);
             this.bunifuCustomLabel4.TabIndex = 137;
@@ -370,13 +380,19 @@
             this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(219, 413);
+            this.btnUpdate.Location = new System.Drawing.Point(378, 283);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(68, 29);
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(198, 158);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(181, 20);
+            this.txtNama.TabIndex = 139;
             // 
             // btnSimpan
             // 
@@ -396,7 +412,7 @@
             this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(134, 413);
+            this.btnSimpan.Location = new System.Drawing.Point(293, 283);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(61, 29);
@@ -411,7 +427,6 @@
             this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel3.Controls.Add(this.panel1);
             this.bunifuGradientPanel3.Controls.Add(this.bunifuCustomLabel2);
-            this.bunifuGradientPanel3.Controls.Add(this.dgPemilik);
             this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
@@ -420,7 +435,7 @@
             this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
             this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
             this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(922, 528);
+            this.bunifuGradientPanel3.Size = new System.Drawing.Size(922, 613);
             this.bunifuGradientPanel3.TabIndex = 10;
             // 
             // btnJabatan
@@ -759,7 +774,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 528);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 613);
             this.bunifuGradientPanel2.TabIndex = 9;
             // 
             // bunifuCustomLabel1
@@ -812,63 +827,61 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1110, 122);
             this.bunifuGradientPanel1.TabIndex = 8;
             // 
-            // txtEmail
+            // bunifuGradientPanel5
             // 
-            this.txtEmail.Location = new System.Drawing.Point(289, 279);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(181, 20);
-            this.txtEmail.TabIndex = 153;
+            this.bunifuGradientPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel5.BackgroundImage")));
+            this.bunifuGradientPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel5.Controls.Add(this.dgPemilik);
+            this.bunifuGradientPanel5.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.bunifuGradientPanel5.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel5.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel5.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel5.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel5.Location = new System.Drawing.Point(0, 349);
+            this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
+            this.bunifuGradientPanel5.Quality = 10;
+            this.bunifuGradientPanel5.Size = new System.Drawing.Size(922, 215);
+            this.bunifuGradientPanel5.TabIndex = 156;
             // 
-            // rbLaki
+            // dgPemilik
             // 
-            this.rbLaki.AutoSize = true;
-            this.rbLaki.Location = new System.Drawing.Point(289, 197);
-            this.rbLaki.Name = "rbLaki";
-            this.rbLaki.Size = new System.Drawing.Size(64, 17);
-            this.rbLaki.TabIndex = 154;
-            this.rbLaki.TabStop = true;
-            this.rbLaki.Text = "Laki-laki";
-            this.rbLaki.UseVisualStyleBackColor = true;
-            // 
-            // rbPerempuan
-            // 
-            this.rbPerempuan.AutoSize = true;
-            this.rbPerempuan.Location = new System.Drawing.Point(381, 197);
-            this.rbPerempuan.Name = "rbPerempuan";
-            this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
-            this.rbPerempuan.TabIndex = 155;
-            this.rbPerempuan.TabStop = true;
-            this.rbPerempuan.Text = "Perempuan";
-            this.rbPerempuan.UseVisualStyleBackColor = true;
-            // 
-            // txtTelepon
-            // 
-            this.txtTelepon.Location = new System.Drawing.Point(289, 240);
-            this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
-            this.txtTelepon.TabIndex = 146;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(289, 152);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(181, 20);
-            this.txtNama.TabIndex = 139;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgPemilik.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgPemilik.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgPemilik.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPemilik.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgPemilik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgPemilik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPemilik.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgPemilik.DoubleBuffered = true;
+            this.dgPemilik.EnableHeadersVisualStyles = false;
+            this.dgPemilik.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgPemilik.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgPemilik.Location = new System.Drawing.Point(0, 0);
+            this.dgPemilik.Name = "dgPemilik";
+            this.dgPemilik.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgPemilik.Size = new System.Drawing.Size(922, 215);
+            this.dgPemilik.TabIndex = 146;
             // 
             // FormPemilik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1110, 650);
+            this.ClientSize = new System.Drawing.Size(1110, 735);
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.MaximizeBox = false;
             this.Name = "FormPemilik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPemilik";
             this.Load += new System.EventHandler(this.FormPemilik_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.bunifuGradientPanel4.ResumeLayout(false);
@@ -877,13 +890,13 @@
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgPemilik;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
@@ -922,5 +935,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.RadioButton rbPerempuan;
         private System.Windows.Forms.RadioButton rbLaki;
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel5;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgPemilik;
     }
 }

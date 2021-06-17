@@ -25,7 +25,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -66,7 +67,8 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertPemilik", myConnection);
@@ -107,16 +109,6 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHapus_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
@@ -131,8 +123,8 @@ namespace TA_RealEstate_Kel11
 
             try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -172,7 +164,7 @@ namespace TA_RealEstate_Kel11
         private void FormPemilik_Load(object sender, EventArgs e)
         {
             txtID.Text = IDOtomatis();
-            //LoadData();
+            LoadData();
         }
 
         private void clear()
