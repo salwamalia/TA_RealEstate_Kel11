@@ -22,6 +22,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Connection.Open();
             if (txtUser.Text == "" || txtPass.Text == "")
             {
                 MessageBox.Show("Silahkan Masukkan Username atau Password Terlebih Dahulu!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -60,6 +61,7 @@ namespace TA_RealEstate_Kel11
                     MessageBox.Show("Username atau Password salah", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+            Connection.Close();
         }
 
         private void btnKeluar_Click(object sender, EventArgs e)

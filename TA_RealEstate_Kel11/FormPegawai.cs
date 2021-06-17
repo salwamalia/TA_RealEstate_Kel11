@@ -18,13 +18,12 @@ namespace TA_RealEstate_Kel11
             InitializeComponent();
         }
 
-        REALESTATEDataContext dc = new REALESTATEDataContext();
         private string IDOtomatis()
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -53,18 +52,142 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        void LoadData()
+        private void btnSimpan_Click(object sender, EventArgs e)
         {
-            var st = from tb in dc.pegawais select tb;
-            dgPegawai.DataSource = st;
+            string jeniskelamin = null;
+            if (rbLaki.Checked)
+            {
+                jeniskelamin = rbLaki.Text;
+            }
+            if (rbPerempuan.Checked)
+            {
+                jeniskelamin = rbPerempuan.Text;
+            }
+
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
+            SqlCommand insert = new SqlCommand("sp_InsertPegawai", myConnection);
+            insert.CommandType = CommandType.StoredProcedure;
+
+            insert.Parameters.AddWithValue("idPegawai", txtID.Text);
+            insert.Parameters.AddWithValue("nama", txtNama.Text);
+            insert.Parameters.AddWithValue("jeniskelamin", jeniskelamin);
+            insert.Parameters.AddWithValue("username", txtUser.Text);
+            insert.Parameters.AddWithValue("password", txtPass.Text);
+            insert.Parameters.AddWithValue("idjabatan", cbJabatan.SelectedItem.ToString());
+
+            if (txtID.Text == "" || txtNama.Text == "" || jeniskelamin == "" || txtUser.Text == "" || txtPass.Text == "" || cbJabatan.Text == "")
+            {
+                MessageBox.Show("Data tersebut Harus diisi !!", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    myConnection.Open();
+                    insert.ExecuteNonQuery();
+                    MessageBox.Show("Pegawai Telah Ditambahkan", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to save " + ex.Message);
+                }
+            }
+
+            txtID.Text = IDOtomatis();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string jeniskelamin = null;
+            if (rbLaki.Checked)
+            {
+                jeniskelamin = rbLaki.Text;
+            }
+            if (rbPerempuan.Checked)
+            {
+                jeniskelamin = rbPerempuan.Text;
+            }
+
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
+            //Update command
+            SqlCommand Update = new SqlCommand("sp_UpdatePegawai", myConnection);
+            Update.CommandType = CommandType.StoredProcedure;
+
+            Update.Parameters.AddWithValue("idPegawai", txtID.Text);
+            Update.Parameters.AddWithValue("nama", txtNama.Text);
+            Update.Parameters.AddWithValue("jeniskelamin", jeniskelamin);
+            Update.Parameters.AddWithValue("username", txtUser.Text);
+            Update.Parameters.AddWithValue("password", txtPass.Text);
+            Update.Parameters.AddWithValue("idJabatan", cbJabatan.SelectedItem.ToString());
+
+            try
+            {
+                myConnection.Open();
+                Update.ExecuteNonQuery();
+                MessageBox.Show("Update Pegawai Succesfully", "Update Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Unable to save " + ex.Message);
+            }
+
+            txtID.Text = IDOtomatis();
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
+            if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                //delete command
+                SqlCommand delete = new SqlCommand("sp_DeletePegawai", myConnection);
+                delete.CommandType = CommandType.StoredProcedure;
+
+                delete.Parameters.AddWithValue("idPegawai", txtID.Text);
+
+                try
+                {
+                    myConnection.Open();
+                    delete.ExecuteNonQuery();
+                    MessageBox.Show("Delete Pegawai Succesfully", "Delete Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to save " + ex.Message);
+                }
+            }
+
+            txtID.Text = IDOtomatis();
         }
 
         private void btnCariPegawai_Click(object sender, EventArgs e)
         {
+            string jeniskelamin = null;
+            if (rbLaki.Checked)
+            {
+                jeniskelamin = rbLaki.Text;
+            }
+            if (rbPerempuan.Checked)
+            {
+                jeniskelamin = rbPerempuan.Text;
+            }
+
             try
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -74,8 +197,9 @@ namespace TA_RealEstate_Kel11
 
                 da.Fill(dt);
 
+                txtID.Text = dt.Rows[0]["idPegawai"].ToString();
                 txtNama.Text = dt.Rows[0]["nama"].ToString();
-                txtJenisKel.Text = dt.Rows[0]["jeniskelamin"].ToString();
+                jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
                 txtUser.Text = dt.Rows[0]["username"].ToString();
                 txtPass.Text = dt.Rows[0]["password"].ToString();
                 cbJabatan.SelectedItem = dt.Rows[0]["idJabatan"].ToString();
@@ -84,7 +208,7 @@ namespace TA_RealEstate_Kel11
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error ! " + ex.Message);
+                MessageBox.Show("Error Pegawai Tidak Ditemukan! " + ex);
             }
         }
 
@@ -97,16 +221,16 @@ namespace TA_RealEstate_Kel11
         {
             txtID.Clear();
             txtNama.Clear();
-            txtJenisKel.Clear();
             txtUser.Clear();
             txtPass.Clear();
             cbJabatan.SelectedIndex = -1;
+            rbLaki.Checked = false;
+            rbPerempuan.Checked = false;
         }
 
         private void FormPegawai_Load(object sender, EventArgs e)
         {
             txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnJabatan_Click(object sender, EventArgs e)
@@ -170,106 +294,6 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
-        }
-
-        private void btnSimpan_Click_1(object sender, EventArgs e)
-        {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
-
-            SqlCommand insert = new SqlCommand("sp_InsertPegawai", myConnection);
-            insert.CommandType = CommandType.StoredProcedure;
-
-            insert.Parameters.AddWithValue("idPegawai", txtID.Text);
-            insert.Parameters.AddWithValue("nama", txtNama.Text);
-            insert.Parameters.AddWithValue("jeniskelamin", txtJenisKel.Text);
-            insert.Parameters.AddWithValue("username", txtUser.Text);
-            insert.Parameters.AddWithValue("password", txtPass.Text);
-            insert.Parameters.AddWithValue("idjabatan", cbJabatan.SelectedItem.ToString());
-
-            if (txtID.Text == "" || txtNama.Text == "" || txtJenisKel.Text == "" || txtUser.Text == "" || txtPass.Text == "" || cbJabatan.Text == "")
-            {
-                MessageBox.Show("Data tersebut Harus diisi !!", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                try
-                {
-                    myConnection.Open();
-                    insert.ExecuteNonQuery();
-                    MessageBox.Show("Pegawai Telah Ditambahkan", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Unable to save " + ex.Message);
-                }
-            }
-
-            txtID.Text = IDOtomatis();
-        }
-
-        private void btnUpdate_Click_1(object sender, EventArgs e)
-        {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
-
-            //Update command
-            SqlCommand Update = new SqlCommand("sp_UpdatePegawai", myConnection);
-            Update.CommandType = CommandType.StoredProcedure;
-
-            Update.Parameters.AddWithValue("idPegawai", txtID.Text);
-            Update.Parameters.AddWithValue("nama", txtNama.Text);
-            Update.Parameters.AddWithValue("jeniskelamin", txtJenisKel.Text);
-            Update.Parameters.AddWithValue("username", txtUser.Text);
-            Update.Parameters.AddWithValue("password", txtPass.Text);
-            Update.Parameters.AddWithValue("idJabatan", cbJabatan.SelectedItem.ToString());
-
-            try
-            {
-                myConnection.Open();
-                Update.ExecuteNonQuery();
-                MessageBox.Show("Update Pegawai Succesfully", "Update Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Unable to save " + ex.Message);
-            }
-
-            txtID.Text = IDOtomatis();
-        }
-
-        private void btnHapus_Click_1(object sender, EventArgs e)
-        {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
-
-            if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            {
-                //delete command
-                SqlCommand delete = new SqlCommand("sp_DeletePegawai", myConnection);
-                delete.CommandType = CommandType.StoredProcedure;
-
-                delete.Parameters.AddWithValue("idPegawai", txtID.Text);
-
-                try
-                {
-                    myConnection.Open();
-                    delete.ExecuteNonQuery();
-                    MessageBox.Show("Delete Pegawai Succesfully", "Delete Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Unable to save " + ex.Message);
-                }
-            }
-
-            txtID.Text = IDOtomatis();
         }
     }
 }

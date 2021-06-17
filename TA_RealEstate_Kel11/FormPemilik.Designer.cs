@@ -34,12 +34,15 @@
             this.dgPemilik = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtCariPemilik = new System.Windows.Forms.TextBox();
+            this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtAlamat = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.cbJenisKel = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -47,7 +50,6 @@
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -63,18 +65,18 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.rbLaki = new System.Windows.Forms.RadioButton();
+            this.rbPerempuan = new System.Windows.Forms.RadioButton();
+            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).BeginInit();
             this.panel1.SuspendLayout();
+            this.bunifuGradientPanel4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
-            this.bunifuGradientPanel4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgPemilik
@@ -103,6 +105,7 @@
             this.dgPemilik.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgPemilik.Size = new System.Drawing.Size(309, 528);
             this.dgPemilik.TabIndex = 145;
+            this.dgPemilik.Click += new System.EventHandler(this.dgPemilik_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -119,13 +122,15 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.rbPerempuan);
+            this.panel1.Controls.Add(this.rbLaki);
+            this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.bunifuGradientPanel4);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtAlamat);
             this.panel1.Controls.Add(this.bunifuCustomLabel8);
             this.panel1.Controls.Add(this.bunifuCustomLabel7);
             this.panel1.Controls.Add(this.bunifuCustomLabel6);
-            this.panel1.Controls.Add(this.numberTextBox1);
-            this.panel1.Controls.Add(this.cbJenisKel);
+            this.panel1.Controls.Add(this.txtTelepon);
             this.panel1.Controls.Add(this.bunifuCustomLabel5);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.btnBatal);
@@ -133,7 +138,7 @@
             this.panel1.Controls.Add(this.btnHapus);
             this.panel1.Controls.Add(this.bunifuCustomLabel4);
             this.panel1.Controls.Add(this.btnUpdate);
-            this.panel1.Controls.Add(this.charTextBox1);
+            this.panel1.Controls.Add(this.txtNama);
             this.panel1.Controls.Add(this.btnSimpan);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 49);
@@ -141,13 +146,86 @@
             this.panel1.Size = new System.Drawing.Size(613, 479);
             this.panel1.TabIndex = 147;
             // 
-            // textBox1
+            // bunifuGradientPanel4
             // 
-            this.textBox1.Location = new System.Drawing.Point(289, 316);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(181, 76);
-            this.textBox1.TabIndex = 150;
+            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
+            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel4.Controls.Add(this.groupBox1);
+            this.bunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.White;
+            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.White;
+            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
+            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
+            this.bunifuGradientPanel4.Quality = 10;
+            this.bunifuGradientPanel4.Size = new System.Drawing.Size(613, 92);
+            this.bunifuGradientPanel4.TabIndex = 152;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.bunifuCustomLabel9);
+            this.groupBox1.Controls.Add(this.txtCariPemilik);
+            this.groupBox1.Controls.Add(this.btnCari);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(613, 92);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cari Pemilik";
+            // 
+            // bunifuCustomLabel9
+            // 
+            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(48, 36);
+            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(84, 26);
+            this.bunifuCustomLabel9.TabIndex = 155;
+            this.bunifuCustomLabel9.Text = "ID Pemilik";
+            this.bunifuCustomLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtCariPemilik
+            // 
+            this.txtCariPemilik.Location = new System.Drawing.Point(198, 42);
+            this.txtCariPemilik.Name = "txtCariPemilik";
+            this.txtCariPemilik.Size = new System.Drawing.Size(181, 20);
+            this.txtCariPemilik.TabIndex = 156;
+            // 
+            // btnCari
+            // 
+            this.btnCari.ActiveBorderThickness = 1;
+            this.btnCari.ActiveCornerRadius = 20;
+            this.btnCari.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnCari.ActiveForecolor = System.Drawing.Color.White;
+            this.btnCari.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnCari.BackColor = System.Drawing.Color.Transparent;
+            this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
+            this.btnCari.ButtonText = "Cari";
+            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnCari.IdleBorderThickness = 1;
+            this.btnCari.IdleCornerRadius = 20;
+            this.btnCari.IdleFillColor = System.Drawing.Color.White;
+            this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnCari.Location = new System.Drawing.Point(415, 36);
+            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCari.Name = "btnCari";
+            this.btnCari.Size = new System.Drawing.Size(67, 29);
+            this.btnCari.TabIndex = 154;
+            this.btnCari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCari.Click += new System.EventHandler(this.btnCari_Click);
+            // 
+            // txtAlamat
+            // 
+            this.txtAlamat.Location = new System.Drawing.Point(289, 316);
+            this.txtAlamat.Multiline = true;
+            this.txtAlamat.Name = "txtAlamat";
+            this.txtAlamat.Size = new System.Drawing.Size(181, 76);
+            this.txtAlamat.TabIndex = 150;
             // 
             // bunifuCustomLabel8
             // 
@@ -181,21 +259,6 @@
             this.bunifuCustomLabel6.TabIndex = 147;
             this.bunifuCustomLabel6.Text = "Telepon";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(289, 240);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(181, 20);
-            this.numberTextBox1.TabIndex = 146;
-            // 
-            // cbJenisKel
-            // 
-            this.cbJenisKel.FormattingEnabled = true;
-            this.cbJenisKel.Location = new System.Drawing.Point(289, 197);
-            this.cbJenisKel.Name = "cbJenisKel";
-            this.cbJenisKel.Size = new System.Drawing.Size(181, 21);
-            this.cbJenisKel.TabIndex = 145;
             // 
             // bunifuCustomLabel5
             // 
@@ -314,13 +377,6 @@
             this.btnUpdate.TabIndex = 141;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // charTextBox1
-            // 
-            this.charTextBox1.Location = new System.Drawing.Point(289, 152);
-            this.charTextBox1.Name = "charTextBox1";
-            this.charTextBox1.Size = new System.Drawing.Size(181, 20);
-            this.charTextBox1.TabIndex = 139;
             // 
             // btnSimpan
             // 
@@ -756,77 +812,48 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1110, 122);
             this.bunifuGradientPanel1.TabIndex = 8;
             // 
-            // bunifuGradientPanel4
+            // txtEmail
             // 
-            this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
-            this.bunifuGradientPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel4.Controls.Add(this.groupBox1);
-            this.bunifuGradientPanel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuGradientPanel4.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
-            this.bunifuGradientPanel4.Quality = 10;
-            this.bunifuGradientPanel4.Size = new System.Drawing.Size(613, 92);
-            this.bunifuGradientPanel4.TabIndex = 152;
+            this.txtEmail.Location = new System.Drawing.Point(289, 279);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(181, 20);
+            this.txtEmail.TabIndex = 153;
             // 
-            // groupBox1
+            // rbLaki
             // 
-            this.groupBox1.Controls.Add(this.bunifuCustomLabel9);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.btnCari);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(613, 92);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cari Pemilik";
+            this.rbLaki.AutoSize = true;
+            this.rbLaki.Location = new System.Drawing.Point(289, 197);
+            this.rbLaki.Name = "rbLaki";
+            this.rbLaki.Size = new System.Drawing.Size(64, 17);
+            this.rbLaki.TabIndex = 154;
+            this.rbLaki.TabStop = true;
+            this.rbLaki.Text = "Laki-laki";
+            this.rbLaki.UseVisualStyleBackColor = true;
             // 
-            // bunifuCustomLabel9
+            // rbPerempuan
             // 
-            this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(48, 36);
-            this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(84, 26);
-            this.bunifuCustomLabel9.TabIndex = 155;
-            this.bunifuCustomLabel9.Text = "ID Pemilik";
-            this.bunifuCustomLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.rbPerempuan.AutoSize = true;
+            this.rbPerempuan.Location = new System.Drawing.Point(381, 197);
+            this.rbPerempuan.Name = "rbPerempuan";
+            this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
+            this.rbPerempuan.TabIndex = 155;
+            this.rbPerempuan.TabStop = true;
+            this.rbPerempuan.Text = "Perempuan";
+            this.rbPerempuan.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtTelepon
             // 
-            this.textBox2.Location = new System.Drawing.Point(198, 42);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(181, 20);
-            this.textBox2.TabIndex = 156;
+            this.txtTelepon.Location = new System.Drawing.Point(289, 240);
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
+            this.txtTelepon.TabIndex = 146;
             // 
-            // btnCari
+            // txtNama
             // 
-            this.btnCari.ActiveBorderThickness = 1;
-            this.btnCari.ActiveCornerRadius = 20;
-            this.btnCari.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.ActiveForecolor = System.Drawing.Color.White;
-            this.btnCari.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.BackColor = System.Drawing.Color.Transparent;
-            this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
-            this.btnCari.ButtonText = "Cari";
-            this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.IdleBorderThickness = 1;
-            this.btnCari.IdleCornerRadius = 20;
-            this.btnCari.IdleFillColor = System.Drawing.Color.White;
-            this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.Location = new System.Drawing.Point(415, 36);
-            this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCari.Name = "btnCari";
-            this.btnCari.Size = new System.Drawing.Size(67, 29);
-            this.btnCari.TabIndex = 154;
-            this.btnCari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtNama.Location = new System.Drawing.Point(289, 152);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(181, 20);
+            this.txtNama.TabIndex = 139;
             // 
             // FormPemilik
             // 
@@ -836,18 +863,20 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.MaximizeBox = false;
             this.Name = "FormPemilik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPemilik";
+            this.Load += new System.EventHandler(this.FormPemilik_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.bunifuGradientPanel3.ResumeLayout(false);
-            this.bunifuGradientPanel2.ResumeLayout(false);
-            this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel4.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.bunifuGradientPanel3.ResumeLayout(false);
+            this.bunifuGradientPanel2.ResumeLayout(false);
+            this.bunifuGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -860,8 +889,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private NumberTextBox numberTextBox1;
-        private System.Windows.Forms.ComboBox cbJenisKel;
+        private NumberTextBox txtTelepon;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
@@ -869,7 +897,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
-        private CharTextBox charTextBox1;
+        private CharTextBox txtNama;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
         private Bunifu.Framework.UI.BunifuFlatButton btnJabatan;
@@ -885,11 +913,14 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAlamat;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCariPemilik;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCari;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.RadioButton rbPerempuan;
+        private System.Windows.Forms.RadioButton rbLaki;
     }
 }
