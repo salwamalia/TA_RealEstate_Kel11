@@ -42,12 +42,12 @@ namespace TA_RealEstate_Kel11
                 number += 1;
                 string str = number.ToString("D2");
 
-                autoid = "Tp" + str;
+                autoid = "TP" + str;
             }
 
             if (autoid == null)
             {
-                autoid = "Tp01";
+                autoid = "TP01";
             }
 
             myConnection.Close();
@@ -55,7 +55,7 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
             string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
@@ -93,7 +93,7 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -116,7 +116,7 @@ namespace TA_RealEstate_Kel11
                 else
                 {
                     MessageBox.Show("Silahkan Ubah Type untuk DiUpdate", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                } 
+                }
             }
             catch
             {
@@ -126,7 +126,7 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -150,6 +150,13 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Tidak Ada Type yang dipilih", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnBatal_Click_1(object sender, EventArgs e)
+        {
+            txtID.Clear();
+            txtNama.Clear();
+            txtCariTipe.Clear();
         }
 
         private void FormPropertyTipe_Load(object sender, EventArgs e)
@@ -235,7 +242,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnCari_Click_1(object sender, EventArgs e)
         {
-            var st = from s in dc.propertyTipes where s.idTipe == txtID.Text select s;
+            var st = from s in dc.propertyTipes where s.idTipe == txtCariTipe.Text select s;
             DataGridViewTipe.DataSource = st;
 
             try
@@ -260,5 +267,7 @@ namespace TA_RealEstate_Kel11
                 MessageBox.Show("Error Data tersebut Tidak ada!");
             }
         }
+
+        
     }
 }

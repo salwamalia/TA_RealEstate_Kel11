@@ -162,7 +162,7 @@ namespace TA_RealEstate_Kel11
         //BUTTON CARI
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
-            var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
+            var st = from s in dc.jabatans where s.idJabatan == txtCariJabatan.Text select s;
             DataGridViewJabatan.DataSource = st;
 
             try

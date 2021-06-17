@@ -32,7 +32,7 @@
     <Type Name="kategoriCicilan">
       <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="jenisCicilan" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="harga" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="keterangan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="kategoriCicilan_tPembelian" Member="tPembelians" ThisKey="idCicilan" OtherKey="idCicilan" Type="tPembelian" />
       <Association Name="kategoriCicilan_tPenyewaan" Member="tPenyewaans" ThisKey="idCicilan" OtherKey="idCicilan" Type="tPenyewaan" />
@@ -62,13 +62,6 @@
       <Association Name="pemilik_tPenyewaan" Member="tPenyewaans" ThisKey="idPemilik" OtherKey="idPemilik" Type="tPenyewaan" />
     </Type>
   </Table>
-  <Table Name="dbo.propertyTipe" Member="propertyTipes">
-    <Type Name="propertyTipe">
-      <Column Name="idTipe" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nama" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="propertyTipe_property" Member="properties" ThisKey="idTipe" OtherKey="idTipe" Type="property" />
-    </Type>
-  </Table>
   <Table Name="dbo.property" Member="properties">
     <Type Name="property">
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -78,7 +71,7 @@
       <Column Name="ukuran" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="gambar" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="fasilitas" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="harga" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPembelian" Member="tDetailPembelians" ThisKey="idProperty" OtherKey="idProperty" Type="tDetailPembelian" />
       <Association Name="property_tDetailPenyewaan" Member="tDetailPenyewaans" ThisKey="idProperty" OtherKey="idProperty" Type="tDetailPenyewaan" />
       <Association Name="property_tPembelian" Member="tPembelians" ThisKey="idProperty" OtherKey="idProperty" Type="tPembelian" />
@@ -87,12 +80,19 @@
       <Association Name="propertyTipe_property" Member="propertyTipe" ThisKey="idTipe" OtherKey="idTipe" Type="propertyTipe" IsForeignKey="true" />
     </Type>
   </Table>
+  <Table Name="dbo.propertyTipe" Member="propertyTipes">
+    <Type Name="propertyTipe">
+      <Column Name="idTipe" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="propertyTipe_property" Member="properties" ThisKey="idTipe" OtherKey="idTipe" Type="property" />
+    </Type>
+  </Table>
   <Table Name="dbo.tDetailPembelian" Member="tDetailPembelians">
     <Type Name="tDetailPembelian">
       <Column Name="idTBeli" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="harga" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPembelian" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
   </Table>
@@ -101,7 +101,7 @@
       <Column Name="idTSewa" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="harga" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPenyewaan" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
   </Table>
@@ -115,8 +115,8 @@
       <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="tanggal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="dp" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="statusBayar" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="client_tPembelian" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
       <Association Name="kategoriBayar_tPembelian" Member="kategoriBayar" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="kategoriBayar" IsForeignKey="true" />
@@ -137,8 +137,8 @@
       <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="tanggal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="dp" Type="System.Decimal" DbType="Money" CanBeNull="true" />
-      <Column Name="total" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="dp" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="statusBayar" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="client_tPenyewaan" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
       <Association Name="kategoriBayar_tPenyewaan" Member="kategoriBayar" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="kategoriBayar" IsForeignKey="true" />

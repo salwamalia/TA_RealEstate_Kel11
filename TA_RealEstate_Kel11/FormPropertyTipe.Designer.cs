@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPropertyTipe));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKategoriBayar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -448,6 +448,7 @@
             this.btnBatal.Size = new System.Drawing.Size(67, 29);
             this.btnBatal.TabIndex = 153;
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click_1);
             // 
             // txtID
             // 
@@ -480,6 +481,7 @@
             this.btnHapus.Size = new System.Drawing.Size(68, 29);
             this.btnHapus.TabIndex = 154;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click_1);
             // 
             // bunifuCustomLabel4
             // 
@@ -516,6 +518,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(68, 29);
             this.btnUpdate.TabIndex = 152;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // txtNama
             // 
@@ -548,6 +551,7 @@
             this.btnSimpan.Size = new System.Drawing.Size(61, 29);
             this.btnSimpan.TabIndex = 151;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click_1);
             // 
             // bunifuGradientPanel4
             // 
@@ -624,19 +628,19 @@
             // 
             // DataGridViewTipe
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridViewTipe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataGridViewTipe.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DataGridViewTipe.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.DataGridViewTipe.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataGridViewTipe.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewTipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataGridViewTipe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.DataGridViewTipe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataGridViewTipe.Dock = System.Windows.Forms.DockStyle.Right;
             this.DataGridViewTipe.DoubleBuffered = true;
