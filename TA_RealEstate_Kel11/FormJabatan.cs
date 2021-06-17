@@ -24,7 +24,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -55,7 +56,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InputJabatan", myConnection);
@@ -96,7 +98,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -154,6 +157,35 @@ namespace TA_RealEstate_Kel11
 
             txtID.Text = IDOtomatis();
             LoadData();
+        }
+
+        //BUTTON CARI
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
+            DataGridViewJabatan.DataSource = st;
+
+            try
+            {
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                myConnection.Open();
+
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan WHERE idJabatan='" + txtCariJabatan.Text + "'", myConnection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                txtNama.Text = dt.Rows[0]["jabatan"].ToString();
+
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Data tersebut Tidak ada!");
+            }
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
@@ -229,33 +261,6 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
-        }
-
-        private void bunifuThinButton21_Click(object sender, EventArgs e) //CARI
-        {
-            var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
-            DataGridViewJabatan.DataSource = st;
-
-            try
-            {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan WHERE idJabatan='" + txtCariJabatan.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtNama.Text = dt.Rows[0]["jabatan"].ToString();
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Data tersebut Tidak ada!");
-            }
         }
     }
 }
