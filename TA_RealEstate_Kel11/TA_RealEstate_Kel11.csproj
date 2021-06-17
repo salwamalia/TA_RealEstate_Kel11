@@ -168,6 +168,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>REALESTATE.dbml</DependentUpon>
     </Compile>
+    <Compile Include="REALESTATEDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>REALESTATEDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +267,17 @@
     </None>
     <None Include="REALESTATE.dbml.layout">
       <DependentUpon>REALESTATE.dbml</DependentUpon>
+    </None>
+    <None Include="REALESTATEDataSet.xsc">
+      <DependentUpon>REALESTATEDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="REALESTATEDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>REALESTATEDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="REALESTATEDataSet.xss">
+      <DependentUpon>REALESTATEDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

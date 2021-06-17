@@ -55,7 +55,7 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -109,12 +109,22 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnBatal_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
+        private void btnCari_Click_1(object sender, EventArgs e)
         {
             var st = from s in dc.pemiliks where s.idPemilik == txtCariPemilik.Text select s;
             dgPemilik.DataSource = st;
@@ -185,7 +195,7 @@ namespace TA_RealEstate_Kel11
             dgPemilik.DataSource = sp;
         }
 
-        private void dgPemilik_Click(object sender, EventArgs e)
+        private void dgPemilik_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -203,6 +213,11 @@ namespace TA_RealEstate_Kel11
             txtTelepon.Text = dgPemilik.CurrentRow.Cells[3].Value.ToString();
             txtEmail.Text = dgPemilik.CurrentRow.Cells[4].Value.ToString();
             txtAlamat.Text = dgPemilik.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
