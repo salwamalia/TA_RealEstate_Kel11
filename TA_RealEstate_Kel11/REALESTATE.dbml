@@ -69,9 +69,9 @@
       <Column Name="idTipe" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idPemilik" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="ukuran" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="gambar" Type="System.Data.Linq.Binary" DbType="VarBinary(MAX)" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="fasilitas" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
       <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="gambar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Association Name="property_tDetailPembelian" Member="tDetailPembelians" ThisKey="idProperty" OtherKey="idProperty" Type="tDetailPembelian" />
       <Association Name="property_tDetailPenyewaan" Member="tDetailPenyewaans" ThisKey="idProperty" OtherKey="idProperty" Type="tDetailPenyewaan" />
       <Association Name="property_tPembelian" Member="tPembelians" ThisKey="idProperty" OtherKey="idProperty" Type="tPembelian" />

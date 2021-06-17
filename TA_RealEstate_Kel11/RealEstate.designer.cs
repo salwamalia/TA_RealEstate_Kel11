@@ -1408,11 +1408,11 @@ namespace TA_RealEstate_Kel11
 		
 		private string _ukuran;
 		
-		private System.Data.Linq.Binary _gambar;
-		
 		private string _fasilitas;
 		
 		private int _harga;
+		
+		private System.Data.Linq.Binary _gambar;
 		
 		private EntitySet<tDetailPembelian> _tDetailPembelians;
 		
@@ -1440,12 +1440,12 @@ namespace TA_RealEstate_Kel11
     partial void OnidPemilikChanged();
     partial void OnukuranChanging(string value);
     partial void OnukuranChanged();
-    partial void OngambarChanging(System.Data.Linq.Binary value);
-    partial void OngambarChanged();
     partial void OnfasilitasChanging(string value);
     partial void OnfasilitasChanged();
     partial void OnhargaChanging(int value);
     partial void OnhargaChanged();
+    partial void OngambarChanging(System.Data.Linq.Binary value);
+    partial void OngambarChanged();
     #endregion
 		
 		public property()
@@ -1567,26 +1567,6 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gambar", DbType="VarBinary(MAX)", UpdateCheck=UpdateCheck.Never)]
-		public System.Data.Linq.Binary gambar
-		{
-			get
-			{
-				return this._gambar;
-			}
-			set
-			{
-				if ((this._gambar != value))
-				{
-					this.OngambarChanging(value);
-					this.SendPropertyChanging();
-					this._gambar = value;
-					this.SendPropertyChanged("gambar");
-					this.OngambarChanged();
-				}
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_fasilitas", DbType="VarChar(100)")]
 		public string fasilitas
 		{
@@ -1623,6 +1603,26 @@ namespace TA_RealEstate_Kel11
 					this._harga = value;
 					this.SendPropertyChanged("harga");
 					this.OnhargaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gambar", DbType="Image", UpdateCheck=UpdateCheck.Never)]
+		public System.Data.Linq.Binary gambar
+		{
+			get
+			{
+				return this._gambar;
+			}
+			set
+			{
+				if ((this._gambar != value))
+				{
+					this.OngambarChanging(value);
+					this.SendPropertyChanging();
+					this._gambar = value;
+					this.SendPropertyChanged("gambar");
+					this.OngambarChanged();
 				}
 			}
 		}
