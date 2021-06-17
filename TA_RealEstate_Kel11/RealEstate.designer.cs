@@ -48,12 +48,12 @@ namespace TA_RealEstate_Kel11
     partial void Insertpemilik(pemilik instance);
     partial void Updatepemilik(pemilik instance);
     partial void Deletepemilik(pemilik instance);
-    partial void InsertpropertyTipe(propertyTipe instance);
-    partial void UpdatepropertyTipe(propertyTipe instance);
-    partial void DeletepropertyTipe(propertyTipe instance);
     partial void Insertproperty(property instance);
     partial void Updateproperty(property instance);
     partial void Deleteproperty(property instance);
+    partial void InsertpropertyTipe(propertyTipe instance);
+    partial void UpdatepropertyTipe(propertyTipe instance);
+    partial void DeletepropertyTipe(propertyTipe instance);
     partial void InserttDetailPembelian(tDetailPembelian instance);
     partial void UpdatetDetailPembelian(tDetailPembelian instance);
     partial void DeletetDetailPembelian(tDetailPembelian instance);
@@ -146,19 +146,19 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		public System.Data.Linq.Table<propertyTipe> propertyTipes
-		{
-			get
-			{
-				return this.GetTable<propertyTipe>();
-			}
-		}
-		
 		public System.Data.Linq.Table<property> properties
 		{
 			get
 			{
 				return this.GetTable<property>();
+			}
+		}
+		
+		public System.Data.Linq.Table<propertyTipe> propertyTipes
+		{
+			get
+			{
+				return this.GetTable<propertyTipe>();
 			}
 		}
 		
@@ -723,7 +723,7 @@ namespace TA_RealEstate_Kel11
 		
 		private string _jenisCicilan;
 		
-		private decimal _harga;
+		private int _harga;
 		
 		private string _keterangan;
 		
@@ -739,7 +739,7 @@ namespace TA_RealEstate_Kel11
     partial void OnidCicilanChanged();
     partial void OnjenisCicilanChanging(string value);
     partial void OnjenisCicilanChanged();
-    partial void OnhargaChanging(decimal value);
+    partial void OnhargaChanging(int value);
     partial void OnhargaChanged();
     partial void OnketeranganChanging(string value);
     partial void OnketeranganChanged();
@@ -792,8 +792,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Money NOT NULL")]
-		public decimal harga
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Int NOT NULL")]
+		public int harga
 		{
 			get
 			{
@@ -1392,120 +1392,6 @@ namespace TA_RealEstate_Kel11
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.propertyTipe")]
-	public partial class propertyTipe : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _idTipe;
-		
-		private string _nama;
-		
-		private EntitySet<property> _properties;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidTipeChanging(string value);
-    partial void OnidTipeChanged();
-    partial void OnnamaChanging(string value);
-    partial void OnnamaChanged();
-    #endregion
-		
-		public propertyTipe()
-		{
-			this._properties = new EntitySet<property>(new Action<property>(this.attach_properties), new Action<property>(this.detach_properties));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTipe", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string idTipe
-		{
-			get
-			{
-				return this._idTipe;
-			}
-			set
-			{
-				if ((this._idTipe != value))
-				{
-					this.OnidTipeChanging(value);
-					this.SendPropertyChanging();
-					this._idTipe = value;
-					this.SendPropertyChanged("idTipe");
-					this.OnidTipeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nama", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string nama
-		{
-			get
-			{
-				return this._nama;
-			}
-			set
-			{
-				if ((this._nama != value))
-				{
-					this.OnnamaChanging(value);
-					this.SendPropertyChanging();
-					this._nama = value;
-					this.SendPropertyChanged("nama");
-					this.OnnamaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="propertyTipe_property", Storage="_properties", ThisKey="idTipe", OtherKey="idTipe")]
-		public EntitySet<property> properties
-		{
-			get
-			{
-				return this._properties;
-			}
-			set
-			{
-				this._properties.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_properties(property entity)
-		{
-			this.SendPropertyChanging();
-			entity.propertyTipe = this;
-		}
-		
-		private void detach_properties(property entity)
-		{
-			this.SendPropertyChanging();
-			entity.propertyTipe = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.property")]
 	public partial class property : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1526,7 +1412,7 @@ namespace TA_RealEstate_Kel11
 		
 		private string _fasilitas;
 		
-		private decimal _harga;
+		private int _harga;
 		
 		private EntitySet<tDetailPembelian> _tDetailPembelians;
 		
@@ -1558,7 +1444,7 @@ namespace TA_RealEstate_Kel11
     partial void OngambarChanged();
     partial void OnfasilitasChanging(string value);
     partial void OnfasilitasChanged();
-    partial void OnhargaChanging(decimal value);
+    partial void OnhargaChanging(int value);
     partial void OnhargaChanged();
     #endregion
 		
@@ -1721,8 +1607,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Money NOT NULL")]
-		public decimal harga
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Int NOT NULL")]
+		public int harga
 		{
 			get
 			{
@@ -1930,6 +1816,120 @@ namespace TA_RealEstate_Kel11
 		}
 	}
 	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.propertyTipe")]
+	public partial class propertyTipe : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _idTipe;
+		
+		private string _nama;
+		
+		private EntitySet<property> _properties;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidTipeChanging(string value);
+    partial void OnidTipeChanged();
+    partial void OnnamaChanging(string value);
+    partial void OnnamaChanged();
+    #endregion
+		
+		public propertyTipe()
+		{
+			this._properties = new EntitySet<property>(new Action<property>(this.attach_properties), new Action<property>(this.detach_properties));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTipe", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string idTipe
+		{
+			get
+			{
+				return this._idTipe;
+			}
+			set
+			{
+				if ((this._idTipe != value))
+				{
+					this.OnidTipeChanging(value);
+					this.SendPropertyChanging();
+					this._idTipe = value;
+					this.SendPropertyChanged("idTipe");
+					this.OnidTipeChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_nama", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string nama
+		{
+			get
+			{
+				return this._nama;
+			}
+			set
+			{
+				if ((this._nama != value))
+				{
+					this.OnnamaChanging(value);
+					this.SendPropertyChanging();
+					this._nama = value;
+					this.SendPropertyChanged("nama");
+					this.OnnamaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="propertyTipe_property", Storage="_properties", ThisKey="idTipe", OtherKey="idTipe")]
+		public EntitySet<property> properties
+		{
+			get
+			{
+				return this._properties;
+			}
+			set
+			{
+				this._properties.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_properties(property entity)
+		{
+			this.SendPropertyChanging();
+			entity.propertyTipe = this;
+		}
+		
+		private void detach_properties(property entity)
+		{
+			this.SendPropertyChanging();
+			entity.propertyTipe = null;
+		}
+	}
+	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tDetailPembelian")]
 	public partial class tDetailPembelian : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1942,7 +1942,7 @@ namespace TA_RealEstate_Kel11
 		
 		private int _lamaCicilan;
 		
-		private decimal _harga;
+		private int _harga;
 		
 		private EntityRef<property> _property;
 		
@@ -1956,7 +1956,7 @@ namespace TA_RealEstate_Kel11
     partial void OnidPropertyChanged();
     partial void OnlamaCicilanChanging(int value);
     partial void OnlamaCicilanChanged();
-    partial void OnhargaChanging(decimal value);
+    partial void OnhargaChanging(int value);
     partial void OnhargaChanged();
     #endregion
 		
@@ -2030,8 +2030,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Money NOT NULL")]
-		public decimal harga
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Int NOT NULL")]
+		public int harga
 		{
 			get
 			{
@@ -2117,7 +2117,7 @@ namespace TA_RealEstate_Kel11
 		
 		private int _lamaCicilan;
 		
-		private decimal _harga;
+		private int _harga;
 		
 		private EntityRef<property> _property;
 		
@@ -2131,7 +2131,7 @@ namespace TA_RealEstate_Kel11
     partial void OnidPropertyChanged();
     partial void OnlamaCicilanChanging(int value);
     partial void OnlamaCicilanChanged();
-    partial void OnhargaChanging(decimal value);
+    partial void OnhargaChanging(int value);
     partial void OnhargaChanged();
     #endregion
 		
@@ -2205,8 +2205,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Money NOT NULL")]
-		public decimal harga
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Int NOT NULL")]
+		public int harga
 		{
 			get
 			{
@@ -2302,9 +2302,9 @@ namespace TA_RealEstate_Kel11
 		
 		private System.DateTime _tanggal;
 		
-		private System.Nullable<decimal> _dp;
+		private System.Nullable<int> _dp;
 		
-		private decimal _total;
+		private int _total;
 		
 		private string _statusBayar;
 		
@@ -2338,9 +2338,9 @@ namespace TA_RealEstate_Kel11
     partial void OnidCicilanChanged();
     partial void OntanggalChanging(System.DateTime value);
     partial void OntanggalChanged();
-    partial void OndpChanging(System.Nullable<decimal> value);
+    partial void OndpChanging(System.Nullable<int> value);
     partial void OndpChanged();
-    partial void OntotalChanging(decimal value);
+    partial void OntotalChanging(int value);
     partial void OntotalChanged();
     partial void OnstatusBayarChanging(string value);
     partial void OnstatusBayarChanged();
@@ -2536,8 +2536,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp", DbType="Money")]
-		public System.Nullable<decimal> dp
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp", DbType="Int")]
+		public System.Nullable<int> dp
 		{
 			get
 			{
@@ -2556,8 +2556,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Money NOT NULL")]
-		public decimal total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Int NOT NULL")]
+		public int total
 		{
 			get
 			{
@@ -2813,9 +2813,9 @@ namespace TA_RealEstate_Kel11
 		
 		private System.DateTime _tanggal;
 		
-		private System.Nullable<decimal> _dp;
+		private System.Nullable<int> _dp;
 		
-		private decimal _total;
+		private int _total;
 		
 		private string _statusBayar;
 		
@@ -2853,9 +2853,9 @@ namespace TA_RealEstate_Kel11
     partial void OnidCicilanChanged();
     partial void OntanggalChanging(System.DateTime value);
     partial void OntanggalChanged();
-    partial void OndpChanging(System.Nullable<decimal> value);
+    partial void OndpChanging(System.Nullable<int> value);
     partial void OndpChanged();
-    partial void OntotalChanging(decimal value);
+    partial void OntotalChanging(int value);
     partial void OntotalChanged();
     partial void OnstatusBayarChanging(string value);
     partial void OnstatusBayarChanged();
@@ -3091,8 +3091,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp", DbType="Money")]
-		public System.Nullable<decimal> dp
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp", DbType="Int")]
+		public System.Nullable<int> dp
 		{
 			get
 			{
@@ -3111,8 +3111,8 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Money NOT NULL")]
-		public decimal total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Int NOT NULL")]
+		public int total
 		{
 			get
 			{
