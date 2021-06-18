@@ -20,13 +20,14 @@ namespace TA_RealEstate_Kel11
         }
 
         REALESTATEDataContext dc = new REALESTATEDataContext();
+        Classes.PERSON person = new Classes.PERSON();
 
         private string IDOtomatis()
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -55,7 +56,7 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void btnSimpan_Click_1(object sender, EventArgs e)
+        private void btnSimpan_Click(object sender, EventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -67,8 +68,8 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertPemilik", myConnection);
@@ -83,7 +84,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "" || txtAlamat.Text == "" || jeniskelamin == "")
             {
-                MessageBox.Show("Data tersebut Harus diisi !!");
+                MessageBox.Show("Semua Data tersebut Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (!(Regex.IsMatch(txtEmail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$")))
             {
@@ -109,22 +110,13 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnHapus_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBatal_Click_1(object sender, EventArgs e)
+        private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
+            txtID.Text = IDOtomatis();
         }
 
-        private void btnCari_Click_1(object sender, EventArgs e)
+        private void btnCari_Click(object sender, EventArgs e)
         {
             var st = from s in dc.pemiliks where s.idPemilik == txtCariPemilik.Text select s;
             dgPemilik.DataSource = st;
@@ -133,8 +125,8 @@ namespace TA_RealEstate_Kel11
 
             try
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -195,7 +187,7 @@ namespace TA_RealEstate_Kel11
             dgPemilik.DataSource = sp;
         }
 
-        private void dgPemilik_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -207,17 +199,129 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            txtID.Text = dgPemilik.CurrentRow.Cells[0].Value.ToString();
-            txtNama.Text = dgPemilik.CurrentRow.Cells[1].Value.ToString();
-            jeniskelamin = dgPemilik.CurrentRow.Cells[2].Value.ToString();
-            txtTelepon.Text = dgPemilik.CurrentRow.Cells[3].Value.ToString();
-            txtEmail.Text = dgPemilik.CurrentRow.Cells[4].Value.ToString();
-            txtAlamat.Text = dgPemilik.CurrentRow.Cells[5].Value.ToString();
+            try
+            {
+                string id = txtID.Text;
+                string name = txtNama.Text;
+                string JenisKelamin = jeniskelamin;
+                string phone = txtTelepon.Text;
+                string email = txtEmail.Text;
+                string address = txtAlamat.Text;
+
+                if (!name.Trim().Equals("") && !phone.Trim().Equals(""))
+                {
+                    if (person.updatePemilik(id, name, JenisKelamin, phone, email, address))
+                    {
+                        MessageBox.Show("pemilik Telah DiUpdate", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                        txtID.Text = IDOtomatis();
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("pemilik Tidak Ter-Update", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Silahkan Isi Nama dan Telepon pemilik untuk DiUpdate", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Tidak Ada pemilik yang dipilih", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            LoadData();
         }
 
-        private void btnX_Click(object sender, EventArgs e)
+        private void btnHapus_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            try
+            {
+                string id = txtID.Text;
+
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete pemilik", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    if (person.deletePemilik(id))
+                    {
+                        MessageBox.Show("pemilik Telah DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtID.Text = IDOtomatis();
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("pemilik Tidak DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Tidak Ada pemilik yang dipilih untuk dihapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnPegawai_Click(object sender, EventArgs e)
+        {
+            FormPegawai kary = new FormPegawai();
+            kary.Show();
+            this.Hide();
+        }
+
+        private void btnPemilik_Click(object sender, EventArgs e)
+        {
+            FormPemilik Own = new FormPemilik();
+            Own.Show();
+            this.Hide();
+        }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            FormClient klien = new FormClient();
+            klien.Show();
+            this.Hide();
+        }
+
+        private void btnProperty_Click(object sender, EventArgs e)
+        {
+            FormProperty Prop = new FormProperty();
+            Prop.Show();
+            this.Hide();
+        }
+
+        private void btnTipeProperty_Click(object sender, EventArgs e)
+        {
+            FormPropertyTipe PropType = new FormPropertyTipe();
+            PropType.Show();
+            this.Hide();
+        }
+
+        private void btnKategoriBayar_Click(object sender, EventArgs e)
+        {
+            FormKategoriBayar byr = new FormKategoriBayar();
+            byr.Show();
+            this.Hide();
+        }
+
+        private void btnCicilan_Click(object sender, EventArgs e)
+        {
+            FormCicilan cicil = new FormCicilan();
+            cicil.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Visible = true;
+            this.Hide();
+        }
+
+        private void btnJabatan_Click(object sender, EventArgs e)
+        {
+            FormJabatan jabat = new FormJabatan();
+            jabat.Show();
+            this.Hide();
         }
     }
 }

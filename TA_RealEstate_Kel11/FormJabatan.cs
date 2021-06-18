@@ -24,8 +24,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -54,41 +54,10 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void btnCari_Click_1(object sender, EventArgs e)
+        private void btnSimpan_Click(object sender, EventArgs e)
         {
-            var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
-            DataGridViewJabatan.DataSource = st;
-
-            try
-            {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan WHERE idJabatan='" + txtCariJabatan.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idjabatan"].ToString();
-                txtNama.Text = dt.Rows[0]["jabatan"].ToString();
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Data tersebut Tidak ada!");
-            }
-            txtID.Text = IDOtomatis();
-            LoadData();
-        }
-
-        private void btnSimpan_Click_1(object sender, EventArgs e)
-        {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InputJabatan", myConnection);
@@ -121,10 +90,16 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+        private void FormJabatan_Load(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            txtID.Text = IDOtomatis();
+            LoadData();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -147,18 +122,20 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Unable to save " + ex.Message);
             }
+
             txtID.Text = IDOtomatis();
             LoadData();
         }
 
-        private void btnHapus_Click_1(object sender, EventArgs e)
+        private void btnHapus_Click(object sender, EventArgs e)
         {
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
+
             if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-
                 //delete command
                 SqlCommand delete = new SqlCommand("sp_DeleteJabatan", myConnection);
                 delete.CommandType = CommandType.StoredProcedure;
@@ -178,22 +155,46 @@ namespace TA_RealEstate_Kel11
                 {
                     MessageBox.Show("Unable to save " + ex.Message);
                 }
-                txtID.Text = IDOtomatis();
-                LoadData();
+            }
+
+            txtID.Text = IDOtomatis();
+            LoadData();
+        }
+
+        //BUTTON CARI
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+            var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
+            DataGridViewJabatan.DataSource = st;
+
+            try
+            {
+                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                myConnection.Open();
+
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan WHERE idJabatan='" + txtCariJabatan.Text + "'", myConnection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                txtID.Text = dt.Rows[0]["idjabatan"].ToString();
+                txtNama.Text = dt.Rows[0]["jabatan"].ToString();
+
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Data tersebut Tidak ada!");
             }
         }
 
-        private void btnBatal_Click_1(object sender, EventArgs e)
+        private void btnBatal_Click(object sender, EventArgs e)
         {
             txtID.Clear();
             txtNama.Clear();
-            txtCariJabatan.Clear();
-        }
-       
-        private void FormJabatan_Load(object sender, EventArgs e)
-        {
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         void LoadData()
@@ -263,11 +264,6 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
-        }
-
-        private void btnX_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

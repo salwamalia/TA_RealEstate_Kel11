@@ -52,6 +52,11 @@ namespace TA_RealEstate_Kel11
                 e.Handled = false;
                 return;
             }
+            if (asciiInteger == 32)
+            {
+                e.Handled = false;
+                return;
+            }
             if (asciiInteger == 8)
             {
                 e.Handled = false;

@@ -15,7 +15,7 @@ namespace TA_RealEstate_Kel11.Classes
         //class ini digunakan untuk owner dan client
         private string id;
         private string name;
-        private string jeniskelamin;
+        private string JenisKelamin;
         private string phone;
         private string email;
         private string address;
@@ -26,7 +26,7 @@ namespace TA_RealEstate_Kel11.Classes
         {
             this.id = ID;
             this.name = NAME;
-            this.jeniskelamin = JENISKELAMIN;
+            this.JenisKelamin = JENISKELAMIN;
             this.phone = PHONE;
             this.email = EMAIL;
             this.address = ADDRESS;
@@ -39,33 +39,50 @@ namespace TA_RealEstate_Kel11.Classes
             return func.getData(command);
         }
 
-        //insert a new type
-        public Boolean insertPerson(string ownerORclient, PERSON person)
+        public Boolean updatePemilik(string id, string name, string JenisKelamin, string phone, string email, string address)
         {
-            string tableName = ownerORclient;
+            SqlCommand command = new SqlCommand("UPDATE pemilik SET nama=@nm, jeniskelamin=@jk, telepon=@tlp, email=@mail, alamat=@adrs WHERE idPemilik=@id");
 
-            SqlCommand command = new SqlCommand("INSERT INTO '" + tableName + "' (nama, telepon, email, alamat) VALUES (@nm, @phn, @mail, @adrs)");
-
-            command.Parameters.Add("@nm", SqlDbType.VarChar).Value = person.name;
-            command.Parameters.Add("@phn", SqlDbType.VarChar).Value = person.phone;
-            command.Parameters.Add("@mail", SqlDbType.VarChar).Value = person.email;
-            command.Parameters.Add("@adrs", SqlDbType.VarChar).Value = person.address;
+            command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+            command.Parameters.Add("@nm", SqlDbType.VarChar).Value = name;
+            command.Parameters.Add("@jk", SqlDbType.VarChar).Value = JenisKelamin;
+            command.Parameters.Add("@tlp", SqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@mail", SqlDbType.VarChar).Value = email;
+            command.Parameters.Add("@adrs", SqlDbType.VarChar).Value = address;
 
             return func.ExecQuery(command);
         }
 
-        public Boolean updatePerson(string ownerORclient, PERSON person)
+        //delete a new type
+        public Boolean deletePemilik(string id)
         {
-            string tableName = ownerORclient;
+            SqlCommand command = new SqlCommand("DELETE FROM pemilik WHERE idPemilik=@id");
 
-            SqlCommand command = new SqlCommand("UPDATE '" + tableName + "' SET nama=@nm, jeniskelamin=@jk, telepon=@tlp, email=@mail, alamat=@adrs WHERE idPemilik=@id");
+            command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
 
-            command.Parameters.Add("@id", SqlDbType.VarChar).Value = person.id;
-            command.Parameters.Add("@nm", SqlDbType.VarChar).Value = person.name;
-            command.Parameters.Add("@jk", SqlDbType.VarChar).Value = person.jeniskelamin;
-            command.Parameters.Add("@tlp", SqlDbType.VarChar).Value = person.phone;
-            command.Parameters.Add("@mail", SqlDbType.VarChar).Value = person.email;
-            command.Parameters.Add("@adrs", SqlDbType.VarChar).Value = person.address;
+            return func.ExecQuery(command);
+        }
+
+        public Boolean updateClient(string id, string name, string JenisKelamin, string phone, string email, string address)
+        {
+            SqlCommand command = new SqlCommand("UPDATE client SET nama=@nm, jeniskelamin=@jk, telepon=@tlp, email=@mail, alamat=@adrs WHERE idClient=@id");
+
+            command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+            command.Parameters.Add("@nm", SqlDbType.VarChar).Value = name;
+            command.Parameters.Add("@jk", SqlDbType.VarChar).Value = JenisKelamin;
+            command.Parameters.Add("@tlp", SqlDbType.VarChar).Value = phone;
+            command.Parameters.Add("@mail", SqlDbType.VarChar).Value = email;
+            command.Parameters.Add("@adrs", SqlDbType.VarChar).Value = address;
+
+            return func.ExecQuery(command);
+        }
+
+        //delete a new type
+        public Boolean deleteClient(string id)
+        {
+            SqlCommand command = new SqlCommand("DELETE FROM client WHERE idClient=@id");
+
+            command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
 
             return func.ExecQuery(command);
         }

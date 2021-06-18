@@ -18,22 +18,22 @@ namespace TA_RealEstate_Kel11
             InitializeComponent();
         }
 
-        private void btnSimpan_Click_1(object sender, EventArgs e)
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnUpdate_Click_1(object sender, EventArgs e)
+        private void btnHapus_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btnHapus_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBatal_Click_1(object sender, EventArgs e)
+        private void btnBatal_Click(object sender, EventArgs e)
         {
 
         }
@@ -41,16 +41,6 @@ namespace TA_RealEstate_Kel11
         private void btnCari_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void FormCicilan_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnX_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }

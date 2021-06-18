@@ -24,8 +24,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -54,7 +54,7 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void btnSimpan_Click_1(object sender, EventArgs e)
+        private void btnSimpan_Click(object sender, EventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -66,8 +66,8 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertPegawai", myConnection);
@@ -100,6 +100,7 @@ namespace TA_RealEstate_Kel11
             }
 
             txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -114,8 +115,8 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //Update command
@@ -142,12 +143,13 @@ namespace TA_RealEstate_Kel11
             }
 
             txtID.Text = IDOtomatis();
+            LoadData();
         }
 
-        private void btnHapus_Click_1(object sender, EventArgs e)
+        private void btnHapus_Click(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
@@ -164,6 +166,7 @@ namespace TA_RealEstate_Kel11
                     delete.ExecuteNonQuery();
                     MessageBox.Show("Delete Pegawai Succesfully", "Delete Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
+                    LoadData();
                 }
                 catch (Exception ex)
                 {
@@ -174,13 +177,11 @@ namespace TA_RealEstate_Kel11
             txtID.Text = IDOtomatis();
         }
 
-        private void btnBatal_Click_1(object sender, EventArgs e)
+        private void btnCariPegawai_Click(object sender, EventArgs e)
         {
-            clear();
-        }
+            var st = from s in dc.pegawais where s.idPegawai == txtCariPegawai.Text select s;
+            dbPegawai.DataSource = st;
 
-        private void btnCariPegawai_Click_1(object sender, EventArgs e)
-        {
             string jeniskelamin = null;
             if (rbLaki.Checked)
             {
@@ -193,8 +194,8 @@ namespace TA_RealEstate_Kel11
 
             try
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -219,6 +220,11 @@ namespace TA_RealEstate_Kel11
             }
         }
 
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+           clear();
+        }
+
         private void clear()
         {
             txtID.Clear();
@@ -232,16 +238,14 @@ namespace TA_RealEstate_Kel11
 
         private void FormPegawai_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.jabatan' table. You can move, or remove it, as needed.
-            this.jabatanTableAdapter.Fill(this.rEALESTATEDataSet.jabatan);
             txtID.Text = IDOtomatis();
             LoadData();
         }
 
         void LoadData()
         {
-            var st = from tb in dc.pegawais select tb;
-            dgPegawai.DataSource = st;
+            var sp = from tb in dc.pegawais select tb;
+            dbPegawai.DataSource = sp;
         }
 
         private void btnJabatan_Click(object sender, EventArgs e)
@@ -305,11 +309,6 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
-        }
-
-        private void btnX_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
         }
     }
 }
