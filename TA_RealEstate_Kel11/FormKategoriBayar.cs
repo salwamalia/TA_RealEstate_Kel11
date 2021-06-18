@@ -25,8 +25,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -55,16 +55,10 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        void LoadData()
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            var st = from tb in dc.kategoriBayars select tb;
-            dgKategoriBayar.DataSource = st;
-        }
-
-        private void btnSimpan_Click(object sender, EventArgs e)
-        {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertKategori", myConnection);
@@ -98,42 +92,10 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            var st = from s in dc.kategoriBayars where s.idKategoriBayar == txtCariKategori.Text select s;
-            dgKategoriBayar.DataSource = st;
-
-            try
-            {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar WHERE idKategoriBayar ='" + txtCariKategori.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idKategoriBayar"].ToString();
-                txtNama.Text = dt.Rows[0]["kategoriBayar"].ToString();
-                txtKet.Text = dt.Rows[0]["keterangan"].ToString();
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
-            }
-
-            txtCariKategori.Clear();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -161,7 +123,7 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -188,7 +150,7 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        private void btnBatal_Click(object sender, EventArgs e)
+        private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
         }
@@ -200,6 +162,44 @@ namespace TA_RealEstate_Kel11
             txtKet.Clear();
         }
 
+        private void btnCari_Click_1(object sender, EventArgs e)
+        {
+            var st = from s in dc.kategoriBayars where s.idKategoriBayar == txtCariKategori.Text select s;
+            dgKategoriBayar.DataSource = st;
+
+            try
+            {
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                myConnection.Open();
+
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar WHERE idKategoriBayar ='" + txtCariKategori.Text + "'", myConnection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                txtID.Text = dt.Rows[0]["idKategoriBayar"].ToString();
+                txtNama.Text = dt.Rows[0]["kategoriBayar"].ToString();
+                txtKet.Text = dt.Rows[0]["keterangan"].ToString();
+
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
+            }
+
+            txtCariKategori.Clear();
+        }
+
+        void LoadData()
+        {
+            var st = from tb in dc.kategoriBayars select tb;
+            dgKategoriBayar.DataSource = st;
+        }
+        
         private void btnJabatan_Click(object sender, EventArgs e)
         {
             FormJabatan jabat = new FormJabatan();
@@ -267,6 +267,11 @@ namespace TA_RealEstate_Kel11
         {
             txtID.Text = IDOtomatis();
             LoadData();
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

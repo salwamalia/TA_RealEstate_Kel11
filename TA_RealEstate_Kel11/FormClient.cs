@@ -26,8 +26,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -56,13 +56,7 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        void LoadData()
-        {
-            var sp = from tb in dc.clients select tb;
-            dgClient.DataSource = sp;
-        }
-
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -74,8 +68,8 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertClient", myConnection);
@@ -116,54 +110,7 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnCariClient_Click(object sender, EventArgs e)
-        {
-            var st = from s in dc.clients where s.idClient == txtCariClient.Text select s;
-            dgClient.DataSource = st;
-
-            string jeniskelamin = null;
-
-            try
-            {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM client WHERE idClient ='" + txtCariClient.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idClient"].ToString();
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-                jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
-                txtTelepon.Text = dt.Rows[0]["telepon"].ToString();
-                txtEmail.Text = dt.Rows[0]["email"].ToString();
-                txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
-
-                if (jeniskelamin == rbLaki.Text)
-                {
-                    rbLaki.Checked = true;
-                }
-                else if (jeniskelamin == rbPerempuan.Text)
-                {
-                    rbPerempuan.Checked = true;
-                }
-
-                rbLaki.Enabled = true;
-                rbPerempuan.Enabled = true;
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Client Tidak Ditemukan! " + ex);
-            }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
             string jeniskelamin = null;
             if (rbLaki.Checked)
@@ -211,7 +158,7 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -238,10 +185,63 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        private void btnBatal_Click(object sender, EventArgs e)
+        private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
             txtID.Text = IDOtomatis();
+        }
+
+        private void btnCariClient_Click_1(object sender, EventArgs e)
+        {
+            var st = from s in dc.clients where s.idClient == txtCariClient.Text select s;
+            dgClient.DataSource = st;
+
+            string jeniskelamin = null;
+
+            try
+            {
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                myConnection.Open();
+
+                DataTable dt = new DataTable();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM client WHERE idClient ='" + txtCariClient.Text + "'", myConnection);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                da.Fill(dt);
+
+                txtID.Text = dt.Rows[0]["idClient"].ToString();
+                txtNama.Text = dt.Rows[0]["nama"].ToString();
+                jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
+                txtTelepon.Text = dt.Rows[0]["telepon"].ToString();
+                txtEmail.Text = dt.Rows[0]["email"].ToString();
+                txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
+
+                if (jeniskelamin == rbLaki.Text)
+                {
+                    rbLaki.Checked = true;
+                }
+                else if (jeniskelamin == rbPerempuan.Text)
+                {
+                    rbPerempuan.Checked = true;
+                }
+
+                rbLaki.Enabled = true;
+                rbPerempuan.Enabled = true;
+
+                myConnection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Client Tidak Ditemukan! " + ex);
+            }
+        }
+
+        void LoadData()
+        {
+            var sp = from tb in dc.clients select tb;
+            dgClient.DataSource = sp;
         }
 
         private void clear()
@@ -323,6 +323,11 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

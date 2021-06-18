@@ -25,8 +25,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -55,16 +55,10 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        void LoadData()
+        private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            var st = from tb in dc.kategoriCicilans select tb;
-            dgCicilan.DataSource = st;
-        }
-
-        private void btnSimpan_Click(object sender, EventArgs e)
-        {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertCicilan", myConnection);
@@ -99,10 +93,10 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -131,7 +125,7 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -158,12 +152,6 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        private void btnBatal_Click(object sender, EventArgs e)
-        {
-            clear();
-            txtID.Text = IDOtomatis();
-        }
-
         private void clear()
         {
             txtID.Clear();
@@ -172,15 +160,21 @@ namespace TA_RealEstate_Kel11
             txtKet.Clear();
         }
 
-        private void btnCari_Click(object sender, EventArgs e)
+        private void btnBatal_Click_1(object sender, EventArgs e)
+        {
+            clear();
+            txtID.Text = IDOtomatis();
+        }
+
+        private void btnCari_Click_1(object sender, EventArgs e)
         {
             var st = from s in dc.kategoriCicilans where s.idCicilan == txtCariCicilan.Text select s;
             dgCicilan.DataSource = st;
 
             try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -205,10 +199,21 @@ namespace TA_RealEstate_Kel11
             txtCariCicilan.Clear();
         }
 
+        void LoadData()
+        {
+            var st = from tb in dc.kategoriCicilans select tb;
+            dgCicilan.DataSource = st;
+        }
+
         private void FormCicilan_Load(object sender, EventArgs e)
         {
             txtID.Text = IDOtomatis();
             LoadData();
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnJabatan_Click(object sender, EventArgs e)

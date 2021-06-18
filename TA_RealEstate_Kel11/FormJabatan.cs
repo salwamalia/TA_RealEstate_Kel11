@@ -24,8 +24,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -54,10 +54,16 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void FormJabatan_Load(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            txtID.Text = IDOtomatis();
+            LoadData();
+        }
+        
+        private void btnSimpan_Click_1(object sender, EventArgs e)
+        {
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InputJabatan", myConnection);
@@ -90,16 +96,10 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void FormJabatan_Load(object sender, EventArgs e)
+        private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            txtID.Text = IDOtomatis();
-            LoadData();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -127,10 +127,10 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        private void btnHapus_Click(object sender, EventArgs e)
+        private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
 
@@ -161,16 +161,21 @@ namespace TA_RealEstate_Kel11
             LoadData();
         }
 
-        //BUTTON CARI
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        private void btnBatal_Click_1(object sender, EventArgs e)
+        {
+            txtID.Clear();
+            txtNama.Clear();
+        }
+
+        private void btnCari_Click(object sender, EventArgs e)
         {
             var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
             DataGridViewJabatan.DataSource = st;
 
             try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -189,12 +194,6 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
             }
-        }
-
-        private void btnBatal_Click(object sender, EventArgs e)
-        {
-            txtID.Clear();
-            txtNama.Clear();
         }
 
         void LoadData()
@@ -264,6 +263,11 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
+        }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
