@@ -47,6 +47,7 @@
             this.cbTipe = new System.Windows.Forms.ComboBox();
             this.txtUkuran = new System.Windows.Forms.TextBox();
             this.txtFasilitas = new System.Windows.Forms.TextBox();
+            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -57,6 +58,7 @@
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel6 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -75,8 +77,6 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
-            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel7.SuspendLayout();
             this.bunifuGradientPanel6.SuspendLayout();
@@ -494,6 +494,13 @@
             this.txtFasilitas.Size = new System.Drawing.Size(160, 71);
             this.txtFasilitas.TabIndex = 175;
             // 
+            // txtHarga
+            // 
+            this.txtHarga.Location = new System.Drawing.Point(387, 140);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(160, 20);
+            this.txtHarga.TabIndex = 174;
+            // 
             // bunifuCustomLabel9
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
@@ -642,6 +649,13 @@
             this.btnUpdate.TabIndex = 167;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(164, 56);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(126, 20);
+            this.txtNama.TabIndex = 165;
+            // 
             // btnSimpan
             // 
             this.btnSimpan.ActiveBorderThickness = 1;
@@ -752,6 +766,7 @@
             this.dgProperty.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dgProperty.Location = new System.Drawing.Point(0, 0);
             this.dgProperty.Name = "dgProperty";
+            this.dgProperty.ReadOnly = true;
             this.dgProperty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgProperty.Size = new System.Drawing.Size(869, 143);
             this.dgProperty.TabIndex = 1;
@@ -931,20 +946,6 @@
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 1;
             // 
-            // txtHarga
-            // 
-            this.txtHarga.Location = new System.Drawing.Point(387, 140);
-            this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(160, 20);
-            this.txtHarga.TabIndex = 174;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(164, 56);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(126, 20);
-            this.txtNama.TabIndex = 165;
-            // 
             // FormProperty
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -953,6 +954,8 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormProperty";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormProperty";

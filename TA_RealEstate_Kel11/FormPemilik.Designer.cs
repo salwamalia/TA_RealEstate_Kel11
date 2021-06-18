@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.dgPemilik = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.rbPerempuan = new System.Windows.Forms.RadioButton();
@@ -47,6 +48,7 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -69,8 +71,6 @@
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgPemilik)).BeginInit();
@@ -121,6 +121,13 @@
             this.panel1.Size = new System.Drawing.Size(922, 564);
             this.panel1.TabIndex = 147;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(198, 157);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(181, 20);
+            this.txtNama.TabIndex = 157;
+            // 
             // bunifuGradientPanel5
             // 
             this.bunifuGradientPanel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel5.BackgroundImage")));
@@ -160,6 +167,7 @@
             this.dgPemilik.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dgPemilik.Location = new System.Drawing.Point(0, 0);
             this.dgPemilik.Name = "dgPemilik";
+            this.dgPemilik.ReadOnly = true;
             this.dgPemilik.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgPemilik.Size = new System.Drawing.Size(922, 215);
             this.dgPemilik.TabIndex = 146;
@@ -306,6 +314,14 @@
             this.bunifuCustomLabel6.TabIndex = 147;
             this.bunifuCustomLabel6.Text = "Telepon";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTelepon
+            // 
+            this.txtTelepon.Location = new System.Drawing.Point(638, 116);
+            this.txtTelepon.MaxLength = 13;
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
+            this.txtTelepon.TabIndex = 146;
             // 
             // bunifuCustomLabel5
             // 
@@ -868,21 +884,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1110, 122);
             this.bunifuGradientPanel1.TabIndex = 8;
             // 
-            // txtTelepon
-            // 
-            this.txtTelepon.Location = new System.Drawing.Point(638, 116);
-            this.txtTelepon.MaxLength = 13;
-            this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
-            this.txtTelepon.TabIndex = 146;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(198, 157);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(181, 20);
-            this.txtNama.TabIndex = 157;
-            // 
             // FormPemilik
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -891,6 +892,8 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPemilik";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPemilik";

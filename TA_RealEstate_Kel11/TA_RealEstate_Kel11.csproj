@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Classes\DB_CONNECTION.cs" />
     <Compile Include="Classes\FUNC.cs" />
+    <Compile Include="Classes\KATEGORI.cs" />
     <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Classes\PROPERTY_TYPE.cs" />
     <Compile Include="FormCicilan.cs">

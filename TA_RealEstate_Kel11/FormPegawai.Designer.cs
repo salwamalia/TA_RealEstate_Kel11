@@ -43,6 +43,7 @@
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.rbPerempuan = new System.Windows.Forms.RadioButton();
             this.rbLaki = new System.Windows.Forms.RadioButton();
             this.cbJabatan = new System.Windows.Forms.ComboBox();
@@ -70,7 +71,6 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel5.SuspendLayout();
@@ -442,6 +442,13 @@
             this.bunifuGradientPanel5.Size = new System.Drawing.Size(548, 382);
             this.bunifuGradientPanel5.TabIndex = 1;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(208, 76);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(209, 20);
+            this.txtNama.TabIndex = 173;
+            // 
             // rbPerempuan
             // 
             this.rbPerempuan.AutoSize = true;
@@ -760,6 +767,7 @@
             this.dbPegawai.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dbPegawai.Location = new System.Drawing.Point(548, 0);
             this.dbPegawai.Name = "dbPegawai";
+            this.dbPegawai.ReadOnly = true;
             this.dbPegawai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dbPegawai.Size = new System.Drawing.Size(309, 531);
             this.dbPegawai.TabIndex = 0;
@@ -874,13 +882,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1045, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(208, 76);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(209, 20);
-            this.txtNama.TabIndex = 173;
-            // 
             // FormPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -889,6 +890,8 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPegawai";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPegawai";

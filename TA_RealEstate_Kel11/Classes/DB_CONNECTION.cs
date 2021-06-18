@@ -11,6 +11,7 @@ namespace TA_RealEstate_Kel11.Classes
     class DB_CONNECTION
     {
         SqlConnection connection = new SqlConnection(@"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True");
+        //SqlConnection connection = new SqlConnection(@"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True);
 
         //get the connection
         public SqlConnection getConnection

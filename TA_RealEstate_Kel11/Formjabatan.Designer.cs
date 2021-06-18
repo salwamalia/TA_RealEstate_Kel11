@@ -46,6 +46,7 @@
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -60,7 +61,6 @@
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel3.SuspendLayout();
@@ -504,6 +504,13 @@
             this.panel1.Size = new System.Drawing.Size(783, 390);
             this.panel1.TabIndex = 144;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(181, 164);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(190, 20);
+            this.txtNama.TabIndex = 157;
+            // 
             // bunifuGradientPanel4
             // 
             this.bunifuGradientPanel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel4.BackgroundImage")));
@@ -751,13 +758,6 @@
             this.bunifuCustomLabel2.Text = "Jabatan";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(181, 164);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(190, 20);
-            this.txtNama.TabIndex = 157;
-            // 
             // FormJabatan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,6 +767,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormJabatan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormJabatann";

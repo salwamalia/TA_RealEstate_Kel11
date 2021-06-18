@@ -55,9 +55,6 @@
             this.txtCariCicilan = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.charTextBox2 = new TA_RealEstate_Kel11.CharTextBox();
-            this.numberTextBox1 = new TA_RealEstate_Kel11.NumberTextBox();
-            this.charTextBox1 = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgCicilan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -65,6 +62,9 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtKet = new System.Windows.Forms.TextBox();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
+            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
@@ -103,7 +103,7 @@
             this.btnBatal.IdleFillColor = System.Drawing.Color.White;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(353, 326);
+            this.btnBatal.Location = new System.Drawing.Point(353, 334);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(77, 33);
@@ -115,6 +115,7 @@
             // 
             this.txtID.Location = new System.Drawing.Point(240, 139);
             this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(189, 20);
             this.txtID.TabIndex = 138;
             // 
@@ -136,7 +137,7 @@
             this.btnHapus.IdleFillColor = System.Drawing.Color.White;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(261, 326);
+            this.btnHapus.Location = new System.Drawing.Point(261, 334);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(77, 33);
@@ -178,6 +179,7 @@
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.Textcolor = System.Drawing.Color.White;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCicilan
             // 
@@ -213,6 +215,7 @@
             this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCicilan.Textcolor = System.Drawing.Color.White;
             this.btnCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCicilan.Click += new System.EventHandler(this.btnCicilan_Click);
             // 
             // btnKategoriBayar
             // 
@@ -248,6 +251,7 @@
             this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnKategoriBayar.Textcolor = System.Drawing.Color.White;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnKategoriBayar.Click += new System.EventHandler(this.btnKategoriBayar_Click);
             // 
             // btnTipeProperty
             // 
@@ -283,6 +287,7 @@
             this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTipeProperty.Textcolor = System.Drawing.Color.White;
             this.btnTipeProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTipeProperty.Click += new System.EventHandler(this.btnTipeProperty_Click);
             // 
             // btnProperty
             // 
@@ -318,6 +323,7 @@
             this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProperty.Textcolor = System.Drawing.Color.White;
             this.btnProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnClient
             // 
@@ -353,6 +359,7 @@
             this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClient.Textcolor = System.Drawing.Color.White;
             this.btnClient.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPemilik
             // 
@@ -388,6 +395,7 @@
             this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPemilik.Textcolor = System.Drawing.Color.White;
             this.btnPemilik.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPemilik.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // btnUpdate
             // 
@@ -407,7 +415,7 @@
             this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(169, 326);
+            this.btnUpdate.Location = new System.Drawing.Point(169, 334);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(77, 33);
@@ -433,7 +441,7 @@
             this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(84, 326);
+            this.btnSimpan.Location = new System.Drawing.Point(84, 334);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(77, 33);
@@ -487,6 +495,7 @@
             this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPegawai.Textcolor = System.Drawing.Color.White;
             this.btnPegawai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
             // 
             // bunifuGradientPanel3
             // 
@@ -509,12 +518,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.txtKet);
+            this.panel1.Controls.Add(this.txtNama);
             this.panel1.Controls.Add(this.bunifuGradientPanel4);
             this.panel1.Controls.Add(this.bunifuCustomLabel6);
             this.panel1.Controls.Add(this.bunifuCustomLabel5);
-            this.panel1.Controls.Add(this.charTextBox2);
-            this.panel1.Controls.Add(this.numberTextBox1);
-            this.panel1.Controls.Add(this.charTextBox1);
+            this.panel1.Controls.Add(this.txtHarga);
             this.panel1.Controls.Add(this.bunifuCustomLabel3);
             this.panel1.Controls.Add(this.btnBatal);
             this.panel1.Controls.Add(this.txtID);
@@ -623,27 +632,6 @@
             this.bunifuCustomLabel5.Text = "Harga";
             this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // charTextBox2
-            // 
-            this.charTextBox2.Location = new System.Drawing.Point(240, 265);
-            this.charTextBox2.Name = "charTextBox2";
-            this.charTextBox2.Size = new System.Drawing.Size(189, 20);
-            this.charTextBox2.TabIndex = 146;
-            // 
-            // numberTextBox1
-            // 
-            this.numberTextBox1.Location = new System.Drawing.Point(240, 221);
-            this.numberTextBox1.Name = "numberTextBox1";
-            this.numberTextBox1.Size = new System.Drawing.Size(189, 20);
-            this.numberTextBox1.TabIndex = 145;
-            // 
-            // charTextBox1
-            // 
-            this.charTextBox1.Location = new System.Drawing.Point(240, 179);
-            this.charTextBox1.Name = "charTextBox1";
-            this.charTextBox1.Size = new System.Drawing.Size(189, 20);
-            this.charTextBox1.TabIndex = 144;
-            // 
             // bunifuCustomLabel4
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
@@ -678,6 +666,7 @@
             this.dgCicilan.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dgCicilan.Location = new System.Drawing.Point(528, 0);
             this.dgCicilan.Name = "dgCicilan";
+            this.dgCicilan.ReadOnly = true;
             this.dgCicilan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgCicilan.Size = new System.Drawing.Size(309, 523);
             this.dgCicilan.TabIndex = 0;
@@ -716,6 +705,7 @@
             this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnJabatan.Textcolor = System.Drawing.Color.White;
             this.btnJabatan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJabatan.Click += new System.EventHandler(this.btnJabatan_Click);
             // 
             // bunifuGradientPanel2
             // 
@@ -791,6 +781,28 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1025, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
+            // txtKet
+            // 
+            this.txtKet.Location = new System.Drawing.Point(240, 265);
+            this.txtKet.Multiline = true;
+            this.txtKet.Name = "txtKet";
+            this.txtKet.Size = new System.Drawing.Size(190, 50);
+            this.txtKet.TabIndex = 151;
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(240, 179);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(189, 20);
+            this.txtNama.TabIndex = 150;
+            // 
+            // txtHarga
+            // 
+            this.txtHarga.Location = new System.Drawing.Point(240, 221);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(189, 20);
+            this.txtHarga.TabIndex = 145;
+            // 
             // FormCicilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -799,9 +811,11 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.MinimizeBox = false;
             this.Name = "FormCicilan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormCicilan";
+            this.Load += new System.EventHandler(this.FormCicilan_Load);
             this.bunifuGradientPanel3.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -843,13 +857,13 @@
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private CharTextBox charTextBox2;
-        private NumberTextBox numberTextBox1;
-        private CharTextBox charTextBox1;
+        private NumberTextBox txtHarga;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel4;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCari;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.TextBox txtCariCicilan;
+        private CharTextBox txtNama;
+        private System.Windows.Forms.TextBox txtKet;
     }
 }

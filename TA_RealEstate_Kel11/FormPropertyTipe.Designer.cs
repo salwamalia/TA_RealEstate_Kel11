@@ -41,6 +41,7 @@
             this.btnPegawai = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnJabatan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.panel1.SuspendLayout();
             this.bunifuGradientPanel4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -413,6 +413,13 @@
             this.panel1.Size = new System.Drawing.Size(827, 392);
             this.panel1.TabIndex = 144;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(173, 184);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(215, 20);
+            this.txtNama.TabIndex = 155;
+            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
@@ -639,6 +646,7 @@
             this.DataGridViewTipe.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.DataGridViewTipe.Location = new System.Drawing.Point(494, 0);
             this.DataGridViewTipe.Name = "DataGridViewTipe";
+            this.DataGridViewTipe.ReadOnly = true;
             this.DataGridViewTipe.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DataGridViewTipe.Size = new System.Drawing.Size(333, 392);
             this.DataGridViewTipe.TabIndex = 145;
@@ -746,13 +754,6 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1015, 122);
             this.bunifuGradientPanel1.TabIndex = 7;
             // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(173, 184);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(215, 20);
-            this.txtNama.TabIndex = 155;
-            // 
             // FormPropertyTipe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -762,6 +763,7 @@
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormPropertyTipe";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPropertyTipe";

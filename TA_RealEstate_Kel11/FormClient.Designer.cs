@@ -750,6 +750,7 @@
             this.dgClient.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dgClient.Location = new System.Drawing.Point(511, 0);
             this.dgClient.Name = "dgClient";
+            this.dgClient.ReadOnly = true;
             this.dgClient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgClient.Size = new System.Drawing.Size(309, 459);
             this.dgClient.TabIndex = 0;
@@ -872,6 +873,8 @@
             this.Controls.Add(this.bunifuGradientPanel3);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormClient";
