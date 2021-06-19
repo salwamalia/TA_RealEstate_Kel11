@@ -22,7 +22,7 @@ namespace TA_RealEstate_Kel11
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="RealEstate")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="REALESTATE")]
 	public partial class REALESTATEDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -69,7 +69,7 @@ namespace TA_RealEstate_Kel11
     #endregion
 		
 		public REALESTATEDataContext() : 
-				base(global::TA_RealEstate_Kel11.Properties.Settings.Default.RealEstateConnectionString1, mappingSource)
+				base(global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2, mappingSource)
 		{
 			OnCreated();
 		}
@@ -1946,6 +1946,8 @@ namespace TA_RealEstate_Kel11
 		
 		private EntityRef<property> _property;
 		
+		private EntityRef<tPembelian> _tPembelian;
+		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1963,6 +1965,7 @@ namespace TA_RealEstate_Kel11
 		public tDetailPembelian()
 		{
 			this._property = default(EntityRef<property>);
+			this._tPembelian = default(EntityRef<tPembelian>);
 			OnCreated();
 		}
 		
@@ -1977,6 +1980,10 @@ namespace TA_RealEstate_Kel11
 			{
 				if ((this._idTBeli != value))
 				{
+					if (this._tPembelian.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
 					this.OnidTBeliChanging(value);
 					this.SendPropertyChanging();
 					this._idTBeli = value;
@@ -2080,6 +2087,40 @@ namespace TA_RealEstate_Kel11
 						this._idProperty = default(string);
 					}
 					this.SendPropertyChanged("property");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tPembelian_tDetailPembelian", Storage="_tPembelian", ThisKey="idTBeli", OtherKey="idTBeli", IsForeignKey=true)]
+		public tPembelian tPembelian
+		{
+			get
+			{
+				return this._tPembelian.Entity;
+			}
+			set
+			{
+				tPembelian previousValue = this._tPembelian.Entity;
+				if (((previousValue != value) 
+							|| (this._tPembelian.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tPembelian.Entity = null;
+						previousValue.tDetailPembelian = null;
+					}
+					this._tPembelian.Entity = value;
+					if ((value != null))
+					{
+						value.tDetailPembelian = this;
+						this._idTBeli = value.idTBeli;
+					}
+					else
+					{
+						this._idTBeli = default(string);
+					}
+					this.SendPropertyChanged("tPembelian");
 				}
 			}
 		}
@@ -2308,6 +2349,8 @@ namespace TA_RealEstate_Kel11
 		
 		private string _statusBayar;
 		
+		private EntityRef<tDetailPembelian> _tDetailPembelian;
+		
 		private EntityRef<client> _client;
 		
 		private EntityRef<kategoriBayar> _kategoriBayar;
@@ -2348,6 +2391,7 @@ namespace TA_RealEstate_Kel11
 		
 		public tPembelian()
 		{
+			this._tDetailPembelian = default(EntityRef<tDetailPembelian>);
 			this._client = default(EntityRef<client>);
 			this._kategoriBayar = default(EntityRef<kategoriBayar>);
 			this._kategoriCicilan = default(EntityRef<kategoriCicilan>);
@@ -2592,6 +2636,35 @@ namespace TA_RealEstate_Kel11
 					this._statusBayar = value;
 					this.SendPropertyChanged("statusBayar");
 					this.OnstatusBayarChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tPembelian_tDetailPembelian", Storage="_tDetailPembelian", ThisKey="idTBeli", OtherKey="idTBeli", IsUnique=true, IsForeignKey=false)]
+		public tDetailPembelian tDetailPembelian
+		{
+			get
+			{
+				return this._tDetailPembelian.Entity;
+			}
+			set
+			{
+				tDetailPembelian previousValue = this._tDetailPembelian.Entity;
+				if (((previousValue != value) 
+							|| (this._tDetailPembelian.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._tDetailPembelian.Entity = null;
+						previousValue.tPembelian = null;
+					}
+					this._tDetailPembelian.Entity = value;
+					if ((value != null))
+					{
+						value.tPembelian = this;
+					}
+					this.SendPropertyChanged("tDetailPembelian");
 				}
 			}
 		}

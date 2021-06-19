@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProperty));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKategoriBayar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,13 +54,8 @@
             this.PBGambar = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cbPemilik = new System.Windows.Forms.ComboBox();
-            this.pemilikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
-            this.pemilikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cbTipe = new System.Windows.Forms.ComboBox();
-            this.propertyTipeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.propertyTipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtUkuran = new System.Windows.Forms.TextBox();
             this.txtFasilitas = new System.Windows.Forms.TextBox();
             this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
@@ -80,8 +75,13 @@
             this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtCariProperty = new System.Windows.Forms.TextBox();
+            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
+            this.propertyTipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertyTipeTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTipeTableAdapter();
+            this.propertyTipeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pemilikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pemilikTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.pemilikTableAdapter();
+            this.pemilikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -89,12 +89,12 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBGambar)).BeginInit();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -547,19 +547,19 @@
             // 
             // dgProperty
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgProperty.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgProperty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgProperty.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProperty.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgProperty.DoubleBuffered = true;
@@ -657,21 +657,6 @@
             this.cbPemilik.TabIndex = 215;
             this.cbPemilik.ValueMember = "idPemilik";
             // 
-            // pemilikBindingSource1
-            // 
-            this.pemilikBindingSource1.DataMember = "pemilik";
-            this.pemilikBindingSource1.DataSource = this.rEALESTATEDataSet;
-            // 
-            // rEALESTATEDataSet
-            // 
-            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
-            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pemilikBindingSource
-            // 
-            this.pemilikBindingSource.DataMember = "pemilik";
-            this.pemilikBindingSource.DataSource = this.rEALESTATEDataSet;
-            // 
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
@@ -694,16 +679,6 @@
             this.cbTipe.Size = new System.Drawing.Size(160, 21);
             this.cbTipe.TabIndex = 213;
             this.cbTipe.ValueMember = "idTipe";
-            // 
-            // propertyTipeBindingSource1
-            // 
-            this.propertyTipeBindingSource1.DataMember = "propertyTipe";
-            this.propertyTipeBindingSource1.DataSource = this.rEALESTATEDataSet;
-            // 
-            // propertyTipeBindingSource
-            // 
-            this.propertyTipeBindingSource.DataMember = "propertyTipe";
-            this.propertyTipeBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // txtUkuran
             // 
@@ -968,13 +943,38 @@
             this.txtCariProperty.Size = new System.Drawing.Size(160, 20);
             this.txtCariProperty.TabIndex = 140;
             // 
+            // rEALESTATEDataSet
+            // 
+            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
+            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // propertyTipeBindingSource
+            // 
+            this.propertyTipeBindingSource.DataMember = "propertyTipe";
+            this.propertyTipeBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
             // propertyTipeTableAdapter
             // 
             this.propertyTipeTableAdapter.ClearBeforeFill = true;
             // 
+            // propertyTipeBindingSource1
+            // 
+            this.propertyTipeBindingSource1.DataMember = "propertyTipe";
+            this.propertyTipeBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // pemilikBindingSource
+            // 
+            this.pemilikBindingSource.DataMember = "pemilik";
+            this.pemilikBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
             // pemilikTableAdapter
             // 
             this.pemilikTableAdapter.ClearBeforeFill = true;
+            // 
+            // pemilikBindingSource1
+            // 
+            this.pemilikBindingSource1.DataMember = "pemilik";
+            this.pemilikBindingSource1.DataSource = this.rEALESTATEDataSet;
             // 
             // FormProperty
             // 
@@ -1005,13 +1005,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBGambar)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

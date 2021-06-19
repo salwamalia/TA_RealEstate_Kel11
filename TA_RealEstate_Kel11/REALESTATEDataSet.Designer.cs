@@ -56,6 +56,8 @@ namespace TA_RealEstate_Kel11 {
         
         private global::System.Data.DataRelation relationFK_tDetailPembelian_property;
         
+        private global::System.Data.DataRelation relationFK_tDetailPembelian_tPembelian;
+        
         private global::System.Data.DataRelation relationFK_tDetailPenyewaan_property;
         
         private global::System.Data.DataRelation relationFK_tPembelian_client;
@@ -492,6 +494,7 @@ namespace TA_RealEstate_Kel11 {
             this.relationFK_property_pemilik = this.Relations["FK_property_pemilik"];
             this.relationFK_property_propertyTipe = this.Relations["FK_property_propertyTipe"];
             this.relationFK_tDetailPembelian_property = this.Relations["FK_tDetailPembelian_property"];
+            this.relationFK_tDetailPembelian_tPembelian = this.Relations["FK_tDetailPembelian_tPembelian"];
             this.relationFK_tDetailPenyewaan_property = this.Relations["FK_tDetailPenyewaan_property"];
             this.relationFK_tPembelian_client = this.Relations["FK_tPembelian_client"];
             this.relationFK_tPembelian_kategoriBayar = this.Relations["FK_tPembelian_kategoriBayar"];
@@ -553,6 +556,10 @@ namespace TA_RealEstate_Kel11 {
                         this.tableproperty.idPropertyColumn}, new global::System.Data.DataColumn[] {
                         this.tabletDetailPembelian.idPropertyColumn}, false);
             this.Relations.Add(this.relationFK_tDetailPembelian_property);
+            this.relationFK_tDetailPembelian_tPembelian = new global::System.Data.DataRelation("FK_tDetailPembelian_tPembelian", new global::System.Data.DataColumn[] {
+                        this.tabletPembelian.idTBeliColumn}, new global::System.Data.DataColumn[] {
+                        this.tabletDetailPembelian.idTBeliColumn}, false);
+            this.Relations.Add(this.relationFK_tDetailPembelian_tPembelian);
             this.relationFK_tDetailPenyewaan_property = new global::System.Data.DataRelation("FK_tDetailPenyewaan_property", new global::System.Data.DataColumn[] {
                         this.tableproperty.idPropertyColumn}, new global::System.Data.DataColumn[] {
                         this.tabletDetailPenyewaan.idPropertyColumn}, false);
@@ -3417,13 +3424,16 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tDetailPembelianRow AddtDetailPembelianRow(string idTBeli, propertyRow parentpropertyRowByFK_tDetailPembelian_property, int lamaCicilan, int harga) {
+            public tDetailPembelianRow AddtDetailPembelianRow(tPembelianRow parenttPembelianRowByFK_tDetailPembelian_tPembelian, propertyRow parentpropertyRowByFK_tDetailPembelian_property, int lamaCicilan, int harga) {
                 tDetailPembelianRow rowtDetailPembelianRow = ((tDetailPembelianRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        idTBeli,
+                        null,
                         null,
                         lamaCicilan,
                         harga};
+                if ((parenttPembelianRowByFK_tDetailPembelian_tPembelian != null)) {
+                    columnValuesArray[0] = parenttPembelianRowByFK_tDetailPembelian_tPembelian[0];
+                }
                 if ((parentpropertyRowByFK_tDetailPembelian_property != null)) {
                     columnValuesArray[1] = parentpropertyRowByFK_tDetailPembelian_property[0];
                 }
@@ -5668,6 +5678,17 @@ namespace TA_RealEstate_Kel11 {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_tDetailPembelian_property"]);
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tPembelianRow tPembelianRow {
+                get {
+                    return ((tPembelianRow)(this.GetParentRow(this.Table.ParentRelations["FK_tDetailPembelian_tPembelian"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tDetailPembelian_tPembelian"]);
+                }
+            }
         }
         
         /// <summary>
@@ -5945,6 +5966,17 @@ namespace TA_RealEstate_Kel11 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetdpNull() {
                 this[this.tabletPembelian.dpColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public tDetailPembelianRow[] GettDetailPembelianRows() {
+                if ((this.Table.ChildRelations["FK_tDetailPembelian_tPembelian"] == null)) {
+                    return new tDetailPembelianRow[0];
+                }
+                else {
+                    return ((tDetailPembelianRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tDetailPembelian_tPembelian"])));
+                }
             }
         }
         
@@ -6765,7 +6797,7 @@ SELECT idClient, nama, jeniskelamin, telepon, email, alamat FROM client WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7201,7 +7233,7 @@ SELECT idClient, nama, jeniskelamin, telepon, email, alamat FROM client WHERE (i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7550,7 +7582,7 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7933,7 +7965,7 @@ SELECT idCicilan, jenisCicilan, harga, keterangan FROM kategoriCicilan WHERE (id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8323,7 +8355,7 @@ SELECT idPegawai, nama, jeniskelamin, username, password, idJabatan FROM pegawai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8781,7 +8813,7 @@ SELECT idPemilik, nama, jeniskelamin, telepon, email, alamat FROM pemilik WHERE 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9245,7 +9277,7 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9702,7 +9734,7 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10053,7 +10085,7 @@ SELECT idTBeli, idProperty, lamaCicilan, harga FROM tDetailPembelian WHERE (idTB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10412,7 +10444,7 @@ SELECT idTSewa, idProperty, lamaCicilan, harga FROM tDetailPenyewaan WHERE (idTS
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10805,7 +10837,7 @@ SELECT idTBeli, idProperty, idClient, namaClient, idPemilik, idKategoriBayar, id
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -11424,7 +11456,7 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString2;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12244,15 +12276,6 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._jabatanTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._jabatanTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._kategoriBayarTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.kategoriBayar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12280,6 +12303,24 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._jabatanTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._jabatanTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._tPembelianTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.tPembelian.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._tPembelianTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._pegawaiTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.pegawai.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12304,15 +12345,6 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._tDetailPenyewaanTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._tPembelianTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tPembelian.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._tPembelianTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12359,14 +12391,6 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._jabatanTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._jabatanTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._kategoriBayarTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.kategoriBayar.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12391,6 +12415,22 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._jabatanTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._jabatanTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._tPembelianTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.tPembelian.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._tPembelianTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._pegawaiTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.pegawai.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12412,14 +12452,6 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._tDetailPenyewaanTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._tPembelianTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tPembelian.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._tPembelianTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12449,14 +12481,6 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tPembelianTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tPembelian.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._tPembelianTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._tDetailPenyewaanTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.tDetailPenyewaan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12481,6 +12505,22 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._tPembelianTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.tPembelian.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._tPembelianTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._jabatanTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._jabatanTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._propertyTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.property.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12502,14 +12542,6 @@ SELECT idTSewa, idProperty, jenisSewa, lamaSewa, idClient, namaClient, idPemilik
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._kategoriBayarTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._jabatanTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._jabatanTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
