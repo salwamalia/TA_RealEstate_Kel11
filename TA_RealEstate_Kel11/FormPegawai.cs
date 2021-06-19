@@ -238,6 +238,8 @@ namespace TA_RealEstate_Kel11
         
         private void FormPegawai_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.jabatan' table. You can move, or remove it, as needed.
+            this.jabatanTableAdapter.Fill(this.rEALESTATEDataSet.jabatan);
             txtID.Text = IDOtomatis();
             LoadData();
         }

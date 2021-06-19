@@ -79,5 +79,10 @@ namespace TA_RealEstate_Kel11
             log.Visible = true;
             this.Hide();
         }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

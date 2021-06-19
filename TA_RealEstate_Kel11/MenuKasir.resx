@@ -126,6 +126,16 @@
         rkJggg==
 </value>
   </data>
+  <data name="btnX.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB0AAAAhCAYAAAAlK6DZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADoSURBVFhH7ZbbCsMgEAX7//9rLprEMoISzdpLcM2LBwYC
+        FWfXjW1fxhjfmyFVZUgz5nn2y7L4dV29tVaEz1jDWmmPMx+lbLTvu/83x3GEQqQ9QZRS7R1ZGfaQOr9I
+        6a51yq4zKVVphXmL0hZHWgtznqYpl2ocaxnnXC6lkh6h2yDVnGUZZhukPPQKb3KQ9phnTJLy0CvPdvrI
+        iwTdrwxwcbXDNx6uJKUC7W7jL06SguZ95QWKnkwKGse8bVvmuEiBK9TqqM8dRkQpMGMqvJvavwaoSiPI
+        6ZyKf4G1NVnkq1SDIVXlAanxb68IrZPiWLktAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="bunifuTileButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAABfFJREFUeF7t
@@ -352,13 +362,6 @@
         FkXE0aKIOFoUEUeLIuJoUUQcLYqIo0URcbQoIo4WRcTRoog4WhQRR4si4mhRRBwtioijRRFxtCgijhZF
         xNGiiDhaFBFHiyLiaFFEHC2KiKNFEXG0KCKOFkXE0aKIOFoUEUeLIuJoUUQcLYqIo0URMdt3+j81Kgk9
         Vu+NkQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="bunifuGradientPanel3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAUSURBVChTY/hPJBhViBdQW+H//wAj+46A3TfWvAAAAABJ
-        RU5ErkJggg==
 </value>
   </data>
 </root>

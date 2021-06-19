@@ -66,7 +66,7 @@ namespace TA_RealEstate_Kel11
 
             insert.Parameters.AddWithValue("idKategoriBayar", txtID.Text);
             insert.Parameters.AddWithValue("kategoriBayar", txtNama.Text);
-            insert.Parameters.AddWithValue("keterangan", txtKet.Text);
+            insert.Parameters.AddWithValue("keterangan", txtKeterangan.Text);
 
             if (txtNama.Text == "")
             {
@@ -104,7 +104,7 @@ namespace TA_RealEstate_Kel11
 
             Update.Parameters.AddWithValue("idKategoriBayar", txtID.Text);
             Update.Parameters.AddWithValue("kategoriBayar", txtNama.Text);
-            Update.Parameters.AddWithValue("keterangan", txtKet.Text);
+            Update.Parameters.AddWithValue("keterangan", txtKeterangan.Text);
 
             try
             {
@@ -159,7 +159,7 @@ namespace TA_RealEstate_Kel11
         {
             txtID.Clear();
             txtNama.Clear();
-            txtKet.Clear();
+            txtKeterangan.Clear();
         }
 
         private void btnCari_Click_1(object sender, EventArgs e)
@@ -182,7 +182,7 @@ namespace TA_RealEstate_Kel11
 
                 txtID.Text = dt.Rows[0]["idKategoriBayar"].ToString();
                 txtNama.Text = dt.Rows[0]["kategoriBayar"].ToString();
-                txtKet.Text = dt.Rows[0]["keterangan"].ToString();
+                txtKeterangan.Text = dt.Rows[0]["keterangan"].ToString();
 
                 myConnection.Close();
             }

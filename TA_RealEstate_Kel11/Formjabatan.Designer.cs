@@ -52,7 +52,6 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DataGridViewJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -61,6 +60,7 @@
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -100,7 +100,7 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 43;
             this.bunifuTileButton1.LabelText = "Admin";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(1226, 0);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(1233, 0);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
@@ -537,7 +537,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.DataGridViewJabatan);
-            this.groupBox3.Location = new System.Drawing.Point(829, 318);
+            this.groupBox3.Location = new System.Drawing.Point(828, 318);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(488, 220);
             this.groupBox3.TabIndex = 161;
@@ -587,13 +587,6 @@
             this.groupBox2.Size = new System.Drawing.Size(488, 220);
             this.groupBox2.TabIndex = 160;
             this.groupBox2.TabStop = false;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(204, 94);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(190, 20);
-            this.txtNama.TabIndex = 165;
             // 
             // bunifuCustomLabel3
             // 
@@ -748,13 +741,20 @@
             this.btnX.IdleFillColor = System.Drawing.Color.White;
             this.btnX.IdleForecolor = System.Drawing.Color.Black;
             this.btnX.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnX.Location = new System.Drawing.Point(1332, 0);
+            this.btnX.Location = new System.Drawing.Point(1337, 0);
             this.btnX.Margin = new System.Windows.Forms.Padding(4);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(29, 33);
             this.btnX.TabIndex = 153;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(204, 94);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(190, 20);
+            this.txtNama.TabIndex = 165;
             // 
             // FormJabatan
             // 

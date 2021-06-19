@@ -434,11 +434,12 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 43;
             this.bunifuTileButton1.LabelText = "Admin";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(1195, 0);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(1229, 0);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 1;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -533,7 +534,7 @@
             this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
             this.btnCari.ButtonText = "Cari";
             this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleBorderThickness = 1;
             this.btnCari.IdleCornerRadius = 20;
@@ -652,7 +653,7 @@
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleBorderThickness = 1;
             this.btnBatal.IdleCornerRadius = 20;
@@ -686,7 +687,7 @@
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleBorderThickness = 1;
             this.btnHapus.IdleCornerRadius = 20;
@@ -723,7 +724,7 @@
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleBorderThickness = 1;
             this.btnUpdate.IdleCornerRadius = 20;
@@ -749,7 +750,7 @@
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleBorderThickness = 1;
             this.btnSimpan.IdleCornerRadius = 20;

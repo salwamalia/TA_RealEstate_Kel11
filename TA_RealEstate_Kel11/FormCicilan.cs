@@ -150,6 +150,8 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Tidak Ada Cicilan yang dipilih", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void clear()
@@ -164,6 +166,7 @@ namespace TA_RealEstate_Kel11
         {
             clear();
             txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnCari_Click_1(object sender, EventArgs e)
@@ -276,6 +279,13 @@ namespace TA_RealEstate_Kel11
         {
             Login log = new Login();
             log.Visible = true;
+            this.Hide();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            MenuAdmin admin = new MenuAdmin();
+            admin.Show();
             this.Hide();
         }
     }

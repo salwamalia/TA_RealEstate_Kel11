@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPegawai));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKategoriBayar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -52,6 +53,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dbPegawai = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.rbPerempuan = new System.Windows.Forms.RadioButton();
             this.rbLaki = new System.Windows.Forms.RadioButton();
             this.cbJabatan = new System.Windows.Forms.ComboBox();
@@ -69,13 +71,19 @@
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
+            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
+            this.jabatanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.jabatanTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.jabatanTableAdapter();
+            this.jabatanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbPegawai)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -522,11 +530,11 @@
             this.btnCariPegawai.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnCariPegawai.ActiveForecolor = System.Drawing.Color.White;
             this.btnCariPegawai.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCariPegawai.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCariPegawai.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCariPegawai.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCariPegawai.BackgroundImage")));
             this.btnCariPegawai.ButtonText = "Cari";
             this.btnCariPegawai.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCariPegawai.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCariPegawai.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCariPegawai.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCariPegawai.IdleBorderThickness = 1;
             this.btnCariPegawai.IdleCornerRadius = 20;
@@ -562,7 +570,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dbPegawai);
-            this.groupBox3.Location = new System.Drawing.Point(821, 269);
+            this.groupBox3.Location = new System.Drawing.Point(837, 269);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(517, 369);
             this.groupBox3.TabIndex = 195;
@@ -571,19 +579,19 @@
             // 
             // dbPegawai
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dbPegawai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dbPegawai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dbPegawai.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dbPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dbPegawai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbPegawai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbPegawai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dbPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbPegawai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbPegawai.DoubleBuffered = true;
@@ -622,6 +630,13 @@
             this.groupBox2.TabIndex = 194;
             this.groupBox2.TabStop = false;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(208, 74);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(209, 20);
+            this.txtNama.TabIndex = 190;
+            // 
             // rbPerempuan
             // 
             this.rbPerempuan.AutoSize = true;
@@ -646,15 +661,15 @@
             // 
             // cbJabatan
             // 
+            this.cbJabatan.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.jabatanBindingSource1, "idJabatan", true));
+            this.cbJabatan.DataSource = this.jabatanBindingSource;
+            this.cbJabatan.DisplayMember = "jabatan";
             this.cbJabatan.FormattingEnabled = true;
-            this.cbJabatan.Items.AddRange(new object[] {
-            "JBT01",
-            "JBT02",
-            "JBT03"});
             this.cbJabatan.Location = new System.Drawing.Point(208, 255);
             this.cbJabatan.Name = "cbJabatan";
             this.cbJabatan.Size = new System.Drawing.Size(209, 21);
             this.cbJabatan.TabIndex = 187;
+            this.cbJabatan.ValueMember = "idJabatan";
             // 
             // bunifuCustomLabel8
             // 
@@ -732,11 +747,11 @@
             this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
             this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleBorderThickness = 1;
             this.btnBatal.IdleCornerRadius = 20;
@@ -766,11 +781,11 @@
             this.btnHapus.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.ActiveForecolor = System.Drawing.Color.White;
             this.btnHapus.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHapus.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleBorderThickness = 1;
             this.btnHapus.IdleCornerRadius = 20;
@@ -803,11 +818,11 @@
             this.btnUpdate.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
             this.btnUpdate.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleBorderThickness = 1;
             this.btnUpdate.IdleCornerRadius = 20;
@@ -829,11 +844,11 @@
             this.btnSimpan.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.ActiveForecolor = System.Drawing.Color.White;
             this.btnSimpan.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSimpan.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleBorderThickness = 1;
             this.btnSimpan.IdleCornerRadius = 20;
@@ -860,17 +875,30 @@
             this.bunifuCustomLabel2.Text = "Pegawai";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtNama
+            // rEALESTATEDataSet
             // 
-            this.txtNama.Location = new System.Drawing.Point(208, 74);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(209, 20);
-            this.txtNama.TabIndex = 190;
+            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
+            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jabatanBindingSource
+            // 
+            this.jabatanBindingSource.DataMember = "jabatan";
+            this.jabatanBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
+            // jabatanTableAdapter
+            // 
+            this.jabatanTableAdapter.ClearBeforeFill = true;
+            // 
+            // jabatanBindingSource1
+            // 
+            this.jabatanBindingSource1.DataMember = "jabatan";
+            this.jabatanBindingSource1.DataSource = this.rEALESTATEDataSet;
             // 
             // FormPegawai
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox3);
@@ -894,6 +922,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbPegawai)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,5 +969,9 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private REALESTATEDataSet rEALESTATEDataSet;
+        private System.Windows.Forms.BindingSource jabatanBindingSource;
+        private REALESTATEDataSetTableAdapters.jabatanTableAdapter jabatanTableAdapter;
+        private System.Windows.Forms.BindingSource jabatanBindingSource1;
     }
 }

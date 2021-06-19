@@ -50,7 +50,7 @@
             this.dgKategoriBayar = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
-            this.txtKet = new System.Windows.Forms.TextBox();
+            this.txtKeterangan = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -511,7 +511,7 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgKategoriBayar);
-            this.groupBox3.Location = new System.Drawing.Point(810, 318);
+            this.groupBox3.Location = new System.Drawing.Point(809, 318);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(487, 233);
             this.groupBox3.TabIndex = 147;
@@ -549,7 +549,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtNama);
-            this.groupBox2.Controls.Add(this.txtKet);
+            this.groupBox2.Controls.Add(this.txtKeterangan);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel5);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox2.Controls.Add(this.btnBatal);
@@ -571,13 +571,13 @@
             this.txtNama.Size = new System.Drawing.Size(184, 20);
             this.txtNama.TabIndex = 157;
             // 
-            // txtKet
+            // txtKeterangan
             // 
-            this.txtKet.Location = new System.Drawing.Point(188, 130);
-            this.txtKet.Multiline = true;
-            this.txtKet.Name = "txtKet";
-            this.txtKet.Size = new System.Drawing.Size(184, 57);
-            this.txtKet.TabIndex = 156;
+            this.txtKeterangan.Location = new System.Drawing.Point(188, 130);
+            this.txtKeterangan.Multiline = true;
+            this.txtKeterangan.Name = "txtKeterangan";
+            this.txtKeterangan.Size = new System.Drawing.Size(184, 57);
+            this.txtKeterangan.TabIndex = 156;
             // 
             // bunifuCustomLabel5
             // 
@@ -612,7 +612,7 @@
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleBorderThickness = 1;
             this.btnBatal.IdleCornerRadius = 20;
@@ -646,7 +646,7 @@
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleBorderThickness = 1;
             this.btnHapus.IdleCornerRadius = 20;
@@ -683,7 +683,7 @@
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleBorderThickness = 1;
             this.btnUpdate.IdleCornerRadius = 20;
@@ -709,7 +709,7 @@
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleBorderThickness = 1;
             this.btnSimpan.IdleCornerRadius = 20;
@@ -747,7 +747,7 @@
             this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
             this.btnCari.ButtonText = "Cari";
             this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleBorderThickness = 1;
             this.btnCari.IdleCornerRadius = 20;
@@ -832,7 +832,7 @@
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgKategoriBayar;
         private System.Windows.Forms.GroupBox groupBox2;
         private CharTextBox txtNama;
-        private System.Windows.Forms.TextBox txtKet;
+        private System.Windows.Forms.TextBox txtKeterangan;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;

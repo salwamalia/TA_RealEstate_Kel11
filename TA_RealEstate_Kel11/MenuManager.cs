@@ -21,5 +21,10 @@ namespace TA_RealEstate_Kel11
         {
             Application.Exit();
         }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

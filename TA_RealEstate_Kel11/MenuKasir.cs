@@ -16,5 +16,10 @@ namespace TA_RealEstate_Kel11
         {
             InitializeComponent();
         }
+
+        private void btnX_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

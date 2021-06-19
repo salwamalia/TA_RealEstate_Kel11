@@ -36,7 +36,7 @@
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapSewa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapBeli = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuGradientPanel3 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -46,6 +46,7 @@
             this.bunifuGradientPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.btnX);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuTileButton1);
             this.bunifuGradientPanel1.Controls.Add(this.bunifuCustomLabel1);
             this.bunifuGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -56,7 +57,7 @@
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(800, 122);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1370, 122);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // bunifuTileButton1
@@ -65,15 +66,14 @@
             this.bunifuTileButton1.color = System.Drawing.Color.Transparent;
             this.bunifuTileButton1.colorActive = System.Drawing.Color.Transparent;
             this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bunifuTileButton1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTileButton1.ForeColor = System.Drawing.Color.White;
             this.bunifuTileButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButton1.Image")));
-            this.bunifuTileButton1.ImagePosition = 20;
+            this.bunifuTileButton1.ImagePosition = 21;
             this.bunifuTileButton1.ImageZoom = 50;
-            this.bunifuTileButton1.LabelPosition = 41;
+            this.bunifuTileButton1.LabelPosition = 43;
             this.bunifuTileButton1.LabelText = "Manager";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(682, 0);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(1237, 0);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
@@ -106,7 +106,7 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 328);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(232, 627);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
             // bunifuFlatButton1
@@ -137,12 +137,12 @@
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(188, 49);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(232, 49);
             this.bunifuFlatButton1.TabIndex = 2;
             this.bunifuFlatButton1.Text = "Logout";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnLapSewa
             // 
@@ -172,12 +172,12 @@
             this.btnLapSewa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLapSewa.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLapSewa.selected = false;
-            this.btnLapSewa.Size = new System.Drawing.Size(188, 49);
+            this.btnLapSewa.Size = new System.Drawing.Size(232, 49);
             this.btnLapSewa.TabIndex = 1;
             this.btnLapSewa.Text = "Laporan Penyewaan";
             this.btnLapSewa.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLapSewa.Textcolor = System.Drawing.Color.White;
-            this.btnLapSewa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapSewa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btnLapBeli
             // 
@@ -207,40 +207,54 @@
             this.btnLapBeli.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLapBeli.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLapBeli.selected = false;
-            this.btnLapBeli.Size = new System.Drawing.Size(188, 49);
+            this.btnLapBeli.Size = new System.Drawing.Size(232, 49);
             this.btnLapBeli.TabIndex = 0;
             this.btnLapBeli.Text = "Laporan Pembelian";
             this.btnLapBeli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLapBeli.Textcolor = System.Drawing.Color.White;
-            this.btnLapBeli.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapBeli.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuGradientPanel3
+            // btnX
             // 
-            this.bunifuGradientPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel3.BackgroundImage")));
-            this.bunifuGradientPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bunifuGradientPanel3.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel3.Location = new System.Drawing.Point(188, 122);
-            this.bunifuGradientPanel3.Name = "bunifuGradientPanel3";
-            this.bunifuGradientPanel3.Quality = 10;
-            this.bunifuGradientPanel3.Size = new System.Drawing.Size(612, 328);
-            this.bunifuGradientPanel3.TabIndex = 4;
+            this.btnX.ActiveBorderThickness = 1;
+            this.btnX.ActiveCornerRadius = 20;
+            this.btnX.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnX.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnX.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnX.AutoSize = true;
+            this.btnX.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnX.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnX.BackgroundImage")));
+            this.btnX.ButtonText = "X";
+            this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnX.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnX.ForeColor = System.Drawing.Color.Black;
+            this.btnX.IdleBorderThickness = 1;
+            this.btnX.IdleCornerRadius = 20;
+            this.btnX.IdleFillColor = System.Drawing.Color.White;
+            this.btnX.IdleForecolor = System.Drawing.Color.Black;
+            this.btnX.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnX.Location = new System.Drawing.Point(1337, 0);
+            this.btnX.Margin = new System.Windows.Forms.Padding(4);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(29, 33);
+            this.btnX.TabIndex = 167;
+            this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // MenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.bunifuGradientPanel3);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MenuManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuManager";
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -255,6 +269,6 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapSewa;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel3;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnX;
     }
 }

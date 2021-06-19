@@ -210,7 +210,7 @@ namespace TA_RealEstate_Kel11
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                 da.Fill(dt);
-
+                 
                 txtID.Text = dt.Rows[0]["idClient"].ToString();
                 txtNama.Text = dt.Rows[0]["nama"].ToString();
                 jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();

@@ -54,12 +54,6 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
-        private void FormJabatan_Load(object sender, EventArgs e)
-        {
-            txtID.Text = IDOtomatis();
-            LoadData();
-        }
-        
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
@@ -122,7 +116,6 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Unable to save " + ex.Message);
             }
-
             txtID.Text = IDOtomatis();
             LoadData();
         }
@@ -156,15 +149,28 @@ namespace TA_RealEstate_Kel11
                     MessageBox.Show("Unable to save " + ex.Message);
                 }
             }
-
             txtID.Text = IDOtomatis();
             LoadData();
         }
 
+        private void FormJabatan_Load(object sender, EventArgs e)
+        {
+            txtID.Text = IDOtomatis();
+            LoadData();
+        }
+
+        void LoadData()
+        {
+            var st = from tb in dc.jabatans select tb;
+            DataGridViewJabatan.DataSource = st;
+        }
+
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
-            txtID.Clear();
             txtNama.Clear();
+            txtCariJabatan.Clear();
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnCari_Click(object sender, EventArgs e)
@@ -194,12 +200,6 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
             }
-        }
-
-        void LoadData()
-        {
-            var st = from tb in dc.jabatans select tb;
-            DataGridViewJabatan.DataSource = st;
         }
 
         private void btnJabatan_Click(object sender, EventArgs e)
