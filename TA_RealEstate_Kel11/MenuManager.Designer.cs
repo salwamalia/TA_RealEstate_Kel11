@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuManager));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapSewa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapBeli = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +60,33 @@
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1370, 122);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
+            // btnX
+            // 
+            this.btnX.ActiveBorderThickness = 1;
+            this.btnX.ActiveCornerRadius = 20;
+            this.btnX.ActiveFillColor = System.Drawing.Color.Transparent;
+            this.btnX.ActiveForecolor = System.Drawing.Color.Transparent;
+            this.btnX.ActiveLineColor = System.Drawing.Color.Transparent;
+            this.btnX.AutoSize = true;
+            this.btnX.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnX.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnX.BackgroundImage")));
+            this.btnX.ButtonText = "X";
+            this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnX.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnX.ForeColor = System.Drawing.Color.Black;
+            this.btnX.IdleBorderThickness = 1;
+            this.btnX.IdleCornerRadius = 20;
+            this.btnX.IdleFillColor = System.Drawing.Color.White;
+            this.btnX.IdleForecolor = System.Drawing.Color.Black;
+            this.btnX.IdleLineColor = System.Drawing.Color.Transparent;
+            this.btnX.Location = new System.Drawing.Point(1337, 0);
+            this.btnX.Margin = new System.Windows.Forms.Padding(4);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(29, 33);
+            this.btnX.TabIndex = 167;
+            this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
             // bunifuTileButton1
             // 
             this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
@@ -78,6 +105,7 @@
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 1;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -213,33 +241,6 @@
             this.btnLapBeli.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLapBeli.Textcolor = System.Drawing.Color.White;
             this.btnLapBeli.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnX
-            // 
-            this.btnX.ActiveBorderThickness = 1;
-            this.btnX.ActiveCornerRadius = 20;
-            this.btnX.ActiveFillColor = System.Drawing.Color.Transparent;
-            this.btnX.ActiveForecolor = System.Drawing.Color.Transparent;
-            this.btnX.ActiveLineColor = System.Drawing.Color.Transparent;
-            this.btnX.AutoSize = true;
-            this.btnX.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnX.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnX.BackgroundImage")));
-            this.btnX.ButtonText = "X";
-            this.btnX.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnX.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnX.ForeColor = System.Drawing.Color.Black;
-            this.btnX.IdleBorderThickness = 1;
-            this.btnX.IdleCornerRadius = 20;
-            this.btnX.IdleFillColor = System.Drawing.Color.White;
-            this.btnX.IdleForecolor = System.Drawing.Color.Black;
-            this.btnX.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnX.Location = new System.Drawing.Point(1337, 0);
-            this.btnX.Margin = new System.Windows.Forms.Padding(4);
-            this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(29, 33);
-            this.btnX.TabIndex = 167;
-            this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // MenuManager
             // 

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPegawai));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKategoriBayar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -57,6 +57,9 @@
             this.rbPerempuan = new System.Windows.Forms.RadioButton();
             this.rbLaki = new System.Windows.Forms.RadioButton();
             this.cbJabatan = new System.Windows.Forms.ComboBox();
+            this.jabatanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
+            this.jabatanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -71,19 +74,16 @@
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
-            this.jabatanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.jabatanTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.jabatanTableAdapter();
-            this.jabatanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbPegawai)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -510,6 +510,7 @@
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(128, 127);
             this.bunifuTileButton1.TabIndex = 156;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
             // groupBox1
             // 
@@ -579,19 +580,19 @@
             // 
             // dbPegawai
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dbPegawai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dbPegawai.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dbPegawai.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dbPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dbPegawai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbPegawai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbPegawai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dbPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbPegawai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbPegawai.DoubleBuffered = true;
@@ -670,6 +671,21 @@
             this.cbJabatan.Size = new System.Drawing.Size(209, 21);
             this.cbJabatan.TabIndex = 187;
             this.cbJabatan.ValueMember = "idJabatan";
+            // 
+            // jabatanBindingSource1
+            // 
+            this.jabatanBindingSource1.DataMember = "jabatan";
+            this.jabatanBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // rEALESTATEDataSet
+            // 
+            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
+            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // jabatanBindingSource
+            // 
+            this.jabatanBindingSource.DataMember = "jabatan";
+            this.jabatanBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // bunifuCustomLabel8
             // 
@@ -875,24 +891,9 @@
             this.bunifuCustomLabel2.Text = "Pegawai";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // rEALESTATEDataSet
-            // 
-            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
-            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jabatanBindingSource
-            // 
-            this.jabatanBindingSource.DataMember = "jabatan";
-            this.jabatanBindingSource.DataSource = this.rEALESTATEDataSet;
-            // 
             // jabatanTableAdapter
             // 
             this.jabatanTableAdapter.ClearBeforeFill = true;
-            // 
-            // jabatanBindingSource1
-            // 
-            this.jabatanBindingSource1.DataMember = "jabatan";
-            this.jabatanBindingSource1.DataSource = this.rEALESTATEDataSet;
             // 
             // FormPegawai
             // 
@@ -922,9 +923,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dbPegawai)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.jabatanBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

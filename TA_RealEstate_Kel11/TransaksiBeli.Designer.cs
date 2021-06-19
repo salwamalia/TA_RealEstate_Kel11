@@ -43,6 +43,7 @@
             this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtDP = new TA_RealEstate_Kel11.NumberTextBox();
             this.cbPembayaran = new System.Windows.Forms.ComboBox();
             this.cbCicilan = new System.Windows.Forms.ComboBox();
             this.cbClient = new System.Windows.Forms.ComboBox();
@@ -70,17 +71,16 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dbTransaksi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTotal = new TA_RealEstate_Kel11.NumberTextBox();
             this.cbDetailProperty = new System.Windows.Forms.ComboBox();
+            this.txtLamaCicilan = new TA_RealEstate_Kel11.NumberTextBox();
+            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.btnBayar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtDP = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtTotal = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtLamaCicilan = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -156,6 +156,7 @@
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 167;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -327,6 +328,13 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(146, 20);
             this.dateTimePicker1.TabIndex = 184;
+            // 
+            // txtDP
+            // 
+            this.txtDP.Location = new System.Drawing.Point(485, 150);
+            this.txtDP.Name = "txtDP";
+            this.txtDP.Size = new System.Drawing.Size(146, 20);
+            this.txtDP.TabIndex = 183;
             // 
             // cbPembayaran
             // 
@@ -710,6 +718,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detail Transaksi";
             // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(121, 185);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(146, 20);
+            this.txtTotal.TabIndex = 168;
+            // 
             // cbDetailProperty
             // 
             this.cbDetailProperty.FormattingEnabled = true;
@@ -717,6 +732,20 @@
             this.cbDetailProperty.Name = "cbDetailProperty";
             this.cbDetailProperty.Size = new System.Drawing.Size(146, 21);
             this.cbDetailProperty.TabIndex = 167;
+            // 
+            // txtLamaCicilan
+            // 
+            this.txtLamaCicilan.Location = new System.Drawing.Point(121, 78);
+            this.txtLamaCicilan.Name = "txtLamaCicilan";
+            this.txtLamaCicilan.Size = new System.Drawing.Size(146, 20);
+            this.txtLamaCicilan.TabIndex = 166;
+            // 
+            // txtHarga
+            // 
+            this.txtHarga.Location = new System.Drawing.Point(121, 121);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.Size = new System.Drawing.Size(146, 20);
+            this.txtHarga.TabIndex = 165;
             // 
             // btnBayar
             // 
@@ -798,34 +827,6 @@
             this.bunifuCustomLabel2.TabIndex = 149;
             this.bunifuCustomLabel2.Text = "Pembelian";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtDP
-            // 
-            this.txtDP.Location = new System.Drawing.Point(485, 150);
-            this.txtDP.Name = "txtDP";
-            this.txtDP.Size = new System.Drawing.Size(146, 20);
-            this.txtDP.TabIndex = 183;
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(121, 185);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(146, 20);
-            this.txtTotal.TabIndex = 168;
-            // 
-            // txtLamaCicilan
-            // 
-            this.txtLamaCicilan.Location = new System.Drawing.Point(121, 78);
-            this.txtLamaCicilan.Name = "txtLamaCicilan";
-            this.txtLamaCicilan.Size = new System.Drawing.Size(146, 20);
-            this.txtLamaCicilan.TabIndex = 166;
-            // 
-            // txtHarga
-            // 
-            this.txtHarga.Location = new System.Drawing.Point(121, 121);
-            this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(146, 20);
-            this.txtHarga.TabIndex = 165;
             // 
             // TransaksiBeli
             // 

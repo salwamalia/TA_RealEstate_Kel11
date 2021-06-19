@@ -273,5 +273,12 @@ namespace TA_RealEstate_Kel11
         {
             Application.Exit();
         }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            MenuAdmin admin = new MenuAdmin();
+            admin.Show();
+            this.Hide();
+        }
     }
 }

@@ -21,5 +21,12 @@ namespace TA_RealEstate_Kel11
         {
             Application.Exit();
         }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            MenuManager manager = new MenuManager();
+            manager.Show();
+            this.Hide();
+        }
     }
 }

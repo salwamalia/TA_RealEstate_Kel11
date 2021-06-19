@@ -52,6 +52,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.DataGridViewJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -60,7 +61,6 @@
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -105,6 +105,7 @@
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 1;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -588,6 +589,13 @@
             this.groupBox2.TabIndex = 160;
             this.groupBox2.TabStop = false;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(204, 94);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(190, 20);
+            this.txtNama.TabIndex = 165;
+            // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
@@ -748,13 +756,6 @@
             this.btnX.TabIndex = 153;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(204, 94);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(190, 20);
-            this.txtNama.TabIndex = 165;
             // 
             // FormJabatan
             // 
