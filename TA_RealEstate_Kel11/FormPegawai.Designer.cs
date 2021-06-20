@@ -59,7 +59,6 @@
             this.cbJabatan = new System.Windows.Forms.ComboBox();
             this.jabatanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
-            this.jabatanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
@@ -73,6 +72,7 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.jabatanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.jabatanTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.jabatanTableAdapter();
             this.bunifuGradientPanel2.SuspendLayout();
@@ -665,6 +665,7 @@
             this.cbJabatan.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.jabatanBindingSource1, "idJabatan", true));
             this.cbJabatan.DataSource = this.jabatanBindingSource;
             this.cbJabatan.DisplayMember = "jabatan";
+            this.cbJabatan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbJabatan.FormattingEnabled = true;
             this.cbJabatan.Location = new System.Drawing.Point(208, 255);
             this.cbJabatan.Name = "cbJabatan";
@@ -681,11 +682,6 @@
             // 
             this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
             this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // jabatanBindingSource
-            // 
-            this.jabatanBindingSource.DataMember = "jabatan";
-            this.jabatanBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // bunifuCustomLabel8
             // 
@@ -878,6 +874,11 @@
             this.btnSimpan.TabIndex = 177;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click_1);
+            // 
+            // jabatanBindingSource
+            // 
+            this.jabatanBindingSource.DataMember = "jabatan";
+            this.jabatanBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // bunifuCustomLabel2
             // 

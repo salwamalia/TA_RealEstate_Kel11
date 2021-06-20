@@ -78,7 +78,7 @@ namespace TA_RealEstate_Kel11
             insert.Parameters.AddWithValue("jeniskelamin", jeniskelamin);
             insert.Parameters.AddWithValue("username", txtUser.Text);
             insert.Parameters.AddWithValue("password", txtPass.Text);
-            insert.Parameters.AddWithValue("idjabatan", cbJabatan.SelectedItem.ToString());
+            insert.Parameters.AddWithValue("idjabatan", cbJabatan.SelectedValue.ToString());
 
             if (txtID.Text == "" || txtNama.Text == "" || jeniskelamin == "" || txtUser.Text == "" || txtPass.Text == "" || cbJabatan.Text == "")
             {
@@ -180,10 +180,12 @@ namespace TA_RealEstate_Kel11
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
+            txtID.Text = IDOtomatis();
         }
 
         private void clear()
         {
+            txtCariPegawai.Clear();
             txtID.Clear();
             txtNama.Clear();
             txtUser.Clear();
@@ -238,6 +240,10 @@ namespace TA_RealEstate_Kel11
         
         private void FormPegawai_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.jabatan' table. You can move, or remove it, as needed.
+            this.jabatanTableAdapter.Fill(this.rEALESTATEDataSet.jabatan);
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.jabatan' table. You can move, or remove it, as needed.
+            this.jabatanTableAdapter.Fill(this.rEALESTATEDataSet.jabatan);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.jabatan' table. You can move, or remove it, as needed.
             this.jabatanTableAdapter.Fill(this.rEALESTATEDataSet.jabatan);
             txtID.Text = IDOtomatis();

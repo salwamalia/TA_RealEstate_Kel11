@@ -78,10 +78,10 @@
             this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
             this.propertyTipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertyTipeTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTipeTableAdapter();
-            this.propertyTipeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pemilikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pemilikTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.pemilikTableAdapter();
             this.pemilikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.propertyTipeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -92,9 +92,9 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogout
@@ -650,6 +650,7 @@
             this.cbPemilik.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pemilikBindingSource1, "idPemilik", true));
             this.cbPemilik.DataSource = this.pemilikBindingSource;
             this.cbPemilik.DisplayMember = "nama";
+            this.cbPemilik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPemilik.FormattingEnabled = true;
             this.cbPemilik.Location = new System.Drawing.Point(164, 147);
             this.cbPemilik.Name = "cbPemilik";
@@ -673,6 +674,7 @@
             this.cbTipe.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.propertyTipeBindingSource1, "idTipe", true));
             this.cbTipe.DataSource = this.propertyTipeBindingSource;
             this.cbTipe.DisplayMember = "nama";
+            this.cbTipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipe.FormattingEnabled = true;
             this.cbTipe.Location = new System.Drawing.Point(164, 108);
             this.cbTipe.Name = "cbTipe";
@@ -957,11 +959,6 @@
             // 
             this.propertyTipeTableAdapter.ClearBeforeFill = true;
             // 
-            // propertyTipeBindingSource1
-            // 
-            this.propertyTipeBindingSource1.DataMember = "propertyTipe";
-            this.propertyTipeBindingSource1.DataSource = this.rEALESTATEDataSet;
-            // 
             // pemilikBindingSource
             // 
             this.pemilikBindingSource.DataMember = "pemilik";
@@ -975,6 +972,11 @@
             // 
             this.pemilikBindingSource1.DataMember = "pemilik";
             this.pemilikBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // propertyTipeBindingSource1
+            // 
+            this.propertyTipeBindingSource1.DataMember = "propertyTipe";
+            this.propertyTipeBindingSource1.DataSource = this.rEALESTATEDataSet;
             // 
             // FormProperty
             // 
@@ -1009,9 +1011,9 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1063,9 +1065,9 @@
         private REALESTATEDataSet rEALESTATEDataSet;
         private System.Windows.Forms.BindingSource propertyTipeBindingSource;
         private REALESTATEDataSetTableAdapters.propertyTipeTableAdapter propertyTipeTableAdapter;
-        private System.Windows.Forms.BindingSource propertyTipeBindingSource1;
         private System.Windows.Forms.BindingSource pemilikBindingSource;
         private REALESTATEDataSetTableAdapters.pemilikTableAdapter pemilikTableAdapter;
         private System.Windows.Forms.BindingSource pemilikBindingSource1;
+        private System.Windows.Forms.BindingSource propertyTipeBindingSource1;
     }
 }

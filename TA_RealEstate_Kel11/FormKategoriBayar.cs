@@ -153,10 +153,13 @@ namespace TA_RealEstate_Kel11
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void clear()
         {
+            txtCariKategori.Clear();
             txtID.Clear();
             txtNama.Clear();
             txtKeterangan.Clear();

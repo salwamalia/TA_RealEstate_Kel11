@@ -21,16 +21,16 @@ namespace TA_RealEstate_Kel11
         }
 
         string imgLocation = "";
-        SqlCommand cmd;
 
         REALESTATEDataContext dt = new REALESTATEDataContext();
+        Classes.PROPERTY property = new Classes.PROPERTY();
 
         private string IDOtomatis()
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -70,8 +70,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             Image img;
@@ -127,8 +127,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             Image img;
@@ -179,31 +179,28 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Property", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
+                string id = txtID.Text;
 
-                //delete command
-                SqlCommand delete = new SqlCommand("sp_DeleteProperty", myConnection);
-                delete.CommandType = CommandType.StoredProcedure;
-
-                delete.Parameters.AddWithValue("idProperty", txtID.Text);
-
-                try
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    myConnection.Open();
-                    delete.ExecuteNonQuery();
-                    MessageBox.Show("Property Delete Succesfully", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                    LoadData();
+                    if (property.deleteProperty(id))
+                    {
+                        MessageBox.Show("Kategori Telah DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                        txtID.Text = IDOtomatis();
+                        LoadData();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Kategori Tidak DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Unable to save " + ex.Message);
-                }
-                txtID.Text = IDOtomatis();
+            }
+            catch
+            {
+                MessageBox.Show("Tidak Ada Kategori yang dipilih", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -231,8 +228,8 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 
@@ -249,15 +246,15 @@ namespace TA_RealEstate_Kel11
                 txtUkuran.Text = dt.Rows[0]["ukuran"].ToString();
                 txtFasilitas.Text = dt.Rows[0]["fasilitas"].ToString();
                 txtHarga.Text = dt.Rows[0]["harga"].ToString();
-
                 byte[] img = (byte[])(dt.Rows[0]["gambar"]);
+
                 if (img == null)
                 {
                     PBGambar.Image = null;
                 }
                 else
                 {
-                    MemoryStream ms = new MemoryStream(img);
+                    MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["gambar"]);
                     PBGambar.Image = Image.FromStream(ms);
                 }
 
@@ -279,10 +276,6 @@ namespace TA_RealEstate_Kel11
 
         private void FormProperty_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.pemilik' table. You can move, or remove it, as needed.
-            this.pemilikTableAdapter.Fill(this.rEALESTATEDataSet.pemilik);
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.propertyTipe' table. You can move, or remove it, as needed.
-            this.propertyTipeTableAdapter.Fill(this.rEALESTATEDataSet.propertyTipe);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.pemilik' table. You can move, or remove it, as needed.
             this.pemilikTableAdapter.Fill(this.rEALESTATEDataSet.pemilik);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.propertyTipe' table. You can move, or remove it, as needed.

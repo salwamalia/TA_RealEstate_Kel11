@@ -25,8 +25,8 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -42,12 +42,12 @@ namespace TA_RealEstate_Kel11
                 number += 1;
                 string str = number.ToString("D2");
 
-                autoid = "Tp" + str;
+                autoid = "TP" + str;
             }
 
             if (autoid == null)
             {
-                autoid = "Tp01";
+                autoid = "TP01";
             }
 
             myConnection.Close();
@@ -57,8 +57,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertType", myConnection);
@@ -153,8 +153,12 @@ namespace TA_RealEstate_Kel11
 
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
+            txtCariTipe.Clear();
             txtID.Clear();
             txtNama.Clear();
+
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnCari_Click(object sender, EventArgs e)
@@ -164,8 +168,8 @@ namespace TA_RealEstate_Kel11
 
             try
             {
-                string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection myConnection = new SqlConnection(myConnectionString);
                 myConnection.Open();
 

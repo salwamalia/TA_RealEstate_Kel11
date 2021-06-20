@@ -52,7 +52,6 @@
             this.txtCariCicilan = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtKet = new System.Windows.Forms.TextBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
@@ -65,6 +64,7 @@
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgCicilan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txtNama = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -569,8 +569,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtKet);
             this.groupBox2.Controls.Add(this.txtNama);
+            this.groupBox2.Controls.Add(this.txtKet);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel6);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel5);
             this.groupBox2.Controls.Add(this.txtHarga);
@@ -594,13 +594,6 @@
             this.txtKet.Name = "txtKet";
             this.txtKet.Size = new System.Drawing.Size(190, 50);
             this.txtKet.TabIndex = 178;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(189, 80);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(189, 20);
-            this.txtNama.TabIndex = 177;
             // 
             // bunifuCustomLabel6
             // 
@@ -803,6 +796,13 @@
             this.dgCicilan.Size = new System.Drawing.Size(522, 274);
             this.dgCicilan.TabIndex = 154;
             // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(189, 80);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(190, 20);
+            this.txtNama.TabIndex = 180;
+            // 
             // FormCicilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -856,7 +856,6 @@
         private System.Windows.Forms.TextBox txtCariCicilan;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtKet;
-        private CharTextBox txtNama;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private NumberTextBox txtHarga;
@@ -869,5 +868,6 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
         private System.Windows.Forms.GroupBox groupBox3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgCicilan;
+        private System.Windows.Forms.TextBox txtNama;
     }
 }
