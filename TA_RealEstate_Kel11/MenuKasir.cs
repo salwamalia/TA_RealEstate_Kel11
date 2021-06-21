@@ -28,5 +28,26 @@ namespace TA_RealEstate_Kel11
             kasir.Show();
             this.Hide();
         }
+
+        private void btnPembelian_Click(object sender, EventArgs e)
+        {
+            TransaksiBeli beli = new TransaksiBeli();
+            beli.Show();
+            this.Hide();
+        }
+
+        private void btnPenyewaan_Click(object sender, EventArgs e)
+        {
+            TransaksiSewa sewa = new TransaksiSewa();
+            sewa.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Visible = true;
+            this.Hide();
+        }
     }
 }

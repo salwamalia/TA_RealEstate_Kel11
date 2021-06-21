@@ -14,6 +14,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormClient : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormClient()
         {
             InitializeComponent();
@@ -25,9 +28,7 @@ namespace TA_RealEstate_Kel11
         private string IDOtomatis()
         {
             string autoid = null;
-
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -67,9 +68,7 @@ namespace TA_RealEstate_Kel11
             {
                 jeniskelamin = rbPerempuan.Text;
             }
-
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertClient", myConnection);
@@ -84,7 +83,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "" || txtAlamat.Text == "" || jeniskelamin == "")
             {
-                MessageBox.Show("Semua Data tersebut Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (!(Regex.IsMatch(txtEmail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$")))
             {
@@ -102,12 +101,9 @@ namespace TA_RealEstate_Kel11
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to save " + ex.Message);
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -137,8 +133,6 @@ namespace TA_RealEstate_Kel11
                     {
                         MessageBox.Show("Client Telah DiUpdate", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clear();
-                        txtID.Text = IDOtomatis();
-                        LoadData();
                     }
                     else
                     {
@@ -154,41 +148,43 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Tidak Ada Client yang dipilih", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            LoadData();
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtCariClient.Text == "")
+            {
+                MessageBox.Show("Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
             {
                 string id = txtID.Text;
 
                 if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Client", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (person.deleteClient(id))
+                    if (!id.Trim().Equals(""))
                     {
-                        MessageBox.Show("Client Telah DiHapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                        txtID.Text = IDOtomatis();
-                        LoadData();
+                        if (person.deleteClient(id))
+                        {
+                            MessageBox.Show("Client Telah DiHapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Client Tidak DiHapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Client Tidak DiHapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Silahkan Isi Data untuk di Hapus", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Tidak Ada Client yang dipilih untuk dihapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
-            txtID.Text = IDOtomatis();
         }
 
         private void btnCariClient_Click_1(object sender, EventArgs e)
@@ -198,62 +194,100 @@ namespace TA_RealEstate_Kel11
 
             string jeniskelamin = null;
 
-            try
+            if (txtCariClient.Text == "")
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM client WHERE idClient ='" + txtCariClient.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-                 
-                txtID.Text = dt.Rows[0]["idClient"].ToString();
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-                jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
-                txtTelepon.Text = dt.Rows[0]["telepon"].ToString();
-                txtEmail.Text = dt.Rows[0]["email"].ToString();
-                txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
-
-                if (jeniskelamin == rbLaki.Text)
-                {
-                    rbLaki.Checked = true;
-                }
-                else if (jeniskelamin == rbPerempuan.Text)
-                {
-                    rbPerempuan.Checked = true;
-                }
-
-                rbLaki.Enabled = true;
-                rbPerempuan.Enabled = true;
-
-                myConnection.Close();
+                MessageBox.Show("Masukkan ID untuk Cari !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error Client Tidak Ditemukan! " + ex);
+                try
+                {
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
+
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM client WHERE idClient ='" + txtCariClient.Text + "'", myConnection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    da.Fill(dt);
+
+                    txtID.Text = dt.Rows[0]["idClient"].ToString();
+                    txtNama.Text = dt.Rows[0]["nama"].ToString();
+                    jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
+                    txtTelepon.Text = dt.Rows[0]["telepon"].ToString();
+                    txtEmail.Text = dt.Rows[0]["email"].ToString();
+                    txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
+
+                    if (jeniskelamin == rbLaki.Text)
+                    {
+                        rbLaki.Checked = true;
+                    }
+                    else if (jeniskelamin == rbPerempuan.Text)
+                    {
+                        rbPerempuan.Checked = true;
+                    }
+
+                    rbLaki.Enabled = true;
+                    rbPerempuan.Enabled = true;
+                    
+                    myConnection.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error Client Tidak Ditemukan! ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
         void LoadData()
         {
-            var sp = from tb in dc.clients select tb;
-            dgClient.DataSource = sp;
+            try
+            {
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM client", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Nama");
+                dataTable.Columns.Add("Jenis Kelamin");
+                dataTable.Columns.Add("Telepon");
+                dataTable.Columns.Add("Email");
+                dataTable.Columns.Add("Alamat");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idClient"];
+                    row["Nama"] = sqlDataReader["nama"];
+                    row["Jenis Kelamin"] = sqlDataReader["jenisKelamin"];
+                    row["Telepon"] = sqlDataReader["telepon"];
+                    row["Email"] = sqlDataReader["email"];
+                    row["Alamat"] = sqlDataReader["alamat"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgClient.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
 
         private void clear()
         {
-            txtID.Clear();
             txtCariClient.Clear();
+            txtID.Clear();
             txtNama.Clear();
             txtEmail.Clear();
             txtTelepon.Clear();
             txtAlamat.Clear();
             rbLaki.Checked = false;
             rbPerempuan.Checked = false;
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void FormClient_Load(object sender, EventArgs e)

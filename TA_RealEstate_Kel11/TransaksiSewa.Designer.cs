@@ -195,7 +195,7 @@
             // btnLogout
             // 
             this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 0;
             this.btnLogout.ButtonText = "Logout";
@@ -203,7 +203,7 @@
             this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
+            this.btnLogout.Iconimage = null;
             this.btnLogout.Iconimage_right = null;
             this.btnLogout.Iconimage_right_Selected = null;
             this.btnLogout.Iconimage_Selected = null;
@@ -216,21 +216,22 @@
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(0, 98);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
             this.btnLogout.Size = new System.Drawing.Size(188, 49);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Textcolor = System.Drawing.Color.White;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnPenyewaan
             // 
             this.btnPenyewaan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPenyewaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPenyewaan.BorderRadius = 0;
             this.btnPenyewaan.ButtonText = "Penyewaan";
@@ -238,7 +239,7 @@
             this.btnPenyewaan.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPenyewaan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPenyewaan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPenyewaan.Iconimage")));
+            this.btnPenyewaan.Iconimage = null;
             this.btnPenyewaan.Iconimage_right = null;
             this.btnPenyewaan.Iconimage_right_Selected = null;
             this.btnPenyewaan.Iconimage_Selected = null;
@@ -251,21 +252,22 @@
             this.btnPenyewaan.IsTab = false;
             this.btnPenyewaan.Location = new System.Drawing.Point(0, 49);
             this.btnPenyewaan.Name = "btnPenyewaan";
-            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPenyewaan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPenyewaan.selected = false;
             this.btnPenyewaan.Size = new System.Drawing.Size(188, 49);
             this.btnPenyewaan.TabIndex = 2;
             this.btnPenyewaan.Text = "Penyewaan";
-            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPenyewaan.Textcolor = System.Drawing.Color.White;
+            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPenyewaan.Textcolor = System.Drawing.Color.Black;
             this.btnPenyewaan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPenyewaan.Click += new System.EventHandler(this.btnPenyewaan_Click);
             // 
             // btnPembelian
             // 
             this.btnPembelian.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPembelian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPembelian.BorderRadius = 0;
             this.btnPembelian.ButtonText = "Pembelian";
@@ -273,7 +275,7 @@
             this.btnPembelian.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPembelian.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPembelian.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPembelian.Iconimage")));
+            this.btnPembelian.Iconimage = null;
             this.btnPembelian.Iconimage_right = null;
             this.btnPembelian.Iconimage_right_Selected = null;
             this.btnPembelian.Iconimage_Selected = null;
@@ -286,22 +288,23 @@
             this.btnPembelian.IsTab = false;
             this.btnPembelian.Location = new System.Drawing.Point(0, 0);
             this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPembelian.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPembelian.selected = false;
             this.btnPembelian.Size = new System.Drawing.Size(188, 49);
             this.btnPembelian.TabIndex = 1;
             this.btnPembelian.Text = "Pembelian";
-            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPembelian.Textcolor = System.Drawing.Color.White;
+            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPembelian.Textcolor = System.Drawing.Color.Black;
             this.btnPembelian.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPembelian.Click += new System.EventHandler(this.btnPembelian_Click);
             // 
             // bunifuCustomLabel2
             // 
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(188, 122);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(1198, 49);
@@ -346,7 +349,7 @@
             this.btnCari.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnCari.ActiveForecolor = System.Drawing.Color.White;
             this.btnCari.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.BackColor = System.Drawing.SystemColors.Control;
+            this.btnCari.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
             this.btnCari.ButtonText = "Cari";
             this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -418,7 +421,7 @@
             this.btnBayar.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnBayar.ActiveForecolor = System.Drawing.Color.White;
             this.btnBayar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBayar.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBayar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBayar.BackgroundImage")));
             this.btnBayar.ButtonText = "Bayar";
             this.btnBayar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -709,7 +712,7 @@
             this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
             this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -734,7 +737,7 @@
             this.btnHapus.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.ActiveForecolor = System.Drawing.Color.White;
             this.btnHapus.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.BackColor = System.Drawing.SystemColors.Control;
+            this.btnHapus.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -759,7 +762,7 @@
             this.btnUpdate.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
             this.btnUpdate.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Control;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -784,7 +787,7 @@
             this.btnSimpan.ActiveFillColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.ActiveForecolor = System.Drawing.Color.White;
             this.btnSimpan.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSimpan.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -880,6 +883,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.groupBox4);

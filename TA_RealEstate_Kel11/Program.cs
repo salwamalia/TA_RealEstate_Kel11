@@ -16,7 +16,7 @@ namespace TA_RealEstate_Kel11
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProperty());
+            Application.Run(new MenuManager());
         }
     }
 }

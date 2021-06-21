@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransaksiBeli));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
@@ -191,7 +191,7 @@
             // btnLogout
             // 
             this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 0;
             this.btnLogout.ButtonText = "Logout";
@@ -199,7 +199,7 @@
             this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
+            this.btnLogout.Iconimage = null;
             this.btnLogout.Iconimage_right = null;
             this.btnLogout.Iconimage_right_Selected = null;
             this.btnLogout.Iconimage_Selected = null;
@@ -212,21 +212,22 @@
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(0, 98);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
             this.btnLogout.Size = new System.Drawing.Size(188, 49);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Textcolor = System.Drawing.Color.White;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnPenyewaan
             // 
             this.btnPenyewaan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPenyewaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPenyewaan.BorderRadius = 0;
             this.btnPenyewaan.ButtonText = "Penyewaan";
@@ -234,7 +235,7 @@
             this.btnPenyewaan.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPenyewaan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPenyewaan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPenyewaan.Iconimage")));
+            this.btnPenyewaan.Iconimage = null;
             this.btnPenyewaan.Iconimage_right = null;
             this.btnPenyewaan.Iconimage_right_Selected = null;
             this.btnPenyewaan.Iconimage_Selected = null;
@@ -247,21 +248,22 @@
             this.btnPenyewaan.IsTab = false;
             this.btnPenyewaan.Location = new System.Drawing.Point(0, 49);
             this.btnPenyewaan.Name = "btnPenyewaan";
-            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPenyewaan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPenyewaan.selected = false;
             this.btnPenyewaan.Size = new System.Drawing.Size(188, 49);
             this.btnPenyewaan.TabIndex = 2;
             this.btnPenyewaan.Text = "Penyewaan";
-            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPenyewaan.Textcolor = System.Drawing.Color.White;
+            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPenyewaan.Textcolor = System.Drawing.Color.Black;
             this.btnPenyewaan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPenyewaan.Click += new System.EventHandler(this.btnPenyewaan_Click);
             // 
             // btnPembelian
             // 
             this.btnPembelian.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPembelian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPembelian.BorderRadius = 0;
             this.btnPembelian.ButtonText = "Pembelian";
@@ -269,7 +271,7 @@
             this.btnPembelian.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPembelian.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPembelian.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPembelian.Iconimage")));
+            this.btnPembelian.Iconimage = null;
             this.btnPembelian.Iconimage_right = null;
             this.btnPembelian.Iconimage_right_Selected = null;
             this.btnPembelian.Iconimage_Selected = null;
@@ -282,16 +284,17 @@
             this.btnPembelian.IsTab = false;
             this.btnPembelian.Location = new System.Drawing.Point(0, 0);
             this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPembelian.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPembelian.selected = false;
             this.btnPembelian.Size = new System.Drawing.Size(188, 49);
             this.btnPembelian.TabIndex = 1;
             this.btnPembelian.Text = "Pembelian";
-            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPembelian.Textcolor = System.Drawing.Color.White;
+            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPembelian.Textcolor = System.Drawing.Color.Black;
             this.btnPembelian.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPembelian.Click += new System.EventHandler(this.btnPembelian_Click);
             // 
             // groupBox5
             // 
@@ -482,7 +485,7 @@
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleBorderThickness = 1;
             this.btnBatal.IdleCornerRadius = 20;
@@ -492,7 +495,7 @@
             this.btnBatal.Location = new System.Drawing.Point(442, 185);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(67, 29);
+            this.btnBatal.Size = new System.Drawing.Size(75, 29);
             this.btnBatal.TabIndex = 167;
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -507,7 +510,7 @@
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleBorderThickness = 1;
             this.btnHapus.IdleCornerRadius = 20;
@@ -517,7 +520,7 @@
             this.btnHapus.Location = new System.Drawing.Point(350, 185);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(68, 29);
+            this.btnHapus.Size = new System.Drawing.Size(76, 29);
             this.btnHapus.TabIndex = 168;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -532,7 +535,7 @@
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleBorderThickness = 1;
             this.btnUpdate.IdleCornerRadius = 20;
@@ -542,7 +545,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(258, 185);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(68, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(76, 29);
             this.btnUpdate.TabIndex = 166;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -557,7 +560,7 @@
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleBorderThickness = 1;
             this.btnSimpan.IdleCornerRadius = 20;
@@ -567,7 +570,7 @@
             this.btnSimpan.Location = new System.Drawing.Point(173, 185);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(61, 29);
+            this.btnSimpan.Size = new System.Drawing.Size(69, 29);
             this.btnSimpan.TabIndex = 165;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -601,7 +604,7 @@
             this.btnCariTransaksi.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCariTransaksi.BackgroundImage")));
             this.btnCariTransaksi.ButtonText = "Cari";
             this.btnCariTransaksi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCariTransaksi.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCariTransaksi.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCariTransaksi.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCariTransaksi.IdleBorderThickness = 1;
             this.btnCariTransaksi.IdleCornerRadius = 20;
@@ -611,7 +614,7 @@
             this.btnCariTransaksi.Location = new System.Drawing.Point(311, 21);
             this.btnCariTransaksi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCariTransaksi.Name = "btnCariTransaksi";
-            this.btnCariTransaksi.Size = new System.Drawing.Size(67, 29);
+            this.btnCariTransaksi.Size = new System.Drawing.Size(75, 29);
             this.btnCariTransaksi.TabIndex = 159;
             this.btnCariTransaksi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -638,19 +641,19 @@
             // 
             // dgDetailTransaksi
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgDetailTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgDetailTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.dgDetailTransaksi.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgDetailTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgDetailTransaksi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDetailTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDetailTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgDetailTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgDetailTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgDetailTransaksi.DoubleBuffered = true;
@@ -675,19 +678,19 @@
             // 
             // dbTransaksi
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dbTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dbTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
             this.dbTransaksi.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dbTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dbTransaksi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dbTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dbTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dbTransaksi.DoubleBuffered = true;
@@ -758,7 +761,7 @@
             this.btnBayar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBayar.BackgroundImage")));
             this.btnBayar.ButtonText = "Bayar";
             this.btnBayar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBayar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBayar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBayar.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBayar.IdleBorderThickness = 1;
             this.btnBayar.IdleCornerRadius = 20;
@@ -768,7 +771,7 @@
             this.btnBayar.Location = new System.Drawing.Point(287, 182);
             this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBayar.Name = "btnBayar";
-            this.btnBayar.Size = new System.Drawing.Size(67, 29);
+            this.btnBayar.Size = new System.Drawing.Size(75, 29);
             this.btnBayar.TabIndex = 165;
             this.btnBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -820,7 +823,7 @@
             // 
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(188, 122);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(1198, 49);

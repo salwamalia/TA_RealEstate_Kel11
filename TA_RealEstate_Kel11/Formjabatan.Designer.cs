@@ -50,7 +50,7 @@
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtCariJabatan = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.DataGridViewJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgJabatan = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -65,7 +65,7 @@
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewJabatan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -146,7 +146,7 @@
             // btnLogout
             // 
             this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 0;
             this.btnLogout.ButtonText = "Logout";
@@ -154,7 +154,7 @@
             this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
+            this.btnLogout.Iconimage = null;
             this.btnLogout.Iconimage_right = null;
             this.btnLogout.Iconimage_right_Selected = null;
             this.btnLogout.Iconimage_Selected = null;
@@ -167,22 +167,22 @@
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(0, 392);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
             this.btnLogout.Size = new System.Drawing.Size(188, 49);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Textcolor = System.Drawing.Color.White;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCicilan
             // 
             this.btnCicilan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnCicilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCicilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCicilan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCicilan.BorderRadius = 0;
             this.btnCicilan.ButtonText = "Cicilan";
@@ -190,7 +190,7 @@
             this.btnCicilan.DisabledColor = System.Drawing.Color.Transparent;
             this.btnCicilan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCicilan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCicilan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCicilan.Iconimage")));
+            this.btnCicilan.Iconimage = null;
             this.btnCicilan.Iconimage_right = null;
             this.btnCicilan.Iconimage_right_Selected = null;
             this.btnCicilan.Iconimage_Selected = null;
@@ -203,22 +203,22 @@
             this.btnCicilan.IsTab = false;
             this.btnCicilan.Location = new System.Drawing.Point(0, 343);
             this.btnCicilan.Name = "btnCicilan";
-            this.btnCicilan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCicilan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCicilan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCicilan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCicilan.selected = false;
             this.btnCicilan.Size = new System.Drawing.Size(188, 49);
             this.btnCicilan.TabIndex = 7;
             this.btnCicilan.Text = "Cicilan";
-            this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCicilan.Textcolor = System.Drawing.Color.White;
+            this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCicilan.Textcolor = System.Drawing.Color.Black;
             this.btnCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCicilan.Click += new System.EventHandler(this.btnCicilan_Click);
             // 
             // btnKategoriBayar
             // 
             this.btnKategoriBayar.Activecolor = System.Drawing.Color.Transparent;
-            this.btnKategoriBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnKategoriBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKategoriBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKategoriBayar.BorderRadius = 0;
             this.btnKategoriBayar.ButtonText = "Kategori Bayar";
@@ -226,7 +226,7 @@
             this.btnKategoriBayar.DisabledColor = System.Drawing.Color.Transparent;
             this.btnKategoriBayar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKategoriBayar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnKategoriBayar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnKategoriBayar.Iconimage")));
+            this.btnKategoriBayar.Iconimage = null;
             this.btnKategoriBayar.Iconimage_right = null;
             this.btnKategoriBayar.Iconimage_right_Selected = null;
             this.btnKategoriBayar.Iconimage_Selected = null;
@@ -239,22 +239,22 @@
             this.btnKategoriBayar.IsTab = false;
             this.btnKategoriBayar.Location = new System.Drawing.Point(0, 294);
             this.btnKategoriBayar.Name = "btnKategoriBayar";
-            this.btnKategoriBayar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnKategoriBayar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKategoriBayar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnKategoriBayar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnKategoriBayar.selected = false;
             this.btnKategoriBayar.Size = new System.Drawing.Size(188, 49);
             this.btnKategoriBayar.TabIndex = 6;
             this.btnKategoriBayar.Text = "Kategori Bayar";
-            this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKategoriBayar.Textcolor = System.Drawing.Color.White;
+            this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKategoriBayar.Textcolor = System.Drawing.Color.Black;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKategoriBayar.Click += new System.EventHandler(this.btnKategoriBayar_Click);
             // 
             // btnTipeProperty
             // 
             this.btnTipeProperty.Activecolor = System.Drawing.Color.Transparent;
-            this.btnTipeProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTipeProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTipeProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTipeProperty.BorderRadius = 0;
             this.btnTipeProperty.ButtonText = "Tipe Property";
@@ -262,7 +262,7 @@
             this.btnTipeProperty.DisabledColor = System.Drawing.Color.Transparent;
             this.btnTipeProperty.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTipeProperty.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTipeProperty.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTipeProperty.Iconimage")));
+            this.btnTipeProperty.Iconimage = null;
             this.btnTipeProperty.Iconimage_right = null;
             this.btnTipeProperty.Iconimage_right_Selected = null;
             this.btnTipeProperty.Iconimage_Selected = null;
@@ -275,22 +275,22 @@
             this.btnTipeProperty.IsTab = false;
             this.btnTipeProperty.Location = new System.Drawing.Point(0, 245);
             this.btnTipeProperty.Name = "btnTipeProperty";
-            this.btnTipeProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTipeProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTipeProperty.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnTipeProperty.OnHoverTextColor = System.Drawing.Color.White;
             this.btnTipeProperty.selected = false;
             this.btnTipeProperty.Size = new System.Drawing.Size(188, 49);
             this.btnTipeProperty.TabIndex = 5;
             this.btnTipeProperty.Text = "Tipe Property";
-            this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipeProperty.Textcolor = System.Drawing.Color.White;
+            this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTipeProperty.Textcolor = System.Drawing.Color.Black;
             this.btnTipeProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipeProperty.Click += new System.EventHandler(this.btnTipeProperty_Click);
             // 
             // btnProperty
             // 
             this.btnProperty.Activecolor = System.Drawing.Color.Transparent;
-            this.btnProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProperty.BorderRadius = 0;
             this.btnProperty.ButtonText = "Property";
@@ -298,7 +298,7 @@
             this.btnProperty.DisabledColor = System.Drawing.Color.Transparent;
             this.btnProperty.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProperty.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnProperty.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnProperty.Iconimage")));
+            this.btnProperty.Iconimage = null;
             this.btnProperty.Iconimage_right = null;
             this.btnProperty.Iconimage_right_Selected = null;
             this.btnProperty.Iconimage_Selected = null;
@@ -311,22 +311,22 @@
             this.btnProperty.IsTab = false;
             this.btnProperty.Location = new System.Drawing.Point(0, 196);
             this.btnProperty.Name = "btnProperty";
-            this.btnProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnProperty.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnProperty.OnHoverTextColor = System.Drawing.Color.White;
             this.btnProperty.selected = false;
             this.btnProperty.Size = new System.Drawing.Size(188, 49);
             this.btnProperty.TabIndex = 4;
             this.btnProperty.Text = "Property";
-            this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProperty.Textcolor = System.Drawing.Color.White;
+            this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProperty.Textcolor = System.Drawing.Color.Black;
             this.btnProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnClient
             // 
             this.btnClient.Activecolor = System.Drawing.Color.Transparent;
-            this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClient.BorderRadius = 0;
             this.btnClient.ButtonText = "Client";
@@ -334,7 +334,7 @@
             this.btnClient.DisabledColor = System.Drawing.Color.Transparent;
             this.btnClient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClient.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnClient.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnClient.Iconimage")));
+            this.btnClient.Iconimage = null;
             this.btnClient.Iconimage_right = null;
             this.btnClient.Iconimage_right_Selected = null;
             this.btnClient.Iconimage_Selected = null;
@@ -347,22 +347,22 @@
             this.btnClient.IsTab = false;
             this.btnClient.Location = new System.Drawing.Point(0, 147);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnClient.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClient.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnClient.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClient.selected = false;
             this.btnClient.Size = new System.Drawing.Size(188, 49);
             this.btnClient.TabIndex = 3;
             this.btnClient.Text = "Client";
-            this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Textcolor = System.Drawing.Color.White;
+            this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClient.Textcolor = System.Drawing.Color.Black;
             this.btnClient.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPemilik
             // 
             this.btnPemilik.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPemilik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPemilik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPemilik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPemilik.BorderRadius = 0;
             this.btnPemilik.ButtonText = "Pemilik";
@@ -370,7 +370,7 @@
             this.btnPemilik.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPemilik.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPemilik.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPemilik.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPemilik.Iconimage")));
+            this.btnPemilik.Iconimage = null;
             this.btnPemilik.Iconimage_right = null;
             this.btnPemilik.Iconimage_right_Selected = null;
             this.btnPemilik.Iconimage_Selected = null;
@@ -383,22 +383,22 @@
             this.btnPemilik.IsTab = false;
             this.btnPemilik.Location = new System.Drawing.Point(0, 98);
             this.btnPemilik.Name = "btnPemilik";
-            this.btnPemilik.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPemilik.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPemilik.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPemilik.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPemilik.selected = false;
             this.btnPemilik.Size = new System.Drawing.Size(188, 49);
             this.btnPemilik.TabIndex = 2;
             this.btnPemilik.Text = "Pemilik";
-            this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPemilik.Textcolor = System.Drawing.Color.White;
+            this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPemilik.Textcolor = System.Drawing.Color.Black;
             this.btnPemilik.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPemilik.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // btnPegawai
             // 
             this.btnPegawai.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPegawai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPegawai.BorderRadius = 0;
             this.btnPegawai.ButtonText = "Pegawai";
@@ -406,7 +406,7 @@
             this.btnPegawai.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPegawai.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPegawai.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPegawai.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPegawai.Iconimage")));
+            this.btnPegawai.Iconimage = null;
             this.btnPegawai.Iconimage_right = null;
             this.btnPegawai.Iconimage_right_Selected = null;
             this.btnPegawai.Iconimage_Selected = null;
@@ -419,22 +419,22 @@
             this.btnPegawai.IsTab = false;
             this.btnPegawai.Location = new System.Drawing.Point(0, 49);
             this.btnPegawai.Name = "btnPegawai";
-            this.btnPegawai.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPegawai.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPegawai.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPegawai.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPegawai.selected = false;
             this.btnPegawai.Size = new System.Drawing.Size(188, 49);
             this.btnPegawai.TabIndex = 1;
             this.btnPegawai.Text = "Pegawai";
-            this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPegawai.Textcolor = System.Drawing.Color.White;
+            this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPegawai.Textcolor = System.Drawing.Color.Black;
             this.btnPegawai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
             // 
             // btnJabatan
             // 
             this.btnJabatan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnJabatan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnJabatan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJabatan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnJabatan.BorderRadius = 0;
             this.btnJabatan.ButtonText = "Jabatan";
@@ -442,7 +442,7 @@
             this.btnJabatan.DisabledColor = System.Drawing.Color.Transparent;
             this.btnJabatan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnJabatan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnJabatan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnJabatan.Iconimage")));
+            this.btnJabatan.Iconimage = null;
             this.btnJabatan.Iconimage_right = null;
             this.btnJabatan.Iconimage_right_Selected = null;
             this.btnJabatan.Iconimage_Selected = null;
@@ -455,15 +455,15 @@
             this.btnJabatan.IsTab = false;
             this.btnJabatan.Location = new System.Drawing.Point(0, 0);
             this.btnJabatan.Name = "btnJabatan";
-            this.btnJabatan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnJabatan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJabatan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnJabatan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnJabatan.selected = false;
             this.btnJabatan.Size = new System.Drawing.Size(188, 49);
             this.btnJabatan.TabIndex = 0;
             this.btnJabatan.Text = "Jabatan";
-            this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJabatan.Textcolor = System.Drawing.Color.White;
+            this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnJabatan.Textcolor = System.Drawing.Color.Black;
             this.btnJabatan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJabatan.Click += new System.EventHandler(this.btnJabatan_Click);
             // 
@@ -471,7 +471,7 @@
             // 
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(188, 122);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(1182, 49);
@@ -502,11 +502,11 @@
             this.btnCari.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCari.BackgroundImage")));
             this.btnCari.ButtonText = "Cari";
             this.btnCari.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCari.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCari.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleBorderThickness = 1;
             this.btnCari.IdleCornerRadius = 20;
-            this.btnCari.IdleFillColor = System.Drawing.Color.White;
+            this.btnCari.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnCari.Location = new System.Drawing.Point(385, 45);
@@ -537,7 +537,7 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.DataGridViewJabatan);
+            this.groupBox3.Controls.Add(this.dgJabatan);
             this.groupBox3.Location = new System.Drawing.Point(828, 318);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(488, 220);
@@ -545,13 +545,13 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabel Jabatan";
             // 
-            // DataGridViewJabatan
+            // dgJabatan
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataGridViewJabatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataGridViewJabatan.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.DataGridViewJabatan.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DataGridViewJabatan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgJabatan.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgJabatan.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgJabatan.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgJabatan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -559,19 +559,19 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataGridViewJabatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DataGridViewJabatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridViewJabatan.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DataGridViewJabatan.DoubleBuffered = true;
-            this.DataGridViewJabatan.EnableHeadersVisualStyles = false;
-            this.DataGridViewJabatan.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.DataGridViewJabatan.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.DataGridViewJabatan.Location = new System.Drawing.Point(3, 16);
-            this.DataGridViewJabatan.Name = "DataGridViewJabatan";
-            this.DataGridViewJabatan.ReadOnly = true;
-            this.DataGridViewJabatan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DataGridViewJabatan.Size = new System.Drawing.Size(482, 201);
-            this.DataGridViewJabatan.TabIndex = 156;
+            this.dgJabatan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgJabatan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgJabatan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgJabatan.DoubleBuffered = true;
+            this.dgJabatan.EnableHeadersVisualStyles = false;
+            this.dgJabatan.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dgJabatan.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgJabatan.Location = new System.Drawing.Point(3, 16);
+            this.dgJabatan.Name = "dgJabatan";
+            this.dgJabatan.ReadOnly = true;
+            this.dgJabatan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgJabatan.Size = new System.Drawing.Size(482, 201);
+            this.dgJabatan.TabIndex = 156;
             // 
             // groupBox2
             // 
@@ -618,17 +618,17 @@
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleBorderThickness = 1;
             this.btnBatal.IdleCornerRadius = 20;
-            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
+            this.btnBatal.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.Location = new System.Drawing.Point(327, 151);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(67, 29);
+            this.btnBatal.Size = new System.Drawing.Size(78, 29);
             this.btnBatal.TabIndex = 163;
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click_1);
@@ -652,17 +652,17 @@
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleBorderThickness = 1;
             this.btnHapus.IdleCornerRadius = 20;
-            this.btnHapus.IdleFillColor = System.Drawing.Color.White;
+            this.btnHapus.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.Location = new System.Drawing.Point(235, 151);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(68, 29);
+            this.btnHapus.Size = new System.Drawing.Size(79, 29);
             this.btnHapus.TabIndex = 164;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click_1);
@@ -689,17 +689,17 @@
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleBorderThickness = 1;
             this.btnUpdate.IdleCornerRadius = 20;
-            this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
+            this.btnUpdate.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.Location = new System.Drawing.Point(143, 151);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(68, 29);
+            this.btnUpdate.Size = new System.Drawing.Size(79, 29);
             this.btnUpdate.TabIndex = 162;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
@@ -715,17 +715,17 @@
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleBorderThickness = 1;
             this.btnSimpan.IdleCornerRadius = 20;
-            this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
+            this.btnSimpan.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.Location = new System.Drawing.Point(58, 151);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(61, 29);
+            this.btnSimpan.Size = new System.Drawing.Size(72, 29);
             this.btnSimpan.TabIndex = 161;
             this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click_1);
@@ -782,7 +782,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridViewJabatan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgJabatan)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -811,7 +811,7 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private System.Windows.Forms.TextBox txtCariJabatan;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid DataGridViewJabatan;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgJabatan;
         private System.Windows.Forms.GroupBox groupBox2;
         private CharTextBox txtNama;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;

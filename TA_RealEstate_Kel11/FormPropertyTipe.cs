@@ -13,6 +13,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormPropertyTipe : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormPropertyTipe()
         {
             InitializeComponent();
@@ -25,8 +28,6 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -57,8 +58,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertType", myConnection);
@@ -67,9 +66,9 @@ namespace TA_RealEstate_Kel11
             insert.Parameters.AddWithValue("idTipe", txtID.Text);
             insert.Parameters.AddWithValue("nama", txtNama.Text);
 
-            if (txtNama.Text == "")
+            if (txtID.Text == "" || txtNama.Text == "")
             {
-                MessageBox.Show("Harus diisi !!");
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -78,18 +77,13 @@ namespace TA_RealEstate_Kel11
                     myConnection.Open();
                     insert.ExecuteNonQuery();
                     MessageBox.Show("Type Telah Ditambahkan", "Add Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtID.Clear();
-                    txtNama.Clear();
-                    LoadData();
+                    clear();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Unable to save " + ex.Message);
                 }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -104,8 +98,7 @@ namespace TA_RealEstate_Kel11
                     if (pType.updateType(id, name))
                     {
                         MessageBox.Show("Type Telah DiUpdate", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtID.Text = IDOtomatis();
-                        LoadData();
+                        clear();
                     }
                     else
                     {
@@ -127,36 +120,46 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtID.Text == "" || txtNama.Text == "")
             {
-                string id = txtID.Text;
-
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Type", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
                 {
-                    if (pType.deleteType(id))
+                    string id = txtID.Text;
+
+                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Type", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBox.Show("Type Telah DiHapus", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtID.Text = IDOtomatis();
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Type Tidak DiHapus", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (pType.deleteType(id))
+                        {
+                            MessageBox.Show("Type Telah DiHapus", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Type Tidak DiHapus", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Tidak Ada Type yang dipilih", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch
+                {
+                    MessageBox.Show("Tidak Ada Type yang dipilih", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
+            clear();
+        }
+
+        public void clear()
+        {
             txtCariTipe.Clear();
             txtID.Clear();
             txtNama.Clear();
-
             txtID.Text = IDOtomatis();
             LoadData();
         }
@@ -164,29 +167,34 @@ namespace TA_RealEstate_Kel11
         private void btnCari_Click(object sender, EventArgs e)
         {
             var st = from s in dc.propertyTipes where s.idTipe == txtID.Text select s;
-            DataGridViewTipe.DataSource = st;
+            dgTipe.DataSource = st;
 
-            try
+            if (txtCariTipe.Text == "")
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM propertyTipe WHERE idTipe ='" + txtCariTipe.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idTipe"].ToString();
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-
-                myConnection.Close();
+                MessageBox.Show("Masukkan ID untuk Cari !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
+                try
+                {
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
+
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM propertyTipe WHERE idTipe ='" + txtCariTipe.Text + "'", myConnection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    da.Fill(dt);
+
+                    txtID.Text = dt.Rows[0]["idTipe"].ToString();
+                    txtNama.Text = dt.Rows[0]["nama"].ToString();
+
+                    myConnection.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -198,8 +206,31 @@ namespace TA_RealEstate_Kel11
         
         void LoadData()
         {
-            var st = from tb in dc.propertyTipes select tb;
-            DataGridViewTipe.DataSource = st;
+            try
+            {
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM propertyTipe", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Tipe");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idTipe"];
+                    row["Tipe"] = sqlDataReader["nama"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgTipe.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
 
         private void btnJabatan_Click(object sender, EventArgs e)

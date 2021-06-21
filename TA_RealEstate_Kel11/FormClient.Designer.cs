@@ -48,7 +48,7 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgClient = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
+            this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.rbPerempuan = new System.Windows.Forms.RadioButton();
             this.rbLaki = new System.Windows.Forms.RadioButton();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -56,7 +56,6 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -70,6 +69,8 @@
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtCariClient = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
+            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -81,7 +82,7 @@
             // btnLogout
             // 
             this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 0;
             this.btnLogout.ButtonText = "Logout";
@@ -89,7 +90,7 @@
             this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
+            this.btnLogout.Iconimage = null;
             this.btnLogout.Iconimage_right = null;
             this.btnLogout.Iconimage_right_Selected = null;
             this.btnLogout.Iconimage_Selected = null;
@@ -102,22 +103,22 @@
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(0, 392);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
             this.btnLogout.Size = new System.Drawing.Size(188, 49);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Textcolor = System.Drawing.Color.White;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnCicilan
             // 
             this.btnCicilan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnCicilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCicilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCicilan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCicilan.BorderRadius = 0;
             this.btnCicilan.ButtonText = "Cicilan";
@@ -125,7 +126,7 @@
             this.btnCicilan.DisabledColor = System.Drawing.Color.Transparent;
             this.btnCicilan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnCicilan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCicilan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCicilan.Iconimage")));
+            this.btnCicilan.Iconimage = null;
             this.btnCicilan.Iconimage_right = null;
             this.btnCicilan.Iconimage_right_Selected = null;
             this.btnCicilan.Iconimage_Selected = null;
@@ -138,22 +139,22 @@
             this.btnCicilan.IsTab = false;
             this.btnCicilan.Location = new System.Drawing.Point(0, 343);
             this.btnCicilan.Name = "btnCicilan";
-            this.btnCicilan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCicilan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnCicilan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnCicilan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCicilan.selected = false;
             this.btnCicilan.Size = new System.Drawing.Size(188, 49);
             this.btnCicilan.TabIndex = 7;
             this.btnCicilan.Text = "Cicilan";
-            this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCicilan.Textcolor = System.Drawing.Color.White;
+            this.btnCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCicilan.Textcolor = System.Drawing.Color.Black;
             this.btnCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCicilan.Click += new System.EventHandler(this.btnCicilan_Click);
             // 
             // btnKategoriBayar
             // 
             this.btnKategoriBayar.Activecolor = System.Drawing.Color.Transparent;
-            this.btnKategoriBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnKategoriBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKategoriBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKategoriBayar.BorderRadius = 0;
             this.btnKategoriBayar.ButtonText = "Kategori Bayar";
@@ -161,7 +162,7 @@
             this.btnKategoriBayar.DisabledColor = System.Drawing.Color.Transparent;
             this.btnKategoriBayar.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnKategoriBayar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnKategoriBayar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnKategoriBayar.Iconimage")));
+            this.btnKategoriBayar.Iconimage = null;
             this.btnKategoriBayar.Iconimage_right = null;
             this.btnKategoriBayar.Iconimage_right_Selected = null;
             this.btnKategoriBayar.Iconimage_Selected = null;
@@ -174,22 +175,22 @@
             this.btnKategoriBayar.IsTab = false;
             this.btnKategoriBayar.Location = new System.Drawing.Point(0, 294);
             this.btnKategoriBayar.Name = "btnKategoriBayar";
-            this.btnKategoriBayar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnKategoriBayar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKategoriBayar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnKategoriBayar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnKategoriBayar.selected = false;
             this.btnKategoriBayar.Size = new System.Drawing.Size(188, 49);
             this.btnKategoriBayar.TabIndex = 6;
             this.btnKategoriBayar.Text = "Kategori Bayar";
-            this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKategoriBayar.Textcolor = System.Drawing.Color.White;
+            this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnKategoriBayar.Textcolor = System.Drawing.Color.Black;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKategoriBayar.Click += new System.EventHandler(this.btnKategoriBayar_Click);
             // 
             // btnTipeProperty
             // 
             this.btnTipeProperty.Activecolor = System.Drawing.Color.Transparent;
-            this.btnTipeProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTipeProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTipeProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnTipeProperty.BorderRadius = 0;
             this.btnTipeProperty.ButtonText = "Tipe Property";
@@ -197,7 +198,7 @@
             this.btnTipeProperty.DisabledColor = System.Drawing.Color.Transparent;
             this.btnTipeProperty.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTipeProperty.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTipeProperty.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTipeProperty.Iconimage")));
+            this.btnTipeProperty.Iconimage = null;
             this.btnTipeProperty.Iconimage_right = null;
             this.btnTipeProperty.Iconimage_right_Selected = null;
             this.btnTipeProperty.Iconimage_Selected = null;
@@ -210,22 +211,22 @@
             this.btnTipeProperty.IsTab = false;
             this.btnTipeProperty.Location = new System.Drawing.Point(0, 245);
             this.btnTipeProperty.Name = "btnTipeProperty";
-            this.btnTipeProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnTipeProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnTipeProperty.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnTipeProperty.OnHoverTextColor = System.Drawing.Color.White;
             this.btnTipeProperty.selected = false;
             this.btnTipeProperty.Size = new System.Drawing.Size(188, 49);
             this.btnTipeProperty.TabIndex = 5;
             this.btnTipeProperty.Text = "Tipe Property";
-            this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTipeProperty.Textcolor = System.Drawing.Color.White;
+            this.btnTipeProperty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnTipeProperty.Textcolor = System.Drawing.Color.Black;
             this.btnTipeProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTipeProperty.Click += new System.EventHandler(this.btnTipeProperty_Click);
             // 
             // btnProperty
             // 
             this.btnProperty.Activecolor = System.Drawing.Color.Transparent;
-            this.btnProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnProperty.BorderRadius = 0;
             this.btnProperty.ButtonText = "Property";
@@ -233,7 +234,7 @@
             this.btnProperty.DisabledColor = System.Drawing.Color.Transparent;
             this.btnProperty.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProperty.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnProperty.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnProperty.Iconimage")));
+            this.btnProperty.Iconimage = null;
             this.btnProperty.Iconimage_right = null;
             this.btnProperty.Iconimage_right_Selected = null;
             this.btnProperty.Iconimage_Selected = null;
@@ -246,22 +247,22 @@
             this.btnProperty.IsTab = false;
             this.btnProperty.Location = new System.Drawing.Point(0, 196);
             this.btnProperty.Name = "btnProperty";
-            this.btnProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnProperty.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnProperty.OnHoverTextColor = System.Drawing.Color.White;
             this.btnProperty.selected = false;
             this.btnProperty.Size = new System.Drawing.Size(188, 49);
             this.btnProperty.TabIndex = 4;
             this.btnProperty.Text = "Property";
-            this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProperty.Textcolor = System.Drawing.Color.White;
+            this.btnProperty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProperty.Textcolor = System.Drawing.Color.Black;
             this.btnProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // btnClient
             // 
             this.btnClient.Activecolor = System.Drawing.Color.Transparent;
-            this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClient.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnClient.BorderRadius = 0;
             this.btnClient.ButtonText = "Client";
@@ -269,7 +270,7 @@
             this.btnClient.DisabledColor = System.Drawing.Color.Transparent;
             this.btnClient.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnClient.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnClient.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnClient.Iconimage")));
+            this.btnClient.Iconimage = null;
             this.btnClient.Iconimage_right = null;
             this.btnClient.Iconimage_right_Selected = null;
             this.btnClient.Iconimage_Selected = null;
@@ -282,22 +283,22 @@
             this.btnClient.IsTab = false;
             this.btnClient.Location = new System.Drawing.Point(0, 147);
             this.btnClient.Name = "btnClient";
-            this.btnClient.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnClient.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClient.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnClient.OnHoverTextColor = System.Drawing.Color.White;
             this.btnClient.selected = false;
             this.btnClient.Size = new System.Drawing.Size(188, 49);
             this.btnClient.TabIndex = 3;
             this.btnClient.Text = "Client";
-            this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClient.Textcolor = System.Drawing.Color.White;
+            this.btnClient.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClient.Textcolor = System.Drawing.Color.Black;
             this.btnClient.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnPemilik
             // 
             this.btnPemilik.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPemilik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPemilik.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPemilik.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPemilik.BorderRadius = 0;
             this.btnPemilik.ButtonText = "Pemilik";
@@ -305,7 +306,7 @@
             this.btnPemilik.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPemilik.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPemilik.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPemilik.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPemilik.Iconimage")));
+            this.btnPemilik.Iconimage = null;
             this.btnPemilik.Iconimage_right = null;
             this.btnPemilik.Iconimage_right_Selected = null;
             this.btnPemilik.Iconimage_Selected = null;
@@ -318,22 +319,22 @@
             this.btnPemilik.IsTab = false;
             this.btnPemilik.Location = new System.Drawing.Point(0, 98);
             this.btnPemilik.Name = "btnPemilik";
-            this.btnPemilik.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPemilik.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPemilik.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPemilik.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPemilik.selected = false;
             this.btnPemilik.Size = new System.Drawing.Size(188, 49);
             this.btnPemilik.TabIndex = 2;
             this.btnPemilik.Text = "Pemilik";
-            this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPemilik.Textcolor = System.Drawing.Color.White;
+            this.btnPemilik.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPemilik.Textcolor = System.Drawing.Color.Black;
             this.btnPemilik.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPemilik.Click += new System.EventHandler(this.btnPemilik_Click);
             // 
             // btnPegawai
             // 
             this.btnPegawai.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPegawai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPegawai.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPegawai.BorderRadius = 0;
             this.btnPegawai.ButtonText = "Pegawai";
@@ -341,7 +342,7 @@
             this.btnPegawai.DisabledColor = System.Drawing.Color.Transparent;
             this.btnPegawai.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPegawai.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPegawai.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPegawai.Iconimage")));
+            this.btnPegawai.Iconimage = null;
             this.btnPegawai.Iconimage_right = null;
             this.btnPegawai.Iconimage_right_Selected = null;
             this.btnPegawai.Iconimage_Selected = null;
@@ -354,22 +355,22 @@
             this.btnPegawai.IsTab = false;
             this.btnPegawai.Location = new System.Drawing.Point(0, 49);
             this.btnPegawai.Name = "btnPegawai";
-            this.btnPegawai.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPegawai.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPegawai.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnPegawai.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPegawai.selected = false;
             this.btnPegawai.Size = new System.Drawing.Size(188, 49);
             this.btnPegawai.TabIndex = 1;
             this.btnPegawai.Text = "Pegawai";
-            this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPegawai.Textcolor = System.Drawing.Color.White;
+            this.btnPegawai.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPegawai.Textcolor = System.Drawing.Color.Black;
             this.btnPegawai.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPegawai.Click += new System.EventHandler(this.btnPegawai_Click);
             // 
             // btnJabatan
             // 
             this.btnJabatan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnJabatan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnJabatan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJabatan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnJabatan.BorderRadius = 0;
             this.btnJabatan.ButtonText = "Jabatan";
@@ -377,7 +378,7 @@
             this.btnJabatan.DisabledColor = System.Drawing.Color.Transparent;
             this.btnJabatan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnJabatan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnJabatan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnJabatan.Iconimage")));
+            this.btnJabatan.Iconimage = null;
             this.btnJabatan.Iconimage_right = null;
             this.btnJabatan.Iconimage_right_Selected = null;
             this.btnJabatan.Iconimage_Selected = null;
@@ -390,15 +391,15 @@
             this.btnJabatan.IsTab = false;
             this.btnJabatan.Location = new System.Drawing.Point(0, 0);
             this.btnJabatan.Name = "btnJabatan";
-            this.btnJabatan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnJabatan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnJabatan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnJabatan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnJabatan.selected = false;
             this.btnJabatan.Size = new System.Drawing.Size(188, 49);
             this.btnJabatan.TabIndex = 0;
             this.btnJabatan.Text = "Jabatan";
-            this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnJabatan.Textcolor = System.Drawing.Color.White;
+            this.btnJabatan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnJabatan.Textcolor = System.Drawing.Color.Black;
             this.btnJabatan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnJabatan.Click += new System.EventHandler(this.btnJabatan_Click);
             // 
@@ -507,9 +508,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgClient);
-            this.groupBox3.Location = new System.Drawing.Point(825, 272);
+            this.groupBox3.Location = new System.Drawing.Point(704, 269);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(511, 398);
+            this.groupBox3.Size = new System.Drawing.Size(641, 398);
             this.groupBox3.TabIndex = 191;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabel Client";
@@ -518,7 +519,7 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgClient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgClient.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgClient.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgClient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -539,11 +540,12 @@
             this.dgClient.Name = "dgClient";
             this.dgClient.ReadOnly = true;
             this.dgClient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgClient.Size = new System.Drawing.Size(505, 379);
+            this.dgClient.Size = new System.Drawing.Size(635, 379);
             this.dgClient.TabIndex = 1;
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.bunifuThinButton21);
             this.groupBox2.Controls.Add(this.txtNama);
             this.groupBox2.Controls.Add(this.rbPerempuan);
             this.groupBox2.Controls.Add(this.rbLaki);
@@ -563,21 +565,40 @@
             this.groupBox2.Controls.Add(this.btnSimpan);
             this.groupBox2.Location = new System.Drawing.Point(235, 367);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(511, 375);
+            this.groupBox2.Size = new System.Drawing.Size(451, 375);
             this.groupBox2.TabIndex = 190;
             this.groupBox2.TabStop = false;
             // 
-            // txtNama
+            // bunifuThinButton21
             // 
-            this.txtNama.Location = new System.Drawing.Point(183, 64);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(181, 20);
-            this.txtNama.TabIndex = 186;
+            this.bunifuThinButton21.ActiveBorderThickness = 1;
+            this.bunifuThinButton21.ActiveCornerRadius = 20;
+            this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
+            this.bunifuThinButton21.ButtonText = "Cari";
+            this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton21.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton21.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleBorderThickness = 1;
+            this.bunifuThinButton21.IdleCornerRadius = 20;
+            this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton21.Location = new System.Drawing.Point(487, -92);
+            this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuThinButton21.Name = "bunifuThinButton21";
+            this.bunifuThinButton21.Size = new System.Drawing.Size(75, 36);
+            this.bunifuThinButton21.TabIndex = 158;
+            this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.btnCariClient_Click_1);
             // 
             // rbPerempuan
             // 
             this.rbPerempuan.AutoSize = true;
-            this.rbPerempuan.Location = new System.Drawing.Point(279, 100);
+            this.rbPerempuan.Location = new System.Drawing.Point(255, 93);
             this.rbPerempuan.Name = "rbPerempuan";
             this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
             this.rbPerempuan.TabIndex = 185;
@@ -588,7 +609,7 @@
             // rbLaki
             // 
             this.rbLaki.AutoSize = true;
-            this.rbLaki.Location = new System.Drawing.Point(183, 100);
+            this.rbLaki.Location = new System.Drawing.Point(159, 93);
             this.rbLaki.Name = "rbLaki";
             this.rbLaki.Size = new System.Drawing.Size(64, 17);
             this.rbLaki.TabIndex = 184;
@@ -598,14 +619,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(183, 167);
+            this.txtEmail.Location = new System.Drawing.Point(159, 160);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(181, 20);
             this.txtEmail.TabIndex = 183;
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(183, 202);
+            this.txtAlamat.Location = new System.Drawing.Point(159, 195);
             this.txtAlamat.Multiline = true;
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(181, 79);
@@ -615,7 +636,7 @@
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(37, 203);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(13, 196);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel8.TabIndex = 181;
@@ -626,7 +647,7 @@
             // 
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(37, 167);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(13, 160);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel7.TabIndex = 180;
@@ -637,26 +658,18 @@
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(37, 132);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(13, 125);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel6.TabIndex = 179;
             this.bunifuCustomLabel6.Text = "Telepon";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtTelepon
-            // 
-            this.txtTelepon.Location = new System.Drawing.Point(183, 133);
-            this.txtTelepon.MaxLength = 13;
-            this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
-            this.txtTelepon.TabIndex = 178;
-            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(37, 100);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(13, 93);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel5.TabIndex = 177;
@@ -667,7 +680,7 @@
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(37, 30);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(13, 23);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel3.TabIndex = 170;
@@ -685,14 +698,14 @@
             this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
             this.btnBatal.ButtonText = "Batal";
             this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleBorderThickness = 1;
             this.btnBatal.IdleCornerRadius = 20;
             this.btnBatal.IdleFillColor = System.Drawing.Color.White;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(291, 308);
+            this.btnBatal.Location = new System.Drawing.Point(267, 301);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(75, 36);
@@ -702,7 +715,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(183, 29);
+            this.txtID.Location = new System.Drawing.Point(159, 22);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 20);
@@ -719,14 +732,14 @@
             this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
             this.btnHapus.ButtonText = "Hapus";
             this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleBorderThickness = 1;
             this.btnHapus.IdleCornerRadius = 20;
             this.btnHapus.IdleFillColor = System.Drawing.Color.White;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(207, 308);
+            this.btnHapus.Location = new System.Drawing.Point(183, 301);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(76, 36);
@@ -738,7 +751,7 @@
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(37, 61);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(13, 54);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel4.TabIndex = 171;
@@ -756,14 +769,14 @@
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.ButtonText = "Update";
             this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleBorderThickness = 1;
             this.btnUpdate.IdleCornerRadius = 20;
             this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(120, 308);
+            this.btnUpdate.Location = new System.Drawing.Point(96, 301);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(76, 36);
@@ -782,14 +795,14 @@
             this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
             this.btnSimpan.ButtonText = "Simpan";
             this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleBorderThickness = 1;
             this.btnSimpan.IdleCornerRadius = 20;
             this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(43, 308);
+            this.btnSimpan.Location = new System.Drawing.Point(19, 301);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(69, 36);
@@ -804,7 +817,7 @@
             this.groupBox1.Controls.Add(this.txtCariClient);
             this.groupBox1.Location = new System.Drawing.Point(235, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(511, 100);
+            this.groupBox1.Size = new System.Drawing.Size(451, 100);
             this.groupBox1.TabIndex = 188;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cari Client";
@@ -820,14 +833,14 @@
             this.btnCariClient.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCariClient.BackgroundImage")));
             this.btnCariClient.ButtonText = "Cari";
             this.btnCariClient.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCariClient.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCariClient.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCariClient.ForeColor = System.Drawing.Color.SeaGreen;
             this.btnCariClient.IdleBorderThickness = 1;
             this.btnCariClient.IdleCornerRadius = 20;
             this.btnCariClient.IdleFillColor = System.Drawing.Color.White;
             this.btnCariClient.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCariClient.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCariClient.Location = new System.Drawing.Point(382, 30);
+            this.btnCariClient.Location = new System.Drawing.Point(358, 24);
             this.btnCariClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCariClient.Name = "btnCariClient";
             this.btnCariClient.Size = new System.Drawing.Size(75, 36);
@@ -839,7 +852,7 @@
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(37, 40);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(13, 34);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(140, 26);
             this.bunifuCustomLabel9.TabIndex = 154;
@@ -848,7 +861,7 @@
             // 
             // txtCariClient
             // 
-            this.txtCariClient.Location = new System.Drawing.Point(183, 40);
+            this.txtCariClient.Location = new System.Drawing.Point(159, 34);
             this.txtCariClient.Name = "txtCariClient";
             this.txtCariClient.Size = new System.Drawing.Size(181, 20);
             this.txtCariClient.TabIndex = 155;
@@ -857,13 +870,28 @@
             // 
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(188, 122);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(1198, 49);
             this.bunifuCustomLabel2.TabIndex = 189;
             this.bunifuCustomLabel2.Text = "Client";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(159, 57);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(181, 20);
+            this.txtNama.TabIndex = 186;
+            // 
+            // txtTelepon
+            // 
+            this.txtTelepon.Location = new System.Drawing.Point(159, 126);
+            this.txtTelepon.MaxLength = 13;
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
+            this.txtTelepon.TabIndex = 178;
             // 
             // FormClient
             // 
@@ -937,5 +965,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
         private System.Windows.Forms.TextBox txtCariClient;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
     }
 }

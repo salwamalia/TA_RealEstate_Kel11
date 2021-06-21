@@ -79,7 +79,7 @@
             this.btnX.IdleFillColor = System.Drawing.Color.White;
             this.btnX.IdleForecolor = System.Drawing.Color.Black;
             this.btnX.IdleLineColor = System.Drawing.Color.Transparent;
-            this.btnX.Location = new System.Drawing.Point(1344, 0);
+            this.btnX.Location = new System.Drawing.Point(1339, 0);
             this.btnX.Margin = new System.Windows.Forms.Padding(4);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(29, 33);
@@ -100,7 +100,7 @@
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 43;
             this.bunifuTileButton1.LabelText = "Kasir";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(1239, 0);
+            this.bunifuTileButton1.Location = new System.Drawing.Point(1232, 0);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
@@ -140,7 +140,7 @@
             // btnLogout
             // 
             this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnLogout.BorderRadius = 0;
             this.btnLogout.ButtonText = "Logout";
@@ -149,7 +149,7 @@
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLogout.Iconimage")));
+            this.btnLogout.Iconimage = null;
             this.btnLogout.Iconimage_right = null;
             this.btnLogout.Iconimage_right_Selected = null;
             this.btnLogout.Iconimage_Selected = null;
@@ -162,21 +162,22 @@
             this.btnLogout.IsTab = false;
             this.btnLogout.Location = new System.Drawing.Point(0, 98);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
             this.btnLogout.Size = new System.Drawing.Size(188, 49);
             this.btnLogout.TabIndex = 3;
             this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogout.Textcolor = System.Drawing.Color.White;
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnPenyewaan
             // 
             this.btnPenyewaan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPenyewaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPenyewaan.BorderRadius = 0;
             this.btnPenyewaan.ButtonText = "Penyewaan";
@@ -185,7 +186,7 @@
             this.btnPenyewaan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPenyewaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPenyewaan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPenyewaan.Iconimage")));
+            this.btnPenyewaan.Iconimage = null;
             this.btnPenyewaan.Iconimage_right = null;
             this.btnPenyewaan.Iconimage_right_Selected = null;
             this.btnPenyewaan.Iconimage_Selected = null;
@@ -198,21 +199,22 @@
             this.btnPenyewaan.IsTab = false;
             this.btnPenyewaan.Location = new System.Drawing.Point(0, 49);
             this.btnPenyewaan.Name = "btnPenyewaan";
-            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPenyewaan.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPenyewaan.selected = false;
             this.btnPenyewaan.Size = new System.Drawing.Size(188, 49);
             this.btnPenyewaan.TabIndex = 2;
             this.btnPenyewaan.Text = "Penyewaan";
-            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPenyewaan.Textcolor = System.Drawing.Color.White;
+            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPenyewaan.Textcolor = System.Drawing.Color.Black;
             this.btnPenyewaan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPenyewaan.Click += new System.EventHandler(this.btnPenyewaan_Click);
             // 
             // btnPembelian
             // 
             this.btnPembelian.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPembelian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPembelian.BorderRadius = 0;
             this.btnPembelian.ButtonText = "Pembelian";
@@ -221,7 +223,7 @@
             this.btnPembelian.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPembelian.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPembelian.Iconimage")));
+            this.btnPembelian.Iconimage = null;
             this.btnPembelian.Iconimage_right = null;
             this.btnPembelian.Iconimage_right_Selected = null;
             this.btnPembelian.Iconimage_Selected = null;
@@ -234,16 +236,17 @@
             this.btnPembelian.IsTab = false;
             this.btnPembelian.Location = new System.Drawing.Point(0, 0);
             this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPembelian.OnHoverTextColor = System.Drawing.Color.White;
             this.btnPembelian.selected = false;
             this.btnPembelian.Size = new System.Drawing.Size(188, 49);
             this.btnPembelian.TabIndex = 1;
             this.btnPembelian.Text = "Pembelian";
-            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPembelian.Textcolor = System.Drawing.Color.White;
+            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPembelian.Textcolor = System.Drawing.Color.Black;
             this.btnPembelian.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPembelian.Click += new System.EventHandler(this.btnPembelian_Click);
             // 
             // MenuKasir
             // 

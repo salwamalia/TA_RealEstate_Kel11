@@ -15,6 +15,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormProperty : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormProperty()
         {
             InitializeComponent();
@@ -28,9 +31,6 @@ namespace TA_RealEstate_Kel11
         private string IDOtomatis()
         {
             string autoid = null;
-
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -70,8 +70,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             Image img;
@@ -105,7 +103,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
             {
-                MessageBox.Show("Data tersebut Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -118,17 +116,13 @@ namespace TA_RealEstate_Kel11
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to save " + ex.Message);
+                    MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             Image img;
@@ -161,54 +155,63 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("harga", txtHarga.Text);
             Update.Parameters.AddWithValue("gambar", photo_aray);
 
-            try
+            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
             {
-                myConnection.Open();
-                Update.ExecuteNonQuery();
-                MessageBox.Show("Update Pegawai Succesfully", "Update Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
+                MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Unable to save " + ex.Message);
+                try
+                {
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Update Property Succesfully", "Update Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string id = txtID.Text;
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
+            {
+                MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
                 {
-                    if (property.deleteProperty(id))
+                    string id = txtID.Text;
+
+                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Property", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBox.Show("Kategori Telah DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                        txtID.Text = IDOtomatis();
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kategori Tidak DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (property.deeteProperty(id))
+                        {
+                            MessageBox.Show("Property Telah DiHapus", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Property Tidak DiHapus", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Tidak Ada Kategori yang dipilih", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch
+                {
+                    MessageBox.Show("Tidak Ada Property yang dipilih", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void clear()
@@ -222,56 +225,103 @@ namespace TA_RealEstate_Kel11
             txtFasilitas.Clear();
             txtHarga.Clear();
             PBGambar.Image = null;
-        }
-
-        private void btnCari_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM property WHERE idProperty ='" + txtCariProperty.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idProperty"].ToString();
-                txtNama.Text = dt.Rows[0]["namaProperty"].ToString();
-                cbTipe.SelectedValue = dt.Rows[0]["idTipe"].ToString();
-                cbPemilik.SelectedValue = dt.Rows[0]["idPemilik"].ToString();
-                txtUkuran.Text = dt.Rows[0]["ukuran"].ToString();
-                txtFasilitas.Text = dt.Rows[0]["fasilitas"].ToString();
-                txtHarga.Text = dt.Rows[0]["harga"].ToString();
-                byte[] img = (byte[])(dt.Rows[0]["gambar"]);
-
-                if (img == null)
-                {
-                    PBGambar.Image = null;
-                }
-                else
-                {
-                    MemoryStream ms = new MemoryStream((byte[])dt.Rows[0]["gambar"]);
-                    PBGambar.Image = Image.FromStream(ms);
-                }
-
-                myConnection.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Pegawai Tidak Ditemukan! " + ex);
-            }
             txtID.Text = IDOtomatis();
             LoadData();
         }
 
+        private void btnCari_Click(object sender, EventArgs e)
+        {
+            if (txtCariProperty.Text == "")
+            {
+                MessageBox.Show("Masukkan ID Untuk Cari !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
+                    
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM property WHERE idProperty ='" + txtCariProperty.Text + "'", myConnection);
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    SqlDataReader sqlDataReader = dr;
+
+                    dr.Read();
+
+                    txtID.Text = sqlDataReader["idProperty"].ToString();
+                    txtNama.Text = sqlDataReader["namaProperty"].ToString();
+                    cbTipe.SelectedValue = sqlDataReader["idTipe"].ToString();
+                    cbPemilik.SelectedValue = sqlDataReader["idPemilik"].ToString();
+                    txtUkuran.Text = sqlDataReader["ukuran"].ToString();
+                    txtFasilitas.Text = sqlDataReader["fasilitas"].ToString();
+                    txtHarga.Text = sqlDataReader["harga"].ToString();
+                    byte[] img = (byte[])(sqlDataReader["gambar"]);
+
+                    try
+                    {
+                        if (img == null)
+                        {
+                            PBGambar.Image = null;
+                        }
+                        else
+                        {
+                            MemoryStream ms = new MemoryStream(img);
+                            PBGambar.Image = Image.FromStream(ms);
+                        }
+                    }
+                    catch
+                    { }
+
+                    dr.Close();
+                    sqlDataReader.Close();
+                    myConnection.Close();
+                    
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Property Tidak Ditemukan! ", "Cari Property", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
         void LoadData()
         {
-            var st = from tb in dt.properties select tb;
-            dgProperty.DataSource = st;
+            try
+            {
+                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM property", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Nama Property");
+                dataTable.Columns.Add("ID Tipe");
+                dataTable.Columns.Add("ID Pemilik");
+                dataTable.Columns.Add("Ukuran");
+                dataTable.Columns.Add("Fasilitas");
+                dataTable.Columns.Add("Harga");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idProperty"];
+                    row["Nama Property"] = sqlDataReader["namaProperty"];
+                    row["ID Tipe"] = sqlDataReader["idTipe"];
+                    row["ID Pemilik"] = sqlDataReader["idPemilik"];
+                    row["Ukuran"] = sqlDataReader["ukuran"];
+                    row["Fasilitas"] = sqlDataReader["fasilitas"];
+                    row["Harga"] = sqlDataReader["harga"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgProperty.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
 
         private void FormProperty_Load(object sender, EventArgs e)

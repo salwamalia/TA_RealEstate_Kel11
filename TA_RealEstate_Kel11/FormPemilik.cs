@@ -14,6 +14,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormPemilik : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormPemilik()
         {
             InitializeComponent();
@@ -26,8 +29,6 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -68,8 +69,6 @@ namespace TA_RealEstate_Kel11
                 jeniskelamin = rbPerempuan.Text;
             }
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertPemilik", myConnection);
@@ -84,7 +83,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "" || txtAlamat.Text == "" || jeniskelamin == "")
             {
-                MessageBox.Show("Semua Data tersebut Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else if (!(Regex.IsMatch(txtEmail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$")))
             {
@@ -105,9 +104,6 @@ namespace TA_RealEstate_Kel11
                     MessageBox.Show("Unable to save " + ex.Message);
                 }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -137,8 +133,6 @@ namespace TA_RealEstate_Kel11
                     {
                         MessageBox.Show("pemilik Telah DiUpdate", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clear();
-                        txtID.Text = IDOtomatis();
-                        LoadData();
                     }
                     else
                     {
@@ -154,52 +148,58 @@ namespace TA_RealEstate_Kel11
             {
                 MessageBox.Show("Tidak Ada pemilik yang dipilih", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            LoadData();
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtCariPemilik.Text == "")
             {
-                string id = txtID.Text;
-
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete pemilik", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
                 {
-                    if (person.deletePemilik(id))
+                    string id = txtID.Text;
+
+                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete pemilik", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBox.Show("pemilik Telah DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtID.Text = IDOtomatis();
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("pemilik Tidak DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (person.deletePemilik(id))
+                        {
+                            MessageBox.Show("pemilik Telah DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtID.Text = IDOtomatis();
+                            LoadData();
+                        }
+                        else
+                        {
+                            MessageBox.Show("pemilik Tidak DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Tidak Ada pemilik yang dipilih untuk dihapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch
+                {
+                    MessageBox.Show("Tidak Ada pemilik yang dipilih untuk dihapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
-            txtID.Text = IDOtomatis();
         }
 
         private void clear()
         {
-            txtID.Clear();
             txtCariPemilik.Clear();
+            txtID.Clear();
             txtNama.Clear();
             txtEmail.Clear();
             txtTelepon.Clear();
             txtAlamat.Clear();
             rbLaki.Checked = false;
             rbPerempuan.Checked = false;
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnCari_Click_1(object sender, EventArgs e)
@@ -209,43 +209,48 @@ namespace TA_RealEstate_Kel11
 
             string jeniskelamin = null;
 
-            try
+            if (txtCariPemilik.Text == "")
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM pemilik WHERE idPemilik ='" + txtCariPemilik.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idPemilik"].ToString();
-                txtNama.Text = dt.Rows[0]["nama"].ToString();
-                jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
-                txtTelepon.Text = dt.Rows[0]["telepon"].ToString();
-                txtEmail.Text = dt.Rows[0]["email"].ToString();
-                txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
-
-                if (jeniskelamin == rbLaki.Text)
-                {
-                    rbLaki.Checked = true;
-                }
-                else if (jeniskelamin == rbPerempuan.Text)
-                {
-                    rbPerempuan.Checked = true;
-                }
-
-                rbLaki.Enabled = true;
-                rbPerempuan.Enabled = true;
-
-                myConnection.Close();
+                MessageBox.Show("Masukkan ID Untuk Cari !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error Pemilik Tidak Ditemukan! " + ex);
+                try
+                {
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
+
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM pemilik WHERE idPemilik ='" + txtCariPemilik.Text + "'", myConnection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    da.Fill(dt);
+
+                    txtID.Text = dt.Rows[0]["idPemilik"].ToString();
+                    txtNama.Text = dt.Rows[0]["nama"].ToString();
+                    jeniskelamin = dt.Rows[0]["jeniskelamin"].ToString();
+                    txtTelepon.Text = dt.Rows[0]["telepon"].ToString();
+                    txtEmail.Text = dt.Rows[0]["email"].ToString();
+                    txtAlamat.Text = dt.Rows[0]["alamat"].ToString();
+
+                    if (jeniskelamin == rbLaki.Text)
+                    {
+                        rbLaki.Checked = true;
+                    }
+                    else if (jeniskelamin == rbPerempuan.Text)
+                    {
+                        rbPerempuan.Checked = true;
+                    }
+
+                    rbLaki.Enabled = true;
+                    rbPerempuan.Enabled = true;
+
+                    myConnection.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Error Pemilik Tidak Ditemukan! ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
@@ -257,8 +262,39 @@ namespace TA_RealEstate_Kel11
 
         void LoadData()
         {
-            var sp = from tb in dc.pemiliks select tb;
-            dgPemilik.DataSource = sp;
+            try
+            {
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM pemilik", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Nama");
+                dataTable.Columns.Add("Jenis Kelamin");
+                dataTable.Columns.Add("Telepon");
+                dataTable.Columns.Add("Email");
+                dataTable.Columns.Add("Alamat");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idPemilik"];
+                    row["Nama"] = sqlDataReader["nama"];
+                    row["Jenis Kelamin"] = sqlDataReader["jenisKelamin"];
+                    row["Telepon"] = sqlDataReader["telepon"];
+                    row["Email"] = sqlDataReader["email"];
+                    row["Alamat"] = sqlDataReader["alamat"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgPemilik.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
 
         private void btnPegawai_Click(object sender, EventArgs e)

@@ -13,6 +13,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormKategoriBayar : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormKategoriBayar()
         {
             InitializeComponent();
@@ -25,9 +28,7 @@ namespace TA_RealEstate_Kel11
         {
             string autoid = null;
 
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+           SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
             string sqlQuery = "SELECT TOP 1 idKategoriBayar FROM kategoriBayar ORDER BY idKategoriBayar DESC";
@@ -57,8 +58,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertKategori", myConnection);
@@ -70,7 +69,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtNama.Text == "")
             {
-                MessageBox.Show("Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -80,11 +79,10 @@ namespace TA_RealEstate_Kel11
                     insert.ExecuteNonQuery();
                     MessageBox.Show("Kategori Telah Ditambahkan", "Add Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
-                    LoadData();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to save " + ex.Message);
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
 
@@ -94,8 +92,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -106,55 +102,61 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("kategoriBayar", txtNama.Text);
             Update.Parameters.AddWithValue("keterangan", txtKeterangan.Text);
 
-            try
+            if (txtNama.Text == "")
             {
-                myConnection.Open();
-                Update.ExecuteNonQuery();
-                MessageBox.Show("Kategori Update Succesfully", "Update Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-                LoadData();
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Unable to save " + ex);
+                try
+                {
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Kategori Update Succesfully", "Update Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception )
+                {
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtNama.Text == "")
             {
-                string id = txtID.Text;
-
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
                 {
-                    if (kategori.deleteKategori(id))
+                    string id = txtID.Text;
+
+                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBox.Show("Kategori Telah DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                        txtID.Text = IDOtomatis();
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Kategori Tidak DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (kategori.deleteKategori(id))
+                        {
+                            MessageBox.Show("Kategori Telah DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Kategori Tidak DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-            }
-            catch
-            {
-                MessageBox.Show("Tidak Ada Kategori yang dipilih", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                catch
+                {
+                    MessageBox.Show("Tidak Ada Kategori yang dipilih", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void clear()
@@ -163,6 +165,8 @@ namespace TA_RealEstate_Kel11
             txtID.Clear();
             txtNama.Clear();
             txtKeterangan.Clear();
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnCari_Click_1(object sender, EventArgs e)
@@ -170,37 +174,65 @@ namespace TA_RealEstate_Kel11
             var st = from s in dc.kategoriBayars where s.idKategoriBayar == txtCariKategori.Text select s;
             dgKategoriBayar.DataSource = st;
 
-            try
+            if (txtCariKategori.Text == "")
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar WHERE idKategoriBayar ='" + txtCariKategori.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idKategoriBayar"].ToString();
-                txtNama.Text = dt.Rows[0]["kategoriBayar"].ToString();
-                txtKeterangan.Text = dt.Rows[0]["keterangan"].ToString();
-
-                myConnection.Close();
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
-            }
+                try
+                {
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
 
-            txtCariKategori.Clear();
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar WHERE idKategoriBayar ='" + txtCariKategori.Text + "'", myConnection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    da.Fill(dt);
+
+                    txtID.Text = dt.Rows[0]["idKategoriBayar"].ToString();
+                    txtNama.Text = dt.Rows[0]["kategoriBayar"].ToString();
+                    txtKeterangan.Text = dt.Rows[0]["keterangan"].ToString();
+
+                    myConnection.Close();
+                }
+                catch (Exception )
+                {
+                    MessageBox.Show("Error Data tersebut Tidak ada!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
         }
 
         void LoadData()
         {
-            var st = from tb in dc.kategoriBayars select tb;
-            dgKategoriBayar.DataSource = st;
+            try
+            {
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Kategori Bayar");
+                dataTable.Columns.Add("Keterangan");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idKategoriBayar"];
+                    row["Kategori Bayar"] = sqlDataReader["kategoriBayar"];
+                    row["Keterangan"] = sqlDataReader["keterangan"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgKategoriBayar.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
         
         private void btnJabatan_Click(object sender, EventArgs e)

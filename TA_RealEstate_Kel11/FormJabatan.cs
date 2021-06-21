@@ -13,6 +13,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormJabatan : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormJabatan()
         {
             InitializeComponent();
@@ -23,9 +26,7 @@ namespace TA_RealEstate_Kel11
         private string IDOtomatis()
         {
             string autoid = null;
-
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -56,8 +57,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InputJabatan", myConnection);
@@ -68,7 +67,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "")
             {
-                MessageBox.Show("Data tersebut Harus diisi !!");
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -77,23 +76,17 @@ namespace TA_RealEstate_Kel11
                     myConnection.Open();
                     insert.ExecuteNonQuery();
                     MessageBox.Show("Jabatan Telah Ditambahkan", "Add Jabatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtID.Clear();
-                    txtNama.Clear();
-                    LoadData();
+                    clear();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("Unable to save " + ex.Message);
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -103,69 +96,100 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("idJabatan", txtID.Text);
             Update.Parameters.AddWithValue("jabatan", txtNama.Text);
 
-            try
+            if (txtID.Text == "" || txtNama.Text == "")
             {
-                myConnection.Open();
-                Update.ExecuteNonQuery();
-                MessageBox.Show("Jabatan Update Succesfully", "Update Jabatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtID.Clear();
-                txtNama.Clear();
-                LoadData();
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Unable to save " + ex.Message);
+                try
+                {
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Jabatan Update Succesfully", "Update Jabatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception )
+                {
+                    MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-
-            if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (txtID.Text == "" || txtNama.Text == "")
             {
-                //delete command
-                SqlCommand delete = new SqlCommand("sp_DeleteJabatan", myConnection);
-                delete.CommandType = CommandType.StoredProcedure;
-
-                delete.Parameters.AddWithValue("idJabatan", txtID.Text);
-
-                try
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    myConnection.Open();
-                    delete.ExecuteNonQuery();
-                    MessageBox.Show("Jabatan Delete Succesfully", "Delete Jabatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtID.Clear();
-                    txtNama.Clear();
-                    LoadData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Unable to save " + ex.Message);
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeleteJabatan", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
+
+                    delete.Parameters.AddWithValue("idJabatan", txtID.Text);
+
+                    try
+                    {
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Jabatan Delete Succesfully", "Delete Jabatan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                    }
+                    catch (Exception )
+                    {
+                        MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void FormJabatan_Load(object sender, EventArgs e)
         {
-            txtID.Text = IDOtomatis();
+             txtID.Text = IDOtomatis();
             LoadData();
         }
 
         void LoadData()
         {
-            var st = from tb in dc.jabatans select tb;
-            DataGridViewJabatan.DataSource = st;
+            try
+            {
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Jabatan");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idJabatan"];
+                    row["Jabatan"] = sqlDataReader["jabatan"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgJabatan.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        public void clear()
         {
             txtNama.Clear();
             txtCariJabatan.Clear();
@@ -176,29 +200,36 @@ namespace TA_RealEstate_Kel11
         private void btnCari_Click(object sender, EventArgs e)
         {
             var st = from s in dc.jabatans where s.idJabatan == txtID.Text select s;
-            DataGridViewJabatan.DataSource = st;
+            dgJabatan.DataSource = st;
 
-            try
+            if (txtCariJabatan.Text == "")
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan WHERE idJabatan='" + txtCariJabatan.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idjabatan"].ToString();
-                txtNama.Text = dt.Rows[0]["jabatan"].ToString();
-
-                myConnection.Close();
+                MessageBox.Show("Masukkan ID untuk Cari !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
+                try
+                {
+                    //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                    string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
+
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM jabatan WHERE idJabatan='" + txtCariJabatan.Text + "'", myConnection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    da.Fill(dt);
+
+                    txtID.Text = dt.Rows[0]["idJabatan"].ToString();
+                    txtNama.Text = dt.Rows[0]["jabatan"].ToString();
+
+                    myConnection.Close();
+                }
+                catch (Exception )
+                {
+                    MessageBox.Show("Error Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

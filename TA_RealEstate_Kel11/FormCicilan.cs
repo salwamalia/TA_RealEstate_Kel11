@@ -13,6 +13,9 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormCicilan : Form
     {
+        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+
         public FormCicilan()
         {
             InitializeComponent();
@@ -24,9 +27,7 @@ namespace TA_RealEstate_Kel11
         private string IDOtomatis()
         {
             string autoid = null;
-
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            
             SqlConnection myConnection = new SqlConnection(myConnectionString);
             myConnection.Open();
 
@@ -57,8 +58,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             SqlCommand insert = new SqlCommand("sp_InsertCicilan", myConnection);
@@ -69,9 +68,9 @@ namespace TA_RealEstate_Kel11
             insert.Parameters.AddWithValue("harga", txtHarga.Text);
             insert.Parameters.AddWithValue("keterangan", txtKet.Text);
 
-            if (txtNama.Text == "" && txtHarga.Text == "")
+            if (txtNama.Text == "" || txtHarga.Text == "")
             {
-                MessageBox.Show("Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -81,22 +80,16 @@ namespace TA_RealEstate_Kel11
                     insert.ExecuteNonQuery();
                     MessageBox.Show("Cicilan Telah Ditambahkan", "Add Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
-                    LoadData();
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show("Unable to save " + ex.Message);
+                    MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
             //update command
@@ -108,65 +101,72 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("harga", txtHarga.Text);
             Update.Parameters.AddWithValue("keterangan", txtKet.Text);
 
-            try
+            if (txtNama.Text == "" && txtHarga.Text == "")
             {
-                myConnection.Open();
-                Update.ExecuteNonQuery();
-                MessageBox.Show("Cicilan Update Succesfully", "Update Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-                LoadData();
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Unable to save " + ex);
+                try
+                {
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Cicilan Update Succesfully", "Update Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtNama.Text == "" && txtHarga.Text == "")
             {
-                string id = txtID.Text;
-
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Cicilan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
                 {
-                    if (kategori.deleteCicilan(id))
+                    string id = txtID.Text;
+
+                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Cicilan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        MessageBox.Show("Cicilan Telah DiHapus", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                        txtID.Text = IDOtomatis();
-                        LoadData();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Cicilan Tidak DiHapus", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (kategori.deleteCicilan(id))
+                        {
+                            MessageBox.Show("Cicilan Telah DiHapus", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            clear();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Cicilan Tidak DiHapus", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
+                catch
+                {
+                    MessageBox.Show("Tidak Ada Cicilan yang dipilih", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            catch
-            {
-                MessageBox.Show("Tidak Ada Cicilan yang dipilih", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void clear()
         {
+            txtCariCicilan.Clear();
             txtID.Clear();
             txtNama.Clear();
             txtHarga.Clear();
             txtKet.Clear();
+            txtID.Text = IDOtomatis();
+            LoadData();
         }
 
         private void btnBatal_Click_1(object sender, EventArgs e)
         {
             clear();
-            txtID.Text = IDOtomatis();
-            LoadData();
         }
 
         private void btnCari_Click_1(object sender, EventArgs e)
@@ -174,38 +174,69 @@ namespace TA_RealEstate_Kel11
             var st = from s in dc.kategoriCicilans where s.idCicilan == txtCariCicilan.Text select s;
             dgCicilan.DataSource = st;
 
-            try
+            if (txtCariCicilan.Text == "")
             {
-                //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection myConnection = new SqlConnection(myConnectionString);
-                myConnection.Open();
-
-                DataTable dt = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan WHERE idCicilan ='" + txtCariCicilan.Text + "'", myConnection);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-                da.Fill(dt);
-
-                txtID.Text = dt.Rows[0]["idCicilan"].ToString();
-                txtNama.Text = dt.Rows[0]["jenisCicilan"].ToString();
-                txtHarga.Text = dt.Rows[0]["harga"].ToString();
-                txtKet.Text = dt.Rows[0]["keterangan"].ToString();
-
-                myConnection.Close();
+                MessageBox.Show("Masukkan ID untuk Cari!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error Data tersebut Tidak ada!" + ex);
-            }
+                try
+                {
+                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    myConnection.Open();
 
-            txtCariCicilan.Clear();
+                    DataTable dt = new DataTable();
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan WHERE idCicilan ='" + txtCariCicilan.Text + "'", myConnection);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                    da.Fill(dt);
+
+                    txtID.Text = dt.Rows[0]["idCicilan"].ToString();
+                    txtNama.Text = dt.Rows[0]["jenisCicilan"].ToString();
+                    txtHarga.Text = dt.Rows[0]["harga"].ToString();
+                    txtKet.Text = dt.Rows[0]["keterangan"].ToString();
+                    
+                    myConnection.Close();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Maaf Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
 
         void LoadData()
         {
-            var st = from tb in dc.kategoriCicilans select tb;
-            dgCicilan.DataSource = st;
+            try
+            {
+                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+                SqlConnection con = new SqlConnection(myConnectionString);
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan", con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                SqlDataReader sqlDataReader = dr;
+                DataTable dataTable = new DataTable();
+                dataTable.Columns.Add("ID");
+                dataTable.Columns.Add("Jenis Cicilan");
+                dataTable.Columns.Add("Harga");
+                dataTable.Columns.Add("Keterangan");
+                while (dr.Read())
+                {
+                    DataRow row = dataTable.NewRow();
+                    row["ID"] = sqlDataReader["idCicilan"];
+                    row["Jenis Cicilan"] = sqlDataReader["jenisCicilan"];
+                    row["Harga"] = sqlDataReader["harga"];
+                    row["Keterangan"] = sqlDataReader["keterangan"];
+                    dataTable.Rows.Add(row);
+                }
+                //this.dataGridView1.DataSource = con.table;
+                dgCicilan.DataSource = dataTable;
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
         }
 
         private void FormCicilan_Load(object sender, EventArgs e)
