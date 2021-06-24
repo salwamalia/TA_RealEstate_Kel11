@@ -24,18 +24,12 @@
       <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="kategoriBayar" Member="kategoriBayar1" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="keterangan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="kategoriBayar_tPembelian" Member="tPembelians" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="tPembelian" />
-      <Association Name="kategoriBayar_tPenyewaan" Member="tPenyewaans" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="tPenyewaan" />
     </Type>
   </Table>
   <Table Name="dbo.kategoriCicilan" Member="kategoriCicilans">
     <Type Name="kategoriCicilan">
       <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="jenisCicilan" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="keterangan" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Association Name="kategoriCicilan_tPembelian" Member="tPembelians" ThisKey="idCicilan" OtherKey="idCicilan" Type="tPembelian" />
-      <Association Name="kategoriCicilan_tPenyewaan" Member="tPenyewaans" ThisKey="idCicilan" OtherKey="idCicilan" Type="tPenyewaan" />
+      <Column Name="cicilan" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.pegawai" Member="pegawais">
@@ -62,6 +56,13 @@
       <Association Name="pemilik_tPenyewaan" Member="tPenyewaans" ThisKey="idPemilik" OtherKey="idPemilik" Type="tPenyewaan" />
     </Type>
   </Table>
+  <Table Name="dbo.propertyTipe" Member="propertyTipes">
+    <Type Name="propertyTipe">
+      <Column Name="idTipe" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="propertyTipe_property" Member="properties" ThisKey="idTipe" OtherKey="idTipe" Type="property" />
+    </Type>
+  </Table>
   <Table Name="dbo.property" Member="properties">
     <Type Name="property">
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -80,28 +81,33 @@
       <Association Name="propertyTipe_property" Member="propertyTipe" ThisKey="idTipe" OtherKey="idTipe" Type="propertyTipe" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.propertyTipe" Member="propertyTipes">
-    <Type Name="propertyTipe">
-      <Column Name="idTipe" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="nama" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Association Name="propertyTipe_property" Member="properties" ThisKey="idTipe" OtherKey="idTipe" Type="property" />
-    </Type>
-  </Table>
   <Table Name="dbo.tDetailPembelian" Member="tDetailPembelians">
     <Type Name="tDetailPembelian">
       <Column Name="idTBeli" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPembelian" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.tDetailPenyewaan" Member="tDetailPenyewaans">
     <Type Name="tDetailPenyewaan">
       <Column Name="idTSewa" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="mulaiSewa" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="sampai" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="lamaCicilan" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dp" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPenyewaan" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
   </Table>
@@ -110,17 +116,9 @@
       <Column Name="idTBeli" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idClient" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="namaClient" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="idPemilik" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="tanggal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="dp" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="statusBayar" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="client_tPembelian" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
-      <Association Name="kategoriBayar_tPembelian" Member="kategoriBayar" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="kategoriBayar" IsForeignKey="true" />
-      <Association Name="kategoriCicilan_tPembelian" Member="kategoriCicilan" ThisKey="idCicilan" OtherKey="idCicilan" Type="kategoriCicilan" IsForeignKey="true" />
       <Association Name="pemilik_tPembelian" Member="pemilik" ThisKey="idPemilik" OtherKey="idPemilik" Type="pemilik" IsForeignKey="true" />
       <Association Name="property_tPembelian" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
@@ -129,20 +127,10 @@
     <Type Name="tPenyewaan">
       <Column Name="idTSewa" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="jenisSewa" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="lamaSewa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="idClient" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="namaClient" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="idPemilik" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="idKategoriBayar" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="idCicilan" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="tanggal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="dp" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="statusBayar" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="client_tPenyewaan" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
-      <Association Name="kategoriBayar_tPenyewaan" Member="kategoriBayar" ThisKey="idKategoriBayar" OtherKey="idKategoriBayar" Type="kategoriBayar" IsForeignKey="true" />
-      <Association Name="kategoriCicilan_tPenyewaan" Member="kategoriCicilan" ThisKey="idCicilan" OtherKey="idCicilan" Type="kategoriCicilan" IsForeignKey="true" />
       <Association Name="pemilik_tPenyewaan" Member="pemilik" ThisKey="idPemilik" OtherKey="idPemilik" Type="pemilik" IsForeignKey="true" />
       <Association Name="property_tPenyewaan" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>

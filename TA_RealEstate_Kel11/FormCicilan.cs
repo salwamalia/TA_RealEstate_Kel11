@@ -64,11 +64,9 @@ namespace TA_RealEstate_Kel11
             insert.CommandType = CommandType.StoredProcedure;
 
             insert.Parameters.AddWithValue("idCicilan", txtID.Text);
-            insert.Parameters.AddWithValue("jenisCicilan", txtNama.Text);
-            insert.Parameters.AddWithValue("harga", txtHarga.Text);
-            insert.Parameters.AddWithValue("keterangan", txtKet.Text);
+            insert.Parameters.AddWithValue("cicilan", txtNamaCicilan.Text);
 
-            if (txtNama.Text == "" || txtHarga.Text == "")
+            if (txtNamaCicilan.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -97,11 +95,9 @@ namespace TA_RealEstate_Kel11
             Update.CommandType = CommandType.StoredProcedure;
 
             Update.Parameters.AddWithValue("idCicilan", txtID.Text);
-            Update.Parameters.AddWithValue("jenisCicilan", txtNama.Text);
-            Update.Parameters.AddWithValue("harga", txtHarga.Text);
-            Update.Parameters.AddWithValue("keterangan", txtKet.Text);
+            Update.Parameters.AddWithValue("cicilan", txtNamaCicilan.Text);
 
-            if (txtNama.Text == "" && txtHarga.Text == "")
+            if (txtNamaCicilan.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -123,7 +119,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            if (txtNama.Text == "" && txtHarga.Text == "")
+            if (txtNamaCicilan.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -157,9 +153,7 @@ namespace TA_RealEstate_Kel11
         {
             txtCariCicilan.Clear();
             txtID.Clear();
-            txtNama.Clear();
-            txtHarga.Clear();
-            txtKet.Clear();
+            txtNamaCicilan.Clear();
             txtID.Text = IDOtomatis();
             LoadData();
         }
@@ -171,36 +165,36 @@ namespace TA_RealEstate_Kel11
 
         private void btnCari_Click_1(object sender, EventArgs e)
         {
-            var st = from s in dc.kategoriCicilans where s.idCicilan == txtCariCicilan.Text select s;
+            var st = from s in dc.kategoriCicilans where s.idCicilan == txtID.Text select s;
             dgCicilan.DataSource = st;
 
             if (txtCariCicilan.Text == "")
             {
-                MessageBox.Show("Masukkan ID untuk Cari!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Masukkan ID untuk Cari !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
                 try
                 {
+                    //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+                    string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                     SqlConnection myConnection = new SqlConnection(myConnectionString);
                     myConnection.Open();
 
                     DataTable dt = new DataTable();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan WHERE idCicilan ='" + txtCariCicilan.Text + "'", myConnection);
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan WHERE idCicilan='" + txtCariCicilan.Text + "'", myConnection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                     da.Fill(dt);
 
                     txtID.Text = dt.Rows[0]["idCicilan"].ToString();
-                    txtNama.Text = dt.Rows[0]["jenisCicilan"].ToString();
-                    txtHarga.Text = dt.Rows[0]["harga"].ToString();
-                    txtKet.Text = dt.Rows[0]["keterangan"].ToString();
-                    
+                    txtNamaCicilan.Text = dt.Rows[0]["cicilan"].ToString();
+
                     myConnection.Close();
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show("Maaf Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Error Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
@@ -209,7 +203,6 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                //string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                 SqlConnection con = new SqlConnection(myConnectionString);
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan", con);
@@ -217,16 +210,12 @@ namespace TA_RealEstate_Kel11
                 SqlDataReader sqlDataReader = dr;
                 DataTable dataTable = new DataTable();
                 dataTable.Columns.Add("ID");
-                dataTable.Columns.Add("Jenis Cicilan");
-                dataTable.Columns.Add("Harga");
-                dataTable.Columns.Add("Keterangan");
+                dataTable.Columns.Add("Cicilan");
                 while (dr.Read())
                 {
                     DataRow row = dataTable.NewRow();
                     row["ID"] = sqlDataReader["idCicilan"];
-                    row["Jenis Cicilan"] = sqlDataReader["jenisCicilan"];
-                    row["Harga"] = sqlDataReader["harga"];
-                    row["Keterangan"] = sqlDataReader["keterangan"];
+                    row["Cicilan"] = sqlDataReader["cicilan"];
                     dataTable.Rows.Add(row);
                 }
                 //this.dataGridView1.DataSource = con.table;

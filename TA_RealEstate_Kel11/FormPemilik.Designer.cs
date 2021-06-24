@@ -519,9 +519,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgPemilik);
-            this.groupBox3.Location = new System.Drawing.Point(797, 269);
+            this.groupBox3.Location = new System.Drawing.Point(636, 280);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(497, 315);
+            this.groupBox3.Size = new System.Drawing.Size(683, 315);
             this.groupBox3.TabIndex = 162;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabel Pemilik";
@@ -534,24 +534,25 @@
             this.dgPemilik.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgPemilik.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgPemilik.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgPemilik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPemilik.ColumnHeadersHeight = 50;
+            this.dgPemilik.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgPemilik.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgPemilik.DoubleBuffered = true;
             this.dgPemilik.EnableHeadersVisualStyles = false;
-            this.dgPemilik.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgPemilik.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgPemilik.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.dgPemilik.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgPemilik.Location = new System.Drawing.Point(3, 16);
             this.dgPemilik.Name = "dgPemilik";
             this.dgPemilik.ReadOnly = true;
             this.dgPemilik.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgPemilik.Size = new System.Drawing.Size(491, 296);
+            this.dgPemilik.Size = new System.Drawing.Size(677, 296);
             this.dgPemilik.TabIndex = 147;
             // 
             // groupBox2
@@ -573,9 +574,9 @@
             this.groupBox2.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
-            this.groupBox2.Location = new System.Drawing.Point(226, 332);
+            this.groupBox2.Location = new System.Drawing.Point(226, 309);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(497, 381);
+            this.groupBox2.Size = new System.Drawing.Size(389, 381);
             this.groupBox2.TabIndex = 161;
             this.groupBox2.TabStop = false;
             // 
@@ -597,7 +598,7 @@
             this.btnBatal.IdleFillColor = System.Drawing.Color.White;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(294, 328);
+            this.btnBatal.Location = new System.Drawing.Point(275, 331);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(74, 29);
@@ -623,7 +624,7 @@
             this.btnHapus.IdleFillColor = System.Drawing.Color.White;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(209, 328);
+            this.btnHapus.Location = new System.Drawing.Point(190, 331);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(75, 29);
@@ -649,7 +650,7 @@
             this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(122, 328);
+            this.btnUpdate.Location = new System.Drawing.Point(103, 331);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 29);
@@ -675,7 +676,7 @@
             this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(40, 328);
+            this.btnSimpan.Location = new System.Drawing.Point(21, 331);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(68, 29);
@@ -685,14 +686,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(187, 197);
+            this.txtEmail.Location = new System.Drawing.Point(168, 200);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(181, 20);
             this.txtEmail.TabIndex = 170;
             // 
             // txtAlamat
             // 
-            this.txtAlamat.Location = new System.Drawing.Point(187, 231);
+            this.txtAlamat.Location = new System.Drawing.Point(168, 234);
             this.txtAlamat.Multiline = true;
             this.txtAlamat.Name = "txtAlamat";
             this.txtAlamat.Size = new System.Drawing.Size(181, 76);
@@ -702,7 +703,7 @@
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(36, 226);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(17, 229);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel8.TabIndex = 168;
@@ -713,7 +714,7 @@
             // 
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(36, 192);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(17, 195);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(72, 26);
             this.bunifuCustomLabel7.TabIndex = 167;
@@ -724,7 +725,7 @@
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(36, 150);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(17, 153);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel6.TabIndex = 166;
@@ -733,7 +734,7 @@
             // 
             // txtTelepon
             // 
-            this.txtTelepon.Location = new System.Drawing.Point(187, 155);
+            this.txtTelepon.Location = new System.Drawing.Point(168, 158);
             this.txtTelepon.MaxLength = 13;
             this.txtTelepon.Name = "txtTelepon";
             this.txtTelepon.Size = new System.Drawing.Size(181, 20);
@@ -741,7 +742,7 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(187, 68);
+            this.txtNama.Location = new System.Drawing.Point(168, 71);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(181, 20);
             this.txtNama.TabIndex = 164;
@@ -749,7 +750,7 @@
             // rbPerempuan
             // 
             this.rbPerempuan.AutoSize = true;
-            this.rbPerempuan.Location = new System.Drawing.Point(279, 115);
+            this.rbPerempuan.Location = new System.Drawing.Point(260, 118);
             this.rbPerempuan.Name = "rbPerempuan";
             this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
             this.rbPerempuan.TabIndex = 163;
@@ -760,7 +761,7 @@
             // rbLaki
             // 
             this.rbLaki.AutoSize = true;
-            this.rbLaki.Location = new System.Drawing.Point(187, 115);
+            this.rbLaki.Location = new System.Drawing.Point(168, 118);
             this.rbLaki.Name = "rbLaki";
             this.rbLaki.Size = new System.Drawing.Size(64, 17);
             this.rbLaki.TabIndex = 162;
@@ -772,7 +773,7 @@
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(36, 109);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(17, 112);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(111, 26);
             this.bunifuCustomLabel5.TabIndex = 161;
@@ -783,7 +784,7 @@
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(36, 21);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(17, 24);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel3.TabIndex = 158;
@@ -792,7 +793,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(187, 26);
+            this.txtID.Location = new System.Drawing.Point(168, 29);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(181, 20);
@@ -802,7 +803,7 @@
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(36, 63);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(17, 66);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(64, 26);
             this.bunifuCustomLabel4.TabIndex = 159;
@@ -816,7 +817,7 @@
             this.groupBox1.Controls.Add(this.btnCari);
             this.groupBox1.Location = new System.Drawing.Point(226, 221);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(497, 92);
+            this.groupBox1.Size = new System.Drawing.Size(389, 70);
             this.groupBox1.TabIndex = 159;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cari Pemilik";
@@ -825,7 +826,7 @@
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(36, 38);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(12, 31);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(84, 26);
             this.bunifuCustomLabel9.TabIndex = 155;
@@ -834,7 +835,7 @@
             // 
             // txtCariPemilik
             // 
-            this.txtCariPemilik.Location = new System.Drawing.Point(187, 44);
+            this.txtCariPemilik.Location = new System.Drawing.Point(103, 36);
             this.txtCariPemilik.Name = "txtCariPemilik";
             this.txtCariPemilik.Size = new System.Drawing.Size(181, 20);
             this.txtCariPemilik.TabIndex = 156;
@@ -857,7 +858,7 @@
             this.btnCari.IdleFillColor = System.Drawing.Color.White;
             this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.Location = new System.Drawing.Point(388, 38);
+            this.btnCari.Location = new System.Drawing.Point(305, 31);
             this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(74, 29);

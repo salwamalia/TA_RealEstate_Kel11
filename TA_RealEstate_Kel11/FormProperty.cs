@@ -191,7 +191,7 @@ namespace TA_RealEstate_Kel11
 
                     if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Property", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        if (property.deeteProperty(id))
+                        if (property.deleteProperty(id))
                         {
                             MessageBox.Show("Property Telah DiHapus", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             clear();
@@ -279,7 +279,6 @@ namespace TA_RealEstate_Kel11
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error Property Tidak Ditemukan! ", "Cari Property", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

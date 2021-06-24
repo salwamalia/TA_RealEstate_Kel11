@@ -72,6 +72,12 @@
     <Compile Include="Classes\PERSON.cs" />
     <Compile Include="Classes\PROPERTY.cs" />
     <Compile Include="Classes\PROPERTY_TYPE.cs" />
+    <Compile Include="TransaksiDetailBeli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransaksiDetailBeli.Designer.cs">
+      <DependentUpon>TransaksiDetailBeli.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCicilan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,12 +192,21 @@
     <Compile Include="TransaksiBeli.Designer.cs">
       <DependentUpon>TransaksiBeli.cs</DependentUpon>
     </Compile>
+    <Compile Include="TransaksiDetailSewa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransaksiDetailSewa.Designer.cs">
+      <DependentUpon>TransaksiDetailSewa.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransaksiSewa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransaksiSewa.Designer.cs">
       <DependentUpon>TransaksiSewa.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TransaksiDetailBeli.resx">
+      <DependentUpon>TransaksiDetailBeli.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCicilan.resx">
       <DependentUpon>FormCicilan.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TransaksiBeli.resx">
       <DependentUpon>TransaksiBeli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransaksiDetailSewa.resx">
+      <DependentUpon>TransaksiDetailSewa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransaksiSewa.resx">
       <DependentUpon>TransaksiSewa.cs</DependentUpon>

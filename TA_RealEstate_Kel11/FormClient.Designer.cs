@@ -49,6 +49,7 @@
             this.dgClient = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
             this.rbPerempuan = new System.Windows.Forms.RadioButton();
             this.rbLaki = new System.Windows.Forms.RadioButton();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -56,6 +57,7 @@
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -69,8 +71,6 @@
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtCariClient = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
-            this.txtTelepon = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -508,9 +508,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgClient);
-            this.groupBox3.Location = new System.Drawing.Point(704, 269);
+            this.groupBox3.Location = new System.Drawing.Point(671, 269);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(641, 398);
+            this.groupBox3.Size = new System.Drawing.Size(648, 398);
             this.groupBox3.TabIndex = 191;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabel Client";
@@ -523,24 +523,25 @@
             this.dgClient.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgClient.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgClient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgClient.ColumnHeadersHeight = 50;
+            this.dgClient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgClient.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgClient.DoubleBuffered = true;
             this.dgClient.EnableHeadersVisualStyles = false;
-            this.dgClient.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgClient.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgClient.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.dgClient.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgClient.Location = new System.Drawing.Point(3, 16);
             this.dgClient.Name = "dgClient";
             this.dgClient.ReadOnly = true;
             this.dgClient.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgClient.Size = new System.Drawing.Size(635, 379);
+            this.dgClient.Size = new System.Drawing.Size(642, 379);
             this.dgClient.TabIndex = 1;
             // 
             // groupBox2
@@ -563,9 +564,9 @@
             this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.btnSimpan);
-            this.groupBox2.Location = new System.Drawing.Point(235, 367);
+            this.groupBox2.Location = new System.Drawing.Point(235, 327);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(451, 375);
+            this.groupBox2.Size = new System.Drawing.Size(419, 375);
             this.groupBox2.TabIndex = 190;
             this.groupBox2.TabStop = false;
             // 
@@ -594,6 +595,13 @@
             this.bunifuThinButton21.TabIndex = 158;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.btnCariClient_Click_1);
+            // 
+            // txtNama
+            // 
+            this.txtNama.Location = new System.Drawing.Point(159, 57);
+            this.txtNama.Name = "txtNama";
+            this.txtNama.Size = new System.Drawing.Size(181, 20);
+            this.txtNama.TabIndex = 186;
             // 
             // rbPerempuan
             // 
@@ -664,6 +672,14 @@
             this.bunifuCustomLabel6.TabIndex = 179;
             this.bunifuCustomLabel6.Text = "Telepon";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTelepon
+            // 
+            this.txtTelepon.Location = new System.Drawing.Point(159, 126);
+            this.txtTelepon.MaxLength = 13;
+            this.txtTelepon.Name = "txtTelepon";
+            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
+            this.txtTelepon.TabIndex = 178;
             // 
             // bunifuCustomLabel5
             // 
@@ -817,7 +833,7 @@
             this.groupBox1.Controls.Add(this.txtCariClient);
             this.groupBox1.Location = new System.Drawing.Point(235, 235);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(451, 100);
+            this.groupBox1.Size = new System.Drawing.Size(419, 69);
             this.groupBox1.TabIndex = 188;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cari Client";
@@ -840,7 +856,7 @@
             this.btnCariClient.IdleFillColor = System.Drawing.Color.White;
             this.btnCariClient.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCariClient.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCariClient.Location = new System.Drawing.Point(358, 24);
+            this.btnCariClient.Location = new System.Drawing.Point(298, 26);
             this.btnCariClient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCariClient.Name = "btnCariClient";
             this.btnCariClient.Size = new System.Drawing.Size(75, 36);
@@ -852,16 +868,16 @@
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(13, 34);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(7, 26);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
-            this.bunifuCustomLabel9.Size = new System.Drawing.Size(140, 26);
+            this.bunifuCustomLabel9.Size = new System.Drawing.Size(97, 26);
             this.bunifuCustomLabel9.TabIndex = 154;
             this.bunifuCustomLabel9.Text = "ID Client";
             this.bunifuCustomLabel9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtCariClient
             // 
-            this.txtCariClient.Location = new System.Drawing.Point(159, 34);
+            this.txtCariClient.Location = new System.Drawing.Point(110, 31);
             this.txtCariClient.Name = "txtCariClient";
             this.txtCariClient.Size = new System.Drawing.Size(181, 20);
             this.txtCariClient.TabIndex = 155;
@@ -877,21 +893,6 @@
             this.bunifuCustomLabel2.TabIndex = 189;
             this.bunifuCustomLabel2.Text = "Client";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNama
-            // 
-            this.txtNama.Location = new System.Drawing.Point(159, 57);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(181, 20);
-            this.txtNama.TabIndex = 186;
-            // 
-            // txtTelepon
-            // 
-            this.txtTelepon.Location = new System.Drawing.Point(159, 126);
-            this.txtTelepon.MaxLength = 13;
-            this.txtTelepon.Name = "txtTelepon";
-            this.txtTelepon.Size = new System.Drawing.Size(181, 20);
-            this.txtTelepon.TabIndex = 178;
             // 
             // FormClient
             // 

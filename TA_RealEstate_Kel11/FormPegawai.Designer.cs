@@ -519,7 +519,7 @@
             this.groupBox1.Controls.Add(this.txtCariPegawai);
             this.groupBox1.Location = new System.Drawing.Point(212, 194);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(499, 100);
+            this.groupBox1.Size = new System.Drawing.Size(446, 75);
             this.groupBox1.TabIndex = 192;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cari Pegawai";
@@ -542,7 +542,7 @@
             this.btnCari.IdleFillColor = System.Drawing.Color.White;
             this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.Location = new System.Drawing.Point(393, 37);
+            this.btnCari.Location = new System.Drawing.Point(349, 29);
             this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(83, 29);
@@ -554,7 +554,7 @@
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(25, 40);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(14, 29);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(100, 26);
             this.bunifuCustomLabel9.TabIndex = 172;
@@ -563,7 +563,7 @@
             // 
             // txtCariPegawai
             // 
-            this.txtCariPegawai.Location = new System.Drawing.Point(177, 40);
+            this.txtCariPegawai.Location = new System.Drawing.Point(132, 34);
             this.txtCariPegawai.Name = "txtCariPegawai";
             this.txtCariPegawai.Size = new System.Drawing.Size(209, 20);
             this.txtCariPegawai.TabIndex = 173;
@@ -571,9 +571,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgPegawai);
-            this.groupBox3.Location = new System.Drawing.Point(730, 318);
+            this.groupBox3.Location = new System.Drawing.Point(670, 291);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(608, 353);
+            this.groupBox3.Size = new System.Drawing.Size(659, 353);
             this.groupBox3.TabIndex = 195;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabel Pegawai";
@@ -586,24 +586,25 @@
             this.dgPegawai.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgPegawai.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgPegawai.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPegawai.ColumnHeadersHeight = 50;
+            this.dgPegawai.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgPegawai.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgPegawai.DoubleBuffered = true;
             this.dgPegawai.EnableHeadersVisualStyles = false;
-            this.dgPegawai.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgPegawai.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgPegawai.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.dgPegawai.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgPegawai.Location = new System.Drawing.Point(3, 16);
             this.dgPegawai.Name = "dgPegawai";
             this.dgPegawai.ReadOnly = true;
             this.dgPegawai.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgPegawai.Size = new System.Drawing.Size(602, 334);
+            this.dgPegawai.Size = new System.Drawing.Size(653, 334);
             this.dgPegawai.TabIndex = 1;
             // 
             // groupBox2
@@ -625,16 +626,15 @@
             this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.btnSimpan);
-            this.groupBox2.Location = new System.Drawing.Point(212, 318);
+            this.groupBox2.Location = new System.Drawing.Point(212, 291);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(499, 353);
+            this.groupBox2.Size = new System.Drawing.Size(446, 353);
             this.groupBox2.TabIndex = 194;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "S";
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(177, 73);
+            this.txtNama.Location = new System.Drawing.Point(155, 70);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(209, 20);
             this.txtNama.TabIndex = 190;
@@ -642,7 +642,7 @@
             // rbPerempuan
             // 
             this.rbPerempuan.AutoSize = true;
-            this.rbPerempuan.Location = new System.Drawing.Point(303, 120);
+            this.rbPerempuan.Location = new System.Drawing.Point(281, 117);
             this.rbPerempuan.Name = "rbPerempuan";
             this.rbPerempuan.Size = new System.Drawing.Size(79, 17);
             this.rbPerempuan.TabIndex = 189;
@@ -653,7 +653,7 @@
             // rbLaki
             // 
             this.rbLaki.AutoSize = true;
-            this.rbLaki.Location = new System.Drawing.Point(179, 120);
+            this.rbLaki.Location = new System.Drawing.Point(157, 117);
             this.rbLaki.Name = "rbLaki";
             this.rbLaki.Size = new System.Drawing.Size(64, 17);
             this.rbLaki.TabIndex = 188;
@@ -668,7 +668,7 @@
             this.cbJabatan.DisplayMember = "jabatan";
             this.cbJabatan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbJabatan.FormattingEnabled = true;
-            this.cbJabatan.Location = new System.Drawing.Point(177, 254);
+            this.cbJabatan.Location = new System.Drawing.Point(155, 251);
             this.cbJabatan.Name = "cbJabatan";
             this.cbJabatan.Size = new System.Drawing.Size(209, 21);
             this.cbJabatan.TabIndex = 187;
@@ -702,14 +702,14 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(177, 207);
+            this.txtPass.Location = new System.Drawing.Point(155, 204);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(209, 20);
             this.txtPass.TabIndex = 185;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(177, 162);
+            this.txtUser.Location = new System.Drawing.Point(155, 159);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(209, 20);
             this.txtUser.TabIndex = 184;
@@ -786,7 +786,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(177, 29);
+            this.txtID.Location = new System.Drawing.Point(155, 26);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(209, 20);

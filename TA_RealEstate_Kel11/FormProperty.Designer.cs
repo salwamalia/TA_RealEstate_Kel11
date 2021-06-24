@@ -553,19 +553,20 @@
             this.dgProperty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgProperty.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgProperty.ColumnHeadersHeight = 50;
+            this.dgProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgProperty.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgProperty.DoubleBuffered = true;
             this.dgProperty.EnableHeadersVisualStyles = false;
-            this.dgProperty.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgProperty.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgProperty.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.dgProperty.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgProperty.Location = new System.Drawing.Point(3, 16);
             this.dgProperty.Name = "dgProperty";
             this.dgProperty.ReadOnly = true;
@@ -612,6 +613,8 @@
             // 
             // PBGambar
             // 
+            this.PBGambar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PBGambar.BackgroundImage")));
+            this.PBGambar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.PBGambar.Location = new System.Drawing.Point(6, 19);
             this.PBGambar.Name = "PBGambar";
             this.PBGambar.Size = new System.Drawing.Size(373, 255);

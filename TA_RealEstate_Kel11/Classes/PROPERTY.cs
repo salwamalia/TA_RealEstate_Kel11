@@ -40,7 +40,7 @@ namespace TA_RealEstate_Kel11.Classes
         }
 
         //delete a new property
-        public Boolean deeteProperty(string id)
+        public Boolean deleteProperty(string id)
         {
             SqlCommand command = new SqlCommand("DELETE FROM property WHERE idProperty=@id");
 

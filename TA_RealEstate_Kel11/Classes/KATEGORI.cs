@@ -42,6 +42,17 @@ namespace TA_RealEstate_Kel11.Classes
             return func.ExecQuery(command);
         }
 
+        //Update a new kategoriBayar
+        public Boolean updateCicilan(string id, string cicilan)
+        {
+            SqlCommand command = new SqlCommand("UPDATE kategoriBayar SET namaCicilan=@nc WHERE idKategoriBayar=@id");
+
+            command.Parameters.Add("@id", SqlDbType.VarChar).Value = id;
+            command.Parameters.Add("@nc", SqlDbType.VarChar).Value = cicilan;
+
+            return func.ExecQuery(command);
+        }
+
         //delete a new kategoriBayar
         public Boolean deleteCicilan(string id)
         {

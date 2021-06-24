@@ -51,16 +51,12 @@
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtCariCicilan = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtNama = new System.Windows.Forms.TextBox();
-            this.txtKet = new System.Windows.Forms.TextBox();
+            this.txtNamaCicilan = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -516,7 +512,7 @@
             this.groupBox1.Controls.Add(this.btnCari);
             this.groupBox1.Controls.Add(this.bunifuCustomLabel7);
             this.groupBox1.Controls.Add(this.txtCariCicilan);
-            this.groupBox1.Location = new System.Drawing.Point(235, 197);
+            this.groupBox1.Location = new System.Drawing.Point(235, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(528, 100);
             this.groupBox1.TabIndex = 152;
@@ -569,78 +565,48 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtNama);
-            this.groupBox2.Controls.Add(this.txtKet);
+            this.groupBox2.Controls.Add(this.txtNamaCicilan);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel6);
-            this.groupBox2.Controls.Add(this.bunifuCustomLabel5);
-            this.groupBox2.Controls.Add(this.txtHarga);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox2.Controls.Add(this.btnBatal);
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.btnHapus);
-            this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox2.Controls.Add(this.btnUpdate);
             this.groupBox2.Controls.Add(this.btnSimpan);
-            this.groupBox2.Location = new System.Drawing.Point(235, 314);
+            this.groupBox2.Location = new System.Drawing.Point(235, 361);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(528, 293);
+            this.groupBox2.Size = new System.Drawing.Size(528, 269);
             this.groupBox2.TabIndex = 153;
             this.groupBox2.TabStop = false;
             // 
-            // txtNama
+            // txtNamaCicilan
             // 
-            this.txtNama.Location = new System.Drawing.Point(189, 80);
-            this.txtNama.Name = "txtNama";
-            this.txtNama.Size = new System.Drawing.Size(190, 20);
-            this.txtNama.TabIndex = 180;
-            // 
-            // txtKet
-            // 
-            this.txtKet.Location = new System.Drawing.Point(189, 166);
-            this.txtKet.Multiline = true;
-            this.txtKet.Name = "txtKet";
-            this.txtKet.Size = new System.Drawing.Size(190, 50);
-            this.txtKet.TabIndex = 178;
+            this.txtNamaCicilan.Location = new System.Drawing.Point(203, 105);
+            this.txtNamaCicilan.Name = "txtNamaCicilan";
+            this.txtNamaCicilan.Size = new System.Drawing.Size(189, 20);
+            this.txtNamaCicilan.TabIndex = 220;
             // 
             // bunifuCustomLabel6
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(18, 161);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(32, 99);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
-            this.bunifuCustomLabel6.Size = new System.Drawing.Size(114, 26);
-            this.bunifuCustomLabel6.TabIndex = 176;
-            this.bunifuCustomLabel6.Text = "Keterangan";
-            this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(18, 117);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(78, 26);
-            this.bunifuCustomLabel5.TabIndex = 175;
-            this.bunifuCustomLabel5.Text = "Harga";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtHarga
-            // 
-            this.txtHarga.Location = new System.Drawing.Point(189, 122);
-            this.txtHarga.Name = "txtHarga";
-            this.txtHarga.Size = new System.Drawing.Size(189, 20);
-            this.txtHarga.TabIndex = 174;
+            this.bunifuCustomLabel6.Size = new System.Drawing.Size(115, 26);
+            this.bunifuCustomLabel6.TabIndex = 219;
+            this.bunifuCustomLabel6.Text = "Cicilan";
+            this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(18, 35);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(32, 57);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(96, 26);
             this.bunifuCustomLabel3.TabIndex = 167;
             this.bunifuCustomLabel3.Text = "ID Cicilan";
-            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnBatal
             // 
@@ -660,7 +626,7 @@
             this.btnBatal.IdleFillColor = System.Drawing.Color.White;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(302, 235);
+            this.btnBatal.Location = new System.Drawing.Point(315, 187);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(77, 33);
@@ -670,7 +636,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(189, 40);
+            this.txtID.Location = new System.Drawing.Point(203, 62);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(189, 20);
@@ -694,24 +660,13 @@
             this.btnHapus.IdleFillColor = System.Drawing.Color.White;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(210, 235);
+            this.btnHapus.Location = new System.Drawing.Point(223, 187);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(77, 33);
             this.btnHapus.TabIndex = 173;
             this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click_1);
-            // 
-            // bunifuCustomLabel4
-            // 
-            this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(18, 75);
-            this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
-            this.bunifuCustomLabel4.Size = new System.Drawing.Size(114, 26);
-            this.bunifuCustomLabel4.TabIndex = 168;
-            this.bunifuCustomLabel4.Text = "Jenis Cicilan";
-            this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUpdate
             // 
@@ -731,7 +686,7 @@
             this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(118, 235);
+            this.btnUpdate.Location = new System.Drawing.Point(131, 187);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(77, 33);
@@ -757,7 +712,7 @@
             this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(33, 235);
+            this.btnSimpan.Location = new System.Drawing.Point(46, 187);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(77, 33);
@@ -768,9 +723,9 @@
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgCicilan);
-            this.groupBox3.Location = new System.Drawing.Point(798, 270);
+            this.groupBox3.Location = new System.Drawing.Point(793, 285);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(528, 293);
+            this.groupBox3.Size = new System.Drawing.Size(419, 347);
             this.groupBox3.TabIndex = 179;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Tabel Cicilan";
@@ -783,24 +738,25 @@
             this.dgCicilan.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgCicilan.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgCicilan.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgCicilan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgCicilan.ColumnHeadersHeight = 50;
+            this.dgCicilan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgCicilan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgCicilan.DoubleBuffered = true;
             this.dgCicilan.EnableHeadersVisualStyles = false;
-            this.dgCicilan.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgCicilan.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgCicilan.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.dgCicilan.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgCicilan.Location = new System.Drawing.Point(3, 16);
             this.dgCicilan.Name = "dgCicilan";
             this.dgCicilan.ReadOnly = true;
             this.dgCicilan.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgCicilan.Size = new System.Drawing.Size(522, 274);
+            this.dgCicilan.Size = new System.Drawing.Size(413, 328);
             this.dgCicilan.TabIndex = 154;
             // 
             // FormCicilan
@@ -855,19 +811,15 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
         private System.Windows.Forms.TextBox txtCariCicilan;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtKet;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
-        private NumberTextBox txtHarga;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
         private System.Windows.Forms.TextBox txtID;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
         private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
         private System.Windows.Forms.GroupBox groupBox3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgCicilan;
-        private System.Windows.Forms.TextBox txtNama;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.TextBox txtNamaCicilan;
     }
 }

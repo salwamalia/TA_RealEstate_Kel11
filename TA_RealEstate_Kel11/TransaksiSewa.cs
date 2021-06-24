@@ -49,5 +49,12 @@ namespace TA_RealEstate_Kel11
             log.Visible = true;
             this.Hide();
         }
+
+        private void btnDetailSewa_Click(object sender, EventArgs e)
+        {
+            TransaksiDetailSewa detailSewa = new TransaksiDetailSewa();
+            detailSewa.Show();
+            this.Hide();
+        }
     }
 }

@@ -120,7 +120,7 @@ namespace TA_RealEstate_Kel11
         {
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-            if (txtID.Text == "" || txtNama.Text == "")
+            if (txtNama.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -151,7 +151,7 @@ namespace TA_RealEstate_Kel11
 
         private void FormJabatan_Load(object sender, EventArgs e)
         {
-             txtID.Text = IDOtomatis();
+            txtID.Text = IDOtomatis();
             LoadData();
         }
 
