@@ -26,7 +26,6 @@ namespace TA_RealEstate_Kel11
         string imgLocation = "";
 
         REALESTATEDataContext dt = new REALESTATEDataContext();
-        Classes.PROPERTY property = new Classes.PROPERTY();
 
         private string IDOtomatis()
         {

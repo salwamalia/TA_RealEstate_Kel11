@@ -22,7 +22,6 @@ namespace TA_RealEstate_Kel11
         }
 
         REALESTATEDataContext dc = new REALESTATEDataContext();
-        Classes.KATEGORI kategori = new Classes.KATEGORI();
 
         private string IDOtomatis()
         {

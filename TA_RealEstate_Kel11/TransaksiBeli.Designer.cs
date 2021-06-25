@@ -41,6 +41,10 @@
             this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtIDBeli = new System.Windows.Forms.TextBox();
             this.btnDetailBeli = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -69,7 +73,6 @@
             this.propertyTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTableAdapter();
             this.clientTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.clientTableAdapter();
             this.pemilikTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.pemilikTableAdapter();
-            this.btnBayar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -291,7 +294,10 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.btnBayar);
+            this.groupBox5.Controls.Add(this.btnSimpan);
+            this.groupBox5.Controls.Add(this.btnBatal);
+            this.groupBox5.Controls.Add(this.btnHapus);
+            this.groupBox5.Controls.Add(this.btnUpdate);
             this.groupBox5.Controls.Add(this.txtIDBeli);
             this.groupBox5.Controls.Add(this.btnDetailBeli);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
@@ -308,6 +314,108 @@
             this.groupBox5.Size = new System.Drawing.Size(868, 211);
             this.groupBox5.TabIndex = 153;
             this.groupBox5.TabStop = false;
+            // 
+            // btnSimpan
+            // 
+            this.btnSimpan.ActiveBorderThickness = 1;
+            this.btnSimpan.ActiveCornerRadius = 20;
+            this.btnSimpan.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.ActiveForecolor = System.Drawing.Color.White;
+            this.btnSimpan.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
+            this.btnSimpan.ButtonText = "Simpan";
+            this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.IdleBorderThickness = 1;
+            this.btnSimpan.IdleCornerRadius = 20;
+            this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
+            this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnSimpan.Location = new System.Drawing.Point(206, 147);
+            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSimpan.Name = "btnSimpan";
+            this.btnSimpan.Size = new System.Drawing.Size(69, 29);
+            this.btnSimpan.TabIndex = 216;
+            this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click_1);
+            // 
+            // btnBatal
+            // 
+            this.btnBatal.ActiveBorderThickness = 1;
+            this.btnBatal.ActiveCornerRadius = 20;
+            this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
+            this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
+            this.btnBatal.ButtonText = "Batal";
+            this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.IdleBorderThickness = 1;
+            this.btnBatal.IdleCornerRadius = 20;
+            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
+            this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.Location = new System.Drawing.Point(467, 147);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(75, 29);
+            this.btnBatal.TabIndex = 218;
+            this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click_1);
+            // 
+            // btnHapus
+            // 
+            this.btnHapus.ActiveBorderThickness = 1;
+            this.btnHapus.ActiveCornerRadius = 20;
+            this.btnHapus.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.ActiveForecolor = System.Drawing.Color.White;
+            this.btnHapus.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
+            this.btnHapus.ButtonText = "Hapus";
+            this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.IdleBorderThickness = 1;
+            this.btnHapus.IdleCornerRadius = 20;
+            this.btnHapus.IdleFillColor = System.Drawing.Color.White;
+            this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnHapus.Location = new System.Drawing.Point(375, 147);
+            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHapus.Name = "btnHapus";
+            this.btnHapus.Size = new System.Drawing.Size(76, 29);
+            this.btnHapus.TabIndex = 219;
+            this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.ActiveBorderThickness = 1;
+            this.btnUpdate.ActiveCornerRadius = 20;
+            this.btnUpdate.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
+            this.btnUpdate.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
+            this.btnUpdate.ButtonText = "Update";
+            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.IdleBorderThickness = 1;
+            this.btnUpdate.IdleCornerRadius = 20;
+            this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
+            this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnUpdate.Location = new System.Drawing.Point(283, 147);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(76, 29);
+            this.btnUpdate.TabIndex = 217;
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtIDBeli
             // 
@@ -598,31 +706,6 @@
             // 
             this.pemilikTableAdapter.ClearBeforeFill = true;
             // 
-            // btnBayar
-            // 
-            this.btnBayar.ActiveBorderThickness = 1;
-            this.btnBayar.ActiveCornerRadius = 20;
-            this.btnBayar.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.ActiveForecolor = System.Drawing.Color.White;
-            this.btnBayar.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBayar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBayar.BackgroundImage")));
-            this.btnBayar.ButtonText = "Bayar";
-            this.btnBayar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBayar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBayar.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.IdleBorderThickness = 1;
-            this.btnBayar.IdleCornerRadius = 20;
-            this.btnBayar.IdleFillColor = System.Drawing.Color.White;
-            this.btnBayar.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.Location = new System.Drawing.Point(669, 159);
-            this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBayar.Name = "btnBayar";
-            this.btnBayar.Size = new System.Drawing.Size(159, 35);
-            this.btnBayar.TabIndex = 187;
-            this.btnBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // TransaksiBeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -698,6 +781,9 @@
         private System.Windows.Forms.BindingSource pemilikBindingSource;
         private REALESTATEDataSetTableAdapters.pemilikTableAdapter pemilikTableAdapter;
         private System.Windows.Forms.BindingSource pemilikBindingSource1;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnBayar;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
     }
 }
