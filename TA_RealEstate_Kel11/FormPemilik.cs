@@ -23,7 +23,6 @@ namespace TA_RealEstate_Kel11
         }
 
         REALESTATEDataContext dc = new REALESTATEDataContext();
-        Classes.PERSON person = new Classes.PERSON();
 
         private string IDOtomatis()
         {
@@ -117,68 +116,73 @@ namespace TA_RealEstate_Kel11
             {
                 jeniskelamin = rbPerempuan.Text;
             }
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-            try
-            {
-                string id = txtID.Text;
-                string name = txtNama.Text;
-                string JenisKelamin = jeniskelamin;
-                string phone = txtTelepon.Text;
-                string email = txtEmail.Text;
-                string address = txtAlamat.Text;
+            //Update command
+            SqlCommand Update = new SqlCommand("sp_UpdatePemilik", myConnection);
+            Update.CommandType = CommandType.StoredProcedure;
 
-                if (!name.Trim().Equals("") && !phone.Trim().Equals(""))
-                {
-                    if (person.updatePemilik(id, name, JenisKelamin, phone, email, address))
-                    {
-                        MessageBox.Show("pemilik Telah DiUpdate", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("pemilik Tidak Ter-Update", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Silahkan Isi Nama dan Telepon pemilik untuk DiUpdate", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            catch
-            {
-                MessageBox.Show("Tidak Ada pemilik yang dipilih", "Update pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
+            Update.Parameters.AddWithValue("idPemilik", txtID.Text);
+            Update.Parameters.AddWithValue("nama", txtNama.Text);
+            Update.Parameters.AddWithValue("jeniskelamin", jeniskelamin);
+            Update.Parameters.AddWithValue("telepon", txtTelepon.Text);
+            Update.Parameters.AddWithValue("email", txtEmail.Text);
+            Update.Parameters.AddWithValue("alamat", txtAlamat.Text);
 
-        private void btnHapus_Click_1(object sender, EventArgs e)
-        {
-            if (txtCariPemilik.Text == "")
+            if (txtID.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "" || txtAlamat.Text == "" || jeniskelamin == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (!(Regex.IsMatch(txtEmail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$")))
+            {
+                MessageBox.Show("Format Email Salah !!" +
+                    "\nGunakan Format a@b.c", "Information Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
                 try
                 {
-                    string id = txtID.Text;
-
-                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete pemilik", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        if (person.deletePemilik(id))
-                        {
-                            MessageBox.Show("pemilik Telah DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            txtID.Text = IDOtomatis();
-                            LoadData();
-                        }
-                        else
-                        {
-                            MessageBox.Show("pemilik Tidak DiHapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Update Pemilik Succesfully", "Update Pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
                 }
-                catch
+                catch (Exception)
                 {
-                    MessageBox.Show("Tidak Ada pemilik yang dipilih untuk dihapus", "Delete pemilik", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+        }
+
+        private void btnHapus_Click_1(object sender, EventArgs e)
+        {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
+            if (txtCariPemilik.Text == "")
+            {
+                MessageBox.Show("Semua Data Harus diisi !!", "Delete Pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pemilik", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeletePemilik", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
+
+                    delete.Parameters.AddWithValue("idPemilik", txtID.Text);
+
+                    try
+                    {
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Delete Pemilik Succesfully", "Delete Pemilik", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

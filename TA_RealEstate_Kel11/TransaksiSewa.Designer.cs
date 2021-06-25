@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransaksiSewa));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
@@ -50,7 +50,6 @@
             this.cbClient = new System.Windows.Forms.ComboBox();
             this.cbPemilik = new System.Windows.Forms.ComboBox();
             this.cbProperty = new System.Windows.Forms.ComboBox();
-            this.txtIDSewa = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -62,6 +61,7 @@
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgTransaksi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txtIDSewa = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -302,7 +302,7 @@
             // 
             this.txtCariTransaksi.Location = new System.Drawing.Point(130, 26);
             this.txtCariTransaksi.Name = "txtCariTransaksi";
-            this.txtCariTransaksi.Size = new System.Drawing.Size(146, 20);
+            this.txtCariTransaksi.Size = new System.Drawing.Size(221, 20);
             this.txtCariTransaksi.TabIndex = 160;
             // 
             // bunifuCustomLabel17
@@ -334,7 +334,7 @@
             this.btnCari.IdleFillColor = System.Drawing.Color.White;
             this.btnCari.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCari.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCari.Location = new System.Drawing.Point(297, 21);
+            this.btnCari.Location = new System.Drawing.Point(365, 20);
             this.btnCari.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCari.Name = "btnCari";
             this.btnCari.Size = new System.Drawing.Size(76, 29);
@@ -343,12 +343,12 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.txtIDSewa);
             this.groupBox5.Controls.Add(this.btnDetailSewa);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
             this.groupBox5.Controls.Add(this.cbClient);
             this.groupBox5.Controls.Add(this.cbPemilik);
             this.groupBox5.Controls.Add(this.cbProperty);
-            this.groupBox5.Controls.Add(this.txtIDSewa);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel10);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel5);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel6);
@@ -393,13 +393,14 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(130, 107);
+            this.dateTimePicker1.Location = new System.Drawing.Point(130, 63);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(221, 20);
             this.dateTimePicker1.TabIndex = 188;
             // 
             // cbClient
             // 
+            this.cbClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClient.FormattingEnabled = true;
             this.cbClient.Location = new System.Drawing.Point(521, 24);
             this.cbClient.Name = "cbClient";
@@ -408,6 +409,7 @@
             // 
             // cbPemilik
             // 
+            this.cbPemilik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPemilik.FormattingEnabled = true;
             this.cbPemilik.Location = new System.Drawing.Point(521, 66);
             this.cbPemilik.Name = "cbPemilik";
@@ -416,24 +418,18 @@
             // 
             // cbProperty
             // 
+            this.cbProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProperty.FormattingEnabled = true;
-            this.cbProperty.Location = new System.Drawing.Point(130, 64);
+            this.cbProperty.Location = new System.Drawing.Point(130, 101);
             this.cbProperty.Name = "cbProperty";
             this.cbProperty.Size = new System.Drawing.Size(221, 21);
             this.cbProperty.TabIndex = 182;
-            // 
-            // txtIDSewa
-            // 
-            this.txtIDSewa.Location = new System.Drawing.Point(130, 24);
-            this.txtIDSewa.Name = "txtIDSewa";
-            this.txtIDSewa.Size = new System.Drawing.Size(221, 20);
-            this.txtIDSewa.TabIndex = 181;
             // 
             // bunifuCustomLabel10
             // 
             this.bunifuCustomLabel10.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel10.Location = new System.Drawing.Point(24, 105);
+            this.bunifuCustomLabel10.Location = new System.Drawing.Point(24, 61);
             this.bunifuCustomLabel10.Name = "bunifuCustomLabel10";
             this.bunifuCustomLabel10.Size = new System.Drawing.Size(100, 26);
             this.bunifuCustomLabel10.TabIndex = 177;
@@ -466,7 +462,7 @@
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(24, 59);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(24, 96);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(100, 26);
             this.bunifuCustomLabel4.TabIndex = 174;
@@ -596,23 +592,24 @@
             // 
             // dgTransaksi
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgTransaksi.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgTransaksi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgTransaksi.ColumnHeadersHeight = 50;
             this.dgTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgTransaksi.DoubleBuffered = true;
+            this.dgTransaksi.EnableHeadersVisualStyles = false;
             this.dgTransaksi.HeaderBgColor = System.Drawing.Color.LightBlue;
             this.dgTransaksi.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgTransaksi.Location = new System.Drawing.Point(3, 16);
@@ -620,6 +617,14 @@
             this.dgTransaksi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgTransaksi.Size = new System.Drawing.Size(773, 191);
             this.dgTransaksi.TabIndex = 1;
+            // 
+            // txtIDSewa
+            // 
+            this.txtIDSewa.Location = new System.Drawing.Point(130, 24);
+            this.txtIDSewa.Name = "txtIDSewa";
+            this.txtIDSewa.ReadOnly = true;
+            this.txtIDSewa.Size = new System.Drawing.Size(221, 20);
+            this.txtIDSewa.TabIndex = 194;
             // 
             // TransaksiSewa
             // 
@@ -669,7 +674,6 @@
         private System.Windows.Forms.ComboBox cbClient;
         private System.Windows.Forms.ComboBox cbPemilik;
         private System.Windows.Forms.ComboBox cbProperty;
-        private System.Windows.Forms.TextBox txtIDSewa;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
@@ -682,5 +686,6 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgTransaksi;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDetailSewa;
+        private System.Windows.Forms.TextBox txtIDSewa;
     }
 }

@@ -126,7 +126,7 @@ namespace TA_RealEstate_Kel11
             }
             else
             {
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Pegawai", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Jabatan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //delete command
                     SqlCommand delete = new SqlCommand("sp_DeleteJabatan", myConnection);
@@ -210,9 +210,7 @@ namespace TA_RealEstate_Kel11
             {
                 try
                 {
-                    //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                    string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                   SqlConnection myConnection = new SqlConnection(myConnectionString);
                     myConnection.Open();
 
                     DataTable dt = new DataTable();
@@ -226,7 +224,7 @@ namespace TA_RealEstate_Kel11
 
                     myConnection.Close();
                 }
-                catch (Exception )
+                catch (Exception ex )
                 {
                     MessageBox.Show("Error Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

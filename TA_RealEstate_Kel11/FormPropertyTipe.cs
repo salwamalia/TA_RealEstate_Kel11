@@ -22,7 +22,6 @@ namespace TA_RealEstate_Kel11
         }
 
         REALESTATEDataContext dc = new REALESTATEDataContext();
-        Classes.PROPERTY_TYPE pType = new Classes.PROPERTY_TYPE();
 
         private string IDOtomatis()
         {
@@ -76,7 +75,7 @@ namespace TA_RealEstate_Kel11
                 {
                     myConnection.Open();
                     insert.ExecuteNonQuery();
-                    MessageBox.Show("Type Telah Ditambahkan", "Add Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Type Telah Ditambahkan", "Add Property Tipe", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
                 catch (Exception ex)
@@ -88,64 +87,64 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            try
-            {
-                string id = txtID.Text;
-                string name = txtNama.Text;
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-                if (!name.Trim().Equals(""))
+            //Update command
+            SqlCommand Update = new SqlCommand("sp_UpdateType", myConnection);
+            Update.CommandType = CommandType.StoredProcedure;
+
+            Update.Parameters.AddWithValue("idTipe", txtID.Text);
+            Update.Parameters.AddWithValue("nama", txtNama.Text);
+
+            if (txtID.Text == "" || txtNama.Text == "")
+            {
+                MessageBox.Show("Semua Data Harus diisi !!", "Add Property Tipe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
                 {
-                    if (pType.updateType(id, name))
-                    {
-                        MessageBox.Show("Type Telah DiUpdate", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Type Tidak Ter-Update", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Update Property Tipe Succesfully", "Update Property Tipe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
                 }
-                else
+                catch (Exception)
                 {
-                    MessageBox.Show("Silahkan Ubah Type untuk DiUpdate", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch
-            {
-                MessageBox.Show("Tidak Ada Type yang dipilih", "Update Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-            LoadData();
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
             if (txtID.Text == "" || txtNama.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                try
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Property Tipe", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string id = txtID.Text;
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeleteType", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Type", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    delete.Parameters.AddWithValue("idTipe", txtID.Text);
+
+                    try
                     {
-                        if (pType.deleteType(id))
-                        {
-                            MessageBox.Show("Type Telah DiHapus", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Type Tidak DiHapus", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Delete Pegawai Succesfully", "Delete Property Tipe", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Tidak Ada Type yang dipilih", "Delete Type", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                 }
             }
         }

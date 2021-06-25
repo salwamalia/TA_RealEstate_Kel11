@@ -126,7 +126,7 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "" || jeniskelamin == "" || txtUser.Text == "" || txtPass.Text == "" || cbJabatan.Text == "")
             {
-                MessageBox.Show("Semua Data Harus diisi !!", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Update Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -148,9 +148,9 @@ namespace TA_RealEstate_Kel11
         {
             SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-            if (txtID.Text == "" || txtNama.Text == "" || txtUser.Text == "" || txtPass.Text == "" || cbJabatan.Text == "")
+            if (txtCariPegawai.Text == "")
             {
-                MessageBox.Show("Semua Data Harus diisi !!", "Add Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Delete Pegawai", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
@@ -246,7 +246,7 @@ namespace TA_RealEstate_Kel11
                     MessageBox.Show("Error Pegawai Tidak Ditemukan! ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-        }
+        }     
                 
         private void FormPegawai_Load(object sender, EventArgs e)
         {

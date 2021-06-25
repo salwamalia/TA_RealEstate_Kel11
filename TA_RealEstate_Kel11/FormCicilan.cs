@@ -119,32 +119,33 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
             if (txtNamaCicilan.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                try
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Cicilan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string id = txtID.Text;
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeleteCicilan", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Cicilan", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    delete.Parameters.AddWithValue("idCicilan", txtID.Text);
+
+                    try
                     {
-                        if (kategori.deleteCicilan(id))
-                        {
-                            MessageBox.Show("Cicilan Telah DiHapus", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Cicilan Tidak DiHapus", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Cicilan Delete Succesfully", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Tidak Ada Cicilan yang dipilih", "Delete Cicilan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
         }
@@ -176,8 +177,6 @@ namespace TA_RealEstate_Kel11
             {
                 try
                 {
-                    //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-                    string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
                     SqlConnection myConnection = new SqlConnection(myConnectionString);
                     myConnection.Open();
 

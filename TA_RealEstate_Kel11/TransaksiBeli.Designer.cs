@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransaksiBeli));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
@@ -40,21 +41,24 @@
             this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.txtIDBeli = new System.Windows.Forms.TextBox();
             this.btnDetailBeli = new Bunifu.Framework.UI.BunifuThinButton2();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.cbClient = new System.Windows.Forms.ComboBox();
+            this.clientBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
+            this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbPemilik = new System.Windows.Forms.ComboBox();
+            this.pemilikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pemilikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbProperty = new System.Windows.Forms.ComboBox();
-            this.txtIDBeli = new System.Windows.Forms.TextBox();
-            this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.propertyBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtCariTransaksi = new System.Windows.Forms.TextBox();
             this.btnCariTransaksi = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -62,9 +66,20 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dbTransaksi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.propertyTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTableAdapter();
+            this.clientTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.clientTableAdapter();
+            this.pemilikTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.pemilikTableAdapter();
+            this.btnBayar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbTransaksi)).BeginInit();
@@ -276,26 +291,31 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.btnBayar);
+            this.groupBox5.Controls.Add(this.txtIDBeli);
             this.groupBox5.Controls.Add(this.btnDetailBeli);
             this.groupBox5.Controls.Add(this.dateTimePicker1);
             this.groupBox5.Controls.Add(this.cbClient);
             this.groupBox5.Controls.Add(this.cbPemilik);
             this.groupBox5.Controls.Add(this.cbProperty);
-            this.groupBox5.Controls.Add(this.txtIDBeli);
-            this.groupBox5.Controls.Add(this.btnSimpan);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel10);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel5);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel6);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel3);
-            this.groupBox5.Controls.Add(this.btnBatal);
-            this.groupBox5.Controls.Add(this.btnHapus);
-            this.groupBox5.Controls.Add(this.btnUpdate);
             this.groupBox5.Location = new System.Drawing.Point(356, 263);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(868, 211);
             this.groupBox5.TabIndex = 153;
             this.groupBox5.TabStop = false;
+            // 
+            // txtIDBeli
+            // 
+            this.txtIDBeli.Location = new System.Drawing.Point(128, 22);
+            this.txtIDBeli.Name = "txtIDBeli";
+            this.txtIDBeli.ReadOnly = true;
+            this.txtIDBeli.Size = new System.Drawing.Size(185, 20);
+            this.txtIDBeli.TabIndex = 186;
             // 
             // btnDetailBeli
             // 
@@ -315,7 +335,7 @@
             this.btnDetailBeli.IdleFillColor = System.Drawing.Color.White;
             this.btnDetailBeli.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnDetailBeli.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnDetailBeli.Location = new System.Drawing.Point(634, 102);
+            this.btnDetailBeli.Location = new System.Drawing.Point(634, 119);
             this.btnDetailBeli.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetailBeli.Name = "btnDetailBeli";
             this.btnDetailBeli.Size = new System.Drawing.Size(151, 32);
@@ -333,7 +353,10 @@
             // 
             // cbClient
             // 
-            this.cbClient.DisplayMember = "idClient";
+            this.cbClient.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clientBindingSource1, "idClient", true));
+            this.cbClient.DataSource = this.clientBindingSource;
+            this.cbClient.DisplayMember = "nama";
+            this.cbClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbClient.FormattingEnabled = true;
             this.cbClient.Location = new System.Drawing.Point(591, 22);
             this.cbClient.Name = "cbClient";
@@ -341,9 +364,27 @@
             this.cbClient.TabIndex = 180;
             this.cbClient.ValueMember = "idClient";
             // 
+            // clientBindingSource1
+            // 
+            this.clientBindingSource1.DataMember = "client";
+            this.clientBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // rEALESTATEDataSet
+            // 
+            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
+            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // clientBindingSource
+            // 
+            this.clientBindingSource.DataMember = "client";
+            this.clientBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
             // cbPemilik
             // 
-            this.cbPemilik.DisplayMember = "idPemilik";
+            this.cbPemilik.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.pemilikBindingSource1, "idPemilik", true));
+            this.cbPemilik.DataSource = this.pemilikBindingSource;
+            this.cbPemilik.DisplayMember = "nama";
+            this.cbPemilik.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPemilik.FormattingEnabled = true;
             this.cbPemilik.Location = new System.Drawing.Point(591, 64);
             this.cbPemilik.Name = "cbPemilik";
@@ -351,9 +392,22 @@
             this.cbPemilik.TabIndex = 179;
             this.cbPemilik.ValueMember = "idPemilik";
             // 
+            // pemilikBindingSource1
+            // 
+            this.pemilikBindingSource1.DataMember = "pemilik";
+            this.pemilikBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // pemilikBindingSource
+            // 
+            this.pemilikBindingSource.DataMember = "pemilik";
+            this.pemilikBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
             // cbProperty
             // 
-            this.cbProperty.DisplayMember = "idProperty";
+            this.cbProperty.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.propertyBindingSource1, "idProperty", true));
+            this.cbProperty.DataSource = this.propertyBindingSource;
+            this.cbProperty.DisplayMember = "namaProperty";
+            this.cbProperty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbProperty.FormattingEnabled = true;
             this.cbProperty.Location = new System.Drawing.Point(128, 102);
             this.cbProperty.Name = "cbProperty";
@@ -361,38 +415,15 @@
             this.cbProperty.TabIndex = 178;
             this.cbProperty.ValueMember = "idProperty";
             // 
-            // txtIDBeli
+            // propertyBindingSource1
             // 
-            this.txtIDBeli.Location = new System.Drawing.Point(128, 22);
-            this.txtIDBeli.Name = "txtIDBeli";
-            this.txtIDBeli.Size = new System.Drawing.Size(185, 20);
-            this.txtIDBeli.TabIndex = 177;
+            this.propertyBindingSource1.DataMember = "property";
+            this.propertyBindingSource1.DataSource = this.rEALESTATEDataSet;
             // 
-            // btnSimpan
+            // propertyBindingSource
             // 
-            this.btnSimpan.ActiveBorderThickness = 1;
-            this.btnSimpan.ActiveCornerRadius = 20;
-            this.btnSimpan.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.ActiveForecolor = System.Drawing.Color.White;
-            this.btnSimpan.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnSimpan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSimpan.BackgroundImage")));
-            this.btnSimpan.ButtonText = "Simpan";
-            this.btnSimpan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSimpan.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSimpan.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.IdleBorderThickness = 1;
-            this.btnSimpan.IdleCornerRadius = 20;
-            this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
-            this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(214, 168);
-            this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSimpan.Name = "btnSimpan";
-            this.btnSimpan.Size = new System.Drawing.Size(69, 29);
-            this.btnSimpan.TabIndex = 165;
-            this.btnSimpan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSimpan.Click += new System.EventHandler(this.btnSimpan_Click);
+            this.propertyBindingSource.DataMember = "property";
+            this.propertyBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // bunifuCustomLabel10
             // 
@@ -448,84 +479,6 @@
             this.bunifuCustomLabel3.TabIndex = 169;
             this.bunifuCustomLabel3.Text = "ID Transaksi";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnBatal
-            // 
-            this.btnBatal.ActiveBorderThickness = 1;
-            this.btnBatal.ActiveCornerRadius = 20;
-            this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
-            this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
-            this.btnBatal.ButtonText = "Batal";
-            this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.IdleBorderThickness = 1;
-            this.btnBatal.IdleCornerRadius = 20;
-            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
-            this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(475, 168);
-            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(75, 29);
-            this.btnBatal.TabIndex = 167;
-            this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
-            // 
-            // btnHapus
-            // 
-            this.btnHapus.ActiveBorderThickness = 1;
-            this.btnHapus.ActiveCornerRadius = 20;
-            this.btnHapus.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.ActiveForecolor = System.Drawing.Color.White;
-            this.btnHapus.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnHapus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHapus.BackgroundImage")));
-            this.btnHapus.ButtonText = "Hapus";
-            this.btnHapus.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHapus.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHapus.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.IdleBorderThickness = 1;
-            this.btnHapus.IdleCornerRadius = 20;
-            this.btnHapus.IdleFillColor = System.Drawing.Color.White;
-            this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(383, 168);
-            this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHapus.Name = "btnHapus";
-            this.btnHapus.Size = new System.Drawing.Size(76, 29);
-            this.btnHapus.TabIndex = 168;
-            this.btnHapus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnHapus.Click += new System.EventHandler(this.btnHapus_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.ActiveBorderThickness = 1;
-            this.btnUpdate.ActiveCornerRadius = 20;
-            this.btnUpdate.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.ActiveForecolor = System.Drawing.Color.White;
-            this.btnUpdate.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
-            this.btnUpdate.ButtonText = "Update";
-            this.btnUpdate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.IdleBorderThickness = 1;
-            this.btnUpdate.IdleCornerRadius = 20;
-            this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
-            this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(291, 168);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(76, 29);
-            this.btnUpdate.TabIndex = 166;
-            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // groupBox4
             // 
@@ -595,19 +548,19 @@
             // 
             // dbTransaksi
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dbTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dbTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dbTransaksi.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dbTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dbTransaksi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dbTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dbTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dbTransaksi.ColumnHeadersHeight = 50;
             this.dbTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dbTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -633,6 +586,43 @@
             this.bunifuCustomLabel2.Text = "Pembelian";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // propertyTableAdapter
+            // 
+            this.propertyTableAdapter.ClearBeforeFill = true;
+            // 
+            // clientTableAdapter
+            // 
+            this.clientTableAdapter.ClearBeforeFill = true;
+            // 
+            // pemilikTableAdapter
+            // 
+            this.pemilikTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnBayar
+            // 
+            this.btnBayar.ActiveBorderThickness = 1;
+            this.btnBayar.ActiveCornerRadius = 20;
+            this.btnBayar.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnBayar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnBayar.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBayar.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBayar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBayar.BackgroundImage")));
+            this.btnBayar.ButtonText = "Bayar";
+            this.btnBayar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBayar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBayar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnBayar.IdleBorderThickness = 1;
+            this.btnBayar.IdleCornerRadius = 20;
+            this.btnBayar.IdleFillColor = System.Drawing.Color.White;
+            this.btnBayar.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnBayar.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBayar.Location = new System.Drawing.Point(669, 159);
+            this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBayar.Name = "btnBayar";
+            this.btnBayar.Size = new System.Drawing.Size(159, 35);
+            this.btnBayar.TabIndex = 187;
+            this.btnBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // TransaksiBeli
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -654,6 +644,13 @@
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -677,23 +674,30 @@
         private System.Windows.Forms.ComboBox cbClient;
         private System.Windows.Forms.ComboBox cbPemilik;
         private System.Windows.Forms.ComboBox cbProperty;
-        private System.Windows.Forms.TextBox txtIDBeli;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnUpdate;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnSimpan;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox txtCariTransaksi;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCariTransaksi;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel15;
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dbTransaksi;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuThinButton2 btnDetailBeli;
+        private System.Windows.Forms.TextBox txtIDBeli;
+        private System.Windows.Forms.TextBox txtCariTransaksi;
+        private REALESTATEDataSet rEALESTATEDataSet;
+        private System.Windows.Forms.BindingSource propertyBindingSource;
+        private REALESTATEDataSetTableAdapters.propertyTableAdapter propertyTableAdapter;
+        private System.Windows.Forms.BindingSource propertyBindingSource1;
+        private System.Windows.Forms.BindingSource clientBindingSource;
+        private REALESTATEDataSetTableAdapters.clientTableAdapter clientTableAdapter;
+        private System.Windows.Forms.BindingSource clientBindingSource1;
+        private System.Windows.Forms.BindingSource pemilikBindingSource;
+        private REALESTATEDataSetTableAdapters.pemilikTableAdapter pemilikTableAdapter;
+        private System.Windows.Forms.BindingSource pemilikBindingSource1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnBayar;
     }
 }

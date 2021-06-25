@@ -124,32 +124,33 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
             if (txtNama.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                try
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori Bayar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string id = txtID.Text;
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeleteKategori", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    delete.Parameters.AddWithValue("idKategoriBayar", txtID.Text);
+
+                    try
                     {
-                        if (kategori.deleteKategori(id))
-                        {
-                            MessageBox.Show("Kategori Telah DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Kategori Tidak DiHapus", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Kategori Bayar Delete Succesfully", "Delete Kategori Bayar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Tidak Ada Kategori yang dipilih", "Delete Kategori", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
         }

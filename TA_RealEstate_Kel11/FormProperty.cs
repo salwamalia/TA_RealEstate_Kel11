@@ -181,30 +181,29 @@ namespace TA_RealEstate_Kel11
 
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
             {
-                MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                try
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Property", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    string id = txtID.Text;
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeleteProperty", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
 
-                    if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Property", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    delete.Parameters.AddWithValue("idProperty", txtID.Text);
+
+                    try
                     {
-                        if (property.deleteProperty(id))
-                        {
-                            MessageBox.Show("Property Telah DiHapus", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Property Tidak DiHapus", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Property Delete Succesfully", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
                     }
-                }
-                catch
-                {
-                    MessageBox.Show("Tidak Ada Property yang dipilih", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
             }
         }

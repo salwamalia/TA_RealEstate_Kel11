@@ -66,12 +66,6 @@
     <Compile Include="CharTextBox.Designer.cs">
       <DependentUpon>CharTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\DB_CONNECTION.cs" />
-    <Compile Include="Classes\FUNC.cs" />
-    <Compile Include="Classes\KATEGORI.cs" />
-    <Compile Include="Classes\PERSON.cs" />
-    <Compile Include="Classes\PROPERTY.cs" />
-    <Compile Include="Classes\PROPERTY_TYPE.cs" />
     <Compile Include="TransaksiDetailBeli.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -308,6 +302,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

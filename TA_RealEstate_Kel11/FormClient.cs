@@ -23,7 +23,6 @@ namespace TA_RealEstate_Kel11
         }
 
         REALESTATEDataContext dc = new REALESTATEDataContext();
-        Classes.PERSON person = new Classes.PERSON();
 
         private string IDOtomatis()
         {
@@ -117,66 +116,72 @@ namespace TA_RealEstate_Kel11
             {
                 jeniskelamin = rbPerempuan.Text;
             }
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
 
-            try
+            //Update command
+            SqlCommand Update = new SqlCommand("sp_UpdateClient", myConnection);
+            Update.CommandType = CommandType.StoredProcedure;
+
+            Update.Parameters.AddWithValue("idClient", txtID.Text);
+            Update.Parameters.AddWithValue("nama", txtNama.Text);
+            Update.Parameters.AddWithValue("jeniskelamin", jeniskelamin);
+            Update.Parameters.AddWithValue("telepon", txtTelepon.Text);
+            Update.Parameters.AddWithValue("email", txtEmail.Text);
+            Update.Parameters.AddWithValue("alamat", txtAlamat.Text);
+
+            if (txtID.Text == "" || txtNama.Text == "" || txtEmail.Text == "" || txtTelepon.Text == "" || txtAlamat.Text == "" || jeniskelamin == "")
             {
-                string id = txtID.Text;
-                string name = txtNama.Text;
-                string JenisKelamin = jeniskelamin;
-                string phone = txtTelepon.Text;
-                string email = txtEmail.Text;
-                string address = txtAlamat.Text;
-
-                if (!name.Trim().Equals("") && !phone.Trim().Equals(""))
-                {
-                    if (person.updateClient(id, name, JenisKelamin, phone, email, address))
-                    {
-                        MessageBox.Show("Client Telah DiUpdate", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Client Tidak Ter-Update", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Silahkan Isi Nama dan Telepon Client untuk DiUpdate", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+                MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            catch
+            else if (!(Regex.IsMatch(txtEmail.Text, @"^^[^@\s]+@[^@\s]+(\.[^@\s]+)+$")))
             {
-                MessageBox.Show("Tidak Ada Client yang dipilih", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Format Email Salah !!" +
+                    "\nGunakan Format a@b.c", "Information Email", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                try
+                {
+                    myConnection.Open();
+                    Update.ExecuteNonQuery();
+                    MessageBox.Show("Update Client Succesfully", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+
             if (txtCariClient.Text == "")
             {
-                MessageBox.Show("Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Semua Data Harus diisi !!", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                string id = txtID.Text;
-
                 if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Client", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (!id.Trim().Equals(""))
+                    //delete command
+                    SqlCommand delete = new SqlCommand("sp_DeleteClient", myConnection);
+                    delete.CommandType = CommandType.StoredProcedure;
+
+                    delete.Parameters.AddWithValue("idClient", txtID.Text);
+
+                    try
                     {
-                        if (person.deleteClient(id))
-                        {
-                            MessageBox.Show("Client Telah DiHapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            clear();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Client Tidak DiHapus", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        myConnection.Open();
+                        delete.ExecuteNonQuery();
+                        MessageBox.Show("Delete Client Succesfully", "Delete Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        clear();
                     }
-                    else
+                    catch (Exception)
                     {
-                        MessageBox.Show("Silahkan Isi Data untuk di Hapus", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
