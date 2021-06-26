@@ -60,6 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bayar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bayar.Designer.cs">
+      <DependentUpon>Bayar.cs</DependentUpon>
+    </Compile>
     <Compile Include="CharTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
