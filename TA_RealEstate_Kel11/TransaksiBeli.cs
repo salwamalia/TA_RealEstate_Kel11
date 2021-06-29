@@ -60,12 +60,24 @@ namespace TA_RealEstate_Kel11
 
         }
 
+        private void btnBatal_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
         public void clear()
         {
             txtCariTransaksi.Clear();
             txtIDBeli.Clear();
-            cbClient.SelectedIndex = -1;
+            dateTimePicker1.ResetText();
             cbProperty.SelectedIndex = -1;
+            txtPemilik.Clear();
+            cbClient.SelectedIndex = -1;
+            txtTotal.Clear();
+
+            cbPropertyDetail.SelectedIndex = -1;
+
+
             txtIDBeli.Text = IDOtomatis();
             //LoadData();
         }
@@ -102,44 +114,12 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void btnDetailBeli_Click(object sender, EventArgs e)
-        {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
-
-            SqlCommand insert = new SqlCommand("sp_InsertPembelian", myConnection);
-            insert.CommandType = CommandType.StoredProcedure;
-
-            insert.Parameters.AddWithValue("idTBeli", txtIDBeli.Text);
-            insert.Parameters.AddWithValue("tanggal", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-            insert.Parameters.AddWithValue("idProperty", cbProperty.SelectedValue.ToString());
-            insert.Parameters.AddWithValue("idClient", cbClient.SelectedValue.ToString());
-            insert.Parameters.AddWithValue("total", txtTotal.Text);
-
-            if (txtIDBeli.Text == "" || dateTimePicker1.Text =="" || cbProperty.Text == "" || cbClient.Text == "")
-            {
-                MessageBox.Show("Semua Data Harus diisi !!", "Add Pembelian", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                try
-                {
-                    myConnection.Open();
-                    //insert.ExecuteNonQuery();
-                    MessageBox.Show("Pembelian Telah Ditambahkan", "Add Pembelian", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    clear();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Unable to save "+ex);
-                    //MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-        }
-
         private void TransaksiBeli_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.pemilik' table. You can move, or remove it, as needed.
-            this.pemilikTableAdapter.Fill(this.rEALESTATEDataSet.pemilik);
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.kategoriCicilan' table. You can move, or remove it, as needed.
+            this.kategoriCicilanTableAdapter.Fill(this.rEALESTATEDataSet.kategoriCicilan);
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.kategoriBayar' table. You can move, or remove it, as needed.
+            this.kategoriBayarTableAdapter.Fill(this.rEALESTATEDataSet.kategoriBayar);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.client' table. You can move, or remove it, as needed.
             this.clientTableAdapter.Fill(this.rEALESTATEDataSet.client);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
@@ -150,11 +130,6 @@ namespace TA_RealEstate_Kel11
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
             
-        }
-
-        private void btnBatal_Click_1(object sender, EventArgs e)
-        {
-            clear();
         }
     }
 }
