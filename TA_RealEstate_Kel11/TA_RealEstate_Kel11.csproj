@@ -72,12 +72,6 @@
     <Compile Include="CharTextBox.Designer.cs">
       <DependentUpon>CharTextBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransaksiDetailBeli.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiDetailBeli.Designer.cs">
-      <DependentUpon>TransaksiDetailBeli.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormCicilan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,21 +186,12 @@
     <Compile Include="TransaksiBeli.Designer.cs">
       <DependentUpon>TransaksiBeli.cs</DependentUpon>
     </Compile>
-    <Compile Include="TransaksiDetailSewa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TransaksiDetailSewa.Designer.cs">
-      <DependentUpon>TransaksiDetailSewa.cs</DependentUpon>
-    </Compile>
     <Compile Include="TransaksiSewa.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TransaksiSewa.Designer.cs">
       <DependentUpon>TransaksiSewa.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="TransaksiDetailBeli.resx">
-      <DependentUpon>TransaksiDetailBeli.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormCicilan.resx">
       <DependentUpon>FormCicilan.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,9 +249,6 @@
     <EmbeddedResource Include="TransaksiBeli.resx">
       <DependentUpon>TransaksiBeli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TransaksiDetailSewa.resx">
-      <DependentUpon>TransaksiDetailSewa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TransaksiSewa.resx">
       <DependentUpon>TransaksiSewa.cs</DependentUpon>
     </EmbeddedResource>
@@ -310,6 +292,7 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Bunifu\" />
     <Folder Include="Classes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

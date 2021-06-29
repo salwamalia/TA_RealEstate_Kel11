@@ -134,10 +134,6 @@ namespace TA_RealEstate_Kel11
                     //MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-
-            TransaksiDetailBeli detailBeli = new TransaksiDetailBeli();
-            detailBeli.Show();
-            this.Hide();
         }
 
         private void TransaksiBeli_Load(object sender, EventArgs e)
