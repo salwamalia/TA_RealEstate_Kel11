@@ -37,17 +37,17 @@ namespace TA_RealEstate_Kel11
             while (dr.Read())
             {
                 string input = dr["idTBeli"].ToString();
-                string angka = input.Substring(input.Length - Math.Min(2, input.Length));
+                string angka = input.Substring(input.Length - Math.Min(3, input.Length));
                 int number = Convert.ToInt32(angka);
                 number += 1;
-                string str = number.ToString("D2");
+                string str = number.ToString("D3");
 
                 autoid = "TRB" + str;
             }
 
             if (autoid == null)
             {
-                autoid = "TRB01";
+                autoid = "TRB001";
             }
 
             myConnection.Close();
@@ -76,11 +76,64 @@ namespace TA_RealEstate_Kel11
             txtTotal.Clear();
 
             cbPropertyDetail.SelectedIndex = -1;
-
-
+            txtHargaProperty.Clear();
+            cbPembayaran.SelectedIndex = -1;
+            cbCicilan.SelectedIndex = -1;
+            txtLamaCicilan.Clear();
+            txtTotal.Clear();
+            txtDP.Clear();
+            txtTotalBayar.Clear();
+            
             txtIDBeli.Text = IDOtomatis();
             //LoadData();
         }
+
+        private void cbProperty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            string sql = "SELECT * FROM property p INNER JOIN pemilik b ON p.idPemilik = b.idPemilik WHERE p.idProperty  = '" + cbProperty.SelectedValue + "' ";
+            SqlCommand cmd = new SqlCommand(sql, myConnection);
+            SqlDataReader myreader;
+            try
+            {
+                myConnection.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    //string harga = myreader.GetInt32(0).ToString();
+                    string pemilik = myreader.GetString(9);
+                    txtPemilik.Text = pemilik;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
+        }
+
+        private void cbPropertyDetail_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            //string sql = "SELECT * FROM property WHERE idProperty = ";
+            string sql = "SELECT * FROM property WHERE idProperty  = '" + cbPropertyDetail.SelectedValue + "' ";
+            SqlCommand cmd = new SqlCommand(sql, myConnection);
+            SqlDataReader myreader;
+            try
+            {
+                myConnection.Open();
+                myreader = cmd.ExecuteReader();
+                while (myreader.Read())
+                {
+                    string harga = myreader.GetInt32(6).ToString();
+                    txtHargaProperty.Text = harga;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error Occured" + ex.Message);
+            }
+        }
+
         private void btnX_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -124,6 +177,7 @@ namespace TA_RealEstate_Kel11
             this.clientTableAdapter.Fill(this.rEALESTATEDataSet.client);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
             this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
+           
             txtIDBeli.Text = IDOtomatis();
         }
 

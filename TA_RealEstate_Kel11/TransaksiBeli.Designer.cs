@@ -60,6 +60,8 @@
             this.txtDetailTotal = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cbCicilan = new System.Windows.Forms.ComboBox();
+            this.kategoriCicilanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.kategoriCicilanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtLamaCicilan = new TA_RealEstate_Kel11.NumberTextBox();
             this.txtHargaProperty = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -95,9 +97,7 @@
             this.propertyTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTableAdapter();
             this.clientTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.clientTableAdapter();
             this.kategoriBayarTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.kategoriBayarTableAdapter();
-            this.kategoriCicilanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.kategoriCicilanTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.kategoriCicilanTableAdapter();
-            this.kategoriCicilanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -107,6 +107,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBayarBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBayarBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
@@ -115,8 +117,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dbTransaksi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -341,7 +341,7 @@
             this.groupBox5.Controls.Add(this.bunifuCustomLabel6);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel4);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel3);
-            this.groupBox5.Location = new System.Drawing.Point(263, 231);
+            this.groupBox5.Location = new System.Drawing.Point(263, 235);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(1053, 289);
             this.groupBox5.TabIndex = 153;
@@ -471,6 +471,7 @@
             this.cbPropertyDetail.Size = new System.Drawing.Size(150, 21);
             this.cbPropertyDetail.TabIndex = 209;
             this.cbPropertyDetail.ValueMember = "idProperty";
+            this.cbPropertyDetail.SelectedIndexChanged += new System.EventHandler(this.cbPropertyDetail_SelectedIndexChanged);
             // 
             // propertyBindingSource3
             // 
@@ -563,6 +564,16 @@
             this.cbCicilan.Size = new System.Drawing.Size(150, 21);
             this.cbCicilan.TabIndex = 188;
             this.cbCicilan.ValueMember = "idCicilan";
+            // 
+            // kategoriCicilanBindingSource1
+            // 
+            this.kategoriCicilanBindingSource1.DataMember = "kategoriCicilan";
+            this.kategoriCicilanBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // kategoriCicilanBindingSource
+            // 
+            this.kategoriCicilanBindingSource.DataMember = "kategoriCicilan";
+            this.kategoriCicilanBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // txtLamaCicilan
             // 
@@ -777,6 +788,7 @@
             this.cbProperty.Size = new System.Drawing.Size(185, 21);
             this.cbProperty.TabIndex = 178;
             this.cbProperty.ValueMember = "idProperty";
+            this.cbProperty.SelectedIndexChanged += new System.EventHandler(this.cbProperty_SelectedIndexChanged);
             // 
             // propertyBindingSource1
             // 
@@ -848,7 +860,7 @@
             this.groupBox4.Controls.Add(this.txtCariTransaksi);
             this.groupBox4.Controls.Add(this.btnCariTransaksi);
             this.groupBox4.Controls.Add(this.bunifuCustomLabel15);
-            this.groupBox4.Location = new System.Drawing.Point(263, 169);
+            this.groupBox4.Location = new System.Drawing.Point(263, 176);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(1053, 59);
             this.groupBox4.TabIndex = 150;
@@ -961,19 +973,9 @@
             // 
             this.kategoriBayarTableAdapter.ClearBeforeFill = true;
             // 
-            // kategoriCicilanBindingSource
-            // 
-            this.kategoriCicilanBindingSource.DataMember = "kategoriCicilan";
-            this.kategoriCicilanBindingSource.DataSource = this.rEALESTATEDataSet;
-            // 
             // kategoriCicilanTableAdapter
             // 
             this.kategoriCicilanTableAdapter.ClearBeforeFill = true;
-            // 
-            // kategoriCicilanBindingSource1
-            // 
-            this.kategoriCicilanBindingSource1.DataMember = "kategoriCicilan";
-            this.kategoriCicilanBindingSource1.DataSource = this.rEALESTATEDataSet;
             // 
             // TransaksiBeli
             // 
@@ -1003,6 +1005,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBayarBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.kategoriBayarBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource1)).EndInit();
@@ -1013,8 +1017,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dbTransaksi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.kategoriCicilanBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
