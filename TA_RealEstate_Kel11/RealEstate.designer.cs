@@ -36,12 +36,12 @@ namespace TA_RealEstate_Kel11
     partial void Insertjabatan(jabatan instance);
     partial void Updatejabatan(jabatan instance);
     partial void Deletejabatan(jabatan instance);
-    partial void InsertkategoriCicilan(kategoriCicilan instance);
-    partial void UpdatekategoriCicilan(kategoriCicilan instance);
-    partial void DeletekategoriCicilan(kategoriCicilan instance);
     partial void InsertkategoriBayar(kategoriBayar instance);
     partial void UpdatekategoriBayar(kategoriBayar instance);
     partial void DeletekategoriBayar(kategoriBayar instance);
+    partial void InsertkategoriCicilan(kategoriCicilan instance);
+    partial void UpdatekategoriCicilan(kategoriCicilan instance);
+    partial void DeletekategoriCicilan(kategoriCicilan instance);
     partial void Insertpegawai(pegawai instance);
     partial void Updatepegawai(pegawai instance);
     partial void Deletepegawai(pegawai instance);
@@ -57,12 +57,12 @@ namespace TA_RealEstate_Kel11
     partial void InserttDetailPembelian(tDetailPembelian instance);
     partial void UpdatetDetailPembelian(tDetailPembelian instance);
     partial void DeletetDetailPembelian(tDetailPembelian instance);
-    partial void InserttPembelian(tPembelian instance);
-    partial void UpdatetPembelian(tPembelian instance);
-    partial void DeletetPembelian(tPembelian instance);
     partial void InserttDetailPenyewaan(tDetailPenyewaan instance);
     partial void UpdatetDetailPenyewaan(tDetailPenyewaan instance);
     partial void DeletetDetailPenyewaan(tDetailPenyewaan instance);
+    partial void InserttPembelian(tPembelian instance);
+    partial void UpdatetPembelian(tPembelian instance);
+    partial void DeletetPembelian(tPembelian instance);
     partial void InserttPenyewaan(tPenyewaan instance);
     partial void UpdatetPenyewaan(tPenyewaan instance);
     partial void DeletetPenyewaan(tPenyewaan instance);
@@ -114,19 +114,19 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		public System.Data.Linq.Table<kategoriCicilan> kategoriCicilans
-		{
-			get
-			{
-				return this.GetTable<kategoriCicilan>();
-			}
-		}
-		
 		public System.Data.Linq.Table<kategoriBayar> kategoriBayars
 		{
 			get
 			{
 				return this.GetTable<kategoriBayar>();
+			}
+		}
+		
+		public System.Data.Linq.Table<kategoriCicilan> kategoriCicilans
+		{
+			get
+			{
+				return this.GetTable<kategoriCicilan>();
 			}
 		}
 		
@@ -170,19 +170,19 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		public System.Data.Linq.Table<tPembelian> tPembelians
-		{
-			get
-			{
-				return this.GetTable<tPembelian>();
-			}
-		}
-		
 		public System.Data.Linq.Table<tDetailPenyewaan> tDetailPenyewaans
 		{
 			get
 			{
 				return this.GetTable<tDetailPenyewaan>();
+			}
+		}
+		
+		public System.Data.Linq.Table<tPembelian> tPembelians
+		{
+			get
+			{
+				return this.GetTable<tPembelian>();
 			}
 		}
 		
@@ -547,148 +547,6 @@ namespace TA_RealEstate_Kel11
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.kategoriCicilan")]
-	public partial class kategoriCicilan : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _idCicilan;
-		
-		private string _cicilan;
-		
-		private EntitySet<tDetailPembelian> _tDetailPembelians;
-		
-		private EntitySet<tDetailPenyewaan> _tDetailPenyewaans;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidCicilanChanging(string value);
-    partial void OnidCicilanChanged();
-    partial void OncicilanChanging(string value);
-    partial void OncicilanChanged();
-    #endregion
-		
-		public kategoriCicilan()
-		{
-			this._tDetailPembelians = new EntitySet<tDetailPembelian>(new Action<tDetailPembelian>(this.attach_tDetailPembelians), new Action<tDetailPembelian>(this.detach_tDetailPembelians));
-			this._tDetailPenyewaans = new EntitySet<tDetailPenyewaan>(new Action<tDetailPenyewaan>(this.attach_tDetailPenyewaans), new Action<tDetailPenyewaan>(this.detach_tDetailPenyewaans));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCicilan", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string idCicilan
-		{
-			get
-			{
-				return this._idCicilan;
-			}
-			set
-			{
-				if ((this._idCicilan != value))
-				{
-					this.OnidCicilanChanging(value);
-					this.SendPropertyChanging();
-					this._idCicilan = value;
-					this.SendPropertyChanged("idCicilan");
-					this.OnidCicilanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cicilan", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
-		public string cicilan
-		{
-			get
-			{
-				return this._cicilan;
-			}
-			set
-			{
-				if ((this._cicilan != value))
-				{
-					this.OncicilanChanging(value);
-					this.SendPropertyChanging();
-					this._cicilan = value;
-					this.SendPropertyChanged("cicilan");
-					this.OncicilanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriCicilan_tDetailPembelian", Storage="_tDetailPembelians", ThisKey="idCicilan", OtherKey="idCicilan")]
-		public EntitySet<tDetailPembelian> tDetailPembelians
-		{
-			get
-			{
-				return this._tDetailPembelians;
-			}
-			set
-			{
-				this._tDetailPembelians.Assign(value);
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriCicilan_tDetailPenyewaan", Storage="_tDetailPenyewaans", ThisKey="idCicilan", OtherKey="idCicilan")]
-		public EntitySet<tDetailPenyewaan> tDetailPenyewaans
-		{
-			get
-			{
-				return this._tDetailPenyewaans;
-			}
-			set
-			{
-				this._tDetailPenyewaans.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_tDetailPembelians(tDetailPembelian entity)
-		{
-			this.SendPropertyChanging();
-			entity.kategoriCicilan = this;
-		}
-		
-		private void detach_tDetailPembelians(tDetailPembelian entity)
-		{
-			this.SendPropertyChanging();
-			entity.kategoriCicilan = null;
-		}
-		
-		private void attach_tDetailPenyewaans(tDetailPenyewaan entity)
-		{
-			this.SendPropertyChanging();
-			entity.kategoriCicilan = this;
-		}
-		
-		private void detach_tDetailPenyewaans(tDetailPenyewaan entity)
-		{
-			this.SendPropertyChanging();
-			entity.kategoriCicilan = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.kategoriBayar")]
 	public partial class kategoriBayar : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -852,6 +710,148 @@ namespace TA_RealEstate_Kel11
 		{
 			this.SendPropertyChanging();
 			entity.kategoriBayar = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.kategoriCicilan")]
+	public partial class kategoriCicilan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _idCicilan;
+		
+		private string _cicilan;
+		
+		private EntitySet<tDetailPembelian> _tDetailPembelians;
+		
+		private EntitySet<tDetailPenyewaan> _tDetailPenyewaans;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidCicilanChanging(string value);
+    partial void OnidCicilanChanged();
+    partial void OncicilanChanging(string value);
+    partial void OncicilanChanged();
+    #endregion
+		
+		public kategoriCicilan()
+		{
+			this._tDetailPembelians = new EntitySet<tDetailPembelian>(new Action<tDetailPembelian>(this.attach_tDetailPembelians), new Action<tDetailPembelian>(this.detach_tDetailPembelians));
+			this._tDetailPenyewaans = new EntitySet<tDetailPenyewaan>(new Action<tDetailPenyewaan>(this.attach_tDetailPenyewaans), new Action<tDetailPenyewaan>(this.detach_tDetailPenyewaans));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCicilan", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string idCicilan
+		{
+			get
+			{
+				return this._idCicilan;
+			}
+			set
+			{
+				if ((this._idCicilan != value))
+				{
+					this.OnidCicilanChanging(value);
+					this.SendPropertyChanging();
+					this._idCicilan = value;
+					this.SendPropertyChanged("idCicilan");
+					this.OnidCicilanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_cicilan", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		public string cicilan
+		{
+			get
+			{
+				return this._cicilan;
+			}
+			set
+			{
+				if ((this._cicilan != value))
+				{
+					this.OncicilanChanging(value);
+					this.SendPropertyChanging();
+					this._cicilan = value;
+					this.SendPropertyChanged("cicilan");
+					this.OncicilanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriCicilan_tDetailPembelian", Storage="_tDetailPembelians", ThisKey="idCicilan", OtherKey="idCicilan")]
+		public EntitySet<tDetailPembelian> tDetailPembelians
+		{
+			get
+			{
+				return this._tDetailPembelians;
+			}
+			set
+			{
+				this._tDetailPembelians.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriCicilan_tDetailPenyewaan", Storage="_tDetailPenyewaans", ThisKey="idCicilan", OtherKey="idCicilan")]
+		public EntitySet<tDetailPenyewaan> tDetailPenyewaans
+		{
+			get
+			{
+				return this._tDetailPenyewaans;
+			}
+			set
+			{
+				this._tDetailPenyewaans.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_tDetailPembelians(tDetailPembelian entity)
+		{
+			this.SendPropertyChanging();
+			entity.kategoriCicilan = this;
+		}
+		
+		private void detach_tDetailPembelians(tDetailPembelian entity)
+		{
+			this.SendPropertyChanging();
+			entity.kategoriCicilan = null;
+		}
+		
+		private void attach_tDetailPenyewaans(tDetailPenyewaan entity)
+		{
+			this.SendPropertyChanging();
+			entity.kategoriCicilan = this;
+		}
+		
+		private void detach_tDetailPenyewaans(tDetailPenyewaan entity)
+		{
+			this.SendPropertyChanging();
+			entity.kategoriCicilan = null;
 		}
 	}
 	
@@ -1312,9 +1312,9 @@ namespace TA_RealEstate_Kel11
 		
 		private EntitySet<tDetailPembelian> _tDetailPembelians;
 		
-		private EntitySet<tPembelian> _tPembelians;
-		
 		private EntitySet<tDetailPenyewaan> _tDetailPenyewaans;
+		
+		private EntitySet<tPembelian> _tPembelians;
 		
 		private EntitySet<tPenyewaan> _tPenyewaans;
 		
@@ -1347,8 +1347,8 @@ namespace TA_RealEstate_Kel11
 		public property()
 		{
 			this._tDetailPembelians = new EntitySet<tDetailPembelian>(new Action<tDetailPembelian>(this.attach_tDetailPembelians), new Action<tDetailPembelian>(this.detach_tDetailPembelians));
-			this._tPembelians = new EntitySet<tPembelian>(new Action<tPembelian>(this.attach_tPembelians), new Action<tPembelian>(this.detach_tPembelians));
 			this._tDetailPenyewaans = new EntitySet<tDetailPenyewaan>(new Action<tDetailPenyewaan>(this.attach_tDetailPenyewaans), new Action<tDetailPenyewaan>(this.detach_tDetailPenyewaans));
+			this._tPembelians = new EntitySet<tPembelian>(new Action<tPembelian>(this.attach_tPembelians), new Action<tPembelian>(this.detach_tPembelians));
 			this._tPenyewaans = new EntitySet<tPenyewaan>(new Action<tPenyewaan>(this.attach_tPenyewaans), new Action<tPenyewaan>(this.detach_tPenyewaans));
 			this._pemilik = default(EntityRef<pemilik>);
 			this._propertyTipe = default(EntityRef<propertyTipe>);
@@ -1536,19 +1536,6 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="property_tPembelian", Storage="_tPembelians", ThisKey="idProperty", OtherKey="idProperty")]
-		public EntitySet<tPembelian> tPembelians
-		{
-			get
-			{
-				return this._tPembelians;
-			}
-			set
-			{
-				this._tPembelians.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="property_tDetailPenyewaan", Storage="_tDetailPenyewaans", ThisKey="idProperty", OtherKey="idProperty")]
 		public EntitySet<tDetailPenyewaan> tDetailPenyewaans
 		{
@@ -1559,6 +1546,19 @@ namespace TA_RealEstate_Kel11
 			set
 			{
 				this._tDetailPenyewaans.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="property_tPembelian", Storage="_tPembelians", ThisKey="idProperty", OtherKey="idProperty")]
+		public EntitySet<tPembelian> tPembelians
+		{
+			get
+			{
+				return this._tPembelians;
+			}
+			set
+			{
+				this._tPembelians.Assign(value);
 			}
 		}
 		
@@ -1675,18 +1675,6 @@ namespace TA_RealEstate_Kel11
 			entity.property = null;
 		}
 		
-		private void attach_tPembelians(tPembelian entity)
-		{
-			this.SendPropertyChanging();
-			entity.property = this;
-		}
-		
-		private void detach_tPembelians(tPembelian entity)
-		{
-			this.SendPropertyChanging();
-			entity.property = null;
-		}
-		
 		private void attach_tDetailPenyewaans(tDetailPenyewaan entity)
 		{
 			this.SendPropertyChanging();
@@ -1694,6 +1682,18 @@ namespace TA_RealEstate_Kel11
 		}
 		
 		private void detach_tDetailPenyewaans(tDetailPenyewaan entity)
+		{
+			this.SendPropertyChanging();
+			entity.property = null;
+		}
+		
+		private void attach_tPembelians(tPembelian entity)
+		{
+			this.SendPropertyChanging();
+			entity.property = this;
+		}
+		
+		private void detach_tPembelians(tPembelian entity)
 		{
 			this.SendPropertyChanging();
 			entity.property = null;
@@ -1844,7 +1844,7 @@ namespace TA_RealEstate_Kel11
 		
 		private System.Nullable<int> _lamaCicilan;
 		
-		private System.Nullable<int> _total;
+		private System.Nullable<int> _perBulan;
 		
 		private System.Nullable<int> _dp;
 		
@@ -1872,8 +1872,8 @@ namespace TA_RealEstate_Kel11
     partial void OnidCicilanChanged();
     partial void OnlamaCicilanChanging(System.Nullable<int> value);
     partial void OnlamaCicilanChanged();
-    partial void OntotalChanging(System.Nullable<int> value);
-    partial void OntotalChanged();
+    partial void OnperBulanChanging(System.Nullable<int> value);
+    partial void OnperBulanChanged();
     partial void OndpChanging(System.Nullable<int> value);
     partial void OndpChanged();
     partial void OntotalBayarChanging(int value);
@@ -2020,22 +2020,22 @@ namespace TA_RealEstate_Kel11
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Int")]
-		public System.Nullable<int> total
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_perBulan", DbType="Int")]
+		public System.Nullable<int> perBulan
 		{
 			get
 			{
-				return this._total;
+				return this._perBulan;
 			}
 			set
 			{
-				if ((this._total != value))
+				if ((this._perBulan != value))
 				{
-					this.OntotalChanging(value);
+					this.OnperBulanChanging(value);
 					this.SendPropertyChanging();
-					this._total = value;
-					this.SendPropertyChanged("total");
-					this.OntotalChanged();
+					this._perBulan = value;
+					this.SendPropertyChanged("perBulan");
+					this.OnperBulanChanged();
 				}
 			}
 		}
@@ -2171,6 +2171,431 @@ namespace TA_RealEstate_Kel11
 					if ((value != null))
 					{
 						value.tDetailPembelians.Add(this);
+						this._idProperty = value.idProperty;
+					}
+					else
+					{
+						this._idProperty = default(string);
+					}
+					this.SendPropertyChanged("property");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tDetailPenyewaan")]
+	public partial class tDetailPenyewaan : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _idTSewa;
+		
+		private string _idProperty;
+		
+		private int _harga;
+		
+		private System.DateTime _mulaiSewa;
+		
+		private System.DateTime _sampai;
+		
+		private string _idKategoriBayar;
+		
+		private string _idCicilan;
+		
+		private System.Nullable<int> _lamaCicilan;
+		
+		private System.Nullable<int> _perBulan;
+		
+		private System.Nullable<int> _dp;
+		
+		private int _totalBayar;
+		
+		private EntityRef<kategoriBayar> _kategoriBayar;
+		
+		private EntityRef<kategoriCicilan> _kategoriCicilan;
+		
+		private EntityRef<property> _property;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidTSewaChanging(string value);
+    partial void OnidTSewaChanged();
+    partial void OnidPropertyChanging(string value);
+    partial void OnidPropertyChanged();
+    partial void OnhargaChanging(int value);
+    partial void OnhargaChanged();
+    partial void OnmulaiSewaChanging(System.DateTime value);
+    partial void OnmulaiSewaChanged();
+    partial void OnsampaiChanging(System.DateTime value);
+    partial void OnsampaiChanged();
+    partial void OnidKategoriBayarChanging(string value);
+    partial void OnidKategoriBayarChanged();
+    partial void OnidCicilanChanging(string value);
+    partial void OnidCicilanChanged();
+    partial void OnlamaCicilanChanging(System.Nullable<int> value);
+    partial void OnlamaCicilanChanged();
+    partial void OnperBulanChanging(System.Nullable<int> value);
+    partial void OnperBulanChanged();
+    partial void OndpChanging(System.Nullable<int> value);
+    partial void OndpChanged();
+    partial void OntotalBayarChanging(int value);
+    partial void OntotalBayarChanged();
+    #endregion
+		
+		public tDetailPenyewaan()
+		{
+			this._kategoriBayar = default(EntityRef<kategoriBayar>);
+			this._kategoriCicilan = default(EntityRef<kategoriCicilan>);
+			this._property = default(EntityRef<property>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTSewa", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string idTSewa
+		{
+			get
+			{
+				return this._idTSewa;
+			}
+			set
+			{
+				if ((this._idTSewa != value))
+				{
+					this.OnidTSewaChanging(value);
+					this.SendPropertyChanging();
+					this._idTSewa = value;
+					this.SendPropertyChanged("idTSewa");
+					this.OnidTSewaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idProperty", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string idProperty
+		{
+			get
+			{
+				return this._idProperty;
+			}
+			set
+			{
+				if ((this._idProperty != value))
+				{
+					if (this._property.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidPropertyChanging(value);
+					this.SendPropertyChanging();
+					this._idProperty = value;
+					this.SendPropertyChanged("idProperty");
+					this.OnidPropertyChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Int NOT NULL")]
+		public int harga
+		{
+			get
+			{
+				return this._harga;
+			}
+			set
+			{
+				if ((this._harga != value))
+				{
+					this.OnhargaChanging(value);
+					this.SendPropertyChanging();
+					this._harga = value;
+					this.SendPropertyChanged("harga");
+					this.OnhargaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mulaiSewa", DbType="Date NOT NULL")]
+		public System.DateTime mulaiSewa
+		{
+			get
+			{
+				return this._mulaiSewa;
+			}
+			set
+			{
+				if ((this._mulaiSewa != value))
+				{
+					this.OnmulaiSewaChanging(value);
+					this.SendPropertyChanging();
+					this._mulaiSewa = value;
+					this.SendPropertyChanged("mulaiSewa");
+					this.OnmulaiSewaChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sampai", DbType="Date NOT NULL")]
+		public System.DateTime sampai
+		{
+			get
+			{
+				return this._sampai;
+			}
+			set
+			{
+				if ((this._sampai != value))
+				{
+					this.OnsampaiChanging(value);
+					this.SendPropertyChanging();
+					this._sampai = value;
+					this.SendPropertyChanged("sampai");
+					this.OnsampaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKategoriBayar", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
+		public string idKategoriBayar
+		{
+			get
+			{
+				return this._idKategoriBayar;
+			}
+			set
+			{
+				if ((this._idKategoriBayar != value))
+				{
+					if (this._kategoriBayar.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidKategoriBayarChanging(value);
+					this.SendPropertyChanging();
+					this._idKategoriBayar = value;
+					this.SendPropertyChanged("idKategoriBayar");
+					this.OnidKategoriBayarChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCicilan", DbType="VarChar(5)")]
+		public string idCicilan
+		{
+			get
+			{
+				return this._idCicilan;
+			}
+			set
+			{
+				if ((this._idCicilan != value))
+				{
+					if (this._kategoriCicilan.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnidCicilanChanging(value);
+					this.SendPropertyChanging();
+					this._idCicilan = value;
+					this.SendPropertyChanged("idCicilan");
+					this.OnidCicilanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lamaCicilan", DbType="Int")]
+		public System.Nullable<int> lamaCicilan
+		{
+			get
+			{
+				return this._lamaCicilan;
+			}
+			set
+			{
+				if ((this._lamaCicilan != value))
+				{
+					this.OnlamaCicilanChanging(value);
+					this.SendPropertyChanging();
+					this._lamaCicilan = value;
+					this.SendPropertyChanged("lamaCicilan");
+					this.OnlamaCicilanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_perBulan", DbType="Int")]
+		public System.Nullable<int> perBulan
+		{
+			get
+			{
+				return this._perBulan;
+			}
+			set
+			{
+				if ((this._perBulan != value))
+				{
+					this.OnperBulanChanging(value);
+					this.SendPropertyChanging();
+					this._perBulan = value;
+					this.SendPropertyChanged("perBulan");
+					this.OnperBulanChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp", DbType="Int")]
+		public System.Nullable<int> dp
+		{
+			get
+			{
+				return this._dp;
+			}
+			set
+			{
+				if ((this._dp != value))
+				{
+					this.OndpChanging(value);
+					this.SendPropertyChanging();
+					this._dp = value;
+					this.SendPropertyChanged("dp");
+					this.OndpChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalBayar", DbType="Int NOT NULL")]
+		public int totalBayar
+		{
+			get
+			{
+				return this._totalBayar;
+			}
+			set
+			{
+				if ((this._totalBayar != value))
+				{
+					this.OntotalBayarChanging(value);
+					this.SendPropertyChanging();
+					this._totalBayar = value;
+					this.SendPropertyChanged("totalBayar");
+					this.OntotalBayarChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriBayar_tDetailPenyewaan", Storage="_kategoriBayar", ThisKey="idKategoriBayar", OtherKey="idKategoriBayar", IsForeignKey=true)]
+		public kategoriBayar kategoriBayar
+		{
+			get
+			{
+				return this._kategoriBayar.Entity;
+			}
+			set
+			{
+				kategoriBayar previousValue = this._kategoriBayar.Entity;
+				if (((previousValue != value) 
+							|| (this._kategoriBayar.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._kategoriBayar.Entity = null;
+						previousValue.tDetailPenyewaans.Remove(this);
+					}
+					this._kategoriBayar.Entity = value;
+					if ((value != null))
+					{
+						value.tDetailPenyewaans.Add(this);
+						this._idKategoriBayar = value.idKategoriBayar;
+					}
+					else
+					{
+						this._idKategoriBayar = default(string);
+					}
+					this.SendPropertyChanged("kategoriBayar");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriCicilan_tDetailPenyewaan", Storage="_kategoriCicilan", ThisKey="idCicilan", OtherKey="idCicilan", IsForeignKey=true)]
+		public kategoriCicilan kategoriCicilan
+		{
+			get
+			{
+				return this._kategoriCicilan.Entity;
+			}
+			set
+			{
+				kategoriCicilan previousValue = this._kategoriCicilan.Entity;
+				if (((previousValue != value) 
+							|| (this._kategoriCicilan.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._kategoriCicilan.Entity = null;
+						previousValue.tDetailPenyewaans.Remove(this);
+					}
+					this._kategoriCicilan.Entity = value;
+					if ((value != null))
+					{
+						value.tDetailPenyewaans.Add(this);
+						this._idCicilan = value.idCicilan;
+					}
+					else
+					{
+						this._idCicilan = default(string);
+					}
+					this.SendPropertyChanged("kategoriCicilan");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="property_tDetailPenyewaan", Storage="_property", ThisKey="idProperty", OtherKey="idProperty", IsForeignKey=true)]
+		public property property
+		{
+			get
+			{
+				return this._property.Entity;
+			}
+			set
+			{
+				property previousValue = this._property.Entity;
+				if (((previousValue != value) 
+							|| (this._property.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._property.Entity = null;
+						previousValue.tDetailPenyewaans.Remove(this);
+					}
+					this._property.Entity = value;
+					if ((value != null))
+					{
+						value.tDetailPenyewaans.Add(this);
 						this._idProperty = value.idProperty;
 					}
 					else
@@ -2435,431 +2860,6 @@ namespace TA_RealEstate_Kel11
 					if ((value != null))
 					{
 						value.tPembelians.Add(this);
-						this._idProperty = value.idProperty;
-					}
-					else
-					{
-						this._idProperty = default(string);
-					}
-					this.SendPropertyChanged("property");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tDetailPenyewaan")]
-	public partial class tDetailPenyewaan : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _idTSewa;
-		
-		private string _idProperty;
-		
-		private int _harga;
-		
-		private System.DateTime _mulaiSewa;
-		
-		private System.DateTime _sampai;
-		
-		private string _idKategoriBayar;
-		
-		private string _idCicilan;
-		
-		private System.Nullable<int> _lamaCicilan;
-		
-		private System.Nullable<int> _total;
-		
-		private System.Nullable<int> _dp;
-		
-		private int _totalBayar;
-		
-		private EntityRef<kategoriBayar> _kategoriBayar;
-		
-		private EntityRef<kategoriCicilan> _kategoriCicilan;
-		
-		private EntityRef<property> _property;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidTSewaChanging(string value);
-    partial void OnidTSewaChanged();
-    partial void OnidPropertyChanging(string value);
-    partial void OnidPropertyChanged();
-    partial void OnhargaChanging(int value);
-    partial void OnhargaChanged();
-    partial void OnmulaiSewaChanging(System.DateTime value);
-    partial void OnmulaiSewaChanged();
-    partial void OnsampaiChanging(System.DateTime value);
-    partial void OnsampaiChanged();
-    partial void OnidKategoriBayarChanging(string value);
-    partial void OnidKategoriBayarChanged();
-    partial void OnidCicilanChanging(string value);
-    partial void OnidCicilanChanged();
-    partial void OnlamaCicilanChanging(System.Nullable<int> value);
-    partial void OnlamaCicilanChanged();
-    partial void OntotalChanging(System.Nullable<int> value);
-    partial void OntotalChanged();
-    partial void OndpChanging(System.Nullable<int> value);
-    partial void OndpChanged();
-    partial void OntotalBayarChanging(int value);
-    partial void OntotalBayarChanged();
-    #endregion
-		
-		public tDetailPenyewaan()
-		{
-			this._kategoriBayar = default(EntityRef<kategoriBayar>);
-			this._kategoriCicilan = default(EntityRef<kategoriCicilan>);
-			this._property = default(EntityRef<property>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idTSewa", DbType="VarChar(5) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string idTSewa
-		{
-			get
-			{
-				return this._idTSewa;
-			}
-			set
-			{
-				if ((this._idTSewa != value))
-				{
-					this.OnidTSewaChanging(value);
-					this.SendPropertyChanging();
-					this._idTSewa = value;
-					this.SendPropertyChanged("idTSewa");
-					this.OnidTSewaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idProperty", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string idProperty
-		{
-			get
-			{
-				return this._idProperty;
-			}
-			set
-			{
-				if ((this._idProperty != value))
-				{
-					if (this._property.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidPropertyChanging(value);
-					this.SendPropertyChanging();
-					this._idProperty = value;
-					this.SendPropertyChanged("idProperty");
-					this.OnidPropertyChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_harga", DbType="Int NOT NULL")]
-		public int harga
-		{
-			get
-			{
-				return this._harga;
-			}
-			set
-			{
-				if ((this._harga != value))
-				{
-					this.OnhargaChanging(value);
-					this.SendPropertyChanging();
-					this._harga = value;
-					this.SendPropertyChanged("harga");
-					this.OnhargaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mulaiSewa", DbType="Date NOT NULL")]
-		public System.DateTime mulaiSewa
-		{
-			get
-			{
-				return this._mulaiSewa;
-			}
-			set
-			{
-				if ((this._mulaiSewa != value))
-				{
-					this.OnmulaiSewaChanging(value);
-					this.SendPropertyChanging();
-					this._mulaiSewa = value;
-					this.SendPropertyChanged("mulaiSewa");
-					this.OnmulaiSewaChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_sampai", DbType="Date NOT NULL")]
-		public System.DateTime sampai
-		{
-			get
-			{
-				return this._sampai;
-			}
-			set
-			{
-				if ((this._sampai != value))
-				{
-					this.OnsampaiChanging(value);
-					this.SendPropertyChanging();
-					this._sampai = value;
-					this.SendPropertyChanged("sampai");
-					this.OnsampaiChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idKategoriBayar", DbType="VarChar(5) NOT NULL", CanBeNull=false)]
-		public string idKategoriBayar
-		{
-			get
-			{
-				return this._idKategoriBayar;
-			}
-			set
-			{
-				if ((this._idKategoriBayar != value))
-				{
-					if (this._kategoriBayar.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidKategoriBayarChanging(value);
-					this.SendPropertyChanging();
-					this._idKategoriBayar = value;
-					this.SendPropertyChanged("idKategoriBayar");
-					this.OnidKategoriBayarChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_idCicilan", DbType="VarChar(5)")]
-		public string idCicilan
-		{
-			get
-			{
-				return this._idCicilan;
-			}
-			set
-			{
-				if ((this._idCicilan != value))
-				{
-					if (this._kategoriCicilan.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidCicilanChanging(value);
-					this.SendPropertyChanging();
-					this._idCicilan = value;
-					this.SendPropertyChanged("idCicilan");
-					this.OnidCicilanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lamaCicilan", DbType="Int")]
-		public System.Nullable<int> lamaCicilan
-		{
-			get
-			{
-				return this._lamaCicilan;
-			}
-			set
-			{
-				if ((this._lamaCicilan != value))
-				{
-					this.OnlamaCicilanChanging(value);
-					this.SendPropertyChanging();
-					this._lamaCicilan = value;
-					this.SendPropertyChanged("lamaCicilan");
-					this.OnlamaCicilanChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Int")]
-		public System.Nullable<int> total
-		{
-			get
-			{
-				return this._total;
-			}
-			set
-			{
-				if ((this._total != value))
-				{
-					this.OntotalChanging(value);
-					this.SendPropertyChanging();
-					this._total = value;
-					this.SendPropertyChanged("total");
-					this.OntotalChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dp", DbType="Int")]
-		public System.Nullable<int> dp
-		{
-			get
-			{
-				return this._dp;
-			}
-			set
-			{
-				if ((this._dp != value))
-				{
-					this.OndpChanging(value);
-					this.SendPropertyChanging();
-					this._dp = value;
-					this.SendPropertyChanged("dp");
-					this.OndpChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_totalBayar", DbType="Int NOT NULL")]
-		public int totalBayar
-		{
-			get
-			{
-				return this._totalBayar;
-			}
-			set
-			{
-				if ((this._totalBayar != value))
-				{
-					this.OntotalBayarChanging(value);
-					this.SendPropertyChanging();
-					this._totalBayar = value;
-					this.SendPropertyChanged("totalBayar");
-					this.OntotalBayarChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriBayar_tDetailPenyewaan", Storage="_kategoriBayar", ThisKey="idKategoriBayar", OtherKey="idKategoriBayar", IsForeignKey=true)]
-		public kategoriBayar kategoriBayar
-		{
-			get
-			{
-				return this._kategoriBayar.Entity;
-			}
-			set
-			{
-				kategoriBayar previousValue = this._kategoriBayar.Entity;
-				if (((previousValue != value) 
-							|| (this._kategoriBayar.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._kategoriBayar.Entity = null;
-						previousValue.tDetailPenyewaans.Remove(this);
-					}
-					this._kategoriBayar.Entity = value;
-					if ((value != null))
-					{
-						value.tDetailPenyewaans.Add(this);
-						this._idKategoriBayar = value.idKategoriBayar;
-					}
-					else
-					{
-						this._idKategoriBayar = default(string);
-					}
-					this.SendPropertyChanged("kategoriBayar");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="kategoriCicilan_tDetailPenyewaan", Storage="_kategoriCicilan", ThisKey="idCicilan", OtherKey="idCicilan", IsForeignKey=true)]
-		public kategoriCicilan kategoriCicilan
-		{
-			get
-			{
-				return this._kategoriCicilan.Entity;
-			}
-			set
-			{
-				kategoriCicilan previousValue = this._kategoriCicilan.Entity;
-				if (((previousValue != value) 
-							|| (this._kategoriCicilan.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._kategoriCicilan.Entity = null;
-						previousValue.tDetailPenyewaans.Remove(this);
-					}
-					this._kategoriCicilan.Entity = value;
-					if ((value != null))
-					{
-						value.tDetailPenyewaans.Add(this);
-						this._idCicilan = value.idCicilan;
-					}
-					else
-					{
-						this._idCicilan = default(string);
-					}
-					this.SendPropertyChanged("kategoriCicilan");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="property_tDetailPenyewaan", Storage="_property", ThisKey="idProperty", OtherKey="idProperty", IsForeignKey=true)]
-		public property property
-		{
-			get
-			{
-				return this._property.Entity;
-			}
-			set
-			{
-				property previousValue = this._property.Entity;
-				if (((previousValue != value) 
-							|| (this._property.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._property.Entity = null;
-						previousValue.tDetailPenyewaans.Remove(this);
-					}
-					this._property.Entity = value;
-					if ((value != null))
-					{
-						value.tDetailPenyewaans.Add(this);
 						this._idProperty = value.idProperty;
 					}
 					else

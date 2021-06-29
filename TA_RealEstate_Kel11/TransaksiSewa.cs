@@ -55,6 +55,21 @@ namespace TA_RealEstate_Kel11
             return autoid;
         }
 
+        private void btnSimpan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHapus_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
@@ -69,13 +84,12 @@ namespace TA_RealEstate_Kel11
             txtPemilik.Clear();
             cbClient.SelectedIndex = -1;
             txtTotal.Clear();
-
-            cbDetailProperty.SelectedIndex = -1;
+            
             txtHargaProperty.Clear();
             cbPembayaran.SelectedIndex = -1;
             cbCicilan.SelectedIndex = -1;
             txtLamaCicilan.Clear();
-            txtTotal.Clear();
+            txtperBulan.Clear();
             txtDP.Clear();
             txtTotalBayar.Clear();
 
@@ -83,6 +97,7 @@ namespace TA_RealEstate_Kel11
             //LoadData();
         }
 
+        //combobox
         private void cbProperty_SelectedIndexChanged(object sender, EventArgs e)
         {
             SqlConnection myConnection = new SqlConnection(myConnectionString);
@@ -95,9 +110,11 @@ namespace TA_RealEstate_Kel11
                 myreader = cmd.ExecuteReader();
                 while (myreader.Read())
                 {
-                    //string harga = myreader.GetInt32(0).ToString();
                     string pemilik = myreader.GetString(9);
                     txtPemilik.Text = pemilik;
+
+                    string harga = myreader.GetInt32(6).ToString();
+                    txtHargaProperty.Text = harga;
                 }
             }
             catch (Exception ex)
@@ -106,26 +123,47 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        private void cbDetailProperty_SelectedIndexChanged(object sender, EventArgs e)
+        //textbox
+        private void txtLamaCicilan_TextChanged(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
-            //string sql = "SELECT * FROM property WHERE idProperty = ";
-            string sql = "SELECT * FROM property WHERE idProperty  = '" + cbDetailProperty.SelectedValue + "' ";
-            SqlCommand cmd = new SqlCommand(sql, myConnection);
-            SqlDataReader myreader;
             try
             {
-                myConnection.Open();
-                myreader = cmd.ExecuteReader();
-                while (myreader.Read())
+                if (txtLamaCicilan.Text == "1")
                 {
-                    string harga = myreader.GetInt32(6).ToString();
-                    txtHargaProperty.Text = harga;
+                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 12).ToString());
+                }
+                else if (txtLamaCicilan.Text == "5")
+                {
+                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 60).ToString());
+                }
+                else if (txtLamaCicilan.Text == "10")
+                {
+                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 120).ToString());
+                }
+                else if (txtLamaCicilan.Text == "15")
+                {
+                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 180).ToString());
+                }
+                else if (txtLamaCicilan.Text != "1" || txtLamaCicilan.Text != "5" || txtLamaCicilan.Text != "10" || txtLamaCicilan.Text != "15")
+                {
+                    MessageBox.Show("Inputkan Lama Cicilan dengan Benar !");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured" + ex.Message);
+                MessageBox.Show("Error Ocucured" + ex);
+            }
+        }
+        //
+        private void txtDP_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                txtTotalBayar.Text = ((int.Parse(txtHargaProperty.Text) - int.Parse(txtDP.Text)).ToString());
+            }
+            catch (Exception ex)
+            {
+
             }
         }
 
