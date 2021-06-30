@@ -90,11 +90,11 @@
     <Compile Include="FormJabatan.Designer.cs">
       <DependentUpon>FormJabatan.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormKategoriBayar.cs">
+    <Compile Include="FormInterior.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKategoriBayar.Designer.cs">
-      <DependentUpon>FormKategoriBayar.cs</DependentUpon>
+    <Compile Include="FormInterior.Designer.cs">
+      <DependentUpon>FormInterior.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPegawai.cs">
       <SubType>Form</SubType>
@@ -120,6 +120,7 @@
     <Compile Include="FormPropertyTipe.Designer.cs">
       <DependentUpon>FormPropertyTipe.cs</DependentUpon>
     </Compile>
+    <Compile Include="koneksi.cs" />
     <Compile Include="LaporanPembelian.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -201,8 +202,8 @@
     <EmbeddedResource Include="FormJabatan.resx">
       <DependentUpon>FormJabatan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormKategoriBayar.resx">
-      <DependentUpon>FormKategoriBayar.cs</DependentUpon>
+    <EmbeddedResource Include="FormInterior.resx">
+      <DependentUpon>FormInterior.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPegawai.resx">
       <DependentUpon>FormPegawai.cs</DependentUpon>

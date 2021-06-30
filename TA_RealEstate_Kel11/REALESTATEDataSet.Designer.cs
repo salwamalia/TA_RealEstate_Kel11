@@ -26,9 +26,9 @@ namespace TA_RealEstate_Kel11 {
         
         private clientDataTable tableclient;
         
-        private jabatanDataTable tablejabatan;
+        private desainInteriorDataTable tabledesainInterior;
         
-        private kategoriBayarDataTable tablekategoriBayar;
+        private jabatanDataTable tablejabatan;
         
         private kategoriCicilanDataTable tablekategoriCicilan;
         
@@ -50,21 +50,19 @@ namespace TA_RealEstate_Kel11 {
         
         private global::System.Data.DataRelation relationFK_pegawai_jabatan;
         
+        private global::System.Data.DataRelation relationFK_property_desainInterior;
+        
         private global::System.Data.DataRelation relationFK_property_pemilik;
         
         private global::System.Data.DataRelation relationFK_property_propertyTipe;
-        
-        private global::System.Data.DataRelation relationFK_tDetailPembelian_kategoriBayar;
         
         private global::System.Data.DataRelation relationFK_tDetailPembelian_kategoriCicilan;
         
         private global::System.Data.DataRelation relationFK_tDetailPembelian_property;
         
-        private global::System.Data.DataRelation relationFK_tDetailPenyewaan_kategoriBayar;
-        
         private global::System.Data.DataRelation relationFK_tDetailPenyewaan_kategoriCicilan;
         
-        private global::System.Data.DataRelation relationFK_tDetailPenyewaan_property1;
+        private global::System.Data.DataRelation relationFK_tDetailPenyewaan_property;
         
         private global::System.Data.DataRelation relationFK_tPembelian_client;
         
@@ -105,11 +103,11 @@ namespace TA_RealEstate_Kel11 {
                 if ((ds.Tables["client"] != null)) {
                     base.Tables.Add(new clientDataTable(ds.Tables["client"]));
                 }
+                if ((ds.Tables["desainInterior"] != null)) {
+                    base.Tables.Add(new desainInteriorDataTable(ds.Tables["desainInterior"]));
+                }
                 if ((ds.Tables["jabatan"] != null)) {
                     base.Tables.Add(new jabatanDataTable(ds.Tables["jabatan"]));
-                }
-                if ((ds.Tables["kategoriBayar"] != null)) {
-                    base.Tables.Add(new kategoriBayarDataTable(ds.Tables["kategoriBayar"]));
                 }
                 if ((ds.Tables["kategoriCicilan"] != null)) {
                     base.Tables.Add(new kategoriCicilanDataTable(ds.Tables["kategoriCicilan"]));
@@ -170,9 +168,9 @@ namespace TA_RealEstate_Kel11 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public jabatanDataTable jabatan {
+        public desainInteriorDataTable desainInterior {
             get {
-                return this.tablejabatan;
+                return this.tabledesainInterior;
             }
         }
         
@@ -180,9 +178,9 @@ namespace TA_RealEstate_Kel11 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public kategoriBayarDataTable kategoriBayar {
+        public jabatanDataTable jabatan {
             get {
-                return this.tablekategoriBayar;
+                return this.tablejabatan;
             }
         }
         
@@ -346,11 +344,11 @@ namespace TA_RealEstate_Kel11 {
                 if ((ds.Tables["client"] != null)) {
                     base.Tables.Add(new clientDataTable(ds.Tables["client"]));
                 }
+                if ((ds.Tables["desainInterior"] != null)) {
+                    base.Tables.Add(new desainInteriorDataTable(ds.Tables["desainInterior"]));
+                }
                 if ((ds.Tables["jabatan"] != null)) {
                     base.Tables.Add(new jabatanDataTable(ds.Tables["jabatan"]));
-                }
-                if ((ds.Tables["kategoriBayar"] != null)) {
-                    base.Tables.Add(new kategoriBayarDataTable(ds.Tables["kategoriBayar"]));
                 }
                 if ((ds.Tables["kategoriCicilan"] != null)) {
                     base.Tables.Add(new kategoriCicilanDataTable(ds.Tables["kategoriCicilan"]));
@@ -418,16 +416,16 @@ namespace TA_RealEstate_Kel11 {
                     this.tableclient.InitVars();
                 }
             }
+            this.tabledesainInterior = ((desainInteriorDataTable)(base.Tables["desainInterior"]));
+            if ((initTable == true)) {
+                if ((this.tabledesainInterior != null)) {
+                    this.tabledesainInterior.InitVars();
+                }
+            }
             this.tablejabatan = ((jabatanDataTable)(base.Tables["jabatan"]));
             if ((initTable == true)) {
                 if ((this.tablejabatan != null)) {
                     this.tablejabatan.InitVars();
-                }
-            }
-            this.tablekategoriBayar = ((kategoriBayarDataTable)(base.Tables["kategoriBayar"]));
-            if ((initTable == true)) {
-                if ((this.tablekategoriBayar != null)) {
-                    this.tablekategoriBayar.InitVars();
                 }
             }
             this.tablekategoriCicilan = ((kategoriCicilanDataTable)(base.Tables["kategoriCicilan"]));
@@ -485,14 +483,13 @@ namespace TA_RealEstate_Kel11 {
                 }
             }
             this.relationFK_pegawai_jabatan = this.Relations["FK_pegawai_jabatan"];
+            this.relationFK_property_desainInterior = this.Relations["FK_property_desainInterior"];
             this.relationFK_property_pemilik = this.Relations["FK_property_pemilik"];
             this.relationFK_property_propertyTipe = this.Relations["FK_property_propertyTipe"];
-            this.relationFK_tDetailPembelian_kategoriBayar = this.Relations["FK_tDetailPembelian_kategoriBayar"];
             this.relationFK_tDetailPembelian_kategoriCicilan = this.Relations["FK_tDetailPembelian_kategoriCicilan"];
             this.relationFK_tDetailPembelian_property = this.Relations["FK_tDetailPembelian_property"];
-            this.relationFK_tDetailPenyewaan_kategoriBayar = this.Relations["FK_tDetailPenyewaan_kategoriBayar"];
             this.relationFK_tDetailPenyewaan_kategoriCicilan = this.Relations["FK_tDetailPenyewaan_kategoriCicilan"];
-            this.relationFK_tDetailPenyewaan_property1 = this.Relations["FK_tDetailPenyewaan_property1"];
+            this.relationFK_tDetailPenyewaan_property = this.Relations["FK_tDetailPenyewaan_property"];
             this.relationFK_tPembelian_client = this.Relations["FK_tPembelian_client"];
             this.relationFK_tPembelian_property = this.Relations["FK_tPembelian_property"];
             this.relationFK_tPenyewaan_client = this.Relations["FK_tPenyewaan_client"];
@@ -509,10 +506,10 @@ namespace TA_RealEstate_Kel11 {
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableclient = new clientDataTable();
             base.Tables.Add(this.tableclient);
+            this.tabledesainInterior = new desainInteriorDataTable();
+            base.Tables.Add(this.tabledesainInterior);
             this.tablejabatan = new jabatanDataTable();
             base.Tables.Add(this.tablejabatan);
-            this.tablekategoriBayar = new kategoriBayarDataTable();
-            base.Tables.Add(this.tablekategoriBayar);
             this.tablekategoriCicilan = new kategoriCicilanDataTable();
             base.Tables.Add(this.tablekategoriCicilan);
             this.tablepegawai = new pegawaiDataTable();
@@ -535,6 +532,10 @@ namespace TA_RealEstate_Kel11 {
                         this.tablejabatan.idJabatanColumn}, new global::System.Data.DataColumn[] {
                         this.tablepegawai.idJabatanColumn}, false);
             this.Relations.Add(this.relationFK_pegawai_jabatan);
+            this.relationFK_property_desainInterior = new global::System.Data.DataRelation("FK_property_desainInterior", new global::System.Data.DataColumn[] {
+                        this.tabledesainInterior.idInteriorColumn}, new global::System.Data.DataColumn[] {
+                        this.tableproperty.idInteriorColumn}, false);
+            this.Relations.Add(this.relationFK_property_desainInterior);
             this.relationFK_property_pemilik = new global::System.Data.DataRelation("FK_property_pemilik", new global::System.Data.DataColumn[] {
                         this.tablepemilik.idPemilikColumn}, new global::System.Data.DataColumn[] {
                         this.tableproperty.idPemilikColumn}, false);
@@ -543,10 +544,6 @@ namespace TA_RealEstate_Kel11 {
                         this.tablepropertyTipe.idTipeColumn}, new global::System.Data.DataColumn[] {
                         this.tableproperty.idTipeColumn}, false);
             this.Relations.Add(this.relationFK_property_propertyTipe);
-            this.relationFK_tDetailPembelian_kategoriBayar = new global::System.Data.DataRelation("FK_tDetailPembelian_kategoriBayar", new global::System.Data.DataColumn[] {
-                        this.tablekategoriBayar.idKategoriBayarColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletDetailPembelian.idKategoriBayarColumn}, false);
-            this.Relations.Add(this.relationFK_tDetailPembelian_kategoriBayar);
             this.relationFK_tDetailPembelian_kategoriCicilan = new global::System.Data.DataRelation("FK_tDetailPembelian_kategoriCicilan", new global::System.Data.DataColumn[] {
                         this.tablekategoriCicilan.idCicilanColumn}, new global::System.Data.DataColumn[] {
                         this.tabletDetailPembelian.idCicilanColumn}, false);
@@ -555,18 +552,14 @@ namespace TA_RealEstate_Kel11 {
                         this.tableproperty.idPropertyColumn}, new global::System.Data.DataColumn[] {
                         this.tabletDetailPembelian.idPropertyColumn}, false);
             this.Relations.Add(this.relationFK_tDetailPembelian_property);
-            this.relationFK_tDetailPenyewaan_kategoriBayar = new global::System.Data.DataRelation("FK_tDetailPenyewaan_kategoriBayar", new global::System.Data.DataColumn[] {
-                        this.tablekategoriBayar.idKategoriBayarColumn}, new global::System.Data.DataColumn[] {
-                        this.tabletDetailPenyewaan.idKategoriBayarColumn}, false);
-            this.Relations.Add(this.relationFK_tDetailPenyewaan_kategoriBayar);
             this.relationFK_tDetailPenyewaan_kategoriCicilan = new global::System.Data.DataRelation("FK_tDetailPenyewaan_kategoriCicilan", new global::System.Data.DataColumn[] {
                         this.tablekategoriCicilan.idCicilanColumn}, new global::System.Data.DataColumn[] {
                         this.tabletDetailPenyewaan.idCicilanColumn}, false);
             this.Relations.Add(this.relationFK_tDetailPenyewaan_kategoriCicilan);
-            this.relationFK_tDetailPenyewaan_property1 = new global::System.Data.DataRelation("FK_tDetailPenyewaan_property1", new global::System.Data.DataColumn[] {
+            this.relationFK_tDetailPenyewaan_property = new global::System.Data.DataRelation("FK_tDetailPenyewaan_property", new global::System.Data.DataColumn[] {
                         this.tableproperty.idPropertyColumn}, new global::System.Data.DataColumn[] {
                         this.tabletDetailPenyewaan.idPropertyColumn}, false);
-            this.Relations.Add(this.relationFK_tDetailPenyewaan_property1);
+            this.Relations.Add(this.relationFK_tDetailPenyewaan_property);
             this.relationFK_tPembelian_client = new global::System.Data.DataRelation("FK_tPembelian_client", new global::System.Data.DataColumn[] {
                         this.tableclient.idClientColumn}, new global::System.Data.DataColumn[] {
                         this.tabletPembelian.idClientColumn}, false);
@@ -593,13 +586,13 @@ namespace TA_RealEstate_Kel11 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializejabatan() {
+        private bool ShouldSerializedesainInterior() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializekategoriBayar() {
+        private bool ShouldSerializejabatan() {
             return false;
         }
         
@@ -716,10 +709,10 @@ namespace TA_RealEstate_Kel11 {
         public delegate void clientRowChangeEventHandler(object sender, clientRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void jabatanRowChangeEventHandler(object sender, jabatanRowChangeEvent e);
+        public delegate void desainInteriorRowChangeEventHandler(object sender, desainInteriorRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void kategoriBayarRowChangeEventHandler(object sender, kategoriBayarRowChangeEvent e);
+        public delegate void jabatanRowChangeEventHandler(object sender, jabatanRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public delegate void kategoriCicilanRowChangeEventHandler(object sender, kategoriCicilanRowChangeEvent e);
@@ -1092,6 +1085,281 @@ namespace TA_RealEstate_Kel11 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class desainInteriorDataTable : global::System.Data.TypedTableBase<desainInteriorRow> {
+            
+            private global::System.Data.DataColumn columnidInterior;
+            
+            private global::System.Data.DataColumn columninterior;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public desainInteriorDataTable() {
+                this.TableName = "desainInterior";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal desainInteriorDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected desainInteriorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn idInteriorColumn {
+                get {
+                    return this.columnidInterior;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn interiorColumn {
+                get {
+                    return this.columninterior;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public desainInteriorRow this[int index] {
+                get {
+                    return ((desainInteriorRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event desainInteriorRowChangeEventHandler desainInteriorRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event desainInteriorRowChangeEventHandler desainInteriorRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event desainInteriorRowChangeEventHandler desainInteriorRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event desainInteriorRowChangeEventHandler desainInteriorRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AdddesainInteriorRow(desainInteriorRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public desainInteriorRow AdddesainInteriorRow(string idInterior, string interior) {
+                desainInteriorRow rowdesainInteriorRow = ((desainInteriorRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        idInterior,
+                        interior};
+                rowdesainInteriorRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowdesainInteriorRow);
+                return rowdesainInteriorRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public desainInteriorRow FindByidInterior(string idInterior) {
+                return ((desainInteriorRow)(this.Rows.Find(new object[] {
+                            idInterior})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                desainInteriorDataTable cln = ((desainInteriorDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new desainInteriorDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnidInterior = base.Columns["idInterior"];
+                this.columninterior = base.Columns["interior"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnidInterior = new global::System.Data.DataColumn("idInterior", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidInterior);
+                this.columninterior = new global::System.Data.DataColumn("interior", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columninterior);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnidInterior}, true));
+                this.columnidInterior.AllowDBNull = false;
+                this.columnidInterior.Unique = true;
+                this.columnidInterior.MaxLength = 5;
+                this.columninterior.AllowDBNull = false;
+                this.columninterior.MaxLength = 50;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public desainInteriorRow NewdesainInteriorRow() {
+                return ((desainInteriorRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new desainInteriorRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(desainInteriorRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.desainInteriorRowChanged != null)) {
+                    this.desainInteriorRowChanged(this, new desainInteriorRowChangeEvent(((desainInteriorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.desainInteriorRowChanging != null)) {
+                    this.desainInteriorRowChanging(this, new desainInteriorRowChangeEvent(((desainInteriorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.desainInteriorRowDeleted != null)) {
+                    this.desainInteriorRowDeleted(this, new desainInteriorRowChangeEvent(((desainInteriorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.desainInteriorRowDeleting != null)) {
+                    this.desainInteriorRowDeleting(this, new desainInteriorRowChangeEvent(((desainInteriorRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemovedesainInteriorRow(desainInteriorRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                REALESTATEDataSet ds = new REALESTATEDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "desainInteriorDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class jabatanDataTable : global::System.Data.TypedTableBase<jabatanRow> {
             
             private global::System.Data.DataColumn columnidJabatan;
@@ -1367,296 +1635,6 @@ namespace TA_RealEstate_Kel11 {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class kategoriBayarDataTable : global::System.Data.TypedTableBase<kategoriBayarRow> {
-            
-            private global::System.Data.DataColumn columnidKategoriBayar;
-            
-            private global::System.Data.DataColumn columnkategoriBayar;
-            
-            private global::System.Data.DataColumn columnketerangan;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarDataTable() {
-                this.TableName = "kategoriBayar";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal kategoriBayarDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected kategoriBayarDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idKategoriBayarColumn {
-                get {
-                    return this.columnidKategoriBayar;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn kategoriBayarColumn {
-                get {
-                    return this.columnkategoriBayar;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn keteranganColumn {
-                get {
-                    return this.columnketerangan;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow this[int index] {
-                get {
-                    return ((kategoriBayarRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event kategoriBayarRowChangeEventHandler kategoriBayarRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event kategoriBayarRowChangeEventHandler kategoriBayarRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event kategoriBayarRowChangeEventHandler kategoriBayarRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event kategoriBayarRowChangeEventHandler kategoriBayarRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddkategoriBayarRow(kategoriBayarRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow AddkategoriBayarRow(string idKategoriBayar, string kategoriBayar, string keterangan) {
-                kategoriBayarRow rowkategoriBayarRow = ((kategoriBayarRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        idKategoriBayar,
-                        kategoriBayar,
-                        keterangan};
-                rowkategoriBayarRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowkategoriBayarRow);
-                return rowkategoriBayarRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow FindByidKategoriBayar(string idKategoriBayar) {
-                return ((kategoriBayarRow)(this.Rows.Find(new object[] {
-                            idKategoriBayar})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                kategoriBayarDataTable cln = ((kategoriBayarDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new kategoriBayarDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnidKategoriBayar = base.Columns["idKategoriBayar"];
-                this.columnkategoriBayar = base.Columns["kategoriBayar"];
-                this.columnketerangan = base.Columns["keterangan"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnidKategoriBayar = new global::System.Data.DataColumn("idKategoriBayar", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidKategoriBayar);
-                this.columnkategoriBayar = new global::System.Data.DataColumn("kategoriBayar", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnkategoriBayar);
-                this.columnketerangan = new global::System.Data.DataColumn("keterangan", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnketerangan);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidKategoriBayar}, true));
-                this.columnidKategoriBayar.AllowDBNull = false;
-                this.columnidKategoriBayar.Unique = true;
-                this.columnidKategoriBayar.MaxLength = 5;
-                this.columnkategoriBayar.AllowDBNull = false;
-                this.columnkategoriBayar.MaxLength = 50;
-                this.columnketerangan.MaxLength = 50;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow NewkategoriBayarRow() {
-                return ((kategoriBayarRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new kategoriBayarRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(kategoriBayarRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.kategoriBayarRowChanged != null)) {
-                    this.kategoriBayarRowChanged(this, new kategoriBayarRowChangeEvent(((kategoriBayarRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.kategoriBayarRowChanging != null)) {
-                    this.kategoriBayarRowChanging(this, new kategoriBayarRowChangeEvent(((kategoriBayarRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.kategoriBayarRowDeleted != null)) {
-                    this.kategoriBayarRowDeleted(this, new kategoriBayarRowChangeEvent(((kategoriBayarRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.kategoriBayarRowDeleting != null)) {
-                    this.kategoriBayarRowDeleting(this, new kategoriBayarRowChangeEvent(((kategoriBayarRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovekategoriBayarRow(kategoriBayarRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                REALESTATEDataSet ds = new REALESTATEDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "kategoriBayarDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class kategoriCicilanDataTable : global::System.Data.TypedTableBase<kategoriCicilanRow> {
             
             private global::System.Data.DataColumn columnidCicilan;
@@ -1749,7 +1727,7 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriCicilanRow AddkategoriCicilanRow(string idCicilan, string cicilan) {
+            public kategoriCicilanRow AddkategoriCicilanRow(string idCicilan, int cicilan) {
                 kategoriCicilanRow rowkategoriCicilanRow = ((kategoriCicilanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idCicilan,
@@ -1792,7 +1770,7 @@ namespace TA_RealEstate_Kel11 {
             private void InitClass() {
                 this.columnidCicilan = new global::System.Data.DataColumn("idCicilan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidCicilan);
-                this.columncicilan = new global::System.Data.DataColumn("cicilan", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncicilan = new global::System.Data.DataColumn("cicilan", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncicilan);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidCicilan}, true));
@@ -1800,7 +1778,6 @@ namespace TA_RealEstate_Kel11 {
                 this.columnidCicilan.Unique = true;
                 this.columnidCicilan.MaxLength = 5;
                 this.columncicilan.AllowDBNull = false;
-                this.columncicilan.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2631,6 +2608,8 @@ namespace TA_RealEstate_Kel11 {
             
             private global::System.Data.DataColumn columngambar;
             
+            private global::System.Data.DataColumn columnidInterior;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public propertyDataTable() {
@@ -2730,6 +2709,14 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn idInteriorColumn {
+                get {
+                    return this.columnidInterior;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2765,7 +2752,7 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public propertyRow AddpropertyRow(string idProperty, string namaProperty, propertyTipeRow parentpropertyTipeRowByFK_property_propertyTipe, pemilikRow parentpemilikRowByFK_property_pemilik, string ukuran, string fasilitas, int harga, byte[] gambar) {
+            public propertyRow AddpropertyRow(string idProperty, string namaProperty, propertyTipeRow parentpropertyTipeRowByFK_property_propertyTipe, pemilikRow parentpemilikRowByFK_property_pemilik, string ukuran, string fasilitas, decimal harga, byte[] gambar, desainInteriorRow parentdesainInteriorRowByFK_property_desainInterior) {
                 propertyRow rowpropertyRow = ((propertyRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idProperty,
@@ -2775,12 +2762,16 @@ namespace TA_RealEstate_Kel11 {
                         ukuran,
                         fasilitas,
                         harga,
-                        gambar};
+                        gambar,
+                        null};
                 if ((parentpropertyTipeRowByFK_property_propertyTipe != null)) {
                     columnValuesArray[2] = parentpropertyTipeRowByFK_property_propertyTipe[0];
                 }
                 if ((parentpemilikRowByFK_property_pemilik != null)) {
                     columnValuesArray[3] = parentpemilikRowByFK_property_pemilik[0];
+                }
+                if ((parentdesainInteriorRowByFK_property_desainInterior != null)) {
+                    columnValuesArray[8] = parentdesainInteriorRowByFK_property_desainInterior[0];
                 }
                 rowpropertyRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowpropertyRow);
@@ -2819,6 +2810,7 @@ namespace TA_RealEstate_Kel11 {
                 this.columnfasilitas = base.Columns["fasilitas"];
                 this.columnharga = base.Columns["harga"];
                 this.columngambar = base.Columns["gambar"];
+                this.columnidInterior = base.Columns["idInterior"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2836,10 +2828,12 @@ namespace TA_RealEstate_Kel11 {
                 base.Columns.Add(this.columnukuran);
                 this.columnfasilitas = new global::System.Data.DataColumn("fasilitas", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfasilitas);
-                this.columnharga = new global::System.Data.DataColumn("harga", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnharga = new global::System.Data.DataColumn("harga", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnharga);
                 this.columngambar = new global::System.Data.DataColumn("gambar", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columngambar);
+                this.columnidInterior = new global::System.Data.DataColumn("idInterior", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidInterior);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidProperty}, true));
                 this.columnidProperty.AllowDBNull = false;
@@ -2855,6 +2849,8 @@ namespace TA_RealEstate_Kel11 {
                 this.columnukuran.MaxLength = 50;
                 this.columnfasilitas.MaxLength = 100;
                 this.columnharga.AllowDBNull = false;
+                this.columnidInterior.AllowDBNull = false;
+                this.columnidInterior.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3269,17 +3265,15 @@ namespace TA_RealEstate_Kel11 {
             
             private global::System.Data.DataColumn columnharga;
             
-            private global::System.Data.DataColumn columnidKategoriBayar;
+            private global::System.Data.DataColumn columnpembayaran;
             
             private global::System.Data.DataColumn columnidCicilan;
-            
-            private global::System.Data.DataColumn columnlamaCicilan;
             
             private global::System.Data.DataColumn columnperBulan;
             
             private global::System.Data.DataColumn columndp;
             
-            private global::System.Data.DataColumn columntotalBayar;
+            private global::System.Data.DataColumn columntotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -3340,9 +3334,9 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idKategoriBayarColumn {
+            public global::System.Data.DataColumn pembayaranColumn {
                 get {
-                    return this.columnidKategoriBayar;
+                    return this.columnpembayaran;
                 }
             }
             
@@ -3351,14 +3345,6 @@ namespace TA_RealEstate_Kel11 {
             public global::System.Data.DataColumn idCicilanColumn {
                 get {
                     return this.columnidCicilan;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn lamaCicilanColumn {
-                get {
-                    return this.columnlamaCicilan;
                 }
             }
             
@@ -3380,9 +3366,9 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn totalBayarColumn {
+            public global::System.Data.DataColumn totalColumn {
                 get {
-                    return this.columntotalBayar;
+                    return this.columntotal;
                 }
             }
             
@@ -3423,23 +3409,19 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tDetailPembelianRow AddtDetailPembelianRow(string idTBeli, propertyRow parentpropertyRowByFK_tDetailPembelian_property, int harga, kategoriBayarRow parentkategoriBayarRowByFK_tDetailPembelian_kategoriBayar, kategoriCicilanRow parentkategoriCicilanRowByFK_tDetailPembelian_kategoriCicilan, int lamaCicilan, int perBulan, int dp, int totalBayar) {
+            public tDetailPembelianRow AddtDetailPembelianRow(string idTBeli, propertyRow parentpropertyRowByFK_tDetailPembelian_property, int harga, string pembayaran, kategoriCicilanRow parentkategoriCicilanRowByFK_tDetailPembelian_kategoriCicilan, int perBulan, int dp, int total) {
                 tDetailPembelianRow rowtDetailPembelianRow = ((tDetailPembelianRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idTBeli,
                         null,
                         harga,
+                        pembayaran,
                         null,
-                        null,
-                        lamaCicilan,
                         perBulan,
                         dp,
-                        totalBayar};
+                        total};
                 if ((parentpropertyRowByFK_tDetailPembelian_property != null)) {
                     columnValuesArray[1] = parentpropertyRowByFK_tDetailPembelian_property[0];
-                }
-                if ((parentkategoriBayarRowByFK_tDetailPembelian_kategoriBayar != null)) {
-                    columnValuesArray[3] = parentkategoriBayarRowByFK_tDetailPembelian_kategoriBayar[0];
                 }
                 if ((parentkategoriCicilanRowByFK_tDetailPembelian_kategoriCicilan != null)) {
                     columnValuesArray[4] = parentkategoriCicilanRowByFK_tDetailPembelian_kategoriCicilan[0];
@@ -3476,12 +3458,11 @@ namespace TA_RealEstate_Kel11 {
                 this.columnidTBeli = base.Columns["idTBeli"];
                 this.columnidProperty = base.Columns["idProperty"];
                 this.columnharga = base.Columns["harga"];
-                this.columnidKategoriBayar = base.Columns["idKategoriBayar"];
+                this.columnpembayaran = base.Columns["pembayaran"];
                 this.columnidCicilan = base.Columns["idCicilan"];
-                this.columnlamaCicilan = base.Columns["lamaCicilan"];
                 this.columnperBulan = base.Columns["perBulan"];
                 this.columndp = base.Columns["dp"];
-                this.columntotalBayar = base.Columns["totalBayar"];
+                this.columntotal = base.Columns["total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3493,18 +3474,16 @@ namespace TA_RealEstate_Kel11 {
                 base.Columns.Add(this.columnidProperty);
                 this.columnharga = new global::System.Data.DataColumn("harga", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnharga);
-                this.columnidKategoriBayar = new global::System.Data.DataColumn("idKategoriBayar", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidKategoriBayar);
+                this.columnpembayaran = new global::System.Data.DataColumn("pembayaran", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpembayaran);
                 this.columnidCicilan = new global::System.Data.DataColumn("idCicilan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidCicilan);
-                this.columnlamaCicilan = new global::System.Data.DataColumn("lamaCicilan", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlamaCicilan);
                 this.columnperBulan = new global::System.Data.DataColumn("perBulan", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnperBulan);
                 this.columndp = new global::System.Data.DataColumn("dp", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndp);
-                this.columntotalBayar = new global::System.Data.DataColumn("totalBayar", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotalBayar);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidTBeli}, true));
                 this.columnidTBeli.AllowDBNull = false;
@@ -3513,10 +3492,10 @@ namespace TA_RealEstate_Kel11 {
                 this.columnidProperty.AllowDBNull = false;
                 this.columnidProperty.MaxLength = 5;
                 this.columnharga.AllowDBNull = false;
-                this.columnidKategoriBayar.AllowDBNull = false;
-                this.columnidKategoriBayar.MaxLength = 5;
+                this.columnpembayaran.AllowDBNull = false;
+                this.columnpembayaran.MaxLength = 50;
                 this.columnidCicilan.MaxLength = 5;
-                this.columntotalBayar.AllowDBNull = false;
+                this.columntotal.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3660,17 +3639,15 @@ namespace TA_RealEstate_Kel11 {
             
             private global::System.Data.DataColumn columnsampai;
             
-            private global::System.Data.DataColumn columnidKategoriBayar;
+            private global::System.Data.DataColumn columnpembayaran;
             
             private global::System.Data.DataColumn columnidCicilan;
-            
-            private global::System.Data.DataColumn columnlamaCicilan;
             
             private global::System.Data.DataColumn columnperBulan;
             
             private global::System.Data.DataColumn columndp;
             
-            private global::System.Data.DataColumn columntotalBayar;
+            private global::System.Data.DataColumn columntotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -3747,9 +3724,9 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn idKategoriBayarColumn {
+            public global::System.Data.DataColumn pembayaranColumn {
                 get {
-                    return this.columnidKategoriBayar;
+                    return this.columnpembayaran;
                 }
             }
             
@@ -3758,14 +3735,6 @@ namespace TA_RealEstate_Kel11 {
             public global::System.Data.DataColumn idCicilanColumn {
                 get {
                     return this.columnidCicilan;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn lamaCicilanColumn {
-                get {
-                    return this.columnlamaCicilan;
                 }
             }
             
@@ -3787,9 +3756,9 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn totalBayarColumn {
+            public global::System.Data.DataColumn totalColumn {
                 get {
-                    return this.columntotalBayar;
+                    return this.columntotal;
                 }
             }
             
@@ -3830,7 +3799,7 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tDetailPenyewaanRow AddtDetailPenyewaanRow(string idTSewa, propertyRow parentpropertyRowByFK_tDetailPenyewaan_property1, int harga, System.DateTime mulaiSewa, System.DateTime sampai, kategoriBayarRow parentkategoriBayarRowByFK_tDetailPenyewaan_kategoriBayar, kategoriCicilanRow parentkategoriCicilanRowByFK_tDetailPenyewaan_kategoriCicilan, int lamaCicilan, int perBulan, int dp, int totalBayar) {
+            public tDetailPenyewaanRow AddtDetailPenyewaanRow(string idTSewa, propertyRow parentpropertyRowByFK_tDetailPenyewaan_property, int harga, System.DateTime mulaiSewa, System.DateTime sampai, string pembayaran, kategoriCicilanRow parentkategoriCicilanRowByFK_tDetailPenyewaan_kategoriCicilan, int perBulan, int dp, int total) {
                 tDetailPenyewaanRow rowtDetailPenyewaanRow = ((tDetailPenyewaanRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         idTSewa,
@@ -3838,17 +3807,13 @@ namespace TA_RealEstate_Kel11 {
                         harga,
                         mulaiSewa,
                         sampai,
+                        pembayaran,
                         null,
-                        null,
-                        lamaCicilan,
                         perBulan,
                         dp,
-                        totalBayar};
-                if ((parentpropertyRowByFK_tDetailPenyewaan_property1 != null)) {
-                    columnValuesArray[1] = parentpropertyRowByFK_tDetailPenyewaan_property1[0];
-                }
-                if ((parentkategoriBayarRowByFK_tDetailPenyewaan_kategoriBayar != null)) {
-                    columnValuesArray[5] = parentkategoriBayarRowByFK_tDetailPenyewaan_kategoriBayar[0];
+                        total};
+                if ((parentpropertyRowByFK_tDetailPenyewaan_property != null)) {
+                    columnValuesArray[1] = parentpropertyRowByFK_tDetailPenyewaan_property[0];
                 }
                 if ((parentkategoriCicilanRowByFK_tDetailPenyewaan_kategoriCicilan != null)) {
                     columnValuesArray[6] = parentkategoriCicilanRowByFK_tDetailPenyewaan_kategoriCicilan[0];
@@ -3887,12 +3852,11 @@ namespace TA_RealEstate_Kel11 {
                 this.columnharga = base.Columns["harga"];
                 this.columnmulaiSewa = base.Columns["mulaiSewa"];
                 this.columnsampai = base.Columns["sampai"];
-                this.columnidKategoriBayar = base.Columns["idKategoriBayar"];
+                this.columnpembayaran = base.Columns["pembayaran"];
                 this.columnidCicilan = base.Columns["idCicilan"];
-                this.columnlamaCicilan = base.Columns["lamaCicilan"];
                 this.columnperBulan = base.Columns["perBulan"];
                 this.columndp = base.Columns["dp"];
-                this.columntotalBayar = base.Columns["totalBayar"];
+                this.columntotal = base.Columns["total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3908,18 +3872,16 @@ namespace TA_RealEstate_Kel11 {
                 base.Columns.Add(this.columnmulaiSewa);
                 this.columnsampai = new global::System.Data.DataColumn("sampai", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnsampai);
-                this.columnidKategoriBayar = new global::System.Data.DataColumn("idKategoriBayar", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidKategoriBayar);
+                this.columnpembayaran = new global::System.Data.DataColumn("pembayaran", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnpembayaran);
                 this.columnidCicilan = new global::System.Data.DataColumn("idCicilan", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnidCicilan);
-                this.columnlamaCicilan = new global::System.Data.DataColumn("lamaCicilan", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnlamaCicilan);
                 this.columnperBulan = new global::System.Data.DataColumn("perBulan", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnperBulan);
                 this.columndp = new global::System.Data.DataColumn("dp", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndp);
-                this.columntotalBayar = new global::System.Data.DataColumn("totalBayar", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotalBayar);
+                this.columntotal = new global::System.Data.DataColumn("total", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntotal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnidTSewa}, true));
                 this.columnidTSewa.AllowDBNull = false;
@@ -3930,10 +3892,10 @@ namespace TA_RealEstate_Kel11 {
                 this.columnharga.AllowDBNull = false;
                 this.columnmulaiSewa.AllowDBNull = false;
                 this.columnsampai.AllowDBNull = false;
-                this.columnidKategoriBayar.AllowDBNull = false;
-                this.columnidKategoriBayar.MaxLength = 5;
+                this.columnpembayaran.AllowDBNull = false;
+                this.columnpembayaran.MaxLength = 50;
                 this.columnidCicilan.MaxLength = 5;
-                this.columntotalBayar.AllowDBNull = false;
+                this.columntotal.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -4848,6 +4810,54 @@ namespace TA_RealEstate_Kel11 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
+        public partial class desainInteriorRow : global::System.Data.DataRow {
+            
+            private desainInteriorDataTable tabledesainInterior;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal desainInteriorRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tabledesainInterior = ((desainInteriorDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string idInterior {
+                get {
+                    return ((string)(this[this.tabledesainInterior.idInteriorColumn]));
+                }
+                set {
+                    this[this.tabledesainInterior.idInteriorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string interior {
+                get {
+                    return ((string)(this[this.tabledesainInterior.interiorColumn]));
+                }
+                set {
+                    this[this.tabledesainInterior.interiorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public propertyRow[] GetpropertyRows() {
+                if ((this.Table.ChildRelations["FK_property_desainInterior"] == null)) {
+                    return new propertyRow[0];
+                }
+                else {
+                    return ((propertyRow[])(base.GetChildRows(this.Table.ChildRelations["FK_property_desainInterior"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
         public partial class jabatanRow : global::System.Data.DataRow {
             
             private jabatanDataTable tablejabatan;
@@ -4896,93 +4906,6 @@ namespace TA_RealEstate_Kel11 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class kategoriBayarRow : global::System.Data.DataRow {
-            
-            private kategoriBayarDataTable tablekategoriBayar;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal kategoriBayarRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablekategoriBayar = ((kategoriBayarDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string idKategoriBayar {
-                get {
-                    return ((string)(this[this.tablekategoriBayar.idKategoriBayarColumn]));
-                }
-                set {
-                    this[this.tablekategoriBayar.idKategoriBayarColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string kategoriBayar {
-                get {
-                    return ((string)(this[this.tablekategoriBayar.kategoriBayarColumn]));
-                }
-                set {
-                    this[this.tablekategoriBayar.kategoriBayarColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string keterangan {
-                get {
-                    try {
-                        return ((string)(this[this.tablekategoriBayar.keteranganColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'keterangan\' in table \'kategoriBayar\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablekategoriBayar.keteranganColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsketeranganNull() {
-                return this.IsNull(this.tablekategoriBayar.keteranganColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetketeranganNull() {
-                this[this.tablekategoriBayar.keteranganColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tDetailPembelianRow[] GettDetailPembelianRows() {
-                if ((this.Table.ChildRelations["FK_tDetailPembelian_kategoriBayar"] == null)) {
-                    return new tDetailPembelianRow[0];
-                }
-                else {
-                    return ((tDetailPembelianRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tDetailPembelian_kategoriBayar"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tDetailPenyewaanRow[] GettDetailPenyewaanRows() {
-                if ((this.Table.ChildRelations["FK_tDetailPenyewaan_kategoriBayar"] == null)) {
-                    return new tDetailPenyewaanRow[0];
-                }
-                else {
-                    return ((tDetailPenyewaanRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tDetailPenyewaan_kategoriBayar"])));
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class kategoriCicilanRow : global::System.Data.DataRow {
             
             private kategoriCicilanDataTable tablekategoriCicilan;
@@ -5007,9 +4930,9 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string cicilan {
+            public int cicilan {
                 get {
-                    return ((string)(this[this.tablekategoriCicilan.cicilanColumn]));
+                    return ((int)(this[this.tablekategoriCicilan.cicilanColumn]));
                 }
                 set {
                     this[this.tablekategoriCicilan.cicilanColumn] = value;
@@ -5310,9 +5233,9 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int harga {
+            public decimal harga {
                 get {
-                    return ((int)(this[this.tableproperty.hargaColumn]));
+                    return ((decimal)(this[this.tableproperty.hargaColumn]));
                 }
                 set {
                     this[this.tableproperty.hargaColumn] = value;
@@ -5332,6 +5255,28 @@ namespace TA_RealEstate_Kel11 {
                 }
                 set {
                     this[this.tableproperty.gambarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string idInterior {
+                get {
+                    return ((string)(this[this.tableproperty.idInteriorColumn]));
+                }
+                set {
+                    this[this.tableproperty.idInteriorColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public desainInteriorRow desainInteriorRow {
+                get {
+                    return ((desainInteriorRow)(this.GetParentRow(this.Table.ParentRelations["FK_property_desainInterior"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_property_desainInterior"]);
                 }
             }
             
@@ -5395,11 +5340,11 @@ namespace TA_RealEstate_Kel11 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public tDetailPenyewaanRow[] GettDetailPenyewaanRows() {
-                if ((this.Table.ChildRelations["FK_tDetailPenyewaan_property1"] == null)) {
+                if ((this.Table.ChildRelations["FK_tDetailPenyewaan_property"] == null)) {
                     return new tDetailPenyewaanRow[0];
                 }
                 else {
-                    return ((tDetailPenyewaanRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tDetailPenyewaan_property1"])));
+                    return ((tDetailPenyewaanRow[])(base.GetChildRows(this.Table.ChildRelations["FK_tDetailPenyewaan_property"])));
                 }
             }
             
@@ -5523,12 +5468,12 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string idKategoriBayar {
+            public string pembayaran {
                 get {
-                    return ((string)(this[this.tabletDetailPembelian.idKategoriBayarColumn]));
+                    return ((string)(this[this.tabletDetailPembelian.pembayaranColumn]));
                 }
                 set {
-                    this[this.tabletDetailPembelian.idKategoriBayarColumn] = value;
+                    this[this.tabletDetailPembelian.pembayaranColumn] = value;
                 }
             }
             
@@ -5545,22 +5490,6 @@ namespace TA_RealEstate_Kel11 {
                 }
                 set {
                     this[this.tabletDetailPembelian.idCicilanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int lamaCicilan {
-                get {
-                    try {
-                        return ((int)(this[this.tabletDetailPembelian.lamaCicilanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lamaCicilan\' in table \'tDetailPembelian\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletDetailPembelian.lamaCicilanColumn] = value;
                 }
             }
             
@@ -5598,23 +5527,12 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int totalBayar {
+            public int total {
                 get {
-                    return ((int)(this[this.tabletDetailPembelian.totalBayarColumn]));
+                    return ((int)(this[this.tabletDetailPembelian.totalColumn]));
                 }
                 set {
-                    this[this.tabletDetailPembelian.totalBayarColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow kategoriBayarRow {
-                get {
-                    return ((kategoriBayarRow)(this.GetParentRow(this.Table.ParentRelations["FK_tDetailPembelian_kategoriBayar"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tDetailPembelian_kategoriBayar"]);
+                    this[this.tabletDetailPembelian.totalColumn] = value;
                 }
             }
             
@@ -5650,18 +5568,6 @@ namespace TA_RealEstate_Kel11 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetidCicilanNull() {
                 this[this.tabletDetailPembelian.idCicilanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IslamaCicilanNull() {
-                return this.IsNull(this.tabletDetailPembelian.lamaCicilanColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetlamaCicilanNull() {
-                this[this.tabletDetailPembelian.lamaCicilanColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5760,12 +5666,12 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string idKategoriBayar {
+            public string pembayaran {
                 get {
-                    return ((string)(this[this.tabletDetailPenyewaan.idKategoriBayarColumn]));
+                    return ((string)(this[this.tabletDetailPenyewaan.pembayaranColumn]));
                 }
                 set {
-                    this[this.tabletDetailPenyewaan.idKategoriBayarColumn] = value;
+                    this[this.tabletDetailPenyewaan.pembayaranColumn] = value;
                 }
             }
             
@@ -5782,22 +5688,6 @@ namespace TA_RealEstate_Kel11 {
                 }
                 set {
                     this[this.tabletDetailPenyewaan.idCicilanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int lamaCicilan {
-                get {
-                    try {
-                        return ((int)(this[this.tabletDetailPenyewaan.lamaCicilanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'lamaCicilan\' in table \'tDetailPenyewaan\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tabletDetailPenyewaan.lamaCicilanColumn] = value;
                 }
             }
             
@@ -5835,23 +5725,12 @@ namespace TA_RealEstate_Kel11 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int totalBayar {
+            public int total {
                 get {
-                    return ((int)(this[this.tabletDetailPenyewaan.totalBayarColumn]));
+                    return ((int)(this[this.tabletDetailPenyewaan.totalColumn]));
                 }
                 set {
-                    this[this.tabletDetailPenyewaan.totalBayarColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow kategoriBayarRow {
-                get {
-                    return ((kategoriBayarRow)(this.GetParentRow(this.Table.ParentRelations["FK_tDetailPenyewaan_kategoriBayar"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tDetailPenyewaan_kategoriBayar"]);
+                    this[this.tabletDetailPenyewaan.totalColumn] = value;
                 }
             }
             
@@ -5870,10 +5749,10 @@ namespace TA_RealEstate_Kel11 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public propertyRow propertyRow {
                 get {
-                    return ((propertyRow)(this.GetParentRow(this.Table.ParentRelations["FK_tDetailPenyewaan_property1"])));
+                    return ((propertyRow)(this.GetParentRow(this.Table.ParentRelations["FK_tDetailPenyewaan_property"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_tDetailPenyewaan_property1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_tDetailPenyewaan_property"]);
                 }
             }
             
@@ -5887,18 +5766,6 @@ namespace TA_RealEstate_Kel11 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetidCicilanNull() {
                 this[this.tabletDetailPenyewaan.idCicilanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IslamaCicilanNull() {
-                return this.IsNull(this.tabletDetailPenyewaan.lamaCicilanColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetlamaCicilanNull() {
-                this[this.tabletDetailPenyewaan.lamaCicilanColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6238,22 +6105,22 @@ namespace TA_RealEstate_Kel11 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class jabatanRowChangeEvent : global::System.EventArgs {
+        public class desainInteriorRowChangeEvent : global::System.EventArgs {
             
-            private jabatanRow eventRow;
+            private desainInteriorRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public jabatanRowChangeEvent(jabatanRow row, global::System.Data.DataRowAction action) {
+            public desainInteriorRowChangeEvent(desainInteriorRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public jabatanRow Row {
+            public desainInteriorRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -6272,22 +6139,22 @@ namespace TA_RealEstate_Kel11 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class kategoriBayarRowChangeEvent : global::System.EventArgs {
+        public class jabatanRowChangeEvent : global::System.EventArgs {
             
-            private kategoriBayarRow eventRow;
+            private jabatanRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRowChangeEvent(kategoriBayarRow row, global::System.Data.DataRowAction action) {
+            public jabatanRowChangeEvent(jabatanRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public kategoriBayarRow Row {
+            public jabatanRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -7078,6 +6945,348 @@ SELECT idClient, nama, jeniskelamin, telepon, email, alamat FROM client WHERE (i
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class desainInteriorTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public desainInteriorTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "desainInterior";
+            tableMapping.ColumnMappings.Add("idInterior", "idInterior");
+            tableMapping.ColumnMappings.Add("interior", "interior");
+            this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[desainInterior] WHERE (([idInterior] = @Original_idInterior) A" +
+                "ND ([interior] = @Original_interior))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_interior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "interior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.InsertCommand.Connection = this.Connection;
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[desainInterior] ([idInterior], [interior]) VALUES (@idInterior" +
+                ", @interior);\r\nSELECT idInterior, interior FROM desainInterior WHERE (idInterior" +
+                " = @idInterior)";
+            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@interior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "interior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[desainInterior] SET [idInterior] = @idInterior, [interior] = @inter" +
+                "ior WHERE (([idInterior] = @Original_idInterior) AND ([interior] = @Original_int" +
+                "erior));\r\nSELECT idInterior, interior FROM desainInterior WHERE (idInterior = @i" +
+                "dInterior)";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@interior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "interior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_interior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "interior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT idInterior, interior FROM dbo.desainInterior";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(REALESTATEDataSet.desainInteriorDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual REALESTATEDataSet.desainInteriorDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            REALESTATEDataSet.desainInteriorDataTable dataTable = new REALESTATEDataSet.desainInteriorDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(REALESTATEDataSet.desainInteriorDataTable dataTable) {
+            return this.Adapter.Update(dataTable);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(REALESTATEDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "desainInterior");
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow dataRow) {
+            return this.Adapter.Update(new global::System.Data.DataRow[] {
+                        dataRow});
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(global::System.Data.DataRow[] dataRows) {
+            return this.Adapter.Update(dataRows);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_idInterior, string Original_interior) {
+            if ((Original_idInterior == null)) {
+                throw new global::System.ArgumentNullException("Original_idInterior");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_idInterior));
+            }
+            if ((Original_interior == null)) {
+                throw new global::System.ArgumentNullException("Original_interior");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_interior));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string idInterior, string interior) {
+            if ((idInterior == null)) {
+                throw new global::System.ArgumentNullException("idInterior");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(idInterior));
+            }
+            if ((interior == null)) {
+                throw new global::System.ArgumentNullException("interior");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(interior));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
+            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.InsertCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.InsertCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string idInterior, string interior, string Original_idInterior, string Original_interior) {
+            if ((idInterior == null)) {
+                throw new global::System.ArgumentNullException("idInterior");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(idInterior));
+            }
+            if ((interior == null)) {
+                throw new global::System.ArgumentNullException("interior");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(interior));
+            }
+            if ((Original_idInterior == null)) {
+                throw new global::System.ArgumentNullException("Original_idInterior");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_idInterior));
+            }
+            if ((Original_interior == null)) {
+                throw new global::System.ArgumentNullException("Original_interior");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_interior));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string interior, string Original_idInterior, string Original_interior) {
+            return this.Update(Original_idInterior, interior, Original_idInterior, Original_interior);
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class jabatanTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -7418,383 +7627,6 @@ SELECT idClient, nama, jeniskelamin, telepon, email, alamat FROM client WHERE (i
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class kategoriBayarTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public kategoriBayarTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "kategoriBayar";
-            tableMapping.ColumnMappings.Add("idKategoriBayar", "idKategoriBayar");
-            tableMapping.ColumnMappings.Add("kategoriBayar", "kategoriBayar");
-            tableMapping.ColumnMappings.Add("keterangan", "keterangan");
-            this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[kategoriBayar] WHERE (([idKategoriBayar] = @Original_idKategor" +
-                "iBayar) AND ([kategoriBayar] = @Original_kategoriBayar) AND ((@IsNull_keterangan" +
-                " = 1 AND [keterangan] IS NULL) OR ([keterangan] = @Original_keterangan)))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_kategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "kategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_keterangan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "keterangan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_keterangan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "keterangan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[kategoriBayar] ([idKategoriBayar], [kategoriBayar], [keteranga" +
-                "n]) VALUES (@idKategoriBayar, @kategoriBayar, @keterangan);\r\nSELECT idKategoriBa" +
-                "yar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKategoriBayar = @idKa" +
-                "tegoriBayar)";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@kategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "kategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@keterangan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "keterangan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[kategoriBayar] SET [idKategoriBayar] = @idKategoriBayar, [kategoriBayar] = @kategoriBayar, [keterangan] = @keterangan WHERE (([idKategoriBayar] = @Original_idKategoriBayar) AND ([kategoriBayar] = @Original_kategoriBayar) AND ((@IsNull_keterangan = 1 AND [keterangan] IS NULL) OR ([keterangan] = @Original_keterangan)));
-SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKategoriBayar = @idKategoriBayar)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@kategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "kategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@keterangan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "keterangan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_kategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "kategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_keterangan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "keterangan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_keterangan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "keterangan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::TA_RealEstate_Kel11.Properties.Settings.Default.REALESTATEConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idKategoriBayar, kategoriBayar, keterangan FROM dbo.kategoriBayar";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(REALESTATEDataSet.kategoriBayarDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual REALESTATEDataSet.kategoriBayarDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            REALESTATEDataSet.kategoriBayarDataTable dataTable = new REALESTATEDataSet.kategoriBayarDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(REALESTATEDataSet.kategoriBayarDataTable dataTable) {
-            return this.Adapter.Update(dataTable);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(REALESTATEDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "kategoriBayar");
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow dataRow) {
-            return this.Adapter.Update(new global::System.Data.DataRow[] {
-                        dataRow});
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(global::System.Data.DataRow[] dataRows) {
-            return this.Adapter.Update(dataRows);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_idKategoriBayar, string Original_kategoriBayar, string Original_keterangan) {
-            if ((Original_idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_idKategoriBayar");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_idKategoriBayar));
-            }
-            if ((Original_kategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_kategoriBayar");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_kategoriBayar));
-            }
-            if ((Original_keterangan == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_keterangan));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string idKategoriBayar, string kategoriBayar, string keterangan) {
-            if ((idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("idKategoriBayar");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(idKategoriBayar));
-            }
-            if ((kategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("kategoriBayar");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(kategoriBayar));
-            }
-            if ((keterangan == null)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(keterangan));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string idKategoriBayar, string kategoriBayar, string keterangan, string Original_idKategoriBayar, string Original_kategoriBayar, string Original_keterangan) {
-            if ((idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("idKategoriBayar");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(idKategoriBayar));
-            }
-            if ((kategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("kategoriBayar");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(kategoriBayar));
-            }
-            if ((keterangan == null)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(keterangan));
-            }
-            if ((Original_idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_idKategoriBayar");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_idKategoriBayar));
-            }
-            if ((Original_kategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_kategoriBayar");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_kategoriBayar));
-            }
-            if ((Original_keterangan == null)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_keterangan));
-            }
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string kategoriBayar, string keterangan, string Original_idKategoriBayar, string Original_kategoriBayar, string Original_keterangan) {
-            return this.Update(Original_idKategoriBayar, kategoriBayar, keterangan, Original_idKategoriBayar, Original_kategoriBayar, Original_keterangan);
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class kategoriCicilanTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -7916,7 +7748,7 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
                 "D ([cicilan] = @Original_cicilan))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[kategoriCicilan] ([idCicilan], [cicilan]) VALUES (@idCicilan, " +
@@ -7924,7 +7756,7 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
                 "dCicilan)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
             this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[kategoriCicilan] SET [idCicilan] = @idCicilan, [cicilan] = @cicilan" +
@@ -7933,9 +7765,9 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
                 "";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8012,19 +7844,14 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_idCicilan, string Original_cicilan) {
+        public virtual int Delete(string Original_idCicilan, int Original_cicilan) {
             if ((Original_idCicilan == null)) {
                 throw new global::System.ArgumentNullException("Original_idCicilan");
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_idCicilan));
             }
-            if ((Original_cicilan == null)) {
-                throw new global::System.ArgumentNullException("Original_cicilan");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_cicilan));
-            }
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_cicilan));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8045,19 +7872,14 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string idCicilan, string cicilan) {
+        public virtual int Insert(string idCicilan, int cicilan) {
             if ((idCicilan == null)) {
                 throw new global::System.ArgumentNullException("idCicilan");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(idCicilan));
             }
-            if ((cicilan == null)) {
-                throw new global::System.ArgumentNullException("cicilan");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(cicilan));
-            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(cicilan));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8078,31 +7900,21 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string idCicilan, string cicilan, string Original_idCicilan, string Original_cicilan) {
+        public virtual int Update(string idCicilan, int cicilan, string Original_idCicilan, int Original_cicilan) {
             if ((idCicilan == null)) {
                 throw new global::System.ArgumentNullException("idCicilan");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(idCicilan));
             }
-            if ((cicilan == null)) {
-                throw new global::System.ArgumentNullException("cicilan");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(cicilan));
-            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(cicilan));
             if ((Original_idCicilan == null)) {
                 throw new global::System.ArgumentNullException("Original_idCicilan");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Original_idCicilan));
             }
-            if ((Original_cicilan == null)) {
-                throw new global::System.ArgumentNullException("Original_cicilan");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(Original_cicilan));
-            }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_cicilan));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8123,7 +7935,7 @@ SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKa
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string cicilan, string Original_idCicilan, string Original_cicilan) {
+        public virtual int Update(int cicilan, string Original_idCicilan, int Original_cicilan) {
             return this.Update(Original_idCicilan, cicilan, Original_idCicilan, Original_cicilan);
         }
     }
@@ -9169,10 +8981,11 @@ SELECT idPemilik, nama, jeniskelamin, telepon, email, alamat FROM pemilik WHERE 
             tableMapping.ColumnMappings.Add("fasilitas", "fasilitas");
             tableMapping.ColumnMappings.Add("harga", "harga");
             tableMapping.ColumnMappings.Add("gambar", "gambar");
+            tableMapping.ColumnMappings.Add("idInterior", "idInterior");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[property] WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[property] WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga) AND ([idInterior] = @Original_idInterior))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_namaProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "namaProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9181,11 +8994,12 @@ SELECT idPemilik, nama, jeniskelamin, telepon, email, alamat FROM pemilik WHERE 
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ukuran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ukuran", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fasilitas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fasilitas", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fasilitas", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fasilitas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[property] ([idProperty], [namaProperty], [idTipe], [idPemilik], [ukuran], [fasilitas], [harga], [gambar]) VALUES (@idProperty, @namaProperty, @idTipe, @idPemilik, @ukuran, @fasilitas, @harga, @gambar);
-SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar FROM property WHERE (idProperty = @idProperty)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[property] ([idProperty], [namaProperty], [idTipe], [idPemilik], [ukuran], [fasilitas], [harga], [gambar], [idInterior]) VALUES (@idProperty, @namaProperty, @idTipe, @idPemilik, @ukuran, @fasilitas, @harga, @gambar, @idInterior);
+SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior FROM property WHERE (idProperty = @idProperty)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@namaProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "namaProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9193,12 +9007,13 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPemilik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPemilik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ukuran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ukuran", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fasilitas", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fasilitas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gambar", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gambar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[property] SET [idProperty] = @idProperty, [namaProperty] = @namaProperty, [idTipe] = @idTipe, [idPemilik] = @idPemilik, [ukuran] = @ukuran, [fasilitas] = @fasilitas, [harga] = @harga, [gambar] = @gambar WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga));
-SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar FROM property WHERE (idProperty = @idProperty)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[property] SET [idProperty] = @idProperty, [namaProperty] = @namaProperty, [idTipe] = @idTipe, [idPemilik] = @idPemilik, [ukuran] = @ukuran, [fasilitas] = @fasilitas, [harga] = @harga, [gambar] = @gambar, [idInterior] = @idInterior WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga) AND ([idInterior] = @Original_idInterior));
+SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior FROM property WHERE (idProperty = @idProperty)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@namaProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "namaProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -9206,8 +9021,9 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idPemilik", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idPemilik", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ukuran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ukuran", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fasilitas", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fasilitas", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gambar", global::System.Data.SqlDbType.Image, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gambar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_namaProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "namaProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTipe", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTipe", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -9215,7 +9031,8 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_ukuran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ukuran", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_fasilitas", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fasilitas", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_fasilitas", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fasilitas", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idInterior", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idInterior", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9232,7 +9049,7 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gam" +
-                "bar FROM dbo.property";
+                "bar, idInterior FROM dbo.property";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9293,7 +9110,7 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_idProperty, string Original_namaProperty, string Original_idTipe, string Original_idPemilik, string Original_ukuran, string Original_fasilitas, int Original_harga) {
+        public virtual int Delete(string Original_idProperty, string Original_namaProperty, string Original_idTipe, string Original_idPemilik, string Original_ukuran, string Original_fasilitas, decimal Original_harga, string Original_idInterior) {
             if ((Original_idProperty == null)) {
                 throw new global::System.ArgumentNullException("Original_idProperty");
             }
@@ -9332,7 +9149,13 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_fasilitas));
             }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_harga));
+            this.Adapter.DeleteCommand.Parameters[7].Value = ((decimal)(Original_harga));
+            if ((Original_idInterior == null)) {
+                throw new global::System.ArgumentNullException("Original_idInterior");
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_idInterior));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9353,7 +9176,7 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string idProperty, string namaProperty, string idTipe, string idPemilik, string ukuran, string fasilitas, int harga, byte[] gambar) {
+        public virtual int Insert(string idProperty, string namaProperty, string idTipe, string idPemilik, string ukuran, string fasilitas, decimal harga, byte[] gambar, string idInterior) {
             if ((idProperty == null)) {
                 throw new global::System.ArgumentNullException("idProperty");
             }
@@ -9390,12 +9213,18 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((string)(fasilitas));
             }
-            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(harga));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((decimal)(harga));
             if ((gambar == null)) {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = ((byte[])(gambar));
+            }
+            if ((idInterior == null)) {
+                throw new global::System.ArgumentNullException("idInterior");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((string)(idInterior));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -9417,7 +9246,24 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string idProperty, string namaProperty, string idTipe, string idPemilik, string ukuran, string fasilitas, int harga, byte[] gambar, string Original_idProperty, string Original_namaProperty, string Original_idTipe, string Original_idPemilik, string Original_ukuran, string Original_fasilitas, int Original_harga) {
+        public virtual int Update(
+                    string idProperty, 
+                    string namaProperty, 
+                    string idTipe, 
+                    string idPemilik, 
+                    string ukuran, 
+                    string fasilitas, 
+                    decimal harga, 
+                    byte[] gambar, 
+                    string idInterior, 
+                    string Original_idProperty, 
+                    string Original_namaProperty, 
+                    string Original_idTipe, 
+                    string Original_idPemilik, 
+                    string Original_ukuran, 
+                    string Original_fasilitas, 
+                    decimal Original_harga, 
+                    string Original_idInterior) {
             if ((idProperty == null)) {
                 throw new global::System.ArgumentNullException("idProperty");
             }
@@ -9454,52 +9300,64 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(fasilitas));
             }
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(harga));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(harga));
             if ((gambar == null)) {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = ((byte[])(gambar));
             }
+            if ((idInterior == null)) {
+                throw new global::System.ArgumentNullException("idInterior");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(idInterior));
+            }
             if ((Original_idProperty == null)) {
                 throw new global::System.ArgumentNullException("Original_idProperty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_idProperty));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_idProperty));
             }
             if ((Original_namaProperty == null)) {
                 throw new global::System.ArgumentNullException("Original_namaProperty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_namaProperty));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_namaProperty));
             }
             if ((Original_idTipe == null)) {
                 throw new global::System.ArgumentNullException("Original_idTipe");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_idTipe));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_idTipe));
             }
             if ((Original_idPemilik == null)) {
                 throw new global::System.ArgumentNullException("Original_idPemilik");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_idPemilik));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_idPemilik));
             }
             if ((Original_ukuran == null)) {
                 throw new global::System.ArgumentNullException("Original_ukuran");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_ukuran));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_ukuran));
             }
             if ((Original_fasilitas == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_fasilitas));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_fasilitas));
             }
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_harga));
+            this.Adapter.UpdateCommand.Parameters[16].Value = ((decimal)(Original_harga));
+            if ((Original_idInterior == null)) {
+                throw new global::System.ArgumentNullException("Original_idInterior");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_idInterior));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -9520,8 +9378,24 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string namaProperty, string idTipe, string idPemilik, string ukuran, string fasilitas, int harga, byte[] gambar, string Original_idProperty, string Original_namaProperty, string Original_idTipe, string Original_idPemilik, string Original_ukuran, string Original_fasilitas, int Original_harga) {
-            return this.Update(Original_idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, Original_idProperty, Original_namaProperty, Original_idTipe, Original_idPemilik, Original_ukuran, Original_fasilitas, Original_harga);
+        public virtual int Update(
+                    string namaProperty, 
+                    string idTipe, 
+                    string idPemilik, 
+                    string ukuran, 
+                    string fasilitas, 
+                    decimal harga, 
+                    byte[] gambar, 
+                    string idInterior, 
+                    string Original_idProperty, 
+                    string Original_namaProperty, 
+                    string Original_idTipe, 
+                    string Original_idPemilik, 
+                    string Original_ukuran, 
+                    string Original_fasilitas, 
+                    decimal Original_harga, 
+                    string Original_idInterior) {
+            return this.Update(Original_idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior, Original_idProperty, Original_namaProperty, Original_idTipe, Original_idPemilik, Original_ukuran, Original_fasilitas, Original_harga, Original_idInterior);
         }
     }
     
@@ -9989,71 +9863,64 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
             tableMapping.ColumnMappings.Add("idTBeli", "idTBeli");
             tableMapping.ColumnMappings.Add("idProperty", "idProperty");
             tableMapping.ColumnMappings.Add("harga", "harga");
-            tableMapping.ColumnMappings.Add("idKategoriBayar", "idKategoriBayar");
+            tableMapping.ColumnMappings.Add("pembayaran", "pembayaran");
             tableMapping.ColumnMappings.Add("idCicilan", "idCicilan");
-            tableMapping.ColumnMappings.Add("lamaCicilan", "lamaCicilan");
             tableMapping.ColumnMappings.Add("perBulan", "perBulan");
             tableMapping.ColumnMappings.Add("dp", "dp");
-            tableMapping.ColumnMappings.Add("totalBayar", "totalBayar");
+            tableMapping.ColumnMappings.Add("total", "total");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tDetailPembelian] WHERE (([idTBeli] = @Original_idTBeli) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([idKategoriBayar] = @Original_idKategoriBayar) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_lamaCicilan = 1 AND [lamaCicilan] IS NULL) OR ([lamaCicilan] = @Original_lamaCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([totalBayar] = @Original_totalBayar))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tDetailPembelian] WHERE (([idTBeli] = @Original_idTBeli) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([pembayaran] = @Original_pembayaran) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([total] = @Original_total))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTBeli", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTBeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tDetailPembelian] ([idTBeli], [idProperty], [harga], [idKategoriBayar], [idCicilan], [lamaCicilan], [perBulan], [dp], [totalBayar]) VALUES (@idTBeli, @idProperty, @harga, @idKategoriBayar, @idCicilan, @lamaCicilan, @perBulan, @dp, @totalBayar);
-SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perBulan, dp, totalBayar FROM tDetailPembelian WHERE (idTBeli = @idTBeli)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tDetailPembelian] ([idTBeli], [idProperty], [harga], [pembayaran], [idCicilan], [perBulan], [dp], [total]) VALUES (@idTBeli, @idProperty, @harga, @pembayaran, @idCicilan, @perBulan, @dp, @total);
+SELECT idTBeli, idProperty, harga, pembayaran, idCicilan, perBulan, dp, total FROM tDetailPembelian WHERE (idTBeli = @idTBeli)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTBeli", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTBeli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tDetailPembelian] SET [idTBeli] = @idTBeli, [idProperty] = @idProperty, [harga] = @harga, [idKategoriBayar] = @idKategoriBayar, [idCicilan] = @idCicilan, [lamaCicilan] = @lamaCicilan, [perBulan] = @perBulan, [dp] = @dp, [totalBayar] = @totalBayar WHERE (([idTBeli] = @Original_idTBeli) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([idKategoriBayar] = @Original_idKategoriBayar) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_lamaCicilan = 1 AND [lamaCicilan] IS NULL) OR ([lamaCicilan] = @Original_lamaCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([totalBayar] = @Original_totalBayar));
-SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perBulan, dp, totalBayar FROM tDetailPembelian WHERE (idTBeli = @idTBeli)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tDetailPembelian] SET [idTBeli] = @idTBeli, [idProperty] = @idProperty, [harga] = @harga, [pembayaran] = @pembayaran, [idCicilan] = @idCicilan, [perBulan] = @perBulan, [dp] = @dp, [total] = @total WHERE (([idTBeli] = @Original_idTBeli) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([pembayaran] = @Original_pembayaran) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([total] = @Original_total));
+SELECT idTBeli, idProperty, harga, pembayaran, idCicilan, perBulan, dp, total FROM tDetailPembelian WHERE (idTBeli = @idTBeli)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTBeli", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTBeli", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTBeli", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTBeli", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10069,8 +9936,8 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perBu" +
-                "lan, dp, totalBayar FROM dbo.tDetailPembelian";
+            this._commandCollection[0].CommandText = "SELECT idTBeli, idProperty, harga, pembayaran, idCicilan, perBulan, dp, total FRO" +
+                "M dbo.tDetailPembelian";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10131,7 +9998,7 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_idTBeli, string Original_idProperty, int Original_harga, string Original_idKategoriBayar, string Original_idCicilan, global::System.Nullable<int> Original_lamaCicilan, global::System.Nullable<int> Original_perBulan, global::System.Nullable<int> Original_dp, int Original_totalBayar) {
+        public virtual int Delete(string Original_idTBeli, string Original_idProperty, int Original_harga, string Original_pembayaran, string Original_idCicilan, global::System.Nullable<int> Original_perBulan, global::System.Nullable<int> Original_dp, int Original_total) {
             if ((Original_idTBeli == null)) {
                 throw new global::System.ArgumentNullException("Original_idTBeli");
             }
@@ -10145,11 +10012,11 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_idProperty));
             }
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_harga));
-            if ((Original_idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_idKategoriBayar");
+            if ((Original_pembayaran == null)) {
+                throw new global::System.ArgumentNullException("Original_pembayaran");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_idKategoriBayar));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_pembayaran));
             }
             if ((Original_idCicilan == null)) {
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
@@ -10159,31 +10026,23 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
                 this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_idCicilan));
             }
-            if ((Original_lamaCicilan.HasValue == true)) {
+            if ((Original_perBulan.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_lamaCicilan.Value));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((int)(Original_perBulan.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((Original_perBulan.HasValue == true)) {
+            if ((Original_dp.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_perBulan.Value));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_dp.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_dp.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_dp.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_totalBayar));
+            this.Adapter.DeleteCommand.Parameters[10].Value = ((int)(Original_total));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10204,7 +10063,7 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string idTBeli, string idProperty, int harga, string idKategoriBayar, string idCicilan, global::System.Nullable<int> lamaCicilan, global::System.Nullable<int> perBulan, global::System.Nullable<int> dp, int totalBayar) {
+        public virtual int Insert(string idTBeli, string idProperty, int harga, string pembayaran, string idCicilan, global::System.Nullable<int> perBulan, global::System.Nullable<int> dp, int total) {
             if ((idTBeli == null)) {
                 throw new global::System.ArgumentNullException("idTBeli");
             }
@@ -10218,11 +10077,11 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(idProperty));
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(harga));
-            if ((idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("idKategoriBayar");
+            if ((pembayaran == null)) {
+                throw new global::System.ArgumentNullException("pembayaran");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(idKategoriBayar));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(pembayaran));
             }
             if ((idCicilan == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -10230,25 +10089,19 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
             else {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((string)(idCicilan));
             }
-            if ((lamaCicilan.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(lamaCicilan.Value));
+            if ((perBulan.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(perBulan.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((perBulan.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(perBulan.Value));
+            if ((dp.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[6].Value = ((int)(dp.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((dp.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(dp.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[8].Value = ((int)(totalBayar));
+            this.Adapter.InsertCommand.Parameters[7].Value = ((int)(total));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10273,21 +10126,19 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
                     string idTBeli, 
                     string idProperty, 
                     int harga, 
-                    string idKategoriBayar, 
+                    string pembayaran, 
                     string idCicilan, 
-                    global::System.Nullable<int> lamaCicilan, 
                     global::System.Nullable<int> perBulan, 
                     global::System.Nullable<int> dp, 
-                    int totalBayar, 
+                    int total, 
                     string Original_idTBeli, 
                     string Original_idProperty, 
                     int Original_harga, 
-                    string Original_idKategoriBayar, 
+                    string Original_pembayaran, 
                     string Original_idCicilan, 
-                    global::System.Nullable<int> Original_lamaCicilan, 
                     global::System.Nullable<int> Original_perBulan, 
                     global::System.Nullable<int> Original_dp, 
-                    int Original_totalBayar) {
+                    int Original_total) {
             if ((idTBeli == null)) {
                 throw new global::System.ArgumentNullException("idTBeli");
             }
@@ -10301,11 +10152,11 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(idProperty));
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(harga));
-            if ((idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("idKategoriBayar");
+            if ((pembayaran == null)) {
+                throw new global::System.ArgumentNullException("pembayaran");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(idKategoriBayar));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(pembayaran));
             }
             if ((idCicilan == null)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
@@ -10313,77 +10164,63 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
             else {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(idCicilan));
             }
-            if ((lamaCicilan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(lamaCicilan.Value));
+            if ((perBulan.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(perBulan.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((perBulan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(perBulan.Value));
+            if ((dp.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(dp.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((dp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(dp.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(totalBayar));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(total));
             if ((Original_idTBeli == null)) {
                 throw new global::System.ArgumentNullException("Original_idTBeli");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_idTBeli));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_idTBeli));
             }
             if ((Original_idProperty == null)) {
                 throw new global::System.ArgumentNullException("Original_idProperty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_idProperty));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_idProperty));
             }
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_harga));
-            if ((Original_idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_idKategoriBayar");
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_harga));
+            if ((Original_pembayaran == null)) {
+                throw new global::System.ArgumentNullException("Original_pembayaran");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_idKategoriBayar));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_pembayaran));
             }
             if ((Original_idCicilan == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_idCicilan));
-            }
-            if ((Original_lamaCicilan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_lamaCicilan.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_idCicilan));
             }
             if ((Original_perBulan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_perBulan.Value));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((int)(Original_perBulan.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
             }
             if ((Original_dp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_dp.Value));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_dp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_totalBayar));
+            this.Adapter.UpdateCommand.Parameters[18].Value = ((int)(Original_total));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10404,25 +10241,8 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    string idProperty, 
-                    int harga, 
-                    string idKategoriBayar, 
-                    string idCicilan, 
-                    global::System.Nullable<int> lamaCicilan, 
-                    global::System.Nullable<int> perBulan, 
-                    global::System.Nullable<int> dp, 
-                    int totalBayar, 
-                    string Original_idTBeli, 
-                    string Original_idProperty, 
-                    int Original_harga, 
-                    string Original_idKategoriBayar, 
-                    string Original_idCicilan, 
-                    global::System.Nullable<int> Original_lamaCicilan, 
-                    global::System.Nullable<int> Original_perBulan, 
-                    global::System.Nullable<int> Original_dp, 
-                    int Original_totalBayar) {
-            return this.Update(Original_idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perBulan, dp, totalBayar, Original_idTBeli, Original_idProperty, Original_harga, Original_idKategoriBayar, Original_idCicilan, Original_lamaCicilan, Original_perBulan, Original_dp, Original_totalBayar);
+        public virtual int Update(string idProperty, int harga, string pembayaran, string idCicilan, global::System.Nullable<int> perBulan, global::System.Nullable<int> dp, int total, string Original_idTBeli, string Original_idProperty, int Original_harga, string Original_pembayaran, string Original_idCicilan, global::System.Nullable<int> Original_perBulan, global::System.Nullable<int> Original_dp, int Original_total) {
+            return this.Update(Original_idTBeli, idProperty, harga, pembayaran, idCicilan, perBulan, dp, total, Original_idTBeli, Original_idProperty, Original_harga, Original_pembayaran, Original_idCicilan, Original_perBulan, Original_dp, Original_total);
         }
     }
     
@@ -10552,79 +10372,72 @@ SELECT idTBeli, idProperty, harga, idKategoriBayar, idCicilan, lamaCicilan, perB
             tableMapping.ColumnMappings.Add("harga", "harga");
             tableMapping.ColumnMappings.Add("mulaiSewa", "mulaiSewa");
             tableMapping.ColumnMappings.Add("sampai", "sampai");
-            tableMapping.ColumnMappings.Add("idKategoriBayar", "idKategoriBayar");
+            tableMapping.ColumnMappings.Add("pembayaran", "pembayaran");
             tableMapping.ColumnMappings.Add("idCicilan", "idCicilan");
-            tableMapping.ColumnMappings.Add("lamaCicilan", "lamaCicilan");
             tableMapping.ColumnMappings.Add("perBulan", "perBulan");
             tableMapping.ColumnMappings.Add("dp", "dp");
-            tableMapping.ColumnMappings.Add("totalBayar", "totalBayar");
+            tableMapping.ColumnMappings.Add("total", "total");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tDetailPenyewaan] WHERE (([idTSewa] = @Original_idTSewa) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([mulaiSewa] = @Original_mulaiSewa) AND ([sampai] = @Original_sampai) AND ([idKategoriBayar] = @Original_idKategoriBayar) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_lamaCicilan = 1 AND [lamaCicilan] IS NULL) OR ([lamaCicilan] = @Original_lamaCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([totalBayar] = @Original_totalBayar))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[tDetailPenyewaan] WHERE (([idTSewa] = @Original_idTSewa) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([mulaiSewa] = @Original_mulaiSewa) AND ([sampai] = @Original_sampai) AND ([pembayaran] = @Original_pembayaran) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([total] = @Original_total))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTSewa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTSewa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mulaiSewa", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mulaiSewa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sampai", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sampai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tDetailPenyewaan] ([idTSewa], [idProperty], [harga], [mulaiSewa], [sampai], [idKategoriBayar], [idCicilan], [lamaCicilan], [perBulan], [dp], [totalBayar]) VALUES (@idTSewa, @idProperty, @harga, @mulaiSewa, @sampai, @idKategoriBayar, @idCicilan, @lamaCicilan, @perBulan, @dp, @totalBayar);
-SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan, lamaCicilan, perBulan, dp, totalBayar FROM tDetailPenyewaan WHERE (idTSewa = @idTSewa)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[tDetailPenyewaan] ([idTSewa], [idProperty], [harga], [mulaiSewa], [sampai], [pembayaran], [idCicilan], [perBulan], [dp], [total]) VALUES (@idTSewa, @idProperty, @harga, @mulaiSewa, @sampai, @pembayaran, @idCicilan, @perBulan, @dp, @total);
+SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, pembayaran, idCicilan, perBulan, dp, total FROM tDetailPenyewaan WHERE (idTSewa = @idTSewa)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTSewa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTSewa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mulaiSewa", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mulaiSewa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sampai", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sampai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tDetailPenyewaan] SET [idTSewa] = @idTSewa, [idProperty] = @idProperty, [harga] = @harga, [mulaiSewa] = @mulaiSewa, [sampai] = @sampai, [idKategoriBayar] = @idKategoriBayar, [idCicilan] = @idCicilan, [lamaCicilan] = @lamaCicilan, [perBulan] = @perBulan, [dp] = @dp, [totalBayar] = @totalBayar WHERE (([idTSewa] = @Original_idTSewa) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([mulaiSewa] = @Original_mulaiSewa) AND ([sampai] = @Original_sampai) AND ([idKategoriBayar] = @Original_idKategoriBayar) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_lamaCicilan = 1 AND [lamaCicilan] IS NULL) OR ([lamaCicilan] = @Original_lamaCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([totalBayar] = @Original_totalBayar));
-SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan, lamaCicilan, perBulan, dp, totalBayar FROM tDetailPenyewaan WHERE (idTSewa = @idTSewa)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[tDetailPenyewaan] SET [idTSewa] = @idTSewa, [idProperty] = @idProperty, [harga] = @harga, [mulaiSewa] = @mulaiSewa, [sampai] = @sampai, [pembayaran] = @pembayaran, [idCicilan] = @idCicilan, [perBulan] = @perBulan, [dp] = @dp, [total] = @total WHERE (([idTSewa] = @Original_idTSewa) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([mulaiSewa] = @Original_mulaiSewa) AND ([sampai] = @Original_sampai) AND ([pembayaran] = @Original_pembayaran) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([total] = @Original_total));
+SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, pembayaran, idCicilan, perBulan, dp, total FROM tDetailPenyewaan WHERE (idTSewa = @idTSewa)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idTSewa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTSewa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@mulaiSewa", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mulaiSewa", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@sampai", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sampai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idTSewa", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idTSewa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idProperty", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idProperty", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_harga", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "harga", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_mulaiSewa", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "mulaiSewa", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_sampai", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "sampai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idKategoriBayar", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idKategoriBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_pembayaran", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "pembayaran", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idCicilan", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_lamaCicilan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "lamaCicilan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_perBulan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "perBulan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_dp", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "dp", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_totalBayar", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "totalBayar", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_total", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10640,8 +10453,8 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan," +
-                " lamaCicilan, perBulan, dp, totalBayar FROM dbo.tDetailPenyewaan";
+            this._commandCollection[0].CommandText = "SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, pembayaran, idCicilan, perB" +
+                "ulan, dp, total FROM dbo.tDetailPenyewaan";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -10702,7 +10515,7 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_idTSewa, string Original_idProperty, int Original_harga, System.DateTime Original_mulaiSewa, System.DateTime Original_sampai, string Original_idKategoriBayar, string Original_idCicilan, global::System.Nullable<int> Original_lamaCicilan, global::System.Nullable<int> Original_perBulan, global::System.Nullable<int> Original_dp, int Original_totalBayar) {
+        public virtual int Delete(string Original_idTSewa, string Original_idProperty, int Original_harga, System.DateTime Original_mulaiSewa, System.DateTime Original_sampai, string Original_pembayaran, string Original_idCicilan, global::System.Nullable<int> Original_perBulan, global::System.Nullable<int> Original_dp, int Original_total) {
             if ((Original_idTSewa == null)) {
                 throw new global::System.ArgumentNullException("Original_idTSewa");
             }
@@ -10718,11 +10531,11 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
             this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_harga));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((System.DateTime)(Original_mulaiSewa));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((System.DateTime)(Original_sampai));
-            if ((Original_idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_idKategoriBayar");
+            if ((Original_pembayaran == null)) {
+                throw new global::System.ArgumentNullException("Original_pembayaran");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_idKategoriBayar));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_pembayaran));
             }
             if ((Original_idCicilan == null)) {
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
@@ -10732,31 +10545,23 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
                 this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_idCicilan));
             }
-            if ((Original_lamaCicilan.HasValue == true)) {
+            if ((Original_perBulan.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_lamaCicilan.Value));
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((int)(Original_perBulan.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
             }
-            if ((Original_perBulan.HasValue == true)) {
+            if ((Original_dp.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_perBulan.Value));
+                this.Adapter.DeleteCommand.Parameters[11].Value = ((int)(Original_dp.Value));
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_dp.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((int)(Original_dp.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.DeleteCommand.Parameters[14].Value = ((int)(Original_totalBayar));
+            this.Adapter.DeleteCommand.Parameters[12].Value = ((int)(Original_total));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10777,7 +10582,7 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string idTSewa, string idProperty, int harga, System.DateTime mulaiSewa, System.DateTime sampai, string idKategoriBayar, string idCicilan, global::System.Nullable<int> lamaCicilan, global::System.Nullable<int> perBulan, global::System.Nullable<int> dp, int totalBayar) {
+        public virtual int Insert(string idTSewa, string idProperty, int harga, System.DateTime mulaiSewa, System.DateTime sampai, string pembayaran, string idCicilan, global::System.Nullable<int> perBulan, global::System.Nullable<int> dp, int total) {
             if ((idTSewa == null)) {
                 throw new global::System.ArgumentNullException("idTSewa");
             }
@@ -10793,11 +10598,11 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
             this.Adapter.InsertCommand.Parameters[2].Value = ((int)(harga));
             this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(mulaiSewa));
             this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(sampai));
-            if ((idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("idKategoriBayar");
+            if ((pembayaran == null)) {
+                throw new global::System.ArgumentNullException("pembayaran");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(idKategoriBayar));
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(pembayaran));
             }
             if ((idCicilan == null)) {
                 this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -10805,25 +10610,19 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(idCicilan));
             }
-            if ((lamaCicilan.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(lamaCicilan.Value));
+            if ((perBulan.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = ((int)(perBulan.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((perBulan.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(perBulan.Value));
+            if ((dp.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(dp.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((dp.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(dp.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.InsertCommand.Parameters[10].Value = ((int)(totalBayar));
+            this.Adapter.InsertCommand.Parameters[9].Value = ((int)(total));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10850,23 +10649,21 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
                     int harga, 
                     System.DateTime mulaiSewa, 
                     System.DateTime sampai, 
-                    string idKategoriBayar, 
+                    string pembayaran, 
                     string idCicilan, 
-                    global::System.Nullable<int> lamaCicilan, 
                     global::System.Nullable<int> perBulan, 
                     global::System.Nullable<int> dp, 
-                    int totalBayar, 
+                    int total, 
                     string Original_idTSewa, 
                     string Original_idProperty, 
                     int Original_harga, 
                     System.DateTime Original_mulaiSewa, 
                     System.DateTime Original_sampai, 
-                    string Original_idKategoriBayar, 
+                    string Original_pembayaran, 
                     string Original_idCicilan, 
-                    global::System.Nullable<int> Original_lamaCicilan, 
                     global::System.Nullable<int> Original_perBulan, 
                     global::System.Nullable<int> Original_dp, 
-                    int Original_totalBayar) {
+                    int Original_total) {
             if ((idTSewa == null)) {
                 throw new global::System.ArgumentNullException("idTSewa");
             }
@@ -10882,11 +10679,11 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
             this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(harga));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(mulaiSewa));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(sampai));
-            if ((idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("idKategoriBayar");
+            if ((pembayaran == null)) {
+                throw new global::System.ArgumentNullException("pembayaran");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(idKategoriBayar));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(pembayaran));
             }
             if ((idCicilan == null)) {
                 this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
@@ -10894,79 +10691,65 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(idCicilan));
             }
-            if ((lamaCicilan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(lamaCicilan.Value));
+            if ((perBulan.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(perBulan.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            if ((perBulan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(perBulan.Value));
+            if ((dp.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(dp.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((dp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(dp.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(totalBayar));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(total));
             if ((Original_idTSewa == null)) {
                 throw new global::System.ArgumentNullException("Original_idTSewa");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_idTSewa));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(Original_idTSewa));
             }
             if ((Original_idProperty == null)) {
                 throw new global::System.ArgumentNullException("Original_idProperty");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_idProperty));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_idProperty));
             }
-            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_harga));
-            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_mulaiSewa));
-            this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_sampai));
-            if ((Original_idKategoriBayar == null)) {
-                throw new global::System.ArgumentNullException("Original_idKategoriBayar");
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_harga));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_mulaiSewa));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(Original_sampai));
+            if ((Original_pembayaran == null)) {
+                throw new global::System.ArgumentNullException("Original_pembayaran");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_idKategoriBayar));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_pembayaran));
             }
             if ((Original_idCicilan == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_idCicilan));
-            }
-            if ((Original_lamaCicilan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((int)(Original_lamaCicilan.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_idCicilan));
             }
             if ((Original_perBulan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_perBulan.Value));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((int)(Original_perBulan.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             if ((Original_dp.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_dp.Value));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((int)(Original_dp.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_totalBayar));
+            this.Adapter.UpdateCommand.Parameters[22].Value = ((int)(Original_total));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -10992,24 +10775,22 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan
                     int harga, 
                     System.DateTime mulaiSewa, 
                     System.DateTime sampai, 
-                    string idKategoriBayar, 
+                    string pembayaran, 
                     string idCicilan, 
-                    global::System.Nullable<int> lamaCicilan, 
                     global::System.Nullable<int> perBulan, 
                     global::System.Nullable<int> dp, 
-                    int totalBayar, 
+                    int total, 
                     string Original_idTSewa, 
                     string Original_idProperty, 
                     int Original_harga, 
                     System.DateTime Original_mulaiSewa, 
                     System.DateTime Original_sampai, 
-                    string Original_idKategoriBayar, 
+                    string Original_pembayaran, 
                     string Original_idCicilan, 
-                    global::System.Nullable<int> Original_lamaCicilan, 
                     global::System.Nullable<int> Original_perBulan, 
                     global::System.Nullable<int> Original_dp, 
-                    int Original_totalBayar) {
-            return this.Update(Original_idTSewa, idProperty, harga, mulaiSewa, sampai, idKategoriBayar, idCicilan, lamaCicilan, perBulan, dp, totalBayar, Original_idTSewa, Original_idProperty, Original_harga, Original_mulaiSewa, Original_sampai, Original_idKategoriBayar, Original_idCicilan, Original_lamaCicilan, Original_perBulan, Original_dp, Original_totalBayar);
+                    int Original_total) {
+            return this.Update(Original_idTSewa, idProperty, harga, mulaiSewa, sampai, pembayaran, idCicilan, perBulan, dp, total, Original_idTSewa, Original_idProperty, Original_harga, Original_mulaiSewa, Original_sampai, Original_pembayaran, Original_idCicilan, Original_perBulan, Original_dp, Original_total);
         }
     }
     
@@ -11919,9 +11700,9 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
         
         private clientTableAdapter _clientTableAdapter;
         
-        private jabatanTableAdapter _jabatanTableAdapter;
+        private desainInteriorTableAdapter _desainInteriorTableAdapter;
         
-        private kategoriBayarTableAdapter _kategoriBayarTableAdapter;
+        private jabatanTableAdapter _jabatanTableAdapter;
         
         private kategoriCicilanTableAdapter _kategoriCicilanTableAdapter;
         
@@ -11975,12 +11756,12 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public jabatanTableAdapter jabatanTableAdapter {
+        public desainInteriorTableAdapter desainInteriorTableAdapter {
             get {
-                return this._jabatanTableAdapter;
+                return this._desainInteriorTableAdapter;
             }
             set {
-                this._jabatanTableAdapter = value;
+                this._desainInteriorTableAdapter = value;
             }
         }
         
@@ -11989,12 +11770,12 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public kategoriBayarTableAdapter kategoriBayarTableAdapter {
+        public jabatanTableAdapter jabatanTableAdapter {
             get {
-                return this._kategoriBayarTableAdapter;
+                return this._jabatanTableAdapter;
             }
             set {
-                this._kategoriBayarTableAdapter = value;
+                this._jabatanTableAdapter = value;
             }
         }
         
@@ -12147,13 +11928,13 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                             && (this._clientTableAdapter.Connection != null))) {
                     return this._clientTableAdapter.Connection;
                 }
+                if (((this._desainInteriorTableAdapter != null) 
+                            && (this._desainInteriorTableAdapter.Connection != null))) {
+                    return this._desainInteriorTableAdapter.Connection;
+                }
                 if (((this._jabatanTableAdapter != null) 
                             && (this._jabatanTableAdapter.Connection != null))) {
                     return this._jabatanTableAdapter.Connection;
-                }
-                if (((this._kategoriBayarTableAdapter != null) 
-                            && (this._kategoriBayarTableAdapter.Connection != null))) {
-                    return this._kategoriBayarTableAdapter.Connection;
                 }
                 if (((this._kategoriCicilanTableAdapter != null) 
                             && (this._kategoriCicilanTableAdapter.Connection != null))) {
@@ -12207,10 +11988,10 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                 if ((this._clientTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._jabatanTableAdapter != null)) {
+                if ((this._desainInteriorTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._kategoriBayarTableAdapter != null)) {
+                if ((this._jabatanTableAdapter != null)) {
                     count = (count + 1);
                 }
                 if ((this._kategoriCicilanTableAdapter != null)) {
@@ -12251,6 +12032,15 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateUpdatedRows(REALESTATEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._desainInteriorTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.desainInterior.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._desainInteriorTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._pemilikTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.pemilik.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -12284,15 +12074,6 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._jabatanTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._kategoriBayarTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.kategoriBayar.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._kategoriBayarTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -12369,6 +12150,14 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private int UpdateInsertedRows(REALESTATEDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._desainInteriorTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.desainInterior.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._desainInteriorTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._pemilikTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.pemilik.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -12398,14 +12187,6 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._jabatanTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._kategoriBayarTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.kategoriBayar.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._kategoriBayarTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -12531,14 +12312,6 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._kategoriBayarTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.kategoriBayar.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._kategoriBayarTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._jabatanTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.jabatan.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -12568,6 +12341,14 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._pemilikTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._desainInteriorTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.desainInterior.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._desainInteriorTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -12615,13 +12396,13 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._jabatanTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._jabatanTableAdapter.Connection) == false))) {
+            if (((this._desainInteriorTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._desainInteriorTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._kategoriBayarTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._kategoriBayarTableAdapter.Connection) == false))) {
+            if (((this._jabatanTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._jabatanTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -12711,6 +12492,15 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                         adaptersWithAcceptChangesDuringUpdate.Add(this._clientTableAdapter.Adapter);
                     }
                 }
+                if ((this._desainInteriorTableAdapter != null)) {
+                    revertConnections.Add(this._desainInteriorTableAdapter, this._desainInteriorTableAdapter.Connection);
+                    this._desainInteriorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._desainInteriorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._desainInteriorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._desainInteriorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._desainInteriorTableAdapter.Adapter);
+                    }
+                }
                 if ((this._jabatanTableAdapter != null)) {
                     revertConnections.Add(this._jabatanTableAdapter, this._jabatanTableAdapter.Connection);
                     this._jabatanTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
@@ -12718,15 +12508,6 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                     if (this._jabatanTableAdapter.Adapter.AcceptChangesDuringUpdate) {
                         this._jabatanTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
                         adaptersWithAcceptChangesDuringUpdate.Add(this._jabatanTableAdapter.Adapter);
-                    }
-                }
-                if ((this._kategoriBayarTableAdapter != null)) {
-                    revertConnections.Add(this._kategoriBayarTableAdapter, this._kategoriBayarTableAdapter.Connection);
-                    this._kategoriBayarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._kategoriBayarTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._kategoriBayarTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._kategoriBayarTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._kategoriBayarTableAdapter.Adapter);
                     }
                 }
                 if ((this._kategoriCicilanTableAdapter != null)) {
@@ -12872,13 +12653,13 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                     this._clientTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._clientTableAdapter]));
                     this._clientTableAdapter.Transaction = null;
                 }
+                if ((this._desainInteriorTableAdapter != null)) {
+                    this._desainInteriorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._desainInteriorTableAdapter]));
+                    this._desainInteriorTableAdapter.Transaction = null;
+                }
                 if ((this._jabatanTableAdapter != null)) {
                     this._jabatanTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._jabatanTableAdapter]));
                     this._jabatanTableAdapter.Transaction = null;
-                }
-                if ((this._kategoriBayarTableAdapter != null)) {
-                    this._kategoriBayarTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._kategoriBayarTableAdapter]));
-                    this._kategoriBayarTableAdapter.Transaction = null;
                 }
                 if ((this._kategoriCicilanTableAdapter != null)) {
                     this._kategoriCicilanTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._kategoriCicilanTableAdapter]));

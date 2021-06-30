@@ -300,7 +300,7 @@
             this.btnKategoriBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKategoriBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKategoriBayar.BorderRadius = 0;
-            this.btnKategoriBayar.ButtonText = "Kategori Bayar";
+            this.btnKategoriBayar.ButtonText = "Interior";
             this.btnKategoriBayar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKategoriBayar.DisabledColor = System.Drawing.Color.Transparent;
             this.btnKategoriBayar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -324,7 +324,7 @@
             this.btnKategoriBayar.selected = false;
             this.btnKategoriBayar.Size = new System.Drawing.Size(188, 49);
             this.btnKategoriBayar.TabIndex = 6;
-            this.btnKategoriBayar.Text = "Kategori Bayar";
+            this.btnKategoriBayar.Text = "Interior";
             this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKategoriBayar.Textcolor = System.Drawing.Color.Black;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

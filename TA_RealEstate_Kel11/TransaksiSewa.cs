@@ -13,21 +13,20 @@ namespace TA_RealEstate_Kel11
 {
     public partial class TransaksiSewa : Form
     {
-        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-
         public TransaksiSewa()
         {
             InitializeComponent();
         }
 
+        //koneksi
+        koneksi connection = new koneksi();
         REALESTATEDataContext dc = new REALESTATEDataContext();
 
         private string IDOtomatis()
         {
             string autoid = null;
 
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
             myConnection.Open();
 
             string sqlQuery = "SELECT TOP 1 idTSewa FROM tPenyewaan ORDER BY idTSewa DESC";
@@ -42,12 +41,12 @@ namespace TA_RealEstate_Kel11
                 number += 1;
                 string str = number.ToString("D3");
 
-                autoid = "TRS" + str;
+                autoid = "TS" + str;
             }
 
             if (autoid == null)
             {
-                autoid = "TRS001";
+                autoid = "TS001";
             }
 
             myConnection.Close();
@@ -84,14 +83,13 @@ namespace TA_RealEstate_Kel11
             txtPemilik.Clear();
             cbClient.SelectedIndex = -1;
             txtTotal.Clear();
-            
+
             txtHargaProperty.Clear();
-            cbPembayaran.SelectedIndex = -1;
+            rbCicil.Checked = false;
+            rbLunas.Checked = false;
             cbCicilan.SelectedIndex = -1;
-            txtLamaCicilan.Clear();
             txtperBulan.Clear();
             txtDP.Clear();
-            txtTotalBayar.Clear();
 
             txtIDSewa.Text = IDOtomatis();
             //LoadData();
@@ -100,7 +98,7 @@ namespace TA_RealEstate_Kel11
         //combobox
         private void cbProperty_SelectedIndexChanged(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
             string sql = "SELECT * FROM property p INNER JOIN pemilik b ON p.idPemilik = b.idPemilik WHERE p.idProperty  = '" + cbProperty.SelectedValue + "' ";
             SqlCommand cmd = new SqlCommand(sql, myConnection);
             SqlDataReader myreader;
@@ -110,7 +108,7 @@ namespace TA_RealEstate_Kel11
                 myreader = cmd.ExecuteReader();
                 while (myreader.Read())
                 {
-                    string pemilik = myreader.GetString(9);
+                    string pemilik = myreader.GetString(10);
                     txtPemilik.Text = pemilik;
 
                     string harga = myreader.GetInt32(6).ToString();
@@ -123,47 +121,16 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        //textbox
-        private void txtLamaCicilan_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txtLamaCicilan.Text == "1")
-                {
-                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 12).ToString());
-                }
-                else if (txtLamaCicilan.Text == "5")
-                {
-                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 60).ToString());
-                }
-                else if (txtLamaCicilan.Text == "10")
-                {
-                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 120).ToString());
-                }
-                else if (txtLamaCicilan.Text == "15")
-                {
-                    txtperBulan.Text = ((int.Parse(txtHargaProperty.Text) * int.Parse(txtLamaCicilan.Text) / 180).ToString());
-                }
-                else if (txtLamaCicilan.Text != "1" || txtLamaCicilan.Text != "5" || txtLamaCicilan.Text != "10" || txtLamaCicilan.Text != "15")
-                {
-                    MessageBox.Show("Inputkan Lama Cicilan dengan Benar !");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error Ocucured" + ex);
-            }
-        }
-        //
+       
         private void txtDP_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                txtTotalBayar.Text = ((int.Parse(txtHargaProperty.Text) - int.Parse(txtDP.Text)).ToString());
+                txtTotal.Text = ((int.Parse(txtHargaProperty.Text) - int.Parse(txtDP.Text)).ToString());
             }
             catch (Exception ex)
             {
-
+                MessageBox.Show("Error Ocucured" + ex);
             }
         }
 
@@ -202,15 +169,76 @@ namespace TA_RealEstate_Kel11
 
         private void TransaksiSewa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.kategoriCicilan' table. You can move, or remove it, as needed.
-            this.kategoriCicilanTableAdapter.Fill(this.rEALESTATEDataSet.kategoriCicilan);
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.kategoriBayar' table. You can move, or remove it, as needed.
-            this.kategoriBayarTableAdapter.Fill(this.rEALESTATEDataSet.kategoriBayar);
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.client' table. You can move, or remove it, as needed.
-            this.clientTableAdapter.Fill(this.rEALESTATEDataSet.client);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
             this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
 
+            txtIDSewa.Text = IDOtomatis();
+            loadCicilan();
+            loadClient();
+        }
+
+        public void loadCicilan()
+        {
+            SqlConnection con1 = connection.Getcon();
+            con1.Open();
+            SqlCommand cmd1 = new SqlCommand("SELECT cicilan FROM kategoriCicilan", con1);
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+            SqlDataReader sqlDataReader1 = dr1;
+            while (dr1.Read())
+            {
+
+                if ((int.Parse(sqlDataReader1["cicilan"].ToString()) <= 12))
+                {
+                    cbCicilan.Items.Add(sqlDataReader1["cicilan"]);
+                }
+            }
+            dr1.Close();
+            con1.Close();
+        }
+
+        public void loadClient()
+        {
+            SqlConnection con1 = connection.Getcon();
+            con1.Open();
+            SqlCommand cmd1 = new SqlCommand("SELECT nama FROM client", con1);
+            SqlDataReader dr1 = cmd1.ExecuteReader();
+            SqlDataReader sqlDataReader1 = dr1;
+            while (dr1.Read())
+            {
+                cbClient.Items.Add(sqlDataReader1["nama"]);
+            }
+            dr1.Close();
+            con1.Close();
+        }
+
+        private void rbCicil_CheckedChanged(object sender, EventArgs e)
+        {
+            cbCicilan.Enabled = true;
+            txtperBulan.Enabled = true;
+        }
+
+        private void rbLunas_CheckedChanged(object sender, EventArgs e)
+        {
+            cbCicilan.Enabled = false;
+            txtperBulan.Enabled = false;
+        }
+
+        private void cbCicilan_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtHargaProperty.Text != "")
+                {
+                    int temp = Int32.Parse(cbCicilan.SelectedItem.ToString());
+                    int temp1 = Int32.Parse(txtHargaProperty.Text);
+                    int temp2 = temp1 / temp;
+                    txtperBulan.Text = temp2.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }

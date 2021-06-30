@@ -1,6 +1,6 @@
 ﻿namespace TA_RealEstate_Kel11
 {
-    partial class FormKategoriBayar
+    partial class FormInterior
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKategoriBayar));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInterior));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -47,13 +47,10 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.dgKategoriBayar = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgInterior = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNama = new TA_RealEstate_Kel11.CharTextBox();
-            this.txtKeterangan = new System.Windows.Forms.TextBox();
-            this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtID = new System.Windows.Forms.TextBox();
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -62,11 +59,12 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtCariKategori = new System.Windows.Forms.TextBox();
+            this.txtCariInterior = new System.Windows.Forms.TextBox();
+            this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgKategoriBayar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInterior)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -149,7 +147,7 @@
             this.btnKategoriBayar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnKategoriBayar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnKategoriBayar.BorderRadius = 0;
-            this.btnKategoriBayar.ButtonText = "Kategori Bayar";
+            this.btnKategoriBayar.ButtonText = "Interior";
             this.btnKategoriBayar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnKategoriBayar.DisabledColor = System.Drawing.Color.Transparent;
             this.btnKategoriBayar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -173,7 +171,7 @@
             this.btnKategoriBayar.selected = false;
             this.btnKategoriBayar.Size = new System.Drawing.Size(188, 49);
             this.btnKategoriBayar.TabIndex = 6;
-            this.btnKategoriBayar.Text = "Kategori Bayar";
+            this.btnKategoriBayar.Text = "Interior";
             this.btnKategoriBayar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnKategoriBayar.Textcolor = System.Drawing.Color.Black;
             this.btnKategoriBayar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -506,26 +504,26 @@
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(1182, 49);
             this.bunifuCustomLabel2.TabIndex = 146;
-            this.bunifuCustomLabel2.Text = "Kategori Bayar";
+            this.bunifuCustomLabel2.Text = "Desain Interior";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.dgKategoriBayar);
+            this.groupBox3.Controls.Add(this.dgInterior);
             this.groupBox3.Location = new System.Drawing.Point(809, 318);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(487, 233);
             this.groupBox3.TabIndex = 147;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Tabel Kategori";
+            this.groupBox3.Text = "Tabel Interior";
             // 
-            // dgKategoriBayar
+            // dgInterior
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgKategoriBayar.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgKategoriBayar.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgKategoriBayar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgKategoriBayar.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgInterior.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgInterior.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgInterior.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgInterior.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -533,27 +531,26 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgKategoriBayar.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgKategoriBayar.ColumnHeadersHeight = 50;
-            this.dgKategoriBayar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgKategoriBayar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgKategoriBayar.DoubleBuffered = true;
-            this.dgKategoriBayar.HeaderBgColor = System.Drawing.Color.LightBlue;
-            this.dgKategoriBayar.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgKategoriBayar.Location = new System.Drawing.Point(3, 16);
-            this.dgKategoriBayar.Name = "dgKategoriBayar";
-            this.dgKategoriBayar.ReadOnly = true;
-            this.dgKategoriBayar.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgKategoriBayar.Size = new System.Drawing.Size(481, 214);
-            this.dgKategoriBayar.TabIndex = 1;
+            this.dgInterior.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgInterior.ColumnHeadersHeight = 50;
+            this.dgInterior.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgInterior.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgInterior.DoubleBuffered = true;
+            this.dgInterior.EnableHeadersVisualStyles = false;
+            this.dgInterior.HeaderBgColor = System.Drawing.Color.LightBlue;
+            this.dgInterior.HeaderForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgInterior.Location = new System.Drawing.Point(3, 16);
+            this.dgInterior.Name = "dgInterior";
+            this.dgInterior.ReadOnly = true;
+            this.dgInterior.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgInterior.Size = new System.Drawing.Size(481, 214);
+            this.dgInterior.TabIndex = 1;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtNama);
-            this.groupBox2.Controls.Add(this.txtKeterangan);
-            this.groupBox2.Controls.Add(this.bunifuCustomLabel5);
-            this.groupBox2.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox2.Controls.Add(this.btnBatal);
+            this.groupBox2.Controls.Add(this.txtNama);
+            this.groupBox2.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox2.Controls.Add(this.txtID);
             this.groupBox2.Controls.Add(this.btnHapus);
             this.groupBox2.Controls.Add(this.bunifuCustomLabel4);
@@ -567,70 +564,25 @@
             // 
             // txtNama
             // 
-            this.txtNama.Location = new System.Drawing.Point(188, 86);
+            this.txtNama.Location = new System.Drawing.Point(188, 115);
             this.txtNama.Name = "txtNama";
             this.txtNama.Size = new System.Drawing.Size(184, 20);
             this.txtNama.TabIndex = 157;
-            // 
-            // txtKeterangan
-            // 
-            this.txtKeterangan.Location = new System.Drawing.Point(188, 130);
-            this.txtKeterangan.Multiline = true;
-            this.txtKeterangan.Name = "txtKeterangan";
-            this.txtKeterangan.Size = new System.Drawing.Size(184, 57);
-            this.txtKeterangan.TabIndex = 156;
-            // 
-            // bunifuCustomLabel5
-            // 
-            this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(52, 125);
-            this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
-            this.bunifuCustomLabel5.Size = new System.Drawing.Size(96, 26);
-            this.bunifuCustomLabel5.TabIndex = 155;
-            this.bunifuCustomLabel5.Text = "Keterangan";
-            this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // bunifuCustomLabel3
             // 
             this.bunifuCustomLabel3.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(52, 42);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(52, 71);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(100, 26);
             this.bunifuCustomLabel3.TabIndex = 148;
-            this.bunifuCustomLabel3.Text = "ID Kategori";
+            this.bunifuCustomLabel3.Text = "ID Interior";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnBatal
-            // 
-            this.btnBatal.ActiveBorderThickness = 1;
-            this.btnBatal.ActiveCornerRadius = 20;
-            this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
-            this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
-            this.btnBatal.ButtonText = "Batal";
-            this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.IdleBorderThickness = 1;
-            this.btnBatal.IdleCornerRadius = 20;
-            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
-            this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(345, 208);
-            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBatal.Name = "btnBatal";
-            this.btnBatal.Size = new System.Drawing.Size(75, 33);
-            this.btnBatal.TabIndex = 153;
-            this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click_1);
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(188, 46);
+            this.txtID.Location = new System.Drawing.Point(188, 75);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
             this.txtID.Size = new System.Drawing.Size(184, 20);
@@ -654,7 +606,7 @@
             this.btnHapus.IdleFillColor = System.Drawing.Color.White;
             this.btnHapus.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnHapus.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnHapus.Location = new System.Drawing.Point(246, 208);
+            this.btnHapus.Location = new System.Drawing.Point(244, 185);
             this.btnHapus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHapus.Name = "btnHapus";
             this.btnHapus.Size = new System.Drawing.Size(76, 33);
@@ -666,11 +618,11 @@
             // 
             this.bunifuCustomLabel4.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(52, 84);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(52, 113);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(81, 26);
             this.bunifuCustomLabel4.TabIndex = 149;
-            this.bunifuCustomLabel4.Text = "Kategori Bayar";
+            this.bunifuCustomLabel4.Text = "Interior";
             this.bunifuCustomLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnUpdate
@@ -691,7 +643,7 @@
             this.btnUpdate.IdleFillColor = System.Drawing.Color.White;
             this.btnUpdate.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnUpdate.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnUpdate.Location = new System.Drawing.Point(154, 208);
+            this.btnUpdate.Location = new System.Drawing.Point(152, 185);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(76, 33);
@@ -717,7 +669,7 @@
             this.btnSimpan.IdleFillColor = System.Drawing.Color.White;
             this.btnSimpan.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnSimpan.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnSimpan.Location = new System.Drawing.Point(65, 208);
+            this.btnSimpan.Location = new System.Drawing.Point(63, 185);
             this.btnSimpan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSimpan.Name = "btnSimpan";
             this.btnSimpan.Size = new System.Drawing.Size(69, 33);
@@ -729,7 +681,7 @@
             // 
             this.groupBox1.Controls.Add(this.btnCari);
             this.groupBox1.Controls.Add(this.bunifuCustomLabel6);
-            this.groupBox1.Controls.Add(this.txtCariKategori);
+            this.groupBox1.Controls.Add(this.txtCariInterior);
             this.groupBox1.Location = new System.Drawing.Point(260, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(487, 100);
@@ -771,17 +723,43 @@
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(100, 26);
             this.bunifuCustomLabel6.TabIndex = 139;
-            this.bunifuCustomLabel6.Text = "ID Kategori";
+            this.bunifuCustomLabel6.Text = "ID Interior";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtCariKategori
+            // txtCariInterior
             // 
-            this.txtCariKategori.Location = new System.Drawing.Point(188, 39);
-            this.txtCariKategori.Name = "txtCariKategori";
-            this.txtCariKategori.Size = new System.Drawing.Size(184, 20);
-            this.txtCariKategori.TabIndex = 140;
+            this.txtCariInterior.Location = new System.Drawing.Point(188, 39);
+            this.txtCariInterior.Name = "txtCariInterior";
+            this.txtCariInterior.Size = new System.Drawing.Size(184, 20);
+            this.txtCariInterior.TabIndex = 140;
             // 
-            // FormKategoriBayar
+            // btnBatal
+            // 
+            this.btnBatal.ActiveBorderThickness = 1;
+            this.btnBatal.ActiveCornerRadius = 20;
+            this.btnBatal.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.ActiveForecolor = System.Drawing.Color.White;
+            this.btnBatal.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnBatal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBatal.BackgroundImage")));
+            this.btnBatal.ButtonText = "Batal";
+            this.btnBatal.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBatal.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBatal.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.IdleBorderThickness = 1;
+            this.btnBatal.IdleCornerRadius = 20;
+            this.btnBatal.IdleFillColor = System.Drawing.Color.White;
+            this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnBatal.Location = new System.Drawing.Point(338, 185);
+            this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBatal.Name = "btnBatal";
+            this.btnBatal.Size = new System.Drawing.Size(75, 33);
+            this.btnBatal.TabIndex = 158;
+            this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
+            // 
+            // FormInterior
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -796,7 +774,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormKategoriBayar";
+            this.Name = "FormInterior";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormKategoriBayar";
             this.Load += new System.EventHandler(this.FormKategoriBayar_Load);
@@ -804,7 +782,7 @@
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgKategoriBayar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgInterior)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -830,13 +808,10 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgKategoriBayar;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgInterior;
         private System.Windows.Forms.GroupBox groupBox2;
         private CharTextBox txtNama;
-        private System.Windows.Forms.TextBox txtKeterangan;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
         private System.Windows.Forms.TextBox txtID;
         private Bunifu.Framework.UI.BunifuThinButton2 btnHapus;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
@@ -845,6 +820,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 btnCari;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
-        private System.Windows.Forms.TextBox txtCariKategori;
+        private System.Windows.Forms.TextBox txtCariInterior;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnBatal;
     }
 }

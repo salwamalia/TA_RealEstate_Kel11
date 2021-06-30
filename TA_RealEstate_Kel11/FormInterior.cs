@@ -11,43 +11,42 @@ using System.Data.SqlClient;
 
 namespace TA_RealEstate_Kel11
 {
-    public partial class FormKategoriBayar : Form
+    public partial class FormInterior : Form
     {
-        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-
-        public FormKategoriBayar()
+        public FormInterior()
         {
             InitializeComponent();
         }
 
+        //koneksi
+        koneksi connection = new koneksi();
         REALESTATEDataContext dc = new REALESTATEDataContext();
 
         private string IDOtomatis()
         {
             string autoid = null;
 
-           SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
             myConnection.Open();
 
-            string sqlQuery = "SELECT TOP 1 idKategoriBayar FROM kategoriBayar ORDER BY idKategoriBayar DESC";
+            string sqlQuery = "SELECT TOP 1 idInterior FROM desainInterior ORDER BY idInterior DESC";
             SqlCommand cmd = new SqlCommand(sqlQuery, myConnection);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
-                string input = dr["idKategoriBayar"].ToString();
-                string angka = input.Substring(input.Length - Math.Min(2, input.Length));
+                string input = dr["idInterior"].ToString();
+                string angka = input.Substring(input.Length - Math.Min(3, input.Length));
                 int number = Convert.ToInt32(angka);
                 number += 1;
-                string str = number.ToString("D2");
+                string str = number.ToString("D3");
 
-                autoid = "KTB" + str;
+                autoid = "IR" + str;
             }
 
             if (autoid == null)
             {
-                autoid = "KTB01";
+                autoid = "IR001";
             }
 
             myConnection.Close();
@@ -57,14 +56,13 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
-            SqlCommand insert = new SqlCommand("sp_InsertKategori", myConnection);
+            SqlCommand insert = new SqlCommand("sp_InsertInterior", myConnection);
             insert.CommandType = CommandType.StoredProcedure;
 
-            insert.Parameters.AddWithValue("idKategoriBayar", txtID.Text);
-            insert.Parameters.AddWithValue("kategoriBayar", txtNama.Text);
-            insert.Parameters.AddWithValue("keterangan", txtKeterangan.Text);
+            insert.Parameters.AddWithValue("idInterior", txtID.Text);
+            insert.Parameters.AddWithValue("interior", txtNama.Text);
 
             if (txtNama.Text == "")
             {
@@ -76,7 +74,7 @@ namespace TA_RealEstate_Kel11
                 {
                     myConnection.Open();
                     insert.ExecuteNonQuery();
-                    MessageBox.Show("Kategori Telah Ditambahkan", "Add Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Interior Telah Ditambahkan", "Add Interior", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
                 catch (Exception ex)
@@ -91,15 +89,14 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             //update command
-            SqlCommand Update = new SqlCommand("sp_UpdateKategori", myConnection);
+            SqlCommand Update = new SqlCommand("sp_UpdateInterior", myConnection);
             Update.CommandType = CommandType.StoredProcedure;
 
-            Update.Parameters.AddWithValue("idKategoriBayar", txtID.Text);
-            Update.Parameters.AddWithValue("kategoriBayar", txtNama.Text);
-            Update.Parameters.AddWithValue("keterangan", txtKeterangan.Text);
+            Update.Parameters.AddWithValue("idInterior", txtID.Text);
+            Update.Parameters.AddWithValue("interior", txtNama.Text);
 
             if (txtNama.Text == "")
             {
@@ -111,7 +108,7 @@ namespace TA_RealEstate_Kel11
                 {
                     myConnection.Open();
                     Update.ExecuteNonQuery();
-                    MessageBox.Show("Kategori Update Succesfully", "Update Kategori", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Interior Update Succesfully", "Update Interior", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
                 catch (Exception )
@@ -123,7 +120,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             if (txtNama.Text == "")
             {
@@ -131,19 +128,19 @@ namespace TA_RealEstate_Kel11
             }
             else
             {
-                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Kategori Bayar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Lanjut ingin Menghapus?", "Delete Interior", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     //delete command
-                    SqlCommand delete = new SqlCommand("sp_DeleteKategori", myConnection);
+                    SqlCommand delete = new SqlCommand("sp_DeleteInterior", myConnection);
                     delete.CommandType = CommandType.StoredProcedure;
 
-                    delete.Parameters.AddWithValue("idKategoriBayar", txtID.Text);
+                    delete.Parameters.AddWithValue("idInterior", txtID.Text);
 
                     try
                     {
                         myConnection.Open();
                         delete.ExecuteNonQuery();
-                        MessageBox.Show("Kategori Bayar Delete Succesfully", "Delete Kategori Bayar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Interior Delete Succesfully", "Delete Interior", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         clear();
                     }
                     catch (Exception)
@@ -154,27 +151,26 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        private void btnBatal_Click_1(object sender, EventArgs e)
+        private void btnBatal_Click(object sender, EventArgs e)
         {
             clear();
         }
 
         private void clear()
         {
-            txtCariKategori.Clear();
+            txtCariInterior.Clear();
             txtID.Clear();
             txtNama.Clear();
-            txtKeterangan.Clear();
             txtID.Text = IDOtomatis();
             LoadData();
         }
 
         private void btnCari_Click_1(object sender, EventArgs e)
         {
-            var st = from s in dc.kategoriBayars where s.idKategoriBayar == txtCariKategori.Text select s;
-            dgKategoriBayar.DataSource = st;
+            var st = from s in dc.desainInteriors where s.idInterior == txtCariInterior.Text select s;
+            dgInterior.DataSource = st;
 
-            if (txtCariKategori.Text == "")
+            if (txtCariInterior.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -182,18 +178,17 @@ namespace TA_RealEstate_Kel11
             {
                 try
                 {
-                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    SqlConnection myConnection = connection.Getcon();
                     myConnection.Open();
 
                     DataTable dt = new DataTable();
-                    SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar WHERE idKategoriBayar ='" + txtCariKategori.Text + "'", myConnection);
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM desainInterior WHERE idInterior ='" + txtCariInterior.Text + "'", myConnection);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
 
                     da.Fill(dt);
 
-                    txtID.Text = dt.Rows[0]["idKategoriBayar"].ToString();
-                    txtNama.Text = dt.Rows[0]["kategoriBayar"].ToString();
-                    txtKeterangan.Text = dt.Rows[0]["keterangan"].ToString();
+                    txtID.Text = dt.Rows[0]["idInterior"].ToString();
+                    txtNama.Text = dt.Rows[0]["interior"].ToString();
 
                     myConnection.Close();
                 }
@@ -208,25 +203,23 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                SqlConnection con = new SqlConnection(myConnectionString);
+                SqlConnection con = connection.Getcon();
                 con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriBayar", con);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM desainInterior", con);
                 SqlDataReader dr = cmd.ExecuteReader();
                 SqlDataReader sqlDataReader = dr;
                 DataTable dataTable = new DataTable();
                 dataTable.Columns.Add("ID");
-                dataTable.Columns.Add("Kategori Bayar");
-                dataTable.Columns.Add("Keterangan");
+                dataTable.Columns.Add("Interior");
                 while (dr.Read())
                 {
                     DataRow row = dataTable.NewRow();
-                    row["ID"] = sqlDataReader["idKategoriBayar"];
-                    row["Kategori Bayar"] = sqlDataReader["kategoriBayar"];
-                    row["Keterangan"] = sqlDataReader["keterangan"];
+                    row["ID"] = sqlDataReader["idInterior"];
+                    row["Interior"] = sqlDataReader["interior"];
                     dataTable.Rows.Add(row);
                 }
                 //this.dataGridView1.DataSource = con.table;
-                dgKategoriBayar.DataSource = dataTable;
+                dgInterior.DataSource = dataTable;
                 con.Close();
             }
             catch (Exception ex)
@@ -279,7 +272,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnKategoriBayar_Click(object sender, EventArgs e)
         {
-            FormKategoriBayar byr = new FormKategoriBayar();
+            FormInterior byr = new FormInterior();
             byr.Show();
             this.Hide();
         }

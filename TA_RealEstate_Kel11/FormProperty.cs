@@ -15,9 +15,6 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormProperty : Form
     {
-        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-
         public FormProperty()
         {
             InitializeComponent();
@@ -25,12 +22,14 @@ namespace TA_RealEstate_Kel11
 
         string imgLocation = "";
 
+        //koneksi
+        koneksi connection = new koneksi();
         REALESTATEDataContext dt = new REALESTATEDataContext();
 
         private string IDOtomatis()
         {
             string autoid = null;
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
             myConnection.Open();
 
             string sqlQuery = "SELECT TOP 1 idProperty FROM property ORDER BY idProperty DESC";
@@ -69,7 +68,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             Image img;
             byte[] photo_aray;
@@ -99,8 +98,9 @@ namespace TA_RealEstate_Kel11
             insert.Parameters.AddWithValue("fasilitas", txtFasilitas.Text);
             insert.Parameters.AddWithValue("harga", txtHarga.Text);
             insert.Parameters.AddWithValue("gambar", photo_aray);
+            insert.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue.ToString());
 
-            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
+            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -115,14 +115,15 @@ namespace TA_RealEstate_Kel11
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    //MessageBox.Show("Unable to save ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Unable to save "+ex);
                 }
             }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             Image img;
             byte[] photo_aray;
@@ -153,8 +154,9 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("fasilitas", txtFasilitas.Text);
             Update.Parameters.AddWithValue("harga", txtHarga.Text);
             Update.Parameters.AddWithValue("gambar", photo_aray);
+            Update.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue);
 
-            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
+            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -169,16 +171,17 @@ namespace TA_RealEstate_Kel11
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Unable to save "+ex);
                 }
             }
         }
 
         private void btnHapus_Click(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
-            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "")
+            if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Delete Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -223,6 +226,7 @@ namespace TA_RealEstate_Kel11
             txtFasilitas.Clear();
             txtHarga.Clear();
             PBGambar.Image = null;
+            cbInterior.SelectedIndex = -1;
             txtID.Text = IDOtomatis();
             LoadData();
         }
@@ -237,7 +241,7 @@ namespace TA_RealEstate_Kel11
             {
                 try
                 {
-                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    SqlConnection myConnection = connection.Getcon();
                     myConnection.Open();
                     
                     SqlCommand cmd = new SqlCommand("SELECT * FROM property WHERE idProperty ='" + txtCariProperty.Text + "'", myConnection);
@@ -250,6 +254,7 @@ namespace TA_RealEstate_Kel11
                     txtNama.Text = sqlDataReader["namaProperty"].ToString();
                     cbTipe.SelectedValue = sqlDataReader["idTipe"].ToString();
                     cbPemilik.SelectedValue = sqlDataReader["idPemilik"].ToString();
+                    cbInterior.SelectedValue = sqlDataReader["idInterior"].ToString();
                     txtUkuran.Text = sqlDataReader["ukuran"].ToString();
                     txtFasilitas.Text = sqlDataReader["fasilitas"].ToString();
                     txtHarga.Text = sqlDataReader["harga"].ToString();
@@ -285,8 +290,7 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-                SqlConnection con = new SqlConnection(myConnectionString);
+                SqlConnection con = connection.Getcon();
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM property", con);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -299,6 +303,7 @@ namespace TA_RealEstate_Kel11
                 dataTable.Columns.Add("Ukuran");
                 dataTable.Columns.Add("Fasilitas");
                 dataTable.Columns.Add("Harga");
+                dataTable.Columns.Add("ID Interior");
                 while (dr.Read())
                 {
                     DataRow row = dataTable.NewRow();
@@ -309,6 +314,7 @@ namespace TA_RealEstate_Kel11
                     row["Ukuran"] = sqlDataReader["ukuran"];
                     row["Fasilitas"] = sqlDataReader["fasilitas"];
                     row["Harga"] = sqlDataReader["harga"];
+                    row["ID Interior"] = sqlDataReader["idInterior"];
                     dataTable.Rows.Add(row);
                 }
                 //this.dataGridView1.DataSource = con.table;
@@ -323,8 +329,12 @@ namespace TA_RealEstate_Kel11
 
         private void FormProperty_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.desainInterior' table. You can move, or remove it, as needed.
+            this.desainInteriorTableAdapter.Fill(this.rEALESTATEDataSet.desainInterior);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.pemilik' table. You can move, or remove it, as needed.
             this.pemilikTableAdapter.Fill(this.rEALESTATEDataSet.pemilik);
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
+            this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.propertyTipe' table. You can move, or remove it, as needed.
             this.propertyTipeTableAdapter.Fill(this.rEALESTATEDataSet.propertyTipe);
             txtID.Text = IDOtomatis();
@@ -387,7 +397,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnKategoriBayar_Click(object sender, EventArgs e)
         {
-            FormKategoriBayar byr = new FormKategoriBayar();
+            FormInterior byr = new FormInterior();
             byr.Show();
             this.Hide();
         }

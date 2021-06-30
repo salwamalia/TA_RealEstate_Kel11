@@ -13,21 +13,20 @@ namespace TA_RealEstate_Kel11
 {
     public partial class FormCicilan : Form
     {
-        //string myConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-        string myConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
-
         public FormCicilan()
         {
             InitializeComponent();
         }
 
+        //koneksi
+        koneksi connection = new koneksi();
         REALESTATEDataContext dc = new REALESTATEDataContext();
 
         private string IDOtomatis()
         {
             string autoid = null;
             
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
             myConnection.Open();
 
             string sqlQuery = "SELECT TOP 1 idCicilan FROM kategoriCicilan ORDER BY idCicilan DESC";
@@ -57,7 +56,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click_1(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             SqlCommand insert = new SqlCommand("sp_InsertCicilan", myConnection);
             insert.CommandType = CommandType.StoredProcedure;
@@ -87,7 +86,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             //update command
             SqlCommand Update = new SqlCommand("sp_UpdateCicilan", myConnection);
@@ -118,7 +117,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnHapus_Click_1(object sender, EventArgs e)
         {
-            SqlConnection myConnection = new SqlConnection(myConnectionString);
+            SqlConnection myConnection = connection.Getcon();
 
             if (txtNamaCicilan.Text == "")
             {
@@ -176,7 +175,7 @@ namespace TA_RealEstate_Kel11
             {
                 try
                 {
-                    SqlConnection myConnection = new SqlConnection(myConnectionString);
+                    SqlConnection myConnection = connection.Getcon();
                     myConnection.Open();
 
                     DataTable dt = new DataTable();
@@ -201,7 +200,7 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                SqlConnection con = new SqlConnection(myConnectionString);
+                SqlConnection con = connection.Getcon();
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM kategoriCicilan", con);
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -281,7 +280,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnKategoriBayar_Click(object sender, EventArgs e)
         {
-            FormKategoriBayar byr = new FormKategoriBayar();
+            FormInterior byr = new FormInterior();
             byr.Show();
             this.Hide();
         }

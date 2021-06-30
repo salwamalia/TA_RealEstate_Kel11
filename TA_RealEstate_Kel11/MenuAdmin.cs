@@ -61,7 +61,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnKategoriBayar_Click(object sender, EventArgs e)
         {
-            FormKategoriBayar byr = new FormKategoriBayar();
+            FormInterior byr = new FormInterior();
             byr.Show();
             this.Hide();
         }
