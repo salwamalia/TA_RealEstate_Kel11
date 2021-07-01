@@ -24,34 +24,40 @@ namespace TA_RealEstate_Kel11
 
         private string IDOtomatis()
         {
-            string autoid = null;
+            int autoid = 0;
+            string kode = null;
 
             SqlConnection myConnection = connection.Getcon();
             myConnection.Open();
 
-            string sqlQuery = "SELECT TOP 1 idTSewa FROM tPenyewaan ORDER BY idTSewa DESC";
+            string sqlQuery = "SELECT TOP (1) MAX(RIGHT (idTSewa,2))+1 AS idTSewa FROM tPenyewaan";
             SqlCommand cmd = new SqlCommand(sqlQuery, myConnection);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
-                string input = dr["idTSewa"].ToString();
-                string angka = input.Substring(input.Length - Math.Min(3, input.Length));
-                int number = Convert.ToInt32(angka);
-                number += 1;
-                string str = number.ToString("D3");
-
-                autoid = "TS" + str;
+                if (dr["idTSewa"].ToString() == "")
+                {
+                    autoid = 1;
+                }
+                else
+                {
+                    autoid = Int32.Parse(dr["idTSewa"].ToString());
+                }
             }
 
-            if (autoid == null)
+            if (autoid < 10)
             {
-                autoid = "TS001";
+                kode = "TS00" + autoid;
+            }
+            else if (autoid < 100)
+            {
+                kode = "TS" + autoid;
             }
 
             myConnection.Close();
 
-            return autoid;
+            return kode;
         }
 
         private void btnSimpan_Click(object sender, EventArgs e)

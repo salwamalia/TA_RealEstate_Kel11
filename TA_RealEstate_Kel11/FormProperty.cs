@@ -28,31 +28,40 @@ namespace TA_RealEstate_Kel11
 
         private string IDOtomatis()
         {
-            string autoid = null;
+            int autoid = 0;
+            string kode = null;
+
             SqlConnection myConnection = connection.Getcon();
             myConnection.Open();
 
-            string sqlQuery = "SELECT TOP 1 idProperty FROM property ORDER BY idProperty DESC";
+            string sqlQuery = "SELECT TOP (1) MAX(RIGHT (idProperty,2))+1 AS idProperty FROM property";
             SqlCommand cmd = new SqlCommand(sqlQuery, myConnection);
             SqlDataReader dr = cmd.ExecuteReader();
 
             while (dr.Read())
             {
-                string input = dr["idProperty"].ToString();
-                string angka = input.Substring(input.Length - Math.Min(2, input.Length));
-                int number = Convert.ToInt32(angka);
-                number += 1;
-                string str = number.ToString("D2");
-
-                autoid = "PTY" + str;
+                if (dr["idProperty"].ToString() == "")
+                {
+                    autoid = 1;
+                }
+                else
+                {
+                    autoid = Int32.Parse(dr["idProperty"].ToString());
+                }
             }
 
-            if (autoid == null)
+            if (autoid < 10)
             {
-                autoid = "PTY01";
+                kode = "PT00" + autoid;
             }
+            else if (autoid < 100)
+            {
+                kode = "PT" + autoid;
+            }
+
             myConnection.Close();
-            return autoid;
+
+            return kode;
         }
 
         private void btnBrowser_Click(object sender, EventArgs e)
@@ -69,6 +78,7 @@ namespace TA_RealEstate_Kel11
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             SqlConnection myConnection = connection.Getcon();
+            int statusProperty = 0;
 
             Image img;
             byte[] photo_aray;
@@ -259,6 +269,7 @@ namespace TA_RealEstate_Kel11
                     txtFasilitas.Text = sqlDataReader["fasilitas"].ToString();
                     txtHarga.Text = sqlDataReader["harga"].ToString();
                     byte[] img = (byte[])(sqlDataReader["gambar"]);
+                    //sqlDataReader.["Status"];
 
                     try
                     {
