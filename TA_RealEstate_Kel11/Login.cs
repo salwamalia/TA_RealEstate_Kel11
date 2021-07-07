@@ -38,7 +38,7 @@ namespace TA_RealEstate_Kel11
                 {
                     foreach (DataRow dr in dt.Rows)
                     {
-                        if (dr["idJabatan"].ToString() == "JB002")
+                        if (dr["idJabatan"].ToString() == "JB001")
                         {
                             this.Hide();
                             MenuAdmin dash = new MenuAdmin();
@@ -50,7 +50,7 @@ namespace TA_RealEstate_Kel11
                             MenuKasir cash = new MenuKasir();
                             cash.Show();
                         }
-                        else if (dr["idJabatan"].ToString() == "JB001")
+                        else if (dr["idJabatan"].ToString() == "JB002")
                         {
                             this.Hide();
                             MenuManager Manage = new MenuManager();

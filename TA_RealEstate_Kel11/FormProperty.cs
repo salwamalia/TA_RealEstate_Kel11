@@ -108,7 +108,6 @@ namespace TA_RealEstate_Kel11
             insert.Parameters.AddWithValue("harga", txtHarga.Text);
             insert.Parameters.AddWithValue("gambar", photo_aray);
             insert.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue.ToString());
-            insert.Parameters.AddWithValue("status", cbStatus.SelectedItem.ToString());
 
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
@@ -165,7 +164,6 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("harga", txtHarga.Text);
             Update.Parameters.AddWithValue("gambar", photo_aray);
             Update.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue);
-            Update.Parameters.AddWithValue("status", cbStatus.SelectedItem.ToString());
 
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
@@ -238,7 +236,6 @@ namespace TA_RealEstate_Kel11
             txtHarga.Clear();
             PBGambar.Image = null;
             cbInterior.SelectedIndex = -1;
-            cbStatus.SelectedIndex = -1;
             txtID.Text = IDOtomatis();
             LoadData();
         }
@@ -271,7 +268,6 @@ namespace TA_RealEstate_Kel11
                     txtFasilitas.Text = sqlDataReader["fasilitas"].ToString();
                     txtHarga.Text = sqlDataReader["harga"].ToString();
                     byte[] img = (byte[])(sqlDataReader["gambar"]);
-                    cbStatus.Text = dr["statusProperty"].ToString();
 
                     try
                     {
@@ -329,7 +325,14 @@ namespace TA_RealEstate_Kel11
                     row["Fasilitas"] = sqlDataReader["fasilitas"];
                     row["Harga"] = sqlDataReader["harga"];
                     row["ID Interior"] = sqlDataReader["idInterior"];
-                    row["Status"] = sqlDataReader["statusProperty"];
+                    if (sqlDataReader["statusProperty"].ToString().Equals("0"))
+                    {
+                        row["Status"] = "Available";
+                    }
+                    else
+                    {
+                        row["Status"] = "Not Available";
+                    }
                     dataTable.Rows.Add(row);
                 }
                 //this.dataGridView1.DataSource = con.table;
@@ -338,7 +341,7 @@ namespace TA_RealEstate_Kel11
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured" + ex.Message);
+                MessageBox.Show("Error Occured" + ex);
             }
         }
 

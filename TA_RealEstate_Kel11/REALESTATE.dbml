@@ -64,9 +64,10 @@
       <Column Name="idPemilik" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="ukuran" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="fasilitas" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
-      <Column Name="harga" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="gambar" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
       <Column Name="idInterior" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="statusProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Association Name="property_tDetailPembelian" Member="tDetailPembelians" ThisKey="idProperty" OtherKey="idProperty" Type="tDetailPembelian" />
       <Association Name="property_tDetailPenyewaan" Member="tDetailPenyewaans" ThisKey="idProperty" OtherKey="idProperty" Type="tDetailPenyewaan" />
       <Association Name="property_tPembelian" Member="tPembelians" ThisKey="idProperty" OtherKey="idProperty" Type="tPembelian" />
@@ -87,7 +88,6 @@
     <Type Name="tDetailPembelian">
       <Column Name="idTBeli" Type="System.String" DbType="VarChar(5) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="harga" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="pembayaran" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="idCicilan" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
       <Column Name="perBulan" Type="System.Int32" DbType="Int" CanBeNull="true" />
@@ -119,8 +119,8 @@
       <Column Name="tanggal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idClient" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="status" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="client_tPembelian" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
       <Association Name="property_tPembelian" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
@@ -131,8 +131,8 @@
       <Column Name="tanggal" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="idProperty" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
       <Column Name="idClient" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
-      <Column Name="total" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="status" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="total" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="status" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="client_tPenyewaan" Member="client" ThisKey="idClient" OtherKey="idClient" Type="client" IsForeignKey="true" />
       <Association Name="property_tPenyewaan" Member="property" ThisKey="idProperty" OtherKey="idProperty" Type="property" IsForeignKey="true" />
     </Type>
