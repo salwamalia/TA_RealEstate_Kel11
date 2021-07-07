@@ -46,6 +46,7 @@
             this.btnHapus = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnUpdate = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbCicilan = new System.Windows.Forms.ComboBox();
             this.rbCicil = new System.Windows.Forms.RadioButton();
             this.rbLunas = new System.Windows.Forms.RadioButton();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -57,7 +58,6 @@
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtperBulan = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cbCicilan = new System.Windows.Forms.ComboBox();
             this.txtHargaProperty = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -389,6 +389,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.cbCicilan);
             this.groupBox3.Controls.Add(this.rbCicil);
             this.groupBox3.Controls.Add(this.rbLunas);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel13);
@@ -400,7 +401,6 @@
             this.groupBox3.Controls.Add(this.bunifuCustomLabel11);
             this.groupBox3.Controls.Add(this.txtperBulan);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel14);
-            this.groupBox3.Controls.Add(this.cbCicilan);
             this.groupBox3.Controls.Add(this.txtHargaProperty);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel12);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel18);
@@ -410,6 +410,18 @@
             this.groupBox3.TabIndex = 226;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detail Transaksi Pembelian";
+            // 
+            // cbCicilan
+            // 
+            this.cbCicilan.DisplayMember = "idCicilan";
+            this.cbCicilan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCicilan.FormattingEnabled = true;
+            this.cbCicilan.Location = new System.Drawing.Point(145, 100);
+            this.cbCicilan.Name = "cbCicilan";
+            this.cbCicilan.Size = new System.Drawing.Size(107, 21);
+            this.cbCicilan.TabIndex = 245;
+            this.cbCicilan.ValueMember = "idCicilan";
+            this.cbCicilan.SelectedIndexChanged += new System.EventHandler(this.cbCicilan_SelectedIndexChanged_1);
             // 
             // rbCicil
             // 
@@ -529,18 +541,6 @@
             this.bunifuCustomLabel14.TabIndex = 169;
             this.bunifuCustomLabel14.Text = "perBulan";
             this.bunifuCustomLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbCicilan
-            // 
-            this.cbCicilan.DisplayMember = "idCicilan";
-            this.cbCicilan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbCicilan.FormattingEnabled = true;
-            this.cbCicilan.Location = new System.Drawing.Point(143, 100);
-            this.cbCicilan.Name = "cbCicilan";
-            this.cbCicilan.Size = new System.Drawing.Size(107, 21);
-            this.cbCicilan.TabIndex = 188;
-            this.cbCicilan.ValueMember = "idCicilan";
-            this.cbCicilan.SelectedIndexChanged += new System.EventHandler(this.cbCicilan_SelectedIndexChanged);
             // 
             // txtHargaProperty
             // 
@@ -958,6 +958,7 @@
             this.dgDetailTransaksi.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgDetailTransaksi.Size = new System.Drawing.Size(606, 259);
             this.dgDetailTransaksi.TabIndex = 1;
+            this.dgDetailTransaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDetailTransaksi_CellContentClick);
             // 
             // TransaksiBeli
             // 
@@ -1033,7 +1034,6 @@
         private NumberTextBox txtDP;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel11;
-        private System.Windows.Forms.ComboBox cbCicilan;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
         private NumberTextBox txtperBulan;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel14;
@@ -1057,5 +1057,6 @@
         private System.Windows.Forms.BindingSource propertyBindingSource1;
         private System.Windows.Forms.GroupBox groupBox6;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgDetailTransaksi;
+        private System.Windows.Forms.ComboBox cbCicilan;
     }
 }
