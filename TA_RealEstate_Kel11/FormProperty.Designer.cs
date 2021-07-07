@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProperty));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnKategoriBayar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,11 +53,19 @@
             this.btnBrowser = new Bunifu.Framework.UI.BunifuThinButton2();
             this.PBGambar = new System.Windows.Forms.PictureBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cbStatus = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cbInterior = new System.Windows.Forms.ComboBox();
+            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
+            this.desainInteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbPemilik = new System.Windows.Forms.ComboBox();
+            this.pemilikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.pemilikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cbTipe = new System.Windows.Forms.ComboBox();
+            this.propertyTipeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.propertyTipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtUkuran = new System.Windows.Forms.TextBox();
             this.txtFasilitas = new System.Windows.Forms.TextBox();
             this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
@@ -77,16 +85,10 @@
             this.btnCari = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtCariProperty = new System.Windows.Forms.TextBox();
-            this.rEALESTATEDataSet = new TA_RealEstate_Kel11.REALESTATEDataSet();
-            this.propertyTipeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.propertyTipeTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTipeTableAdapter();
-            this.propertyBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.propertyTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTableAdapter();
-            this.pemilikBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pemilikTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.pemilikTableAdapter();
-            this.pemilikBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.desainInteriorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.desainInteriorTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.desainInteriorTableAdapter();
+            this.propertyTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTableAdapter();
             this.desainInteriorBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bunifuGradientPanel2.SuspendLayout();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -95,13 +97,13 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PBGambar)).BeginInit();
             this.groupBox3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.desainInteriorBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.desainInteriorBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -555,19 +557,19 @@
             // 
             // dgProperty
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgProperty.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgProperty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgProperty.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgProperty.ColumnHeadersHeight = 50;
             this.dgProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgProperty.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -632,6 +634,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.bunifuCustomLabel12);
+            this.groupBox3.Controls.Add(this.cbStatus);
             this.groupBox3.Controls.Add(this.bunifuCustomLabel8);
             this.groupBox3.Controls.Add(this.cbInterior);
             this.groupBox3.Controls.Add(this.cbPemilik);
@@ -658,11 +662,34 @@
             this.groupBox3.TabIndex = 167;
             this.groupBox3.TabStop = false;
             // 
+            // bunifuCustomLabel12
+            // 
+            this.bunifuCustomLabel12.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuCustomLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel12.Location = new System.Drawing.Point(354, 183);
+            this.bunifuCustomLabel12.Name = "bunifuCustomLabel12";
+            this.bunifuCustomLabel12.Size = new System.Drawing.Size(74, 26);
+            this.bunifuCustomLabel12.TabIndex = 250;
+            this.bunifuCustomLabel12.Text = "Status";
+            this.bunifuCustomLabel12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FormattingEnabled = true;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Available",
+            "Not Available"});
+            this.cbStatus.Location = new System.Drawing.Point(435, 186);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(160, 21);
+            this.cbStatus.TabIndex = 249;
+            // 
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(355, 21);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(21, 183);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(74, 26);
             this.bunifuCustomLabel8.TabIndex = 248;
@@ -676,11 +703,21 @@
             this.cbInterior.DisplayMember = "interior";
             this.cbInterior.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInterior.FormattingEnabled = true;
-            this.cbInterior.Location = new System.Drawing.Point(435, 26);
+            this.cbInterior.Location = new System.Drawing.Point(164, 186);
             this.cbInterior.Name = "cbInterior";
             this.cbInterior.Size = new System.Drawing.Size(160, 21);
             this.cbInterior.TabIndex = 247;
             this.cbInterior.ValueMember = "idInterior";
+            // 
+            // rEALESTATEDataSet
+            // 
+            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
+            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // desainInteriorBindingSource
+            // 
+            this.desainInteriorBindingSource.DataMember = "desainInterior";
+            this.desainInteriorBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // cbPemilik
             // 
@@ -695,6 +732,16 @@
             this.cbPemilik.TabIndex = 215;
             this.cbPemilik.ValueMember = "idPemilik";
             // 
+            // pemilikBindingSource1
+            // 
+            this.pemilikBindingSource1.DataMember = "pemilik";
+            this.pemilikBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // pemilikBindingSource
+            // 
+            this.pemilikBindingSource.DataMember = "pemilik";
+            this.pemilikBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
             // bunifuCustomLabel11
             // 
             this.bunifuCustomLabel11.BackColor = System.Drawing.Color.Transparent;
@@ -708,7 +755,7 @@
             // 
             // cbTipe
             // 
-            this.cbTipe.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.propertyBindingSource, "idProperty", true));
+            this.cbTipe.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.propertyTipeBindingSource1, "idTipe", true));
             this.cbTipe.DataSource = this.propertyTipeBindingSource;
             this.cbTipe.DisplayMember = "nama";
             this.cbTipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -719,16 +766,26 @@
             this.cbTipe.TabIndex = 213;
             this.cbTipe.ValueMember = "idTipe";
             // 
+            // propertyTipeBindingSource1
+            // 
+            this.propertyTipeBindingSource1.DataMember = "propertyTipe";
+            this.propertyTipeBindingSource1.DataSource = this.rEALESTATEDataSet;
+            // 
+            // propertyTipeBindingSource
+            // 
+            this.propertyTipeBindingSource.DataMember = "propertyTipe";
+            this.propertyTipeBindingSource.DataSource = this.rEALESTATEDataSet;
+            // 
             // txtUkuran
             // 
-            this.txtUkuran.Location = new System.Drawing.Point(435, 68);
+            this.txtUkuran.Location = new System.Drawing.Point(435, 28);
             this.txtUkuran.Name = "txtUkuran";
             this.txtUkuran.Size = new System.Drawing.Size(160, 20);
             this.txtUkuran.TabIndex = 212;
             // 
             // txtFasilitas
             // 
-            this.txtFasilitas.Location = new System.Drawing.Point(435, 104);
+            this.txtFasilitas.Location = new System.Drawing.Point(435, 64);
             this.txtFasilitas.Multiline = true;
             this.txtFasilitas.Name = "txtFasilitas";
             this.txtFasilitas.Size = new System.Drawing.Size(160, 71);
@@ -736,7 +793,7 @@
             // 
             // txtHarga
             // 
-            this.txtHarga.Location = new System.Drawing.Point(435, 189);
+            this.txtHarga.Location = new System.Drawing.Point(435, 149);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.Size = new System.Drawing.Size(160, 20);
             this.txtHarga.TabIndex = 210;
@@ -745,7 +802,7 @@
             // 
             this.bunifuCustomLabel9.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel9.Location = new System.Drawing.Point(353, 185);
+            this.bunifuCustomLabel9.Location = new System.Drawing.Point(353, 145);
             this.bunifuCustomLabel9.Name = "bunifuCustomLabel9";
             this.bunifuCustomLabel9.Size = new System.Drawing.Size(69, 26);
             this.bunifuCustomLabel9.TabIndex = 209;
@@ -756,7 +813,7 @@
             // 
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(355, 100);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(355, 60);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(69, 26);
             this.bunifuCustomLabel7.TabIndex = 208;
@@ -767,7 +824,7 @@
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(354, 63);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(354, 23);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(69, 26);
             this.bunifuCustomLabel6.TabIndex = 207;
@@ -982,51 +1039,21 @@
             this.txtCariProperty.Size = new System.Drawing.Size(160, 20);
             this.txtCariProperty.TabIndex = 140;
             // 
-            // rEALESTATEDataSet
-            // 
-            this.rEALESTATEDataSet.DataSetName = "REALESTATEDataSet";
-            this.rEALESTATEDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // propertyTipeBindingSource
-            // 
-            this.propertyTipeBindingSource.DataMember = "propertyTipe";
-            this.propertyTipeBindingSource.DataSource = this.rEALESTATEDataSet;
-            // 
             // propertyTipeTableAdapter
             // 
             this.propertyTipeTableAdapter.ClearBeforeFill = true;
-            // 
-            // propertyBindingSource
-            // 
-            this.propertyBindingSource.DataMember = "property";
-            this.propertyBindingSource.DataSource = this.rEALESTATEDataSet;
-            // 
-            // propertyTableAdapter
-            // 
-            this.propertyTableAdapter.ClearBeforeFill = true;
-            // 
-            // pemilikBindingSource
-            // 
-            this.pemilikBindingSource.DataMember = "pemilik";
-            this.pemilikBindingSource.DataSource = this.rEALESTATEDataSet;
             // 
             // pemilikTableAdapter
             // 
             this.pemilikTableAdapter.ClearBeforeFill = true;
             // 
-            // pemilikBindingSource1
-            // 
-            this.pemilikBindingSource1.DataMember = "pemilik";
-            this.pemilikBindingSource1.DataSource = this.rEALESTATEDataSet;
-            // 
-            // desainInteriorBindingSource
-            // 
-            this.desainInteriorBindingSource.DataMember = "desainInterior";
-            this.desainInteriorBindingSource.DataSource = this.rEALESTATEDataSet;
-            // 
             // desainInteriorTableAdapter
             // 
             this.desainInteriorTableAdapter.ClearBeforeFill = true;
+            // 
+            // propertyTableAdapter
+            // 
+            this.propertyTableAdapter.ClearBeforeFill = true;
             // 
             // desainInteriorBindingSource1
             // 
@@ -1062,14 +1089,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.PBGambar)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.desainInteriorBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rEALESTATEDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyTipeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.propertyBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pemilikBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.desainInteriorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.desainInteriorBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1121,16 +1148,18 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnBrowser;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel8;
         private System.Windows.Forms.ComboBox cbInterior;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel12;
+        private System.Windows.Forms.ComboBox cbStatus;
         private REALESTATEDataSet rEALESTATEDataSet;
         private System.Windows.Forms.BindingSource propertyTipeBindingSource;
         private REALESTATEDataSetTableAdapters.propertyTipeTableAdapter propertyTipeTableAdapter;
-        private System.Windows.Forms.BindingSource propertyBindingSource;
-        private REALESTATEDataSetTableAdapters.propertyTableAdapter propertyTableAdapter;
         private System.Windows.Forms.BindingSource pemilikBindingSource;
         private REALESTATEDataSetTableAdapters.pemilikTableAdapter pemilikTableAdapter;
-        private System.Windows.Forms.BindingSource pemilikBindingSource1;
         private System.Windows.Forms.BindingSource desainInteriorBindingSource;
         private REALESTATEDataSetTableAdapters.desainInteriorTableAdapter desainInteriorTableAdapter;
+        private REALESTATEDataSetTableAdapters.propertyTableAdapter propertyTableAdapter;
+        private System.Windows.Forms.BindingSource pemilikBindingSource1;
+        private System.Windows.Forms.BindingSource propertyTipeBindingSource1;
         private System.Windows.Forms.BindingSource desainInteriorBindingSource1;
     }
 }

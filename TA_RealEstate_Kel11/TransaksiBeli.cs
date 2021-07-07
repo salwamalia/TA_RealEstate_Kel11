@@ -60,9 +60,131 @@ namespace TA_RealEstate_Kel11
             return kode;
         }
 
+        public String seperate(String a)
+        {
+            string[] test = a.Split(',');
+            string x = "";
+            foreach (string tst in test)
+            {
+
+                if (tst.Trim() != "")
+                {
+                    x = x + tst;
+                    Console.Write(tst);
+                }
+            }
+            return x;
+        }
+
+        public int split(String x)
+        {
+            String[] a = x.Split(' ');
+            String[] b = a[1].Split('.');
+            String[] c = b[1].Split(',');
+            String Total = b[0] + c[0];
+            int total = int.Parse(seperate(Total));
+
+            return total;
+        }
+
         private void btnSimpan_Click(object sender, EventArgs e)
         {
+            //int StatusBeli = 0;
 
+            if (txtIDBeli.Text == "" || txtDP.Text == "" || cbProperty.Text == "" || cbCicilan.Text == "" || cbClient.Text == "")
+            {
+                MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                try
+                {
+                    SqlConnection myConnection = connection.Getcon();
+                    SqlCommand cmd1 = new SqlCommand("sp_InsertPembelian", myConnection);
+                    cmd1.CommandType = CommandType.StoredProcedure;
+                    cmd1.Parameters.AddWithValue("idTBeli", txtIDBeli.Text);
+                    cmd1.Parameters.AddWithValue("tanggal", TglTrans.Value.ToString("yyyy-MM-dd"));
+                    cmd1.Parameters.AddWithValue("idProperty", cbProperty.SelectedValue.ToString());
+                    cmd1.Parameters.AddWithValue("idClient", cbClient.SelectedItem.ToString());
+                    cmd1.Parameters.AddWithValue("total", txtTotal.Text);
+                    myConnection.Open();
+                    cmd1.ExecuteNonQuery();
+                    myConnection.Close();
+
+                    for (int i = 0; i < dbTransaksi.Rows.Count - 1; i++)
+                    {
+                        string pembayaran = null;
+                        if (rbCicil.Checked)
+                        {
+                            pembayaran = rbCicil.Text;
+                        }
+                        if (rbLunas.Checked)
+                        {
+                            pembayaran = rbLunas.Text;
+                        }
+
+                        //menambah data pada detail transaksi
+                        SqlConnection myConnection1 = connection.Getcon();
+                        myConnection1.Open();
+                        SqlCommand cmd2 = new SqlCommand("sp_InsertDetailPembelian", myConnection1);
+                        cmd2.CommandType = CommandType.StoredProcedure;
+                        cmd2.Parameters.AddWithValue("idTBeli", txtIDBeli.Text);
+                        cmd2.Parameters.AddWithValue("idProperty", cbProperty.SelectedValue.ToString());
+                        cmd2.Parameters.AddWithValue("harga", txtHargaProperty.Text);
+                        cmd2.Parameters.AddWithValue("pembayaran", pembayaran);
+                        cmd2.Parameters.AddWithValue("idCicilan", cbCicilan.SelectedValue.ToString());
+                        cmd2.Parameters.AddWithValue("perBulan", txtperBulan.Text);
+                        cmd2.Parameters.AddWithValue("dp", txtDP.Text);
+                        cmd2.Parameters.AddWithValue("total", txtTotal.Text);
+                        cmd2.ExecuteNonQuery();
+                        myConnection1.Close();
+
+                        //mencari jumlah dari bahan yang ditambahkan
+                        SqlConnection conn = connection.Getcon();
+                        conn.Open();
+                        SqlCommand cmd = new SqlCommand("sp_SearchProperty", conn);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@idProperty", dbTransaksi.Rows[i].Cells[0].Value);
+                        SqlDataReader drprop;
+                        drprop = cmd.ExecuteReader();
+                        String Prop = "";
+                        int found = 0;
+                        
+                        while (drprop.Read())
+                        {
+                            Prop = drprop["statusProperty"].ToString();
+                        }
+
+                        /*for (int i = 0; i < dbTransaksi.Rows.Count - 1; i++)
+                        {
+                            if (Prop.Equals("aktif"))
+                            {
+                                found++;
+                            }
+                        }*/
+                        conn.Close();
+
+                        //Menyimpan data jumlah yang sudah diupdate
+                        SqlConnection conn1 = connection.Getcon();
+                        conn1.Open();
+                        SqlCommand cmd7 = new SqlCommand("sp_UpdateStatusProp", conn1);
+                        cmd7.CommandType = CommandType.StoredProcedure;
+                        cmd7.Parameters.AddWithValue("@idProperty", SqlDbType.VarChar).Value = dbTransaksi.Rows[i].Cells[0].Value;
+                        cmd7.Parameters.AddWithValue("@statusProperty", SqlDbType.NVarChar).Value = "Not Available";
+                        cmd7.ExecuteNonQuery();
+                        conn1.Close();
+                    }
+
+                    myConnection.Close();
+                    MessageBox.Show("Pembelian Telah Ditambahkan", "Add Pembelian", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    //MessageBox.Show("Unable to save " + ex.Message , "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning );
+                    MessageBox.Show("Unable to save " + ex);
+                }
+            }
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -89,7 +211,7 @@ namespace TA_RealEstate_Kel11
         {
             txtCariTransaksi.Clear();
             txtIDBeli.Clear();
-            dateTimePicker1.ResetText();
+            TglTrans.ResetText();
             cbProperty.SelectedIndex = -1;
             txtPemilik.Clear();
             cbClient.SelectedIndex = -1;
@@ -183,6 +305,10 @@ namespace TA_RealEstate_Kel11
 
         private void TransaksiBeli_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
+            this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
+            this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
             this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
             txtIDBeli.Text = IDOtomatis();

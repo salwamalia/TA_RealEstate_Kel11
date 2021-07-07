@@ -78,7 +78,6 @@ namespace TA_RealEstate_Kel11
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             SqlConnection myConnection = connection.Getcon();
-            int statusProperty = 0;
 
             Image img;
             byte[] photo_aray;
@@ -109,6 +108,7 @@ namespace TA_RealEstate_Kel11
             insert.Parameters.AddWithValue("harga", txtHarga.Text);
             insert.Parameters.AddWithValue("gambar", photo_aray);
             insert.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue.ToString());
+            insert.Parameters.AddWithValue("status", cbStatus.SelectedItem.ToString());
 
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
@@ -165,6 +165,7 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("harga", txtHarga.Text);
             Update.Parameters.AddWithValue("gambar", photo_aray);
             Update.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue);
+            Update.Parameters.AddWithValue("status", cbStatus.SelectedItem.ToString());
 
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
@@ -237,6 +238,7 @@ namespace TA_RealEstate_Kel11
             txtHarga.Clear();
             PBGambar.Image = null;
             cbInterior.SelectedIndex = -1;
+            cbStatus.SelectedIndex = -1;
             txtID.Text = IDOtomatis();
             LoadData();
         }
@@ -269,7 +271,7 @@ namespace TA_RealEstate_Kel11
                     txtFasilitas.Text = sqlDataReader["fasilitas"].ToString();
                     txtHarga.Text = sqlDataReader["harga"].ToString();
                     byte[] img = (byte[])(sqlDataReader["gambar"]);
-                    //sqlDataReader.["Status"];
+                    cbStatus.Text = dr["statusProperty"].ToString();
 
                     try
                     {
@@ -315,6 +317,7 @@ namespace TA_RealEstate_Kel11
                 dataTable.Columns.Add("Fasilitas");
                 dataTable.Columns.Add("Harga");
                 dataTable.Columns.Add("ID Interior");
+                dataTable.Columns.Add("Status");
                 while (dr.Read())
                 {
                     DataRow row = dataTable.NewRow();
@@ -326,6 +329,7 @@ namespace TA_RealEstate_Kel11
                     row["Fasilitas"] = sqlDataReader["fasilitas"];
                     row["Harga"] = sqlDataReader["harga"];
                     row["ID Interior"] = sqlDataReader["idInterior"];
+                    row["Status"] = sqlDataReader["statusProperty"];
                     dataTable.Rows.Add(row);
                 }
                 //this.dataGridView1.DataSource = con.table;
@@ -340,12 +344,12 @@ namespace TA_RealEstate_Kel11
 
         private void FormProperty_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
+            this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.desainInterior' table. You can move, or remove it, as needed.
             this.desainInteriorTableAdapter.Fill(this.rEALESTATEDataSet.desainInterior);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.pemilik' table. You can move, or remove it, as needed.
             this.pemilikTableAdapter.Fill(this.rEALESTATEDataSet.pemilik);
-            // TODO: This line of code loads data into the 'rEALESTATEDataSet.property' table. You can move, or remove it, as needed.
-            this.propertyTableAdapter.Fill(this.rEALESTATEDataSet.property);
             // TODO: This line of code loads data into the 'rEALESTATEDataSet.propertyTipe' table. You can move, or remove it, as needed.
             this.propertyTipeTableAdapter.Fill(this.rEALESTATEDataSet.propertyTipe);
             txtID.Text = IDOtomatis();

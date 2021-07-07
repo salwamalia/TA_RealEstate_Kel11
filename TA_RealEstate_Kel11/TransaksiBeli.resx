@@ -263,10 +263,13 @@
         Zj8azZo9o8oXq4H9766MvrIUF5XlgcryQGV5oLIGRuQHVzeqOaBjkAkAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="rEALESTATEDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <metadata name="propertyTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>352, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>63</value>
+    <value>107</value>
   </metadata>
 </root>

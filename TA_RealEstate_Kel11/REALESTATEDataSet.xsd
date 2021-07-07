@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="REALESTATEConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="REALESTATEConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TA_RealEstate_Kel11.Properties.Settings.GlobalReference.Default.REALESTATEConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="REALESTATEConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="REALESTATEConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.TA_RealEstate_Kel11.Properties.Settings.GlobalReference.Default.REALESTATEConnectionString2" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="clientTableAdapter" GeneratorDataComponentClassName="clientTableAdapter" Name="client" UserDataComponentName="clientTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.client" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[client] WHERE (([idClient] = @Original_idClient) AND ([nama] = @Original_nama) AND ([jeniskelamin] = @Original_jeniskelamin) AND ([telepon] = @Original_telepon) AND ([email] = @Original_email) AND ([alamat] = @Original_alamat))</CommandText>
@@ -77,7 +77,7 @@ SELECT idClient, nama, jeniskelamin, telepon, email, alamat FROM client WHERE (i
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="desainInteriorTableAdapter" GeneratorDataComponentClassName="desainInteriorTableAdapter" Name="desainInterior" UserDataComponentName="desainInteriorTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.desainInterior" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.desainInterior" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[desainInterior] WHERE (([idInterior] = @Original_idInterior) AND ([interior] = @Original_interior))</CommandText>
@@ -125,7 +125,7 @@ SELECT idInterior, interior FROM desainInterior WHERE (idInterior = @idInterior)
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="jabatanTableAdapter" GeneratorDataComponentClassName="jabatanTableAdapter" Name="jabatan" UserDataComponentName="jabatanTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.jabatan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.jabatan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[jabatan] WHERE (([idJabatan] = @Original_idJabatan) AND ([jabatan] = @Original_jabatan))</CommandText>
@@ -171,43 +171,98 @@ SELECT idJabatan, jabatan FROM jabatan WHERE (idJabatan = @idJabatan)</CommandTe
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kategoriCicilanTableAdapter" GeneratorDataComponentClassName="kategoriCicilanTableAdapter" Name="kategoriCicilan" UserDataComponentName="kategoriCicilanTableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kategoriBayarTableAdapter" GeneratorDataComponentClassName="kategoriBayarTableAdapter" Name="kategoriBayar" UserDataComponentName="kategoriBayarTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.kategoriCicilan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.kategoriBayar" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[kategoriCicilan] WHERE (([idCicilan] = @Original_idCicilan) AND ([cicilan] = @Original_cicilan))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[kategoriBayar] WHERE (([idKategoriBayar] = @Original_idKategoriBayar) AND ([kategoriBayar] = @Original_kategoriBayar) AND ((@IsNull_keterangan = 1 AND [keterangan] IS NULL) OR ([keterangan] = @Original_keterangan)))</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idCicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idCicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_cicilan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idKategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idKategoriBayar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_kategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="kategoriBayar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_keterangan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="keterangan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_keterangan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="keterangan" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[kategoriCicilan] ([idCicilan], [cicilan]) VALUES (@idCicilan, @cicilan);
-SELECT idCicilan, cicilan FROM kategoriCicilan WHERE (idCicilan = @idCicilan)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[kategoriBayar] ([idKategoriBayar], [kategoriBayar], [keterangan]) VALUES (@idKategoriBayar, @kategoriBayar, @keterangan);
+SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKategoriBayar = @idKategoriBayar)</CommandText>
                     <Parameters>
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idCicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idCicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@cicilan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idKategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idKategoriBayar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@kategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="kategoriBayar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@keterangan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="keterangan" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT idCicilan, cicilan FROM dbo.kategoriCicilan</CommandText>
+                    <CommandText>SELECT idKategoriBayar, kategoriBayar, keterangan FROM dbo.kategoriBayar</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[kategoriCicilan] SET [idCicilan] = @idCicilan, [cicilan] = @cicilan WHERE (([idCicilan] = @Original_idCicilan) AND ([cicilan] = @Original_cicilan));
-SELECT idCicilan, cicilan FROM kategoriCicilan WHERE (idCicilan = @idCicilan)</CommandText>
+                    <CommandText>UPDATE [dbo].[kategoriBayar] SET [idKategoriBayar] = @idKategoriBayar, [kategoriBayar] = @kategoriBayar, [keterangan] = @keterangan WHERE (([idKategoriBayar] = @Original_idKategoriBayar) AND ([kategoriBayar] = @Original_kategoriBayar) AND ((@IsNull_keterangan = 1 AND [keterangan] IS NULL) OR ([keterangan] = @Original_keterangan)));
+SELECT idKategoriBayar, kategoriBayar, keterangan FROM kategoriBayar WHERE (idKategoriBayar = @idKategoriBayar)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idKategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idKategoriBayar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@kategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="kategoriBayar" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@keterangan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="keterangan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idKategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idKategoriBayar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_kategoriBayar" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="kategoriBayar" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_keterangan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="keterangan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_keterangan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="keterangan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idKategoriBayar" DataSetColumn="idKategoriBayar" />
+              <Mapping SourceColumn="kategoriBayar" DataSetColumn="kategoriBayar" />
+              <Mapping SourceColumn="keterangan" DataSetColumn="keterangan" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="kategoriCicilanTableAdapter" GeneratorDataComponentClassName="kategoriCicilanTableAdapter" Name="kategoriCicilan" UserDataComponentName="kategoriCicilanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.kategoriCicilan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [dbo].[kategoriCicilan] WHERE (([idCicilan] = @Original_idCicilan) AND ([Cicilan] = @Original_Cicilan))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idCicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idCicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Cicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [dbo].[kategoriCicilan] ([idCicilan], [Cicilan]) VALUES (@idCicilan, @Cicilan);
+SELECT idCicilan, Cicilan FROM kategoriCicilan WHERE (idCicilan = @idCicilan)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idCicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idCicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@cicilan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Cicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT idCicilan, Cicilan FROM dbo.kategoriCicilan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [dbo].[kategoriCicilan] SET [idCicilan] = @idCicilan, [Cicilan] = @Cicilan WHERE (([idCicilan] = @Original_idCicilan) AND ([Cicilan] = @Original_Cicilan));
+SELECT idCicilan, Cicilan FROM kategoriCicilan WHERE (idCicilan = @idCicilan)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idCicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idCicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Cicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cicilan" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idCicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idCicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_cicilan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="cicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_Cicilan" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="Cicilan" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -215,13 +270,13 @@ SELECT idCicilan, cicilan FROM kategoriCicilan WHERE (idCicilan = @idCicilan)</C
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="idCicilan" DataSetColumn="idCicilan" />
-              <Mapping SourceColumn="cicilan" DataSetColumn="cicilan" />
+              <Mapping SourceColumn="Cicilan" DataSetColumn="Cicilan" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pegawaiTableAdapter" GeneratorDataComponentClassName="pegawaiTableAdapter" Name="pegawai" UserDataComponentName="pegawaiTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.pegawai" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.pegawai" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[pegawai] WHERE (([idPegawai] = @Original_idPegawai) AND ([nama] = @Original_nama) AND ([jeniskelamin] = @Original_jeniskelamin) AND ([username] = @Original_username) AND ([password] = @Original_password) AND ([idJabatan] = @Original_idJabatan))</CommandText>
@@ -289,7 +344,7 @@ SELECT idPegawai, nama, jeniskelamin, username, password, idJabatan FROM pegawai
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pemilikTableAdapter" GeneratorDataComponentClassName="pemilikTableAdapter" Name="pemilik" UserDataComponentName="pemilikTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.pemilik" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.pemilik" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[pemilik] WHERE (([idPemilik] = @Original_idPemilik) AND ([nama] = @Original_nama) AND ([jeniskelamin] = @Original_jeniskelamin) AND ([telepon] = @Original_telepon) AND ([email] = @Original_email) AND ([alamat] = @Original_alamat))</CommandText>
@@ -357,10 +412,10 @@ SELECT idPemilik, nama, jeniskelamin, telepon, email, alamat FROM pemilik WHERE 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="propertyTableAdapter" GeneratorDataComponentClassName="propertyTableAdapter" Name="property" UserDataComponentName="propertyTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.property" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.property" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[property] WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga) AND ([idInterior] = @Original_idInterior))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[property] WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga) AND ([idInterior] = @Original_idInterior) AND ((@IsNull_statusProperty = 1 AND [statusProperty] IS NULL) OR ([statusProperty] = @Original_statusProperty)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_namaProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="namaProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -369,15 +424,17 @@ SELECT idPemilik, nama, jeniskelamin, telepon, email, alamat FROM pemilik WHERE 
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ukuran" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ukuran" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_fasilitas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="fasilitas" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_fasilitas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fasilitas" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_harga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_harga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idInterior" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idInterior" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_statusProperty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="statusProperty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_statusProperty" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="statusProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>INSERT INTO [dbo].[property] ([idProperty], [namaProperty], [idTipe], [idPemilik], [ukuran], [fasilitas], [harga], [gambar], [idInterior]) VALUES (@idProperty, @namaProperty, @idTipe, @idPemilik, @ukuran, @fasilitas, @harga, @gambar, @idInterior);
-SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior FROM property WHERE (idProperty = @idProperty)</CommandText>
+                    <CommandText>INSERT INTO [dbo].[property] ([idProperty], [namaProperty], [idTipe], [idPemilik], [ukuran], [fasilitas], [harga], [gambar], [idInterior], [statusProperty]) VALUES (@idProperty, @namaProperty, @idTipe, @idPemilik, @ukuran, @fasilitas, @harga, @gambar, @idInterior, @statusProperty);
+SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior, statusProperty FROM property WHERE (idProperty = @idProperty)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@namaProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="namaProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -385,22 +442,23 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idPemilik" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idPemilik" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ukuran" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ukuran" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@fasilitas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fasilitas" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@harga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@harga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@gambar" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="gambar" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idInterior" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idInterior" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@statusProperty" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="statusProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior FROM dbo.property</CommandText>
+                    <CommandText>SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior, statusProperty FROM dbo.property</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[property] SET [idProperty] = @idProperty, [namaProperty] = @namaProperty, [idTipe] = @idTipe, [idPemilik] = @idPemilik, [ukuran] = @ukuran, [fasilitas] = @fasilitas, [harga] = @harga, [gambar] = @gambar, [idInterior] = @idInterior WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga) AND ([idInterior] = @Original_idInterior));
-SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior FROM property WHERE (idProperty = @idProperty)</CommandText>
+                    <CommandText>UPDATE [dbo].[property] SET [idProperty] = @idProperty, [namaProperty] = @namaProperty, [idTipe] = @idTipe, [idPemilik] = @idPemilik, [ukuran] = @ukuran, [fasilitas] = @fasilitas, [harga] = @harga, [gambar] = @gambar, [idInterior] = @idInterior, [statusProperty] = @statusProperty WHERE (([idProperty] = @Original_idProperty) AND ([namaProperty] = @Original_namaProperty) AND ([idTipe] = @Original_idTipe) AND ([idPemilik] = @Original_idPemilik) AND ([ukuran] = @Original_ukuran) AND ((@IsNull_fasilitas = 1 AND [fasilitas] IS NULL) OR ([fasilitas] = @Original_fasilitas)) AND ([harga] = @Original_harga) AND ([idInterior] = @Original_idInterior) AND ((@IsNull_statusProperty = 1 AND [statusProperty] IS NULL) OR ([statusProperty] = @Original_statusProperty)));
+SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, gambar, idInterior, statusProperty FROM property WHERE (idProperty = @idProperty)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@namaProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="namaProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
@@ -408,9 +466,10 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idPemilik" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idPemilik" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@ukuran" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ukuran" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@fasilitas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fasilitas" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@harga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@harga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Binary" Direction="Input" ParameterName="@gambar" Precision="0" ProviderType="Image" Scale="0" Size="0" SourceColumn="gambar" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idInterior" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idInterior" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@statusProperty" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="statusProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_namaProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="namaProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idTipe" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idTipe" SourceColumnNullMapping="false" SourceVersion="Original" />
@@ -418,8 +477,10 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_ukuran" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="ukuran" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_fasilitas" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="fasilitas" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_fasilitas" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="fasilitas" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Currency" Direction="Input" ParameterName="@Original_harga" Precision="0" ProviderType="Money" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_harga" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="harga" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idInterior" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idInterior" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_statusProperty" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="statusProperty" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_statusProperty" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="statusProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -435,12 +496,13 @@ SELECT idProperty, namaProperty, idTipe, idPemilik, ukuran, fasilitas, harga, ga
               <Mapping SourceColumn="harga" DataSetColumn="harga" />
               <Mapping SourceColumn="gambar" DataSetColumn="gambar" />
               <Mapping SourceColumn="idInterior" DataSetColumn="idInterior" />
+              <Mapping SourceColumn="statusProperty" DataSetColumn="statusProperty" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="propertyTipeTableAdapter" GeneratorDataComponentClassName="propertyTipeTableAdapter" Name="propertyTipe" UserDataComponentName="propertyTipeTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.propertyTipe" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.propertyTipe" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[propertyTipe] WHERE (([idTipe] = @Original_idTipe) AND ([nama] = @Original_nama))</CommandText>
@@ -488,7 +550,7 @@ SELECT idTipe, nama FROM propertyTipe WHERE (idTipe = @idTipe)</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tDetailPembelianTableAdapter" GeneratorDataComponentClassName="tDetailPembelianTableAdapter" Name="tDetailPembelian" UserDataComponentName="tDetailPembelianTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.tDetailPembelian" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.tDetailPembelian" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tDetailPembelian] WHERE (([idTBeli] = @Original_idTBeli) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([pembayaran] = @Original_pembayaran) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([total] = @Original_total))</CommandText>
@@ -572,7 +634,7 @@ SELECT idTBeli, idProperty, harga, pembayaran, idCicilan, perBulan, dp, total FR
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tDetailPenyewaanTableAdapter" GeneratorDataComponentClassName="tDetailPenyewaanTableAdapter" Name="tDetailPenyewaan" UserDataComponentName="tDetailPenyewaanTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.tDetailPenyewaan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.tDetailPenyewaan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tDetailPenyewaan] WHERE (([idTSewa] = @Original_idTSewa) AND ([idProperty] = @Original_idProperty) AND ([harga] = @Original_harga) AND ([mulaiSewa] = @Original_mulaiSewa) AND ([sampai] = @Original_sampai) AND ([pembayaran] = @Original_pembayaran) AND ((@IsNull_idCicilan = 1 AND [idCicilan] IS NULL) OR ([idCicilan] = @Original_idCicilan)) AND ((@IsNull_perBulan = 1 AND [perBulan] IS NULL) OR ([perBulan] = @Original_perBulan)) AND ((@IsNull_dp = 1 AND [dp] IS NULL) OR ([dp] = @Original_dp)) AND ([total] = @Original_total))</CommandText>
@@ -666,17 +728,16 @@ SELECT idTSewa, idProperty, harga, mulaiSewa, sampai, pembayaran, idCicilan, per
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tPembelianTableAdapter" GeneratorDataComponentClassName="tPembelianTableAdapter" Name="tPembelian" UserDataComponentName="tPembelianTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.tPembelian" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.tPembelian" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM [dbo].[tPembelian] WHERE (([idTBeli] = @Original_idTBeli) AND ([tanggal] = @Original_tanggal) AND ([idProperty] = @Original_idProperty) AND ([idClient] = @Original_idClient) AND ((@IsNull_total = 1 AND [total] IS NULL) OR ([total] = @Original_total)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)))</CommandText>
+                    <CommandText>DELETE FROM [dbo].[tPembelian] WHERE (([idTBeli] = @Original_idTBeli) AND ([tanggal] = @Original_tanggal) AND ([idProperty] = @Original_idProperty) AND ([idClient] = @Original_idClient) AND ([total] = @Original_total) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idTBeli" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idTBeli" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idClient" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idClient" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -691,7 +752,7 @@ SELECT idTBeli, tanggal, idProperty, idClient, total, status FROM tPembelian WHE
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idClient" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idClient" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
@@ -704,21 +765,20 @@ SELECT idTBeli, tanggal, idProperty, idClient, total, status FROM tPembelian WHE
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE [dbo].[tPembelian] SET [idTBeli] = @idTBeli, [tanggal] = @tanggal, [idProperty] = @idProperty, [idClient] = @idClient, [total] = @total, [status] = @status WHERE (([idTBeli] = @Original_idTBeli) AND ([tanggal] = @Original_tanggal) AND ([idProperty] = @Original_idProperty) AND ([idClient] = @Original_idClient) AND ((@IsNull_total = 1 AND [total] IS NULL) OR ([total] = @Original_total)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)));
+                    <CommandText>UPDATE [dbo].[tPembelian] SET [idTBeli] = @idTBeli, [tanggal] = @tanggal, [idProperty] = @idProperty, [idClient] = @idClient, [total] = @total, [status] = @status WHERE (([idTBeli] = @Original_idTBeli) AND ([tanggal] = @Original_tanggal) AND ([idProperty] = @Original_idProperty) AND ([idClient] = @Original_idClient) AND ([total] = @Original_total) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)));
 SELECT idTBeli, tanggal, idProperty, idClient, total, status FROM tPembelian WHERE (idTBeli = @idTBeli)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idTBeli" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idTBeli" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@idClient" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idClient" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idTBeli" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idTBeli" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Date" Direction="Input" ParameterName="@Original_tanggal" Precision="0" ProviderType="Date" Scale="0" Size="0" SourceColumn="tanggal" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idProperty" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idProperty" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_idClient" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="idClient" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="true" SourceVersion="Original" />
-                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_total" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="total" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_status" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="true" SourceVersion="Original" />
                       <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="AnsiString" Direction="Input" ParameterName="@Original_status" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="status" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
@@ -738,7 +798,7 @@ SELECT idTBeli, tanggal, idProperty, idClient, total, status FROM tPembelian WHE
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tPenyewaanTableAdapter" GeneratorDataComponentClassName="tPenyewaanTableAdapter" Name="tPenyewaan" UserDataComponentName="tPenyewaanTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="REALESTATEConnectionString (Settings)" DbObjectName="REALESTATE.dbo.tPenyewaan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="REALESTATEConnectionString2 (Settings)" DbObjectName="REALESTATE.dbo.tPenyewaan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[tPenyewaan] WHERE (([idTSewa] = @Original_idTSewa) AND ([tanggal] = @Original_tanggal) AND ([idProperty] = @Original_idProperty) AND ([idClient] = @Original_idClient) AND ((@IsNull_total = 1 AND [total] IS NULL) OR ([total] = @Original_total)) AND ((@IsNull_status = 1 AND [status] IS NULL) OR ([status] = @Original_status)))</CommandText>
@@ -904,6 +964,33 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="kategoriBayar" msprop:Generator_TableClassName="kategoriBayarDataTable" msprop:Generator_TableVarName="tablekategoriBayar" msprop:Generator_TablePropName="kategoriBayar" msprop:Generator_RowDeletingName="kategoriBayarRowDeleting" msprop:Generator_RowChangingName="kategoriBayarRowChanging" msprop:Generator_RowEvHandlerName="kategoriBayarRowChangeEventHandler" msprop:Generator_RowDeletedName="kategoriBayarRowDeleted" msprop:Generator_UserTableName="kategoriBayar" msprop:Generator_RowChangedName="kategoriBayarRowChanged" msprop:Generator_RowEvArgName="kategoriBayarRowChangeEvent" msprop:Generator_RowClassName="kategoriBayarRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idKategoriBayar" msprop:Generator_ColumnVarNameInTable="columnidKategoriBayar" msprop:Generator_ColumnPropNameInRow="idKategoriBayar" msprop:Generator_ColumnPropNameInTable="idKategoriBayarColumn" msprop:Generator_UserColumnName="idKategoriBayar">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="kategoriBayar" msprop:Generator_ColumnVarNameInTable="columnkategoriBayar" msprop:Generator_ColumnPropNameInRow="kategoriBayar" msprop:Generator_ColumnPropNameInTable="kategoriBayarColumn" msprop:Generator_UserColumnName="kategoriBayar">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="keterangan" msprop:Generator_ColumnVarNameInTable="columnketerangan" msprop:Generator_ColumnPropNameInRow="keterangan" msprop:Generator_ColumnPropNameInTable="keteranganColumn" msprop:Generator_UserColumnName="keterangan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="kategoriCicilan" msprop:Generator_TableClassName="kategoriCicilanDataTable" msprop:Generator_TableVarName="tablekategoriCicilan" msprop:Generator_TablePropName="kategoriCicilan" msprop:Generator_RowDeletingName="kategoriCicilanRowDeleting" msprop:Generator_RowChangingName="kategoriCicilanRowChanging" msprop:Generator_RowEvHandlerName="kategoriCicilanRowChangeEventHandler" msprop:Generator_RowDeletedName="kategoriCicilanRowDeleted" msprop:Generator_UserTableName="kategoriCicilan" msprop:Generator_RowChangedName="kategoriCicilanRowChanged" msprop:Generator_RowEvArgName="kategoriCicilanRowChangeEvent" msprop:Generator_RowClassName="kategoriCicilanRow">
           <xs:complexType>
             <xs:sequence>
@@ -914,7 +1001,13 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="cicilan" msprop:Generator_ColumnVarNameInTable="columncicilan" msprop:Generator_ColumnPropNameInRow="cicilan" msprop:Generator_ColumnPropNameInTable="cicilanColumn" msprop:Generator_UserColumnName="cicilan" type="xs:int" />
+              <xs:element name="Cicilan" msprop:Generator_ColumnVarNameInTable="columnCicilan" msprop:Generator_ColumnPropNameInRow="Cicilan" msprop:Generator_ColumnPropNameInTable="CicilanColumn" msprop:Generator_UserColumnName="Cicilan">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -1059,12 +1152,19 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="harga" msprop:Generator_ColumnVarNameInTable="columnharga" msprop:Generator_ColumnPropNameInRow="harga" msprop:Generator_ColumnPropNameInTable="hargaColumn" msprop:Generator_UserColumnName="harga" type="xs:decimal" />
+              <xs:element name="harga" msprop:Generator_ColumnVarNameInTable="columnharga" msprop:Generator_ColumnPropNameInRow="harga" msprop:Generator_ColumnPropNameInTable="hargaColumn" msprop:Generator_UserColumnName="harga" type="xs:int" />
               <xs:element name="gambar" msprop:Generator_ColumnVarNameInTable="columngambar" msprop:Generator_ColumnPropNameInRow="gambar" msprop:Generator_ColumnPropNameInTable="gambarColumn" msprop:Generator_UserColumnName="gambar" type="xs:base64Binary" minOccurs="0" />
               <xs:element name="idInterior" msprop:Generator_ColumnVarNameInTable="columnidInterior" msprop:Generator_ColumnPropNameInRow="idInterior" msprop:Generator_ColumnPropNameInTable="idInteriorColumn" msprop:Generator_UserColumnName="idInterior">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="statusProperty" msprop:Generator_ColumnVarNameInTable="columnstatusProperty" msprop:Generator_ColumnPropNameInRow="statusProperty" msprop:Generator_ColumnPropNameInTable="statusPropertyColumn" msprop:Generator_UserColumnName="statusProperty" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1194,7 +1294,7 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:int" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:int" />
               <xs:element name="status" msprop:Generator_ColumnVarNameInTable="columnstatus" msprop:Generator_ColumnPropNameInRow="status" msprop:Generator_ColumnPropNameInTable="statusColumn" msprop:Generator_UserColumnName="status" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -1255,6 +1355,10 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
       <xs:selector xpath=".//mstns:jabatan" />
       <xs:field xpath="mstns:idJabatan" />
     </xs:unique>
+    <xs:unique name="kategoriBayar_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:kategoriBayar" />
+      <xs:field xpath="mstns:idKategoriBayar" />
+    </xs:unique>
     <xs:unique name="kategoriCicilan_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:kategoriCicilan" />
       <xs:field xpath="mstns:idCicilan" />
@@ -1300,8 +1404,10 @@ SELECT idTSewa, tanggal, idProperty, idClient, total, status FROM tPenyewaan WHE
       <msdata:Relationship name="FK_property_propertyTipe" msdata:parent="propertyTipe" msdata:child="property" msdata:parentkey="idTipe" msdata:childkey="idTipe" msprop:Generator_UserChildTable="property" msprop:Generator_ChildPropName="GetpropertyRows" msprop:Generator_UserRelationName="FK_property_propertyTipe" msprop:Generator_RelationVarName="relationFK_property_propertyTipe" msprop:Generator_UserParentTable="propertyTipe" msprop:Generator_ParentPropName="propertyTipeRow" />
       <msdata:Relationship name="FK_tDetailPembelian_kategoriCicilan" msdata:parent="kategoriCicilan" msdata:child="tDetailPembelian" msdata:parentkey="idCicilan" msdata:childkey="idCicilan" msprop:Generator_UserChildTable="tDetailPembelian" msprop:Generator_ChildPropName="GettDetailPembelianRows" msprop:Generator_UserRelationName="FK_tDetailPembelian_kategoriCicilan" msprop:Generator_ParentPropName="kategoriCicilanRow" msprop:Generator_RelationVarName="relationFK_tDetailPembelian_kategoriCicilan" msprop:Generator_UserParentTable="kategoriCicilan" />
       <msdata:Relationship name="FK_tDetailPembelian_property" msdata:parent="property" msdata:child="tDetailPembelian" msdata:parentkey="idProperty" msdata:childkey="idProperty" msprop:Generator_UserChildTable="tDetailPembelian" msprop:Generator_ChildPropName="GettDetailPembelianRows" msprop:Generator_UserRelationName="FK_tDetailPembelian_property" msprop:Generator_ParentPropName="propertyRow" msprop:Generator_RelationVarName="relationFK_tDetailPembelian_property" msprop:Generator_UserParentTable="property" />
+      <msdata:Relationship name="FK_tDetailPembelian_tPembelian" msdata:parent="tPembelian" msdata:child="tDetailPembelian" msdata:parentkey="idTBeli" msdata:childkey="idTBeli" msprop:Generator_UserChildTable="tDetailPembelian" msprop:Generator_ChildPropName="GettDetailPembelianRows" msprop:Generator_UserRelationName="FK_tDetailPembelian_tPembelian" msprop:Generator_RelationVarName="relationFK_tDetailPembelian_tPembelian" msprop:Generator_UserParentTable="tPembelian" msprop:Generator_ParentPropName="tPembelianRow" />
       <msdata:Relationship name="FK_tDetailPenyewaan_kategoriCicilan" msdata:parent="kategoriCicilan" msdata:child="tDetailPenyewaan" msdata:parentkey="idCicilan" msdata:childkey="idCicilan" msprop:Generator_UserChildTable="tDetailPenyewaan" msprop:Generator_ChildPropName="GettDetailPenyewaanRows" msprop:Generator_UserRelationName="FK_tDetailPenyewaan_kategoriCicilan" msprop:Generator_ParentPropName="kategoriCicilanRow" msprop:Generator_RelationVarName="relationFK_tDetailPenyewaan_kategoriCicilan" msprop:Generator_UserParentTable="kategoriCicilan" />
       <msdata:Relationship name="FK_tDetailPenyewaan_property" msdata:parent="property" msdata:child="tDetailPenyewaan" msdata:parentkey="idProperty" msdata:childkey="idProperty" msprop:Generator_UserChildTable="tDetailPenyewaan" msprop:Generator_ChildPropName="GettDetailPenyewaanRows" msprop:Generator_UserRelationName="FK_tDetailPenyewaan_property" msprop:Generator_ParentPropName="propertyRow" msprop:Generator_RelationVarName="relationFK_tDetailPenyewaan_property" msprop:Generator_UserParentTable="property" />
+      <msdata:Relationship name="FK_tDetailPenyewaan_tPenyewaan" msdata:parent="tPenyewaan" msdata:child="tDetailPenyewaan" msdata:parentkey="idTSewa" msdata:childkey="idTSewa" msprop:Generator_UserChildTable="tDetailPenyewaan" msprop:Generator_ChildPropName="GettDetailPenyewaanRows" msprop:Generator_UserRelationName="FK_tDetailPenyewaan_tPenyewaan" msprop:Generator_RelationVarName="relationFK_tDetailPenyewaan_tPenyewaan" msprop:Generator_UserParentTable="tPenyewaan" msprop:Generator_ParentPropName="tPenyewaanRow" />
       <msdata:Relationship name="FK_tPembelian_client" msdata:parent="client" msdata:child="tPembelian" msdata:parentkey="idClient" msdata:childkey="idClient" msprop:Generator_UserChildTable="tPembelian" msprop:Generator_ChildPropName="GettPembelianRows" msprop:Generator_UserRelationName="FK_tPembelian_client" msprop:Generator_ParentPropName="clientRow" msprop:Generator_RelationVarName="relationFK_tPembelian_client" msprop:Generator_UserParentTable="client" />
       <msdata:Relationship name="FK_tPembelian_property" msdata:parent="property" msdata:child="tPembelian" msdata:parentkey="idProperty" msdata:childkey="idProperty" msprop:Generator_UserChildTable="tPembelian" msprop:Generator_ChildPropName="GettPembelianRows" msprop:Generator_UserRelationName="FK_tPembelian_property" msprop:Generator_ParentPropName="propertyRow" msprop:Generator_RelationVarName="relationFK_tPembelian_property" msprop:Generator_UserParentTable="property" />
       <msdata:Relationship name="FK_tPenyewaan_client" msdata:parent="client" msdata:child="tPenyewaan" msdata:parentkey="idClient" msdata:childkey="idClient" msprop:Generator_UserChildTable="tPenyewaan" msprop:Generator_ChildPropName="GettPenyewaanRows" msprop:Generator_UserRelationName="FK_tPenyewaan_client" msprop:Generator_ParentPropName="clientRow" msprop:Generator_RelationVarName="relationFK_tPenyewaan_client" msprop:Generator_UserParentTable="client" />

@@ -68,7 +68,7 @@
             this.txtIDBeli = new System.Windows.Forms.TextBox();
             this.btnSimpan = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.TglTrans = new System.Windows.Forms.DateTimePicker();
             this.cbClient = new System.Windows.Forms.ComboBox();
             this.cbProperty = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -314,7 +314,7 @@
             this.groupBox5.Controls.Add(this.txtIDBeli);
             this.groupBox5.Controls.Add(this.btnSimpan);
             this.groupBox5.Controls.Add(this.btnBatal);
-            this.groupBox5.Controls.Add(this.dateTimePicker1);
+            this.groupBox5.Controls.Add(this.TglTrans);
             this.groupBox5.Controls.Add(this.cbClient);
             this.groupBox5.Controls.Add(this.cbProperty);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel10);
@@ -327,7 +327,7 @@
             this.groupBox5.Size = new System.Drawing.Size(1053, 289);
             this.groupBox5.TabIndex = 153;
             this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "s";
+            this.groupBox5.Text = "Pembelian";
             // 
             // btnHapus
             // 
@@ -701,13 +701,13 @@
             this.btnBatal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnBatal.Click += new System.EventHandler(this.btnBatal_Click);
             // 
-            // dateTimePicker1
+            // TglTrans
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(128, 61);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(185, 20);
-            this.dateTimePicker1.TabIndex = 184;
+            this.TglTrans.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TglTrans.Location = new System.Drawing.Point(128, 61);
+            this.TglTrans.Name = "TglTrans";
+            this.TglTrans.Size = new System.Drawing.Size(185, 20);
+            this.TglTrans.TabIndex = 184;
             // 
             // cbClient
             // 
@@ -961,7 +961,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 btnX;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker TglTrans;
         private System.Windows.Forms.ComboBox cbClient;
         private System.Windows.Forms.ComboBox cbProperty;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel10;

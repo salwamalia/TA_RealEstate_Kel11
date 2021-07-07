@@ -231,7 +231,7 @@ namespace TA_RealEstate_Kel11
                 }
                 catch (Exception ex )
                 {
-                    MessageBox.Show("Error Data tersebut Tidak ada!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Error Data tersebut Tidak ada!" + ex.Message, "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
         }
