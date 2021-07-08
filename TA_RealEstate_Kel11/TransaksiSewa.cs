@@ -814,13 +814,6 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            Login log = new Login();
-            log.Visible = true;
-            this.Hide();
-        }
-
         private void rbCicil_CheckedChanged(object sender, EventArgs e)
         {
             cbCicilan.Enabled = true;
@@ -831,6 +824,27 @@ namespace TA_RealEstate_Kel11
         {
             cbCicilan.Enabled = false;
             txtperBulan.Enabled = false;
+        }
+
+        private void btnPembayaran_Click(object sender, EventArgs e)
+        {
+            PembayaranPembelian bayar = new PembayaranPembelian();
+            bayar.Show();
+            this.Hide();
+        }
+
+        private void btnbayarSewa_Click(object sender, EventArgs e)
+        {
+            PembayaranPenyewaan bayar = new PembayaranPenyewaan();
+            bayar.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login log = new Login();
+            log.Visible = true;
+            this.Hide();
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click_1(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Visible = true;
