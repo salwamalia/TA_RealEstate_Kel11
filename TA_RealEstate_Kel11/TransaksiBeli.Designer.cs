@@ -30,15 +30,17 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TransaksiBeli));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnbayarsewa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPembayaran = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -91,8 +93,6 @@
             this.propertyTableAdapter = new TA_RealEstate_Kel11.REALESTATEDataSetTableAdapters.propertyTableAdapter();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dgDetailTransaksi = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnbayarsewa = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -205,6 +205,78 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(134, 666);
             this.bunifuGradientPanel2.TabIndex = 4;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.BorderRadius = 0;
+            this.btnLogout.ButtonText = "Logout";
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogout.Iconimage = null;
+            this.btnLogout.Iconimage_right = null;
+            this.btnLogout.Iconimage_right_Selected = null;
+            this.btnLogout.Iconimage_Selected = null;
+            this.btnLogout.IconMarginLeft = 0;
+            this.btnLogout.IconMarginRight = 0;
+            this.btnLogout.IconRightVisible = true;
+            this.btnLogout.IconRightZoom = 0D;
+            this.btnLogout.IconVisible = true;
+            this.btnLogout.IconZoom = 90D;
+            this.btnLogout.IsTab = false;
+            this.btnLogout.Location = new System.Drawing.Point(0, 196);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogout.selected = false;
+            this.btnLogout.Size = new System.Drawing.Size(134, 49);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
+            this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnbayarsewa
+            // 
+            this.btnbayarsewa.Activecolor = System.Drawing.Color.Transparent;
+            this.btnbayarsewa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnbayarsewa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnbayarsewa.BorderRadius = 0;
+            this.btnbayarsewa.ButtonText = "Pembayaran Penyewaan";
+            this.btnbayarsewa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnbayarsewa.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnbayarsewa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnbayarsewa.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnbayarsewa.Iconimage = null;
+            this.btnbayarsewa.Iconimage_right = null;
+            this.btnbayarsewa.Iconimage_right_Selected = null;
+            this.btnbayarsewa.Iconimage_Selected = null;
+            this.btnbayarsewa.IconMarginLeft = 0;
+            this.btnbayarsewa.IconMarginRight = 0;
+            this.btnbayarsewa.IconRightVisible = true;
+            this.btnbayarsewa.IconRightZoom = 0D;
+            this.btnbayarsewa.IconVisible = true;
+            this.btnbayarsewa.IconZoom = 90D;
+            this.btnbayarsewa.IsTab = false;
+            this.btnbayarsewa.Location = new System.Drawing.Point(0, 147);
+            this.btnbayarsewa.Name = "btnbayarsewa";
+            this.btnbayarsewa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnbayarsewa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnbayarsewa.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnbayarsewa.selected = false;
+            this.btnbayarsewa.Size = new System.Drawing.Size(134, 49);
+            this.btnbayarsewa.TabIndex = 6;
+            this.btnbayarsewa.Text = "Pembayaran Penyewaan";
+            this.btnbayarsewa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnbayarsewa.Textcolor = System.Drawing.Color.Black;
+            this.btnbayarsewa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnbayarsewa.Click += new System.EventHandler(this.btnbayarsewa_Click);
             // 
             // btnPembayaran
             // 
@@ -426,6 +498,7 @@
             this.cbCicilan.TabIndex = 245;
             this.cbCicilan.ValueMember = "idCicilan";
             this.cbCicilan.SelectedIndexChanged += new System.EventHandler(this.cbCicilan_SelectedIndexChanged_1);
+            this.cbCicilan.SelectedValueChanged += new System.EventHandler(this.cbCicilan_SelectedValueChanged);
             // 
             // rbCicil
             // 
@@ -531,7 +604,6 @@
             // 
             this.txtperBulan.Location = new System.Drawing.Point(516, 32);
             this.txtperBulan.Name = "txtperBulan";
-            this.txtperBulan.ReadOnly = true;
             this.txtperBulan.Size = new System.Drawing.Size(166, 20);
             this.txtperBulan.TabIndex = 171;
             // 
@@ -642,6 +714,7 @@
             this.txtTotal.ReadOnly = true;
             this.txtTotal.Size = new System.Drawing.Size(166, 20);
             this.txtTotal.TabIndex = 237;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // txtPemilik
             // 
@@ -882,19 +955,19 @@
             // 
             // dgTransaksi
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgTransaksi.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgTransaksi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgTransaksi.ColumnHeadersHeight = 50;
             this.dgTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -937,19 +1010,19 @@
             // 
             // dgDetailTransaksi
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgDetailTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgDetailTransaksi.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgDetailTransaksi.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgDetailTransaksi.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgDetailTransaksi.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgDetailTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgDetailTransaksi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgDetailTransaksi.ColumnHeadersHeight = 50;
             this.dgDetailTransaksi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgDetailTransaksi.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -963,78 +1036,6 @@
             this.dgDetailTransaksi.Size = new System.Drawing.Size(606, 259);
             this.dgDetailTransaksi.TabIndex = 1;
             this.dgDetailTransaksi.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgDetailTransaksi_CellContentClick);
-            // 
-            // btnbayarsewa
-            // 
-            this.btnbayarsewa.Activecolor = System.Drawing.Color.Transparent;
-            this.btnbayarsewa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnbayarsewa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnbayarsewa.BorderRadius = 0;
-            this.btnbayarsewa.ButtonText = "Pembayaran Penyewaan";
-            this.btnbayarsewa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnbayarsewa.DisabledColor = System.Drawing.Color.Transparent;
-            this.btnbayarsewa.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnbayarsewa.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnbayarsewa.Iconimage = null;
-            this.btnbayarsewa.Iconimage_right = null;
-            this.btnbayarsewa.Iconimage_right_Selected = null;
-            this.btnbayarsewa.Iconimage_Selected = null;
-            this.btnbayarsewa.IconMarginLeft = 0;
-            this.btnbayarsewa.IconMarginRight = 0;
-            this.btnbayarsewa.IconRightVisible = true;
-            this.btnbayarsewa.IconRightZoom = 0D;
-            this.btnbayarsewa.IconVisible = true;
-            this.btnbayarsewa.IconZoom = 90D;
-            this.btnbayarsewa.IsTab = false;
-            this.btnbayarsewa.Location = new System.Drawing.Point(0, 147);
-            this.btnbayarsewa.Name = "btnbayarsewa";
-            this.btnbayarsewa.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnbayarsewa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnbayarsewa.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnbayarsewa.selected = false;
-            this.btnbayarsewa.Size = new System.Drawing.Size(134, 49);
-            this.btnbayarsewa.TabIndex = 6;
-            this.btnbayarsewa.Text = "Pembayaran Penyewaan";
-            this.btnbayarsewa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnbayarsewa.Textcolor = System.Drawing.Color.Black;
-            this.btnbayarsewa.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnbayarsewa.Click += new System.EventHandler(this.btnbayarsewa_Click);
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
-            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogout.BorderRadius = 0;
-            this.btnLogout.ButtonText = "Logout";
-            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
-            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogout.Iconimage = null;
-            this.btnLogout.Iconimage_right = null;
-            this.btnLogout.Iconimage_right_Selected = null;
-            this.btnLogout.Iconimage_Selected = null;
-            this.btnLogout.IconMarginLeft = 0;
-            this.btnLogout.IconMarginRight = 0;
-            this.btnLogout.IconRightVisible = true;
-            this.btnLogout.IconRightZoom = 0D;
-            this.btnLogout.IconVisible = true;
-            this.btnLogout.IconZoom = 90D;
-            this.btnLogout.IsTab = false;
-            this.btnLogout.Location = new System.Drawing.Point(0, 196);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLogout.selected = false;
-            this.btnLogout.Size = new System.Drawing.Size(134, 49);
-            this.btnLogout.TabIndex = 7;
-            this.btnLogout.Text = "Logout";
-            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogout.Textcolor = System.Drawing.Color.Black;
-            this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // TransaksiBeli
             // 

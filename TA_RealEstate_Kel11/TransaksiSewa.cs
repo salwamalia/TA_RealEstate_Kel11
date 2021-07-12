@@ -60,6 +60,12 @@ namespace TA_RealEstate_Kel11
             return kode;
         }
 
+        public int ambildurasi()
+        {
+            string temp = CBDurasi.SelectedItem.ToString().Substring(0, 2);
+            return Int32.Parse(temp);
+        }
+
         private void btnSimpan_Click(object sender, EventArgs e)
         {
             try
@@ -115,7 +121,10 @@ namespace TA_RealEstate_Kel11
                     insert1.Parameters.AddWithValue("@idTSewa", txtIDSewa.Text);
                     insert1.Parameters.AddWithValue("@idProperty", cbProperty.SelectedValue.ToString());
                     insert1.Parameters.AddWithValue("@mulai", dateTimePickerMulai.Value.ToString("yyyy-MM-dd"));
-                    insert1.Parameters.AddWithValue("@sampai", dateTimePickerSampai.Value.ToString("yyyy-MM-dd"));
+
+                    DateTime tglsampai = DateTime.Parse(dateTimePickerMulai.Value.ToString("yyyy-MM-dd"));
+                   
+                    insert1.Parameters.AddWithValue("@sampai", tglsampai.AddMonths(ambildurasi()).ToString("yyyy-MM-dd"));
                     insert1.Parameters.AddWithValue("@pembayaran", pembayaran);
 
                     //convert nama ke id  cbCicilan
@@ -194,7 +203,6 @@ namespace TA_RealEstate_Kel11
                 cmd2.Parameters.AddWithValue("@idTSewa", txtIDSewa.Text);
                 cmd2.Parameters.AddWithValue("@idProperty", cbProperty.SelectedValue.ToString());
                 cmd2.Parameters.AddWithValue("@mulai", dateTimePickerMulai.Value.ToString("yyyy-MM-dd"));
-                cmd2.Parameters.AddWithValue("@sampai", dateTimePickerSampai.Value.ToString("yyyy-MM-dd"));
                 cmd2.Parameters.AddWithValue("@pembayaran", pembayaran);
 
                 //convert nama ke id  cbCicilan
@@ -398,7 +406,6 @@ namespace TA_RealEstate_Kel11
             txtIDSewa.Clear();
             dateTimePicker1.ResetText();
             dateTimePickerMulai.ResetText();
-            dateTimePickerSampai.ResetText();
             cbProperty.SelectedIndex = -1;
             txtPemilik.Clear();
             cbClient.SelectedIndex = -1;
@@ -658,7 +665,7 @@ namespace TA_RealEstate_Kel11
                 }
 
                 dateTimePickerMulai.Text = dgDetailTransaksi.Rows[e.RowIndex].Cells[2].Value.ToString();
-                dateTimePickerSampai.Text = dgDetailTransaksi.Rows[e.RowIndex].Cells[3].Value.ToString();
+                //dateTimePickerSampai.Text = dgDetailTransaksi.Rows[e.RowIndex].Cells[3].Value.ToString();
                 pembayaran = dgDetailTransaksi.Rows[e.RowIndex].Cells[4].Value.ToString();
 
                 //cicilan
@@ -750,7 +757,7 @@ namespace TA_RealEstate_Kel11
                 }
 
                 dateTimePickerMulai.Text = dgDetailTransaksi.Rows[e.RowIndex].Cells[2].Value.ToString();
-                dateTimePickerSampai.Text = dgDetailTransaksi.Rows[e.RowIndex].Cells[3].Value.ToString();
+                //dateTimePickerSampai.Text = dgDetailTransaksi.Rows[e.RowIndex].Cells[3].Value.ToString();
                 pembayaran = dgDetailTransaksi.Rows[e.RowIndex].Cells[4].Value.ToString();
 
                 //cicilan
@@ -828,16 +835,10 @@ namespace TA_RealEstate_Kel11
 
         private void btnPembayaran_Click(object sender, EventArgs e)
         {
-            PembayaranPembelian bayar = new PembayaranPembelian();
-            bayar.Show();
-            this.Hide();
         }
 
         private void btnbayarSewa_Click(object sender, EventArgs e)
         {
-            PembayaranPenyewaan bayar = new PembayaranPenyewaan();
-            bayar.Show();
-            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -845,6 +846,11 @@ namespace TA_RealEstate_Kel11
             Login log = new Login();
             log.Visible = true;
             this.Hide();
+        }
+
+        private void CBDurasi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

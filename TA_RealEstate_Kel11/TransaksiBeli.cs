@@ -441,19 +441,26 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        //TEXTBOX
-        private void txtDP_TextChanged(object sender, EventArgs e)
+        private void cbCicilan_SelectedValueChanged(object sender, EventArgs e)
         {
-            try
+            
+        }
+
+        //TEXTBOX
+        private void txtTotal_TextChanged(object sender, EventArgs e)
+        {
+            if (txtHargaProperty.Text != "")
             {
-                int temp = Int32.Parse(txtDP.Text);
-                int temp1 = Int32.Parse(txtHargaProperty.Text);
-                int temp2 = temp1 - temp;
+                int temp = Int32.Parse(txtperBulan.Text);
+                int temp1 = Int32.Parse(cbCicilan.SelectedItem.ToString());
+                int temp2 = temp1 * temp;
                 txtTotal.Text = temp2.ToString();
             }
-            catch (Exception)
-            {
-            }
+        }
+
+        private void txtDP_TextChanged(object sender, EventArgs e)
+        {
+            
         }
 
         //SEPARATOR
@@ -841,16 +848,10 @@ namespace TA_RealEstate_Kel11
 
         private void btnPembayaran_Click(object sender, EventArgs e)
         {
-            PembayaranPembelian bayar = new PembayaranPembelian();
-            bayar.Show();
-            this.Hide();
         }
 
         private void btnbayarsewa_Click(object sender, EventArgs e)
         {
-            PembayaranPenyewaan bayar = new PembayaranPenyewaan();
-            bayar.Show();
-            this.Hide();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)

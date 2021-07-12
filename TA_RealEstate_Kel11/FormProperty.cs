@@ -56,7 +56,7 @@ namespace TA_RealEstate_Kel11
             }
             else if (autoid < 100)
             {
-                kode = "PT" + autoid;
+                kode = "PT0" + autoid;
             }
 
             myConnection.Close();
@@ -77,38 +77,6 @@ namespace TA_RealEstate_Kel11
 
         private void btnSimpan_Click(object sender, EventArgs e)
         {
-            SqlConnection myConnection = connection.Getcon();
-
-            Image img;
-            byte[] photo_aray;
-            if (PBGambar.Image != null)
-            {
-                img = PBGambar.Image;
-                MemoryStream ms = new MemoryStream();
-                PBGambar.Image.Save(ms, ImageFormat.Jpeg);
-                photo_aray = new byte[ms.Length];
-                ms.Position = 0;
-                ms.Read(photo_aray, 0, photo_aray.Length);
-            }
-            else
-            {
-                byte[] kosong = { 0 };
-                photo_aray = kosong;
-            }
-
-            SqlCommand insert = new SqlCommand("sp_InputProperty", myConnection);
-            insert.CommandType = CommandType.StoredProcedure;
-
-            insert.Parameters.AddWithValue("idProperty", IDOtomatis());
-            insert.Parameters.AddWithValue("namaProperty", txtNama.Text);
-            insert.Parameters.AddWithValue("idTipe", cbTipe.SelectedValue.ToString());
-            insert.Parameters.AddWithValue("idPemilik", cbPemilik.SelectedValue.ToString());
-            insert.Parameters.AddWithValue("ukuran", txtUkuran.Text);
-            insert.Parameters.AddWithValue("fasilitas", txtFasilitas.Text);
-            insert.Parameters.AddWithValue("harga", txtHarga.Text);
-            insert.Parameters.AddWithValue("gambar", photo_aray);
-            insert.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue.ToString());
-
             if (txtID.Text == "" || txtNama.Text == "" || cbTipe.Text == "" || cbPemilik.Text == "" || txtUkuran.Text == "" || txtFasilitas.Text == "" || txtHarga.Text == "" || cbInterior.Text == "")
             {
                 MessageBox.Show("Semua Data Harus diisi !!", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -117,8 +85,41 @@ namespace TA_RealEstate_Kel11
             {
                 try
                 {
+                    SqlConnection myConnection = connection.Getcon();
                     myConnection.Open();
+
+                    Image img;
+                    byte[] photo_aray;
+                    if (PBGambar.Image != null)
+                    {
+                        img = PBGambar.Image;
+                        MemoryStream ms = new MemoryStream();
+                        PBGambar.Image.Save(ms, ImageFormat.Jpeg);
+                        photo_aray = new byte[ms.Length];
+                        ms.Position = 0;
+                        ms.Read(photo_aray, 0, photo_aray.Length);
+                    }
+                    else
+                    {
+                        byte[] kosong = { 0 };
+                        photo_aray = kosong;
+                    }
+
+                    SqlCommand insert = new SqlCommand("sp_InputProperty", myConnection);
+                    insert.CommandType = CommandType.StoredProcedure;
+
+                    insert.Parameters.AddWithValue("idProperty", IDOtomatis());
+                    insert.Parameters.AddWithValue("namaProperty", txtNama.Text);
+                    insert.Parameters.AddWithValue("idTipe", cbTipe.SelectedValue.ToString());
+                    insert.Parameters.AddWithValue("idPemilik", cbPemilik.SelectedValue.ToString());
+                    insert.Parameters.AddWithValue("ukuran", txtUkuran.Text);
+                    insert.Parameters.AddWithValue("fasilitas", txtFasilitas.Text);
+                    insert.Parameters.AddWithValue("harga", hargasparator);
+                    insert.Parameters.AddWithValue("gambar", photo_aray);
+                    insert.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue.ToString());
+
                     insert.ExecuteNonQuery();
+                    myConnection.Close();
                     MessageBox.Show("Property Telah Ditambahkan", "Add Property", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     clear();
                 }
@@ -161,7 +162,7 @@ namespace TA_RealEstate_Kel11
             Update.Parameters.AddWithValue("idPemilik", cbPemilik.SelectedValue);
             Update.Parameters.AddWithValue("ukuran", txtUkuran.Text);
             Update.Parameters.AddWithValue("fasilitas", txtFasilitas.Text);
-            Update.Parameters.AddWithValue("harga", txtHarga.Text);
+            Update.Parameters.AddWithValue("harga", hargasparator);
             Update.Parameters.AddWithValue("gambar", photo_aray);
             Update.Parameters.AddWithValue("idInterior", cbInterior.SelectedValue);
 
@@ -323,7 +324,9 @@ namespace TA_RealEstate_Kel11
                     row["ID Pemilik"] = sqlDataReader["idPemilik"];
                     row["Ukuran"] = sqlDataReader["ukuran"];
                     row["Fasilitas"] = sqlDataReader["fasilitas"];
-                    row["Harga"] = sqlDataReader["harga"];
+                    int num = Convert.ToInt32(sqlDataReader["harga"].ToString());
+                    string res2 = String.Format("{0:#,##0}", num);
+                    row["Harga"] = res2.ToString();
                     row["ID Interior"] = sqlDataReader["idInterior"];
                     if (sqlDataReader["statusProperty"].ToString().Equals("0"))
                     {
@@ -342,6 +345,43 @@ namespace TA_RealEstate_Kel11
             catch (Exception ex)
             {
                 MessageBox.Show("Error Occured" + ex);
+            }
+        }
+
+        //separator
+        private double hargasparator;
+        private void txtHarga_Leave(object sender, EventArgs e)
+        {
+            if (txtHarga.Text != "")
+            {
+                try
+                {
+                    hargasparator = Convert.ToDouble(txtHarga.Text);
+                    string res2 = String.Format("{0:#,###}", hargasparator);
+                    txtHarga.Text = res2.ToString();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Occured" + ex);
+                }
+            }
+        }
+
+        private void txtHarga_TextChanged(object sender, EventArgs e)
+        {
+            if (txtHarga.Text != "")
+            {
+                try
+                {
+                    hargasparator = Convert.ToDouble(txtHarga.Text);
+                    string res2 = String.Format("{0:#,###}", hargasparator);
+                    txtHarga.Text = res2.ToString();
+                    txtHarga.Select(txtHarga.Text.Length, 0);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Occured" + ex);
+                }
             }
         }
 

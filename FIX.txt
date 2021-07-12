@@ -1,0 +1,24 @@
+agensi
+1TRS UDAHHHHHHH
+TBeliPTY
+idtransaksi,idtpy,harga
+
+2TRS UDAHHHHHHH
+TJualPTY LUNAS
+idtrs,client,harga
+det: idrs,tgl,idpty,harga
+
+MAKELAR INI WOOYYYY
+3TRS UDAHHHHH
+TSewaPTY LUNAS
+idtransaksi,tgl, idclient, harga
+det:idtrs,idPty,mulai,sampai
+
+4TRS UDAHHHHHHHHHHH
+TJualPTY LUNAS
+idtrs,tgl,idpty,harga,idclient
+
+4TRS(JUAL KREDIT
+idtrs,tgl trs, idpty,idcicil(angka),jmlhcicil(kolom),namaCLient
+det:idtrs,tglcicil,hargacicil,harga setelah dikurang cicilan
+

@@ -31,14 +31,14 @@ namespace TA_RealEstate_Kel11
 
         private void btnPembelian_Click(object sender, EventArgs e)
         {
-            TransaksiBeli beli = new TransaksiBeli();
+            TBeliProperty beli = new TBeliProperty();
             beli.Show();
             this.Hide();
         }
 
         private void btnPenyewaan_Click(object sender, EventArgs e)
         {
-            TransaksiSewa sewa = new TransaksiSewa();
+            TSewaProperty sewa = new TSewaProperty();
             sewa.Show();
             this.Hide();
         }
