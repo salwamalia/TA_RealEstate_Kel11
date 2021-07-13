@@ -60,6 +60,44 @@ namespace TA_RealEstate_Kel11
             return kode;
         }
 
+        private string IDOtomatis2()
+        {
+            int autoid = 0;
+            string kode = null;
+
+            SqlConnection myConnection = connection.Getcon();
+            myConnection.Open();
+
+            string sqlQuery = "SELECT TOP (1) MAX(RIGHT (idDetailCIcil,2))+1 AS idDetailCIcil FROM TJualPropertyCicilDet";
+            SqlCommand cmd = new SqlCommand(sqlQuery, myConnection);
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                if (dr["idDetailCIcil"].ToString() == "")
+                {
+                    autoid = 1;
+                }
+                else
+                {
+                    autoid = Int32.Parse(dr["idDetailCIcil"].ToString());
+                }
+            }
+
+            if (autoid < 10)
+            {
+                kode = "BY00" + autoid;
+            }
+            else if (autoid < 100)
+            {
+                kode = "BY0" + autoid;
+            }
+
+            myConnection.Close();
+
+            return kode;
+        }
+
         private void txtIDSewa_Click(object sender, EventArgs e)
         {
             txtIDJual.Text = IDOtomatis();
@@ -83,6 +121,7 @@ namespace TA_RealEstate_Kel11
 
                     insert.Parameters.AddWithValue("@idTJualPropertyCicil", txtIDJual.Text);
                     insert.Parameters.AddWithValue("@tanggal", tanggal.Value.ToString("yyyy-MM-dd"));
+                    insert.Parameters.AddWithValue("@idProperty", txtProperty.Text);
 
                     //convert nama ke id  cbCLient
                     SqlConnection convert = connection.Getcon();
@@ -92,12 +131,15 @@ namespace TA_RealEstate_Kel11
                     SqlDataReader sqlDataReader = dr;
                     dr.Read();
                     insert.Parameters.AddWithValue("@idClient", sqlDataReader["idClient"]);
-
                     dr.Close();
                     convert.Close();
                     ///
 
-                    insert.Parameters.AddWithValue("@harga", hargasparator);
+                    insert.Parameters.AddWithValue("@hargaProperty", hargasparator);
+                    insert.Parameters.AddWithValue("@perBulan", perbulansparator);
+                    insert.Parameters.AddWithValue("@jumlahCicilan", txtJmhlCicilan.Text);
+                    insert.Parameters.AddWithValue("@total", totalsparator);
+
                     insert.ExecuteNonQuery();
                     myConnection.Close();
 
@@ -107,25 +149,11 @@ namespace TA_RealEstate_Kel11
                     SqlCommand insert1 = new SqlCommand("sp_InsertTJualPropertyCicilDet", myConnection1);
                     insert1.CommandType = CommandType.StoredProcedure;
 
+                    insert1.Parameters.AddWithValue("@idDetailCicil", IDOtomatis2());
                     insert1.Parameters.AddWithValue("@idTJualPropertyCicil", txtIDJual.Text);
-                    insert1.Parameters.AddWithValue("@idProperty", txtProperty.Text);
-                    insert1.Parameters.AddWithValue("@harga", hargasparator);
-
-                    //convert nama ke id  cbCicilan
-                    SqlConnection convert1 = connection.Getcon();
-                    convert1.Open();
-                    SqlCommand cmd1 = new SqlCommand("SELECT idCicilan FROM kategoriCicilan WHERE cicilan = '" + cbCicilan.SelectedItem + "'", convert1);
-                    SqlDataReader dr1 = cmd1.ExecuteReader();
-                    SqlDataReader sqlDataReader1 = dr1;
-                    dr1.Read();
-                    insert1.Parameters.AddWithValue("@idCicilan", sqlDataReader1["idCicilan"]);
-                    dr1.Close();
-                    convert1.Close();
-                    ///
-
-                    insert1.Parameters.AddWithValue("@perbulan", perbulansparator);
-                    insert1.Parameters.AddWithValue("@jumlahCicilan", txtJmhlCicilan.Text);
-                    insert1.Parameters.AddWithValue("@total", totalsparator);
+                    insert1.Parameters.AddWithValue("@tanggalDetail", tanggal.Value.ToString("yyyy-MM-dd"));
+                    insert1.Parameters.AddWithValue("@harga", uangsparator);
+                    insert1.Parameters.AddWithValue("@jumlah", 0);
 
                     insert1.ExecuteNonQuery();
                     myConnection1.Close();
@@ -136,7 +164,7 @@ namespace TA_RealEstate_Kel11
             catch (Exception ex)
             {
                 //MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("Unable to save " + ex);
+                MessageBox.Show("Unable to save "+ex);
             }
         }
 
@@ -156,6 +184,7 @@ namespace TA_RealEstate_Kel11
             txtJmhlCicilan.Clear();
             txtTotal.Clear();
 
+            LoadDataProperty();
             LoadData();
         }
 
@@ -221,6 +250,7 @@ namespace TA_RealEstate_Kel11
         private double hargasparator;
         private double perbulansparator;
         private double totalsparator;
+        private double uangsparator;
         private void txtHarga_Leave(object sender, EventArgs e)
         {
             if (txtHarga.Text != "")
@@ -300,6 +330,24 @@ namespace TA_RealEstate_Kel11
                     string res2 = String.Format("{0:#,###}", totalsparator);
                     txtTotal.Text = res2.ToString();
                     txtTotal.Select(txtTotal.Text.Length, 0);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error Occured" + ex);
+                }
+            }
+        }
+
+        private void txtUang_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUang.Text != "")
+            {
+                try
+                {
+                    uangsparator = Convert.ToDouble(txtUang.Text);
+                    string res2 = String.Format("{0:#,###}", uangsparator);
+                    txtUang.Text = res2.ToString();
+                    txtUang.Select(txtUang.Text.Length, 0);
                 }
                 catch (Exception ex)
                 {
@@ -408,18 +456,45 @@ namespace TA_RealEstate_Kel11
                 DataTable dataTable = new DataTable();
                 dataTable.Columns.Add("ID Transaksi");
                 dataTable.Columns.Add("Tanggal");
+                dataTable.Columns.Add("ID Property");
                 dataTable.Columns.Add("ID Client");
-                dataTable.Columns.Add("Harga");
+                dataTable.Columns.Add("Harga Property");
+                dataTable.Columns.Add("Perbulan");
+                dataTable.Columns.Add("Jumlah Cicilan");
+                dataTable.Columns.Add("Total");
+                dataTable.Columns.Add("Status Bayar");
+
                 while (dr.Read())
                 {
                     DataRow row = dataTable.NewRow();
 
                     row["ID Transaksi"] = sqlDataReader["idTJualPropertyCicil"];
                     row["Tanggal"] = sqlDataReader["tanggal"];
+                    row["ID Property"] = sqlDataReader["idProperty"];
                     row["ID Client"] = sqlDataReader["idClient"];
-                    int num = Convert.ToInt32(sqlDataReader["harga"].ToString());
-                    string res2 = String.Format("{0:#,##0}", num);
-                    row["Harga"] = res2.ToString();
+                    
+                    int num = Convert.ToInt32(sqlDataReader["hargaProperty"].ToString());
+                    string res = String.Format("{0:#,##0}", num);
+                    row["Harga Property"] = res.ToString();
+
+                    int num1 = Convert.ToInt32(sqlDataReader["perbulan"].ToString());
+                    string res1 = String.Format("{0:#,##0}", num1);
+                    row["Perbulan"] = res1.ToString();
+
+                    row["Jumlah Cicilan"] = sqlDataReader["jumlahCicilan"];
+
+                    int num2 = Convert.ToInt32(sqlDataReader["total"].ToString());
+                    string res2 = String.Format("{0:#,##0}", num2);
+                    row["Total"] = res2.ToString();
+
+                    if (sqlDataReader["statusBayar"].ToString().Equals("0"))
+                    {
+                        row["Status Bayar"] = "Belum Lunas";
+                    }
+                    else
+                    {
+                        row["Status Bayar"] = "Lunas";
+                    }
                     dataTable.Rows.Add(row);
                 }
                 //this.dataGridView1.DataSource = con.table;
@@ -433,39 +508,23 @@ namespace TA_RealEstate_Kel11
                 SqlDataReader dr1 = cmd1.ExecuteReader();
                 SqlDataReader sqlDataReader1 = dr1;
                 DataTable dataTable1 = new DataTable();
+                dataTable1.Columns.Add("ID Bayar");
                 dataTable1.Columns.Add("ID Transaksi");
-                dataTable1.Columns.Add("ID Property");
+                dataTable1.Columns.Add("Tanggal Detail");
                 dataTable1.Columns.Add("Harga");
-                dataTable1.Columns.Add("ID Cicilan");
-                dataTable1.Columns.Add("Perbulan");
-                dataTable1.Columns.Add("Jumlah Cicilan");
-                dataTable1.Columns.Add("Total");
                 while (dr1.Read())
                 {
                     DataRow row1 = dataTable1.NewRow();
+                    row1["ID Bayar"] = sqlDataReader1["idDetailCicil"];
                     row1["ID Transaksi"] = sqlDataReader1["idTJualPropertyCicil"];
-                    row1["ID Property"] = sqlDataReader1["idProperty"];
+                    row1["Tanggal Detail"] = sqlDataReader1["tanggalDetail"];
 
                     int num = Convert.ToInt32(sqlDataReader1["harga"].ToString());
                     string res = String.Format("{0:#,##0}", num);
-
                     row1["Harga"] = res.ToString();
-                    row1["ID Cicilan"] = sqlDataReader1["idCicilan"];
-
-                    int num1 = Convert.ToInt32(sqlDataReader1["perBulan"].ToString());
-                    string res1 = String.Format("{0:#,##0}", num1);
-                    row1["Perbulan"] = res1.ToString();
-
-                    int num2 = Convert.ToInt32(sqlDataReader1["jumlahCicilan"].ToString());
-                    string res2 = String.Format("{0:#,##0}", num2);
-                    row1["Jumlah Cicilan"] = res2.ToString();
-
-                    int num3 = Convert.ToInt32(sqlDataReader1["total"].ToString());
-                    string res3 = String.Format("{0:#,##0}", num3);
-                    row1["Total"] = res3.ToString();
                     dataTable1.Rows.Add(row1);
                 }
-                dgDetailJualProperty.DataSource = dataTable1;
+                //dgDetailJualProperty.DataSource = dataTable1;
                 con1.Close();
             }
             catch (Exception ex)
@@ -503,8 +562,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            MenuKasir kasir = new MenuKasir();
-            kasir.Show();
+            TSewaProperty sewa = new TSewaProperty();
+            sewa.Show();
             this.Hide();
         }
     }

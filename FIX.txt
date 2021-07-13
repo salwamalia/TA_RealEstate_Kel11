@@ -19,6 +19,6 @@ TJualPTY LUNAS
 idtrs,tgl,idpty,harga,idclient
 
 4TRS(JUAL KREDIT
-idtrs,tgl trs, idpty,idcicil(angka),jmlhcicil(kolom),namaCLient
+idtrs,tgl trs, namaCLient, idpty,idcicil(angka),jmlhcicil(kolom)
 det:idtrs,tglcicil,hargacicil,harga setelah dikurang cicilan
 

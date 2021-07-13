@@ -296,9 +296,9 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dgBeliProperty);
-            this.groupBox6.Location = new System.Drawing.Point(834, 201);
+            this.groupBox6.Location = new System.Drawing.Point(894, 220);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(448, 183);
+            this.groupBox6.Size = new System.Drawing.Size(453, 519);
             this.groupBox6.TabIndex = 159;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Tabel Data Beli Property";
@@ -328,7 +328,7 @@
             this.dgBeliProperty.Location = new System.Drawing.Point(3, 16);
             this.dgBeliProperty.Name = "dgBeliProperty";
             this.dgBeliProperty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgBeliProperty.Size = new System.Drawing.Size(442, 164);
+            this.dgBeliProperty.Size = new System.Drawing.Size(447, 500);
             this.dgBeliProperty.TabIndex = 1;
             // 
             // groupBox5
@@ -350,9 +350,9 @@
             this.groupBox5.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox5.Controls.Add(this.txtHarga);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel18);
-            this.groupBox5.Location = new System.Drawing.Point(221, 201);
+            this.groupBox5.Location = new System.Drawing.Point(16, 29);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(575, 180);
+            this.groupBox5.Size = new System.Drawing.Size(665, 171);
             this.groupBox5.TabIndex = 158;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Beli Property";
@@ -388,7 +388,7 @@
             // 
             this.bunifuCustomLabel7.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(402, 71);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(465, 94);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(30, 26);
             this.bunifuCustomLabel7.TabIndex = 248;
@@ -399,7 +399,7 @@
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel8.Location = new System.Drawing.Point(302, 70);
+            this.bunifuCustomLabel8.Location = new System.Drawing.Point(365, 93);
             this.bunifuCustomLabel8.Name = "bunifuCustomLabel8";
             this.bunifuCustomLabel8.Size = new System.Drawing.Size(100, 26);
             this.bunifuCustomLabel8.TabIndex = 246;
@@ -410,7 +410,7 @@
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(402, 16);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(465, 55);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(30, 26);
             this.bunifuCustomLabel5.TabIndex = 245;
@@ -421,7 +421,7 @@
             // 
             this.bunifuCustomLabel6.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel6.Location = new System.Drawing.Point(302, 17);
+            this.bunifuCustomLabel6.Location = new System.Drawing.Point(365, 56);
             this.bunifuCustomLabel6.Name = "bunifuCustomLabel6";
             this.bunifuCustomLabel6.Size = new System.Drawing.Size(82, 26);
             this.bunifuCustomLabel6.TabIndex = 243;
@@ -446,7 +446,7 @@
             this.btnBatal.IdleFillColor = System.Drawing.Color.White;
             this.btnBatal.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBatal.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBatal.Location = new System.Drawing.Point(440, 123);
+            this.btnBatal.Location = new System.Drawing.Point(536, 126);
             this.btnBatal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBatal.Name = "btnBatal";
             this.btnBatal.Size = new System.Drawing.Size(87, 32);
@@ -472,7 +472,7 @@
             this.btnBayar.IdleFillColor = System.Drawing.Color.White;
             this.btnBayar.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnBayar.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnBayar.Location = new System.Drawing.Point(345, 123);
+            this.btnBayar.Location = new System.Drawing.Point(441, 126);
             this.btnBayar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBayar.Name = "btnBayar";
             this.btnBayar.Size = new System.Drawing.Size(87, 32);
@@ -484,7 +484,7 @@
             // 
             this.bunifuCustomLabel22.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel22.Location = new System.Drawing.Point(119, 137);
+            this.bunifuCustomLabel22.Location = new System.Drawing.Point(467, 17);
             this.bunifuCustomLabel22.Name = "bunifuCustomLabel22";
             this.bunifuCustomLabel22.Size = new System.Drawing.Size(30, 26);
             this.bunifuCustomLabel22.TabIndex = 241;
@@ -526,7 +526,7 @@
             // 
             this.bunifuCustomLabel18.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel18.Location = new System.Drawing.Point(13, 136);
+            this.bunifuCustomLabel18.Location = new System.Drawing.Point(361, 16);
             this.bunifuCustomLabel18.Name = "bunifuCustomLabel18";
             this.bunifuCustomLabel18.Size = new System.Drawing.Size(82, 26);
             this.bunifuCustomLabel18.TabIndex = 158;
@@ -536,20 +536,21 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txtCariProperty);
+            this.groupBox4.Controls.Add(this.groupBox5);
             this.groupBox4.Controls.Add(this.btnCariProperty);
             this.groupBox4.Controls.Add(this.bunifuCustomLabel15);
-            this.groupBox4.Location = new System.Drawing.Point(256, 387);
+            this.groupBox4.Controls.Add(this.groupBox2);
+            this.groupBox4.Location = new System.Drawing.Point(161, 217);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(964, 54);
+            this.groupBox4.Size = new System.Drawing.Size(707, 522);
             this.groupBox4.TabIndex = 156;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Cari Property";
             // 
             // txtCariProperty
             // 
-            this.txtCariProperty.Location = new System.Drawing.Point(142, 23);
+            this.txtCariProperty.Location = new System.Drawing.Point(156, 231);
             this.txtCariProperty.Name = "txtCariProperty";
-            this.txtCariProperty.Size = new System.Drawing.Size(185, 20);
+            this.txtCariProperty.Size = new System.Drawing.Size(443, 20);
             this.txtCariProperty.TabIndex = 160;
             // 
             // btnCariProperty
@@ -570,7 +571,7 @@
             this.btnCariProperty.IdleFillColor = System.Drawing.Color.White;
             this.btnCariProperty.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCariProperty.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCariProperty.Location = new System.Drawing.Point(351, 18);
+            this.btnCariProperty.Location = new System.Drawing.Point(606, 225);
             this.btnCariProperty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCariProperty.Name = "btnCariProperty";
             this.btnCariProperty.Size = new System.Drawing.Size(75, 29);
@@ -582,19 +583,19 @@
             // 
             this.bunifuCustomLabel15.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(22, 18);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(15, 225);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(100, 26);
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(130, 26);
             this.bunifuCustomLabel15.TabIndex = 158;
-            this.bunifuCustomLabel15.Text = "ID Property";
+            this.bunifuCustomLabel15.Text = "Cari ID Property";
             this.bunifuCustomLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgProperty);
-            this.groupBox2.Location = new System.Drawing.Point(256, 447);
+            this.groupBox2.Location = new System.Drawing.Point(16, 259);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(964, 278);
+            this.groupBox2.Size = new System.Drawing.Size(668, 237);
             this.groupBox2.TabIndex = 157;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tabel Data Property";
@@ -624,12 +625,12 @@
             this.dgProperty.Location = new System.Drawing.Point(3, 16);
             this.dgProperty.Name = "dgProperty";
             this.dgProperty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgProperty.Size = new System.Drawing.Size(958, 259);
+            this.dgProperty.Size = new System.Drawing.Size(662, 218);
             this.dgProperty.TabIndex = 1;
             // 
             // txtKembalian
             // 
-            this.txtKembalian.Location = new System.Drawing.Point(440, 76);
+            this.txtKembalian.Location = new System.Drawing.Point(503, 99);
             this.txtKembalian.Name = "txtKembalian";
             this.txtKembalian.ReadOnly = true;
             this.txtKembalian.Size = new System.Drawing.Size(120, 20);
@@ -637,7 +638,7 @@
             // 
             // txtUang
             // 
-            this.txtUang.Location = new System.Drawing.Point(440, 19);
+            this.txtUang.Location = new System.Drawing.Point(503, 58);
             this.txtUang.Name = "txtUang";
             this.txtUang.Size = new System.Drawing.Size(120, 20);
             this.txtUang.TabIndex = 244;
@@ -645,7 +646,7 @@
             // 
             // txtHarga
             // 
-            this.txtHarga.Location = new System.Drawing.Point(155, 143);
+            this.txtHarga.Location = new System.Drawing.Point(503, 23);
             this.txtHarga.Name = "txtHarga";
             this.txtHarga.ReadOnly = true;
             this.txtHarga.Size = new System.Drawing.Size(120, 20);
@@ -660,9 +661,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);

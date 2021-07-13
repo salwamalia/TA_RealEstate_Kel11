@@ -416,5 +416,12 @@ namespace TA_RealEstate_Kel11
             kasir.Show();
             this.Hide();
         }
+
+        private void btnPelunasanCicilan_Click(object sender, EventArgs e)
+        {
+            TPelunasanCicilanProperty lunascicilan = new TPelunasanCicilanProperty();
+            lunascicilan.Show();
+            this.Hide();
+        }
     }
 }

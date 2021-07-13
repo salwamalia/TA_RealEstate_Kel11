@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TJualProperty));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
@@ -51,10 +51,8 @@
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtProperty = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtKembalian = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtUang = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.btnBatal = new Bunifu.Framework.UI.BunifuThinButton2();
             this.btnBayar = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -62,7 +60,6 @@
             this.txtIDJual = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtCariProperty = new System.Windows.Forms.TextBox();
@@ -70,6 +67,9 @@
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgProperty = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.txtKembalian = new TA_RealEstate_Kel11.NumberTextBox();
+            this.txtUang = new TA_RealEstate_Kel11.NumberTextBox();
+            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -298,28 +298,28 @@
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.dgJualProperty);
-            this.groupBox6.Location = new System.Drawing.Point(788, 216);
+            this.groupBox6.Location = new System.Drawing.Point(795, 226);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(530, 195);
+            this.groupBox6.Size = new System.Drawing.Size(552, 414);
             this.groupBox6.TabIndex = 163;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Tabel Data Jual Property";
             // 
             // dgJualProperty
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgJualProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgJualProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgJualProperty.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgJualProperty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgJualProperty.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgJualProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgJualProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgJualProperty.ColumnHeadersHeight = 50;
             this.dgJualProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgJualProperty.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -330,7 +330,7 @@
             this.dgJualProperty.Location = new System.Drawing.Point(3, 16);
             this.dgJualProperty.Name = "dgJualProperty";
             this.dgJualProperty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgJualProperty.Size = new System.Drawing.Size(524, 176);
+            this.dgJualProperty.Size = new System.Drawing.Size(546, 395);
             this.dgJualProperty.TabIndex = 1;
             // 
             // groupBox5
@@ -354,7 +354,7 @@
             this.groupBox5.Controls.Add(this.bunifuCustomLabel3);
             this.groupBox5.Controls.Add(this.txtHarga);
             this.groupBox5.Controls.Add(this.bunifuCustomLabel18);
-            this.groupBox5.Location = new System.Drawing.Point(187, 216);
+            this.groupBox5.Location = new System.Drawing.Point(19, 36);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(575, 192);
             this.groupBox5.TabIndex = 162;
@@ -420,14 +420,6 @@
             this.bunifuCustomLabel7.Text = "Rp.";
             this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtKembalian
-            // 
-            this.txtKembalian.Location = new System.Drawing.Point(440, 60);
-            this.txtKembalian.Name = "txtKembalian";
-            this.txtKembalian.ReadOnly = true;
-            this.txtKembalian.Size = new System.Drawing.Size(120, 20);
-            this.txtKembalian.TabIndex = 247;
-            // 
             // bunifuCustomLabel8
             // 
             this.bunifuCustomLabel8.BackColor = System.Drawing.Color.Transparent;
@@ -449,14 +441,6 @@
             this.bunifuCustomLabel5.TabIndex = 245;
             this.bunifuCustomLabel5.Text = "Rp.";
             this.bunifuCustomLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // txtUang
-            // 
-            this.txtUang.Location = new System.Drawing.Point(440, 19);
-            this.txtUang.Name = "txtUang";
-            this.txtUang.Size = new System.Drawing.Size(120, 20);
-            this.txtUang.TabIndex = 244;
-            this.txtUang.TextChanged += new System.EventHandler(this.txtUang_TextChanged);
             // 
             // bunifuCustomLabel6
             // 
@@ -563,16 +547,6 @@
             this.bunifuCustomLabel3.Text = "ID Transaksi";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // txtHarga
-            // 
-            this.txtHarga.Location = new System.Drawing.Point(155, 119);
-            this.txtHarga.Name = "txtHarga";
-            this.txtHarga.ReadOnly = true;
-            this.txtHarga.Size = new System.Drawing.Size(120, 20);
-            this.txtHarga.TabIndex = 165;
-            this.txtHarga.TextChanged += new System.EventHandler(this.txtHarga_TextChanged);
-            this.txtHarga.Leave += new System.EventHandler(this.txtHarga_Leave);
-            // 
             // bunifuCustomLabel18
             // 
             this.bunifuCustomLabel18.BackColor = System.Drawing.Color.Transparent;
@@ -587,20 +561,21 @@
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.txtCariProperty);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.groupBox2);
             this.groupBox4.Controls.Add(this.btnCariProperty);
             this.groupBox4.Controls.Add(this.bunifuCustomLabel15);
-            this.groupBox4.Location = new System.Drawing.Point(222, 414);
+            this.groupBox4.Location = new System.Drawing.Point(164, 190);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(964, 54);
+            this.groupBox4.Size = new System.Drawing.Size(615, 566);
             this.groupBox4.TabIndex = 160;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Cari Property";
             // 
             // txtCariProperty
             // 
-            this.txtCariProperty.Location = new System.Drawing.Point(142, 23);
+            this.txtCariProperty.Location = new System.Drawing.Point(165, 246);
             this.txtCariProperty.Name = "txtCariProperty";
-            this.txtCariProperty.Size = new System.Drawing.Size(185, 20);
+            this.txtCariProperty.Size = new System.Drawing.Size(286, 20);
             this.txtCariProperty.TabIndex = 160;
             // 
             // btnCariProperty
@@ -621,7 +596,7 @@
             this.btnCariProperty.IdleFillColor = System.Drawing.Color.White;
             this.btnCariProperty.IdleForecolor = System.Drawing.Color.SeaGreen;
             this.btnCariProperty.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnCariProperty.Location = new System.Drawing.Point(351, 18);
+            this.btnCariProperty.Location = new System.Drawing.Point(471, 240);
             this.btnCariProperty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCariProperty.Name = "btnCariProperty";
             this.btnCariProperty.Size = new System.Drawing.Size(75, 29);
@@ -633,38 +608,38 @@
             // 
             this.bunifuCustomLabel15.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel15.Location = new System.Drawing.Point(22, 18);
+            this.bunifuCustomLabel15.Location = new System.Drawing.Point(33, 240);
             this.bunifuCustomLabel15.Name = "bunifuCustomLabel15";
-            this.bunifuCustomLabel15.Size = new System.Drawing.Size(100, 26);
+            this.bunifuCustomLabel15.Size = new System.Drawing.Size(135, 26);
             this.bunifuCustomLabel15.TabIndex = 158;
-            this.bunifuCustomLabel15.Text = "ID Property";
+            this.bunifuCustomLabel15.Text = "Cari ID Property";
             this.bunifuCustomLabel15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgProperty);
-            this.groupBox2.Location = new System.Drawing.Point(222, 474);
+            this.groupBox2.Location = new System.Drawing.Point(19, 282);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(964, 278);
+            this.groupBox2.Size = new System.Drawing.Size(575, 264);
             this.groupBox2.TabIndex = 161;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Tabel Data Property";
             // 
             // dgProperty
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgProperty.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgProperty.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgProperty.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgProperty.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightBlue;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightBlue;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProperty.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgProperty.ColumnHeadersHeight = 50;
             this.dgProperty.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgProperty.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -675,8 +650,34 @@
             this.dgProperty.Location = new System.Drawing.Point(3, 16);
             this.dgProperty.Name = "dgProperty";
             this.dgProperty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgProperty.Size = new System.Drawing.Size(958, 259);
+            this.dgProperty.Size = new System.Drawing.Size(569, 245);
             this.dgProperty.TabIndex = 1;
+            // 
+            // txtKembalian
+            // 
+            this.txtKembalian.Location = new System.Drawing.Point(440, 60);
+            this.txtKembalian.Name = "txtKembalian";
+            this.txtKembalian.ReadOnly = true;
+            this.txtKembalian.Size = new System.Drawing.Size(120, 20);
+            this.txtKembalian.TabIndex = 247;
+            // 
+            // txtUang
+            // 
+            this.txtUang.Location = new System.Drawing.Point(440, 19);
+            this.txtUang.Name = "txtUang";
+            this.txtUang.Size = new System.Drawing.Size(120, 20);
+            this.txtUang.TabIndex = 244;
+            this.txtUang.TextChanged += new System.EventHandler(this.txtUang_TextChanged);
+            // 
+            // txtHarga
+            // 
+            this.txtHarga.Location = new System.Drawing.Point(155, 119);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.ReadOnly = true;
+            this.txtHarga.Size = new System.Drawing.Size(120, 20);
+            this.txtHarga.TabIndex = 165;
+            this.txtHarga.TextChanged += new System.EventHandler(this.txtHarga_TextChanged);
+            this.txtHarga.Leave += new System.EventHandler(this.txtHarga_Leave);
             // 
             // TJualProperty
             // 
@@ -685,9 +686,7 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);

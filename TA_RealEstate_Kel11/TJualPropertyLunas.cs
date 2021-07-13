@@ -357,8 +357,8 @@ namespace TA_RealEstate_Kel11
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            MenuKasir kasir = new MenuKasir();
-            kasir.Show();
+            TSewaProperty sewa = new TSewaProperty();
+            sewa.Show();
             this.Hide();
         }
     }
