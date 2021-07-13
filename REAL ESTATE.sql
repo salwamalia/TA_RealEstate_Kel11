@@ -51,18 +51,6 @@ CREATE TABLE property
 	statusProperty	varchar(5)		NULL,
 );
 
-CREATE TABLE tPembayaranPembelian
-(	idBBeli		varchar(5)		NOT NULL	PRIMARY KEY,
-	tanggal		date			NOT NULL,
-	statusBayar	varchar(5)		NULL
-);
-
-CREATE TABLE tPembayaranPenyewaan
-(	idBSewa		varchar(5)		NOT NULL	PRIMARY KEY,
-	tanggal		date			NOT NULL,
-	statusBayar	varchar(5)		NULL
-);
-
 CREATE TABLE desainInterior
 (	idInterior	varchar(5)		NOT NULL	PRIMARY KEY,
 	interior	varchar(50)		NOT NULL
@@ -74,7 +62,7 @@ CREATE TABLE kategoriCicilan
 );
 
 
---//////BENER INII////////////////////////////
+--////////////TRANSAKSI////////////////////////////
 CREATE TABLE TBeliProperty
 (	idTBeliProperty		varchar(5)		NOT NULL	PRIMARY KEY,
 	tanggal				date			NOT NULL,
@@ -126,8 +114,10 @@ CREATE TABLE TJualPropertyCicilDet
 (	idTJualPropertyCicil	varchar(5)		NOT NULL	PRIMARY KEY,
 	idProperty				varchar(5)		NOT NULL,
 	harga					int				NOT NULL,
-	idCicilan				varchar(5)		NULL,
-	perBulan				int				NULL,
+	idCicilan				varchar(5)		NOT NULL,
+	perBulan				int				NOT NULL,
+	jumlahCicilan			int				NOT NULL,
+	total					int				NOT NULL
 );
 
 
@@ -148,6 +138,147 @@ SELECT*FROM tDetailPenyewaan
 
 SELECT * FROM property p INNER JOIN pemilik b ON p.idPemilik = b.idPemilik WHERE p.idProperty 
 SELECT * FROM TBeliProperty p INNER JOIN property b ON p.idProperty = b.idProperty WHERE p.idTBeliProperty
+
+--===============================-
+--BELI PROPERTY AGENSI
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertTBeliProperty]
+	@idTBeliProperty varchar(5),
+	@idProperty varchar(5),
+	@tanggal date,
+	@harga int,
+	@status varchar(5) = 0,
+	@statusProperty varchar(5) = 1
+AS
+BEGIN
+	INSERT INTO TBeliProperty Values (@idTBeliProperty, @tanggal, @idProperty, @harga, @status)
+	UPDATE property SET statusProperty = @statusProperty WHERE idProperty = @idProperty
+END
+-----------------------------------------------------------------------------------
+--===============================-
+--JUAL PROPERTY AGENSI
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertTJualProperty]
+	@idTJualProperty varchar(5),
+	@tanggal date,
+	@idBeliProperty varchar(5),
+	@harga int,
+	@idClient varchar(5),
+	@status varchar(5) = 1
+AS
+BEGIN
+	INSERT INTO TJualProperty Values (@idTJualProperty, @tanggal, @idBeliProperty, @harga, @idClient)
+	UPDATE TBeliProperty SET status = @status WHERE idTBeliProperty = @idBeliProperty
+END
+-------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+
+--===============================-
+--SEWA PROPERTY MAKELAR
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertTSewaProperty]
+	@idTSewaProperty varchar(5),
+	@tanggal  date,
+	@idClient varchar(5),
+	@harga int
+AS
+BEGIN
+	INSERT INTO TSewaProperty Values (@idTSewaProperty, @tanggal, @idClient, @harga)
+END
+-----------------------------------------------------------------------------------
+--===============================-
+--SEWA DETAIL PROPERTY MAKELAR
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertTSewaPropertyDet]
+	@idTSewaProperty varchar(5),
+	@idProperty varchar(5),
+	@mulai date,
+	@sampai date,
+	@harga int,
+	@statusProperty varchar(5) = 1
+AS
+BEGIN
+	INSERT INTO TSewaPropertyDet Values (@idTSewaProperty, @idProperty, @mulai, @sampai, @harga)
+	UPDATE property SET statusProperty = @statusProperty WHERE idProperty = @idProperty
+END
+-----------------------------------------------------------------------------------
+--===============================-
+--JUAL PROPERTY LUNAS MAKELAR
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertTJualPropertyLunas]
+	@idJPLunas varchar(5),
+	@tanggal date,
+	@idProperty varchar(5),
+	@harga int,
+	@idClient varchar(5),
+	@statusProperty varchar(5) = 1
+AS
+BEGIN
+	INSERT INTO TJualPropertyLunas Values (@idJPLunas, @tanggal, @idProperty, @harga, @idClient)
+	UPDATE property SET statusProperty = @statusProperty WHERE idProperty = @idProperty
+END
+-----------------------------------------------------------------------------------------
+--===============================-
+--JUAL PROPERTY CICIL MAKELAR
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE PROCEDURE [dbo].[sp_InsertTJualPropertyCicil]
+	@idTJualPropertyCicil varchar(5),
+	@tanggal date,
+	@idClient varchar(5),
+	@harga int
+AS
+BEGIN
+	INSERT INTO TJualPropertyCicil Values (@idTJualPropertyCicil, @tanggal, @idClient, @harga)
+END
+-----------------------------------------------------------------------------------
+--===============================-
+--JUAL DETAIL PROPERTY MAKELAR CICIL
+--===============================-
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [dbo].[sp_InsertTJualPropertyCicilDet]
+	@idTJualPropertyCicil varchar(5),
+	@idProperty varchar(5),
+	@harga int,
+	@idCicilan varchar(5),
+	@perBulan int,
+	@jumlahCicilan int,
+	@total int,
+	@statusProperty varchar(5) = 1
+AS
+BEGIN
+	INSERT INTO TJualPropertyCicilDet Values (@idTJualPropertyCicil, @idProperty, @harga, @idCicilan, @perBulan, @jumlahCicilan, @total)
+	UPDATE property SET statusProperty = @statusProperty WHERE idProperty = @idProperty
+END
+-----------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------
 
 --===============================-
 --JABATAN

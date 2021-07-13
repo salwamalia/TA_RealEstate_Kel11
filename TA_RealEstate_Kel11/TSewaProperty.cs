@@ -130,8 +130,7 @@ namespace TA_RealEstate_Kel11
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                MessageBox.Show("Unable to save " + ex);
+                MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
