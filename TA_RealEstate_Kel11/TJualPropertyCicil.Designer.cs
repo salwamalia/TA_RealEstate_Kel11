@@ -46,12 +46,16 @@
             this.dgJualProperty = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.bunifuCustomLabel14 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtUang = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel16 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtTotal = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel8 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtJmhlCicilan = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtperBulan = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel23 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cbCicilan = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel13 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -67,6 +71,7 @@
             this.txtIDJual = new System.Windows.Forms.TextBox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuCustomLabel18 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtCariProperty = new System.Windows.Forms.TextBox();
@@ -74,11 +79,6 @@
             this.bunifuCustomLabel15 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dgProperty = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.txtUang = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtTotal = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtJmhlCicilan = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtperBulan = new TA_RealEstate_Kel11.NumberTextBox();
-            this.txtHarga = new TA_RealEstate_Kel11.NumberTextBox();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.groupBox6.SuspendLayout();
@@ -153,6 +153,7 @@
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(118, 122);
             this.bunifuTileButton1.TabIndex = 167;
+            this.bunifuTileButton1.Click += new System.EventHandler(this.bunifuTileButton1_Click);
             // 
             // bunifuCustomLabel1
             // 
@@ -390,6 +391,14 @@
             this.bunifuCustomLabel14.Text = "Rp.";
             this.bunifuCustomLabel14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtUang
+            // 
+            this.txtUang.Location = new System.Drawing.Point(424, 112);
+            this.txtUang.Name = "txtUang";
+            this.txtUang.Size = new System.Drawing.Size(104, 20);
+            this.txtUang.TabIndex = 275;
+            this.txtUang.TextChanged += new System.EventHandler(this.txtUang_TextChanged);
+            // 
             // bunifuCustomLabel16
             // 
             this.bunifuCustomLabel16.BackColor = System.Drawing.Color.Transparent;
@@ -411,6 +420,14 @@
             this.bunifuCustomLabel7.TabIndex = 273;
             this.bunifuCustomLabel7.Text = "Rp.";
             this.bunifuCustomLabel7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtTotal
+            // 
+            this.txtTotal.Location = new System.Drawing.Point(424, 156);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(104, 20);
+            this.txtTotal.TabIndex = 272;
+            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
             // 
             // bunifuCustomLabel8
             // 
@@ -434,6 +451,14 @@
             this.bunifuCustomLabel6.Text = "kali";
             this.bunifuCustomLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtJmhlCicilan
+            // 
+            this.txtJmhlCicilan.Location = new System.Drawing.Point(391, 69);
+            this.txtJmhlCicilan.Name = "txtJmhlCicilan";
+            this.txtJmhlCicilan.Size = new System.Drawing.Size(95, 20);
+            this.txtJmhlCicilan.TabIndex = 269;
+            this.txtJmhlCicilan.TextChanged += new System.EventHandler(this.txtJmhlCicilan_TextChanged);
+            // 
             // bunifuCustomLabel5
             // 
             this.bunifuCustomLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -455,6 +480,14 @@
             this.bunifuCustomLabel11.TabIndex = 267;
             this.bunifuCustomLabel11.Text = "Rp.";
             this.bunifuCustomLabel11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtperBulan
+            // 
+            this.txtperBulan.Location = new System.Drawing.Point(421, 22);
+            this.txtperBulan.Name = "txtperBulan";
+            this.txtperBulan.Size = new System.Drawing.Size(107, 20);
+            this.txtperBulan.TabIndex = 266;
+            this.txtperBulan.TextChanged += new System.EventHandler(this.txtperBulan_TextChanged);
             // 
             // bunifuCustomLabel23
             // 
@@ -643,6 +676,16 @@
             this.bunifuCustomLabel3.Text = "ID Transaksi";
             this.bunifuCustomLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // txtHarga
+            // 
+            this.txtHarga.Location = new System.Drawing.Point(140, 248);
+            this.txtHarga.Name = "txtHarga";
+            this.txtHarga.ReadOnly = true;
+            this.txtHarga.Size = new System.Drawing.Size(107, 20);
+            this.txtHarga.TabIndex = 165;
+            this.txtHarga.TextChanged += new System.EventHandler(this.txtHarga_TextChanged);
+            this.txtHarga.Leave += new System.EventHandler(this.txtHarga_Leave);
+            // 
             // bunifuCustomLabel18
             // 
             this.bunifuCustomLabel18.BackColor = System.Drawing.Color.Transparent;
@@ -748,48 +791,6 @@
             this.dgProperty.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgProperty.Size = new System.Drawing.Size(627, 197);
             this.dgProperty.TabIndex = 1;
-            // 
-            // txtUang
-            // 
-            this.txtUang.Location = new System.Drawing.Point(424, 112);
-            this.txtUang.Name = "txtUang";
-            this.txtUang.Size = new System.Drawing.Size(104, 20);
-            this.txtUang.TabIndex = 275;
-            this.txtUang.TextChanged += new System.EventHandler(this.txtUang_TextChanged);
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.Location = new System.Drawing.Point(424, 156);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(104, 20);
-            this.txtTotal.TabIndex = 272;
-            this.txtTotal.TextChanged += new System.EventHandler(this.txtTotal_TextChanged);
-            // 
-            // txtJmhlCicilan
-            // 
-            this.txtJmhlCicilan.Location = new System.Drawing.Point(391, 69);
-            this.txtJmhlCicilan.Name = "txtJmhlCicilan";
-            this.txtJmhlCicilan.Size = new System.Drawing.Size(95, 20);
-            this.txtJmhlCicilan.TabIndex = 269;
-            this.txtJmhlCicilan.TextChanged += new System.EventHandler(this.txtJmhlCicilan_TextChanged);
-            // 
-            // txtperBulan
-            // 
-            this.txtperBulan.Location = new System.Drawing.Point(421, 22);
-            this.txtperBulan.Name = "txtperBulan";
-            this.txtperBulan.Size = new System.Drawing.Size(107, 20);
-            this.txtperBulan.TabIndex = 266;
-            this.txtperBulan.TextChanged += new System.EventHandler(this.txtperBulan_TextChanged);
-            // 
-            // txtHarga
-            // 
-            this.txtHarga.Location = new System.Drawing.Point(140, 248);
-            this.txtHarga.Name = "txtHarga";
-            this.txtHarga.ReadOnly = true;
-            this.txtHarga.Size = new System.Drawing.Size(107, 20);
-            this.txtHarga.TabIndex = 165;
-            this.txtHarga.TextChanged += new System.EventHandler(this.txtHarga_TextChanged);
-            this.txtHarga.Leave += new System.EventHandler(this.txtHarga_Leave);
             // 
             // TJualPropertyCicil
             // 

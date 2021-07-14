@@ -34,9 +34,10 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.btnSewaProperty = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnJualProperty = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPelunasanCicilan = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPenyewaan = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPembelian = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -124,8 +125,9 @@
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel2.Controls.Add(this.btnLogout);
-            this.bunifuGradientPanel2.Controls.Add(this.btnPenyewaan);
-            this.bunifuGradientPanel2.Controls.Add(this.btnPembelian);
+            this.bunifuGradientPanel2.Controls.Add(this.btnPelunasanCicilan);
+            this.bunifuGradientPanel2.Controls.Add(this.btnJualProperty);
+            this.bunifuGradientPanel2.Controls.Add(this.btnSewaProperty);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuGradientPanel2.GradientBottomLeft = System.Drawing.Color.SkyBlue;
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.Plum;
@@ -136,6 +138,117 @@
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(188, 666);
             this.bunifuGradientPanel2.TabIndex = 2;
+            // 
+            // btnSewaProperty
+            // 
+            this.btnSewaProperty.Activecolor = System.Drawing.Color.Transparent;
+            this.btnSewaProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSewaProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSewaProperty.BorderRadius = 0;
+            this.btnSewaProperty.ButtonText = "Sewa Property";
+            this.btnSewaProperty.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSewaProperty.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnSewaProperty.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSewaProperty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSewaProperty.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSewaProperty.Iconimage = null;
+            this.btnSewaProperty.Iconimage_right = null;
+            this.btnSewaProperty.Iconimage_right_Selected = null;
+            this.btnSewaProperty.Iconimage_Selected = null;
+            this.btnSewaProperty.IconMarginLeft = 0;
+            this.btnSewaProperty.IconMarginRight = 0;
+            this.btnSewaProperty.IconRightVisible = true;
+            this.btnSewaProperty.IconRightZoom = 0D;
+            this.btnSewaProperty.IconVisible = true;
+            this.btnSewaProperty.IconZoom = 90D;
+            this.btnSewaProperty.IsTab = false;
+            this.btnSewaProperty.Location = new System.Drawing.Point(0, 0);
+            this.btnSewaProperty.Name = "btnSewaProperty";
+            this.btnSewaProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSewaProperty.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnSewaProperty.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSewaProperty.selected = false;
+            this.btnSewaProperty.Size = new System.Drawing.Size(188, 49);
+            this.btnSewaProperty.TabIndex = 2;
+            this.btnSewaProperty.Text = "Sewa Property";
+            this.btnSewaProperty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSewaProperty.Textcolor = System.Drawing.Color.Black;
+            this.btnSewaProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSewaProperty.Click += new System.EventHandler(this.btnPenyewaan_Click);
+            // 
+            // btnJualProperty
+            // 
+            this.btnJualProperty.Activecolor = System.Drawing.Color.Transparent;
+            this.btnJualProperty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnJualProperty.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnJualProperty.BorderRadius = 0;
+            this.btnJualProperty.ButtonText = "Jual Property";
+            this.btnJualProperty.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnJualProperty.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnJualProperty.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnJualProperty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJualProperty.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnJualProperty.Iconimage = null;
+            this.btnJualProperty.Iconimage_right = null;
+            this.btnJualProperty.Iconimage_right_Selected = null;
+            this.btnJualProperty.Iconimage_Selected = null;
+            this.btnJualProperty.IconMarginLeft = 0;
+            this.btnJualProperty.IconMarginRight = 0;
+            this.btnJualProperty.IconRightVisible = true;
+            this.btnJualProperty.IconRightZoom = 0D;
+            this.btnJualProperty.IconVisible = true;
+            this.btnJualProperty.IconZoom = 90D;
+            this.btnJualProperty.IsTab = false;
+            this.btnJualProperty.Location = new System.Drawing.Point(0, 49);
+            this.btnJualProperty.Name = "btnJualProperty";
+            this.btnJualProperty.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnJualProperty.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnJualProperty.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnJualProperty.selected = false;
+            this.btnJualProperty.Size = new System.Drawing.Size(188, 49);
+            this.btnJualProperty.TabIndex = 7;
+            this.btnJualProperty.Text = "Jual Property";
+            this.btnJualProperty.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnJualProperty.Textcolor = System.Drawing.Color.Black;
+            this.btnJualProperty.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJualProperty.Click += new System.EventHandler(this.btnJualProperty_Click);
+            // 
+            // btnPelunasanCicilan
+            // 
+            this.btnPelunasanCicilan.Activecolor = System.Drawing.Color.Transparent;
+            this.btnPelunasanCicilan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPelunasanCicilan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPelunasanCicilan.BorderRadius = 0;
+            this.btnPelunasanCicilan.ButtonText = "Pelunasan Cicilan";
+            this.btnPelunasanCicilan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPelunasanCicilan.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnPelunasanCicilan.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPelunasanCicilan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPelunasanCicilan.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPelunasanCicilan.Iconimage = null;
+            this.btnPelunasanCicilan.Iconimage_right = null;
+            this.btnPelunasanCicilan.Iconimage_right_Selected = null;
+            this.btnPelunasanCicilan.Iconimage_Selected = null;
+            this.btnPelunasanCicilan.IconMarginLeft = 0;
+            this.btnPelunasanCicilan.IconMarginRight = 0;
+            this.btnPelunasanCicilan.IconRightVisible = true;
+            this.btnPelunasanCicilan.IconRightZoom = 0D;
+            this.btnPelunasanCicilan.IconVisible = true;
+            this.btnPelunasanCicilan.IconZoom = 90D;
+            this.btnPelunasanCicilan.IsTab = false;
+            this.btnPelunasanCicilan.Location = new System.Drawing.Point(0, 98);
+            this.btnPelunasanCicilan.Name = "btnPelunasanCicilan";
+            this.btnPelunasanCicilan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPelunasanCicilan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnPelunasanCicilan.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPelunasanCicilan.selected = false;
+            this.btnPelunasanCicilan.Size = new System.Drawing.Size(188, 49);
+            this.btnPelunasanCicilan.TabIndex = 8;
+            this.btnPelunasanCicilan.Text = "Pelunasan Cicilan";
+            this.btnPelunasanCicilan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPelunasanCicilan.Textcolor = System.Drawing.Color.Black;
+            this.btnPelunasanCicilan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPelunasanCicilan.Click += new System.EventHandler(this.btnPelunasanCicilan_Click);
             // 
             // btnLogout
             // 
@@ -160,93 +273,19 @@
             this.btnLogout.IconVisible = true;
             this.btnLogout.IconZoom = 90D;
             this.btnLogout.IsTab = false;
-            this.btnLogout.Location = new System.Drawing.Point(0, 98);
+            this.btnLogout.Location = new System.Drawing.Point(0, 147);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLogout.selected = false;
             this.btnLogout.Size = new System.Drawing.Size(188, 49);
-            this.btnLogout.TabIndex = 6;
+            this.btnLogout.TabIndex = 9;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogout.Textcolor = System.Drawing.Color.Black;
             this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click_1);
-            // 
-            // btnPenyewaan
-            // 
-            this.btnPenyewaan.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPenyewaan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPenyewaan.BorderRadius = 0;
-            this.btnPenyewaan.ButtonText = "Makelar";
-            this.btnPenyewaan.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPenyewaan.DisabledColor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPenyewaan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPenyewaan.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPenyewaan.Iconimage = null;
-            this.btnPenyewaan.Iconimage_right = null;
-            this.btnPenyewaan.Iconimage_right_Selected = null;
-            this.btnPenyewaan.Iconimage_Selected = null;
-            this.btnPenyewaan.IconMarginLeft = 0;
-            this.btnPenyewaan.IconMarginRight = 0;
-            this.btnPenyewaan.IconRightVisible = true;
-            this.btnPenyewaan.IconRightZoom = 0D;
-            this.btnPenyewaan.IconVisible = true;
-            this.btnPenyewaan.IconZoom = 90D;
-            this.btnPenyewaan.IsTab = false;
-            this.btnPenyewaan.Location = new System.Drawing.Point(0, 49);
-            this.btnPenyewaan.Name = "btnPenyewaan";
-            this.btnPenyewaan.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPenyewaan.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPenyewaan.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPenyewaan.selected = false;
-            this.btnPenyewaan.Size = new System.Drawing.Size(188, 49);
-            this.btnPenyewaan.TabIndex = 2;
-            this.btnPenyewaan.Text = "Makelar";
-            this.btnPenyewaan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPenyewaan.Textcolor = System.Drawing.Color.Black;
-            this.btnPenyewaan.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPenyewaan.Click += new System.EventHandler(this.btnPenyewaan_Click);
-            // 
-            // btnPembelian
-            // 
-            this.btnPembelian.Activecolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPembelian.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPembelian.BorderRadius = 0;
-            this.btnPembelian.ButtonText = "Agensi";
-            this.btnPembelian.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPembelian.DisabledColor = System.Drawing.Color.Transparent;
-            this.btnPembelian.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPembelian.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPembelian.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPembelian.Iconimage = null;
-            this.btnPembelian.Iconimage_right = null;
-            this.btnPembelian.Iconimage_right_Selected = null;
-            this.btnPembelian.Iconimage_Selected = null;
-            this.btnPembelian.IconMarginLeft = 0;
-            this.btnPembelian.IconMarginRight = 0;
-            this.btnPembelian.IconRightVisible = true;
-            this.btnPembelian.IconRightZoom = 0D;
-            this.btnPembelian.IconVisible = true;
-            this.btnPembelian.IconZoom = 90D;
-            this.btnPembelian.IsTab = false;
-            this.btnPembelian.Location = new System.Drawing.Point(0, 0);
-            this.btnPembelian.Name = "btnPembelian";
-            this.btnPembelian.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPembelian.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnPembelian.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPembelian.selected = false;
-            this.btnPembelian.Size = new System.Drawing.Size(188, 49);
-            this.btnPembelian.TabIndex = 1;
-            this.btnPembelian.Text = "Agensi";
-            this.btnPembelian.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPembelian.Textcolor = System.Drawing.Color.Black;
-            this.btnPembelian.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPembelian.Click += new System.EventHandler(this.btnPembelian_Click);
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // MenuKasir
             // 
@@ -260,6 +299,7 @@
             this.Name = "MenuKasir";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuKasir";
+            this.Load += new System.EventHandler(this.MenuKasir_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
@@ -273,9 +313,10 @@
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnPembelian;
-        private Bunifu.Framework.UI.BunifuFlatButton btnPenyewaan;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSewaProperty;
         private Bunifu.Framework.UI.BunifuThinButton2 btnX;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPelunasanCicilan;
+        private Bunifu.Framework.UI.BunifuFlatButton btnJualProperty;
         private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
     }
 }

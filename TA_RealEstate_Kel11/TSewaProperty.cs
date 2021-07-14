@@ -103,28 +103,17 @@ namespace TA_RealEstate_Kel11
                     convert.Close();
                     ///
 
-                    insert.Parameters.AddWithValue("@harga", hargasparator);
-                    insert.ExecuteNonQuery();
-                    myConnection.Close();
-
-                    //DETAIL
-                    SqlConnection myConnection1 = connection.Getcon();
-                    myConnection1.Open();
-                    SqlCommand insert1 = new SqlCommand("sp_InsertTSewaPropertyDet", myConnection1);
-                    insert1.CommandType = CommandType.StoredProcedure;
-
-                    insert1.Parameters.AddWithValue("@idTSewaProperty", txtIDSewa.Text);
-                    insert1.Parameters.AddWithValue("@idProperty", txtProperty.Text);
-                    insert1.Parameters.AddWithValue("@mulai", tanggalMulai.Value.ToString("yyyy-MM-dd"));
+                    insert.Parameters.AddWithValue("@idProperty", txtProperty.Text);
+                    insert.Parameters.AddWithValue("@mulai", tanggalMulai.Value.ToString("yyyy-MM-dd"));
 
                     DateTime tglsampai = DateTime.Parse(tanggalMulai.Value.ToString("yyyy-MM-dd"));
 
-                    insert1.Parameters.AddWithValue("@sampai", tglsampai.AddMonths(ambildurasi()).ToString("yyyy-MM-dd"));
-                    insert1.Parameters.AddWithValue("@harga", hargasparator);
-
-                    insert1.ExecuteNonQuery();
-                    myConnection1.Close();
+                    insert.Parameters.AddWithValue("@sampai", tglsampai.AddMonths(ambildurasi()).ToString("yyyy-MM-dd"));
+                    insert.Parameters.AddWithValue("@harga", hargasparator);
+                    insert.ExecuteNonQuery();
+                    myConnection.Close();
                     clear();
+
                     MessageBox.Show("Save Sucessfully", "Add Transaksi", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
@@ -140,14 +129,12 @@ namespace TA_RealEstate_Kel11
             txtIDSewa.Clear();
             tanggal.ResetText();
             cbClient.SelectedIndex = -1;
-
             txtProperty.Clear();
             txtHarga.Clear();
             tanggalMulai.ResetText();
             CBDurasi.SelectedIndex = -1;
 
             txtUang.Clear();
-            txtKembalian.Clear();
 
             loadClient();
             LoadDataProperty();
@@ -265,7 +252,6 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                //SEWA
                 SqlConnection con = connection.Getcon();
                 con.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM TSewaProperty", con);
@@ -275,6 +261,9 @@ namespace TA_RealEstate_Kel11
                 dataTable.Columns.Add("ID Transaksi");
                 dataTable.Columns.Add("Tanggal");
                 dataTable.Columns.Add("ID Client");
+                dataTable.Columns.Add("ID Property");
+                dataTable.Columns.Add("Mulai Sewa");
+                dataTable.Columns.Add("Sampai");
                 dataTable.Columns.Add("Harga");
                 while (dr.Read())
                 {
@@ -283,6 +272,10 @@ namespace TA_RealEstate_Kel11
                     row["ID Transaksi"] = sqlDataReader["idTSewaProperty"];
                     row["Tanggal"] = sqlDataReader["tanggal"];
                     row["ID Client"] = sqlDataReader["idClient"];
+                    row["ID Property"] = sqlDataReader["idProperty"];
+                    row["Mulai Sewa"] = sqlDataReader["mulaiSewa"];
+                    row["Sampai"] = sqlDataReader["sampai"];
+
                     int num = Convert.ToInt32(sqlDataReader["harga"].ToString());
                     string res2 = String.Format("{0:#,##0}", num);
                     row["Harga"] = res2.ToString();
@@ -291,33 +284,6 @@ namespace TA_RealEstate_Kel11
                 //this.dataGridView1.DataSource = con.table;
                 dgSewaProperty.DataSource = dataTable;
                 con.Close();
-
-                //DETAIL
-                SqlConnection con1 = connection.Getcon();
-                con1.Open();
-                SqlCommand cmd1 = new SqlCommand("SELECT * FROM TSewaPropertyDet", con1);
-                SqlDataReader dr1 = cmd1.ExecuteReader();
-                SqlDataReader sqlDataReader1 = dr1;
-                DataTable dataTable1 = new DataTable();
-                dataTable1.Columns.Add("ID Transaksi");
-                dataTable1.Columns.Add("ID Property");
-                dataTable1.Columns.Add("Mulai Sewa");
-                dataTable1.Columns.Add("Sampai");
-                dataTable1.Columns.Add("Harga");
-                while (dr1.Read())
-                {
-                    DataRow row1 = dataTable1.NewRow();
-                    row1["ID Transaksi"] = sqlDataReader1["idTSewaProperty"];
-                    row1["ID Property"] = sqlDataReader1["idProperty"];
-                    row1["Mulai Sewa"] = sqlDataReader1["mulaiSewa"];
-                    row1["Sampai"] = sqlDataReader1["sampai"];
-                    int num = Convert.ToInt32(sqlDataReader1["harga"].ToString());
-                    string res2 = String.Format("{0:#,##0}", num);
-                    row1["Harga"] = res2.ToString();
-                    dataTable1.Rows.Add(row1);
-                }
-                dgDetailSewaProperty.DataSource = dataTable1;
-                con1.Close();
             }
             catch (Exception ex)
             {
@@ -377,14 +343,6 @@ namespace TA_RealEstate_Kel11
                 string res2 = String.Format("{0:#,###}", hargasparator);
                 txtUang.Text = res2.ToString();
                 txtUang.Select(txtUang.Text.Length, 0);
-
-
-                double temp1 = Convert.ToDouble(txtUang.Text);
-                double temp2 = Convert.ToDouble(txtHarga.Text);
-                double temp = temp1 - temp2;
-                string res1 = String.Format("{0:#,##0}", temp);
-                txtKembalian.Text = res1.ToString();
-                txtKembalian.Select(txtKembalian.Text.Length, 0);
             }
             catch (Exception)
             {
@@ -396,20 +354,6 @@ namespace TA_RealEstate_Kel11
             Application.Exit();
         }
 
-        private void btnSewa_Click(object sender, EventArgs e)
-        {
-            TSewaProperty sewa = new TSewaProperty();
-            sewa.Show();
-            this.Hide();
-        }
-
-        private void btnJual_Click(object sender, EventArgs e)
-        {
-            TJualPropertyLunas lunas = new TJualPropertyLunas();
-            lunas.Show();
-            this.Hide();
-        }
-
         private void btnKembali_Click(object sender, EventArgs e)
         {
             MenuKasir kasir = new MenuKasir();
@@ -417,10 +361,10 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void btnPelunasanCicilan_Click(object sender, EventArgs e)
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
-            TPelunasanCicilanProperty lunascicilan = new TPelunasanCicilanProperty();
-            lunascicilan.Show();
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
             this.Hide();
         }
     }

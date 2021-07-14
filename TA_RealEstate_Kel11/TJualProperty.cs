@@ -337,9 +337,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnBeli_Click(object sender, EventArgs e)
         {
-            TBeliProperty Beli = new TBeliProperty();
-            Beli.Show();
-            this.Hide();
+            
         }
 
         private void btnJual_Click(object sender, EventArgs e)

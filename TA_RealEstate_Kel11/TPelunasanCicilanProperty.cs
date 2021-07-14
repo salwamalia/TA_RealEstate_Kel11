@@ -95,7 +95,8 @@ namespace TA_RealEstate_Kel11
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //MessageBox.Show("Unable to save ", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Unable to save "+ex);
             }
         }
 
@@ -263,7 +264,6 @@ namespace TA_RealEstate_Kel11
         //separator
         private double hargasparator;
         private double totalsparator;
-        private double uangsparator;
         private void txtHarga_Leave(object sender, EventArgs e)
         {
             if (txtHarga.Text != "")
@@ -299,12 +299,12 @@ namespace TA_RealEstate_Kel11
             }
         }
 
-        private void txtUang_TextChanged_1(object sender, EventArgs e)
+        private void txtUang_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                uangsparator = Convert.ToDouble(txtUang.Text);
-                string res2 = String.Format("{0:#,###}", uangsparator);
+                hargasparator = Convert.ToDouble(txtUang.Text);
+                string res2 = String.Format("{0:#,###}", hargasparator);
                 txtUang.Text = res2.ToString();
                 txtUang.Select(txtUang.Text.Length, 0);
 
@@ -347,8 +347,15 @@ namespace TA_RealEstate_Kel11
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            TSewaProperty sewa = new TSewaProperty();
-            sewa.Show();
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
+            this.Hide();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
             this.Hide();
         }
     }

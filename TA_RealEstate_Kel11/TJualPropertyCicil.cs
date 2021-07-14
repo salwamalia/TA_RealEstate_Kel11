@@ -562,8 +562,15 @@ namespace TA_RealEstate_Kel11
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            TSewaProperty sewa = new TSewaProperty();
-            sewa.Show();
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
+            this.Hide();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
             this.Hide();
         }
     }

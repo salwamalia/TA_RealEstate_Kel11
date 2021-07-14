@@ -118,8 +118,6 @@ namespace TA_RealEstate_Kel11
             txtHarga.Clear();
             cbClient.SelectedIndex = -1;
             txtUang.Clear();
-            txtKembalian.Clear();
-            loadClient();
             LoadDataProperty();
             LoadData();
         }
@@ -322,14 +320,6 @@ namespace TA_RealEstate_Kel11
                 string res2 = String.Format("{0:#,###}", hargasparator);
                 txtUang.Text = res2.ToString();
                 txtUang.Select(txtUang.Text.Length, 0);
-
-
-                double temp1 = Convert.ToDouble(txtUang.Text);
-                double temp2 = Convert.ToDouble(txtHarga.Text);
-                double temp = temp1 - temp2;
-                string res1 = String.Format("{0:#,##0}", temp);
-                txtKembalian.Text = res1.ToString();
-                txtKembalian.Select(txtKembalian.Text.Length, 0);
             }
             catch (Exception)
             {
@@ -357,8 +347,15 @@ namespace TA_RealEstate_Kel11
 
         private void btnKembali_Click(object sender, EventArgs e)
         {
-            TSewaProperty sewa = new TSewaProperty();
-            sewa.Show();
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
+            this.Hide();
+        }
+
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        {
+            MenuKasir kasir = new MenuKasir();
+            kasir.Show();
             this.Hide();
         }
     }

@@ -29,21 +29,33 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void btnPembelian_Click(object sender, EventArgs e)
-        {
-            TBeliProperty beli = new TBeliProperty();
-            beli.Show();
-            this.Hide();
-        }
-
         private void btnPenyewaan_Click(object sender, EventArgs e)
         {
             TSewaProperty sewa = new TSewaProperty();
             sewa.Show();
             this.Hide();
         }
+        
+        private void MenuKasir_Load(object sender, EventArgs e)
+        {
 
-        private void btnLogout_Click_1(object sender, EventArgs e)
+        }
+
+        private void btnJualProperty_Click(object sender, EventArgs e)
+        {
+            TJualPropertyLunas lunas = new TJualPropertyLunas();
+            lunas.Show();
+            this.Hide();
+        }
+
+        private void btnPelunasanCicilan_Click(object sender, EventArgs e)
+        {
+            TPelunasanCicilanProperty lunas = new TPelunasanCicilanProperty();
+            lunas.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Visible = true;

@@ -193,12 +193,6 @@
     <Compile Include="TJualPropertyLunas.Designer.cs">
       <DependentUpon>TJualPropertyLunas.cs</DependentUpon>
     </Compile>
-    <Compile Include="TBeliProperty.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TBeliProperty.Designer.cs">
-      <DependentUpon>TBeliProperty.cs</DependentUpon>
-    </Compile>
     <Compile Include="TPelunasanCicilanProperty.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -273,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TJualPropertyLunas.resx">
       <DependentUpon>TJualPropertyLunas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TBeliProperty.resx">
-      <DependentUpon>TBeliProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TPelunasanCicilanProperty.resx">
       <DependentUpon>TPelunasanCicilanProperty.cs</DependentUpon>
