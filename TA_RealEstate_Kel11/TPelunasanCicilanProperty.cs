@@ -84,7 +84,7 @@ namespace TA_RealEstate_Kel11
                     insert1.Parameters.AddWithValue("@idDetailCicil", txtIDBayar.Text);
                     insert1.Parameters.AddWithValue("@idTJualPropertyCicil", txtIDTransaksi.Text);
                     insert1.Parameters.AddWithValue("@tanggalDetail", tanggalDetail.Value.ToString("yyyy-MM-dd"));
-                    insert1.Parameters.AddWithValue("@harga", totalsparator);
+                    insert1.Parameters.AddWithValue("@harga", uangsparator);
                     insert1.Parameters.AddWithValue("@jumlah", 0);
 
                     insert1.ExecuteNonQuery();
@@ -264,6 +264,7 @@ namespace TA_RealEstate_Kel11
         //separator
         private double hargasparator;
         private double totalsparator;
+        private double uangsparator;
         private void txtHarga_Leave(object sender, EventArgs e)
         {
             if (txtHarga.Text != "")
@@ -303,8 +304,8 @@ namespace TA_RealEstate_Kel11
         {
             try
             {
-                hargasparator = Convert.ToDouble(txtUang.Text);
-                string res2 = String.Format("{0:#,###}", hargasparator);
+                uangsparator = Convert.ToDouble(txtUang.Text);
+                string res2 = String.Format("{0:#,###}", uangsparator);
                 txtUang.Text = res2.ToString();
                 txtUang.Select(txtUang.Text.Length, 0);
 
@@ -318,7 +319,6 @@ namespace TA_RealEstate_Kel11
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error Occured" + ex);
             }
         }
 
