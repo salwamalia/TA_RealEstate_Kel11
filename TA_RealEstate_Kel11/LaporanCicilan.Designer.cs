@@ -1,6 +1,6 @@
 ﻿namespace TA_RealEstate_Kel11
 {
-    partial class LaporanPembelian
+    partial class LaporanCicilan
     {
         /// <summary>
         /// Required designer variable.
@@ -28,24 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LaporanPembelian));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LaporanCicilan));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.btnX = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLapCicil = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapSewa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapBeli = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.btnPDF = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnExcel = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgLapBeli = new System.Windows.Forms.DataGridView();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnLihat = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.DataSetCicilan = new TA_RealEstate_Kel11.DataSetCicilan();
+            this.CicilanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.CicilanTableAdapter = new TA_RealEstate_Kel11.DataSetCicilanTableAdapters.CicilanTableAdapter();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgLapBeli)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetCicilan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CicilanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -65,7 +71,7 @@
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1370, 122);
-            this.bunifuGradientPanel1.TabIndex = 1;
+            this.bunifuGradientPanel1.TabIndex = 2;
             // 
             // btnX
             // 
@@ -130,7 +136,8 @@
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.bunifuFlatButton1);
+            this.bunifuGradientPanel2.Controls.Add(this.btnLogout);
+            this.bunifuGradientPanel2.Controls.Add(this.btnLapCicil);
             this.bunifuGradientPanel2.Controls.Add(this.btnLapSewa);
             this.bunifuGradientPanel2.Controls.Add(this.btnLapBeli);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -141,44 +148,80 @@
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(0, 122);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(212, 627);
-            this.bunifuGradientPanel2.TabIndex = 2;
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(211, 627);
+            this.bunifuGradientPanel2.TabIndex = 4;
             // 
-            // bunifuFlatButton1
+            // btnLogout
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Logout";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 98);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(212, 49);
-            this.bunifuFlatButton1.TabIndex = 2;
-            this.bunifuFlatButton1.Text = "Logout";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.BorderRadius = 0;
+            this.btnLogout.ButtonText = "Log out";
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogout.Iconimage = null;
+            this.btnLogout.Iconimage_right = null;
+            this.btnLogout.Iconimage_right_Selected = null;
+            this.btnLogout.Iconimage_Selected = null;
+            this.btnLogout.IconMarginLeft = 0;
+            this.btnLogout.IconMarginRight = 0;
+            this.btnLogout.IconRightVisible = true;
+            this.btnLogout.IconRightZoom = 0D;
+            this.btnLogout.IconVisible = true;
+            this.btnLogout.IconZoom = 90D;
+            this.btnLogout.IsTab = false;
+            this.btnLogout.Location = new System.Drawing.Point(0, 147);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogout.selected = false;
+            this.btnLogout.Size = new System.Drawing.Size(211, 49);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
+            this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // btnLapCicil
+            // 
+            this.btnLapCicil.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLapCicil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLapCicil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLapCicil.BorderRadius = 0;
+            this.btnLapCicil.ButtonText = "Laporan Cicilan";
+            this.btnLapCicil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLapCicil.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnLapCicil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLapCicil.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLapCicil.Iconimage = null;
+            this.btnLapCicil.Iconimage_right = null;
+            this.btnLapCicil.Iconimage_right_Selected = null;
+            this.btnLapCicil.Iconimage_Selected = null;
+            this.btnLapCicil.IconMarginLeft = 0;
+            this.btnLapCicil.IconMarginRight = 0;
+            this.btnLapCicil.IconRightVisible = true;
+            this.btnLapCicil.IconRightZoom = 0D;
+            this.btnLapCicil.IconVisible = true;
+            this.btnLapCicil.IconZoom = 90D;
+            this.btnLapCicil.IsTab = false;
+            this.btnLapCicil.Location = new System.Drawing.Point(0, 98);
+            this.btnLapCicil.Name = "btnLapCicil";
+            this.btnLapCicil.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLapCicil.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLapCicil.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLapCicil.selected = false;
+            this.btnLapCicil.Size = new System.Drawing.Size(211, 49);
+            this.btnLapCicil.TabIndex = 2;
+            this.btnLapCicil.Text = "Laporan Cicilan";
+            this.btnLapCicil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLapCicil.Textcolor = System.Drawing.Color.Black;
+            this.btnLapCicil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapCicil.Click += new System.EventHandler(this.btnLapCicil_Click);
             // 
             // btnLapSewa
             // 
@@ -208,7 +251,7 @@
             this.btnLapSewa.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLapSewa.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLapSewa.selected = false;
-            this.btnLapSewa.Size = new System.Drawing.Size(212, 49);
+            this.btnLapSewa.Size = new System.Drawing.Size(211, 49);
             this.btnLapSewa.TabIndex = 1;
             this.btnLapSewa.Text = "Laporan Penyewaan";
             this.btnLapSewa.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -244,7 +287,7 @@
             this.btnLapBeli.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnLapBeli.OnHoverTextColor = System.Drawing.Color.White;
             this.btnLapBeli.selected = false;
-            this.btnLapBeli.Size = new System.Drawing.Size(212, 49);
+            this.btnLapBeli.Size = new System.Drawing.Size(211, 49);
             this.btnLapBeli.TabIndex = 0;
             this.btnLapBeli.Text = "Laporan Pembelian";
             this.btnLapBeli.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,122 +299,129 @@
             // 
             this.bunifuCustomLabel2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuCustomLabel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(212, 122);
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(211, 122);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(1158, 49);
-            this.bunifuCustomLabel2.TabIndex = 138;
-            this.bunifuCustomLabel2.Text = "Laporan Pembelian";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(1159, 49);
+            this.bunifuCustomLabel2.TabIndex = 143;
+            this.bunifuCustomLabel2.Text = "Laporan Cicilan";
             this.bunifuCustomLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnPDF
+            // txtID
             // 
-            this.btnPDF.ActiveBorderThickness = 1;
-            this.btnPDF.ActiveCornerRadius = 20;
-            this.btnPDF.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.ActiveForecolor = System.Drawing.Color.White;
-            this.btnPDF.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnPDF.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPDF.BackgroundImage")));
-            this.btnPDF.ButtonText = "Import to PDF";
-            this.btnPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPDF.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPDF.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.IdleBorderThickness = 1;
-            this.btnPDF.IdleCornerRadius = 20;
-            this.btnPDF.IdleFillColor = System.Drawing.Color.White;
-            this.btnPDF.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnPDF.Location = new System.Drawing.Point(1006, 233);
-            this.btnPDF.Margin = new System.Windows.Forms.Padding(5);
-            this.btnPDF.Name = "btnPDF";
-            this.btnPDF.Size = new System.Drawing.Size(135, 36);
-            this.btnPDF.TabIndex = 139;
-            this.btnPDF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtID.Location = new System.Drawing.Point(581, 200);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(233, 20);
+            this.txtID.TabIndex = 178;
             // 
-            // btnExcel
+            // label1
             // 
-            this.btnExcel.ActiveBorderThickness = 1;
-            this.btnExcel.ActiveCornerRadius = 20;
-            this.btnExcel.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.ActiveForecolor = System.Drawing.Color.White;
-            this.btnExcel.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnExcel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnExcel.BackgroundImage")));
-            this.btnExcel.ButtonText = "Import to Excel";
-            this.btnExcel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcel.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.IdleBorderThickness = 1;
-            this.btnExcel.IdleCornerRadius = 20;
-            this.btnExcel.IdleFillColor = System.Drawing.Color.White;
-            this.btnExcel.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnExcel.Location = new System.Drawing.Point(1169, 233);
-            this.btnExcel.Margin = new System.Windows.Forms.Padding(5);
-            this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(135, 36);
-            this.btnExcel.TabIndex = 140;
-            this.btnExcel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(438, 200);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 20);
+            this.label1.TabIndex = 177;
+            this.label1.Text = "ID Transaksi      :";
             // 
-            // groupBox1
+            // btnLihat
             // 
-            this.groupBox1.Controls.Add(this.dgLapBeli);
-            this.groupBox1.Location = new System.Drawing.Point(277, 277);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1030, 378);
-            this.groupBox1.TabIndex = 141;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tabel Laporan Pembelian";
+            this.btnLihat.ActiveBorderThickness = 1;
+            this.btnLihat.ActiveCornerRadius = 20;
+            this.btnLihat.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.btnLihat.ActiveForecolor = System.Drawing.Color.White;
+            this.btnLihat.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.btnLihat.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnLihat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLihat.BackgroundImage")));
+            this.btnLihat.ButtonText = "View";
+            this.btnLihat.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLihat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLihat.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnLihat.IdleBorderThickness = 1;
+            this.btnLihat.IdleCornerRadius = 20;
+            this.btnLihat.IdleFillColor = System.Drawing.Color.White;
+            this.btnLihat.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnLihat.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnLihat.Location = new System.Drawing.Point(1066, 192);
+            this.btnLihat.Margin = new System.Windows.Forms.Padding(5);
+            this.btnLihat.Name = "btnLihat";
+            this.btnLihat.Size = new System.Drawing.Size(135, 36);
+            this.btnLihat.TabIndex = 176;
+            this.btnLihat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLihat.Click += new System.EventHandler(this.btnLihat_Click);
             // 
-            // dgLapBeli
+            // reportViewer1
             // 
-            this.dgLapBeli.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgLapBeli.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgLapBeli.Location = new System.Drawing.Point(3, 16);
-            this.dgLapBeli.Name = "dgLapBeli";
-            this.dgLapBeli.Size = new System.Drawing.Size(1024, 359);
-            this.dgLapBeli.TabIndex = 138;
+            reportDataSource1.Name = "dsCicilan";
+            reportDataSource1.Value = this.CicilanBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "TA_RealEstate_Kel11.ReportCicilan.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(344, 244);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(890, 493);
+            this.reportViewer1.TabIndex = 179;
             // 
-            // LaporanPembelian
+            // DataSetCicilan
+            // 
+            this.DataSetCicilan.DataSetName = "DataSetCicilan";
+            this.DataSetCicilan.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // CicilanBindingSource
+            // 
+            this.CicilanBindingSource.DataMember = "Cicilan";
+            this.CicilanBindingSource.DataSource = this.DataSetCicilan;
+            // 
+            // CicilanTableAdapter
+            // 
+            this.CicilanTableAdapter.ClearBeforeFill = true;
+            // 
+            // LaporanCicilan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnExcel);
-            this.Controls.Add(this.btnPDF);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnLihat);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LaporanPembelian";
+            this.Name = "LaporanCicilan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "LaporanPembelian";
+            this.Text = "LaporanCicilan";
+            this.Load += new System.EventHandler(this.LaporanCicilan_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             this.bunifuGradientPanel2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgLapBeli)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DataSetCicilan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CicilanBindingSource)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnX;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLapCicil;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapSewa;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapBeli;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnX;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnPDF;
-        private Bunifu.Framework.UI.BunifuThinButton2 btnExcel;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgLapBeli;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnLihat;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource CicilanBindingSource;
+        private DataSetCicilan DataSetCicilan;
+        private DataSetCicilanTableAdapters.CicilanTableAdapter CicilanTableAdapter;
     }
 }

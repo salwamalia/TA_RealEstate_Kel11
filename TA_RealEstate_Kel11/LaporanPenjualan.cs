@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace TA_RealEstate_Kel11
 {
-    public partial class LaporanPembelian : Form
+    public partial class LaporanPenjualan : Form
     {
-        public LaporanPembelian()
+        public LaporanPenjualan()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnLapBeli_Click(object sender, EventArgs e)
         {
-            LaporanPembelian beli = new LaporanPembelian();
+            LaporanPenjualan beli = new LaporanPenjualan();
             beli.Show();
             this.Hide();
         }
@@ -43,7 +43,26 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void LaporanPenjualan_Load(object sender, EventArgs e)
+        {
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btnLihat_Click(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'DataSetPenjualan.Penjualan' table. You can move, or remove it, as needed.
+            this.PenjualanTableAdapter.Fill(this.DataSetPenjualan.Penjualan, txtID.Text);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void btnLapCicil_Click(object sender, EventArgs e)
+        {
+            LaporanCicilan cicil = new LaporanCicilan();
+            cicil.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Visible = true;

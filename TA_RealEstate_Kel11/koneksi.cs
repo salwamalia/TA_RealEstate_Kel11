@@ -12,8 +12,8 @@ namespace TA_RealEstate_Kel11
         public SqlConnection Getcon()
         {
             SqlConnection connection = new SqlConnection();
-            //connection.ConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
-            connection.ConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
+            connection.ConnectionString = @"Data Source=LAPTOP-L1AODT95;Initial Catalog=REALESTATE;Integrated Security=True";
+            //connection.ConnectionString = @"Data Source=WINDOWS-LD56BQV;Initial Catalog=REALESTATE;Integrated Security=True";
             return connection;
         }
     }

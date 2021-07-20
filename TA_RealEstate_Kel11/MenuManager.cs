@@ -31,7 +31,7 @@ namespace TA_RealEstate_Kel11
 
         private void btnLapBeli_Click(object sender, EventArgs e)
         {
-            LaporanPembelian beli = new LaporanPembelian();
+            LaporanPenjualan beli = new LaporanPenjualan();
             beli.Show();
             this.Hide();
         }
@@ -43,7 +43,14 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void btnLapCicil_Click(object sender, EventArgs e)
+        {
+            LaporanCicilan cicil = new LaporanCicilan();
+            cicil.Show();
+            this.Hide();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             Login log = new Login();
             log.Visible = true;

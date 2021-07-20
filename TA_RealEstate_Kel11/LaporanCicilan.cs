@@ -10,23 +10,23 @@ using System.Windows.Forms;
 
 namespace TA_RealEstate_Kel11
 {
-    public partial class LaporanPenyewaan : Form
+    public partial class LaporanCicilan : Form
     {
-        public LaporanPenyewaan()
+        public LaporanCicilan()
         {
             InitializeComponent();
         }
 
-        private void btnX_Click(object sender, EventArgs e)
+        private void LaporanCicilan_Load(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.reportViewer1.RefreshReport();
         }
 
-        private void bunifuTileButton1_Click(object sender, EventArgs e)
+        private void btnLihat_Click(object sender, EventArgs e)
         {
-            MenuManager manager = new MenuManager();
-            manager.Show();
-            this.Hide();
+            // TODO: This line of code loads data into the 'DataSetCicilan.Cicilan' table. You can move, or remove it, as needed.
+            this.CicilanTableAdapter.Fill(this.DataSetCicilan.Cicilan, txtID.Text);
+            this.reportViewer1.RefreshReport();
         }
 
         private void btnLapBeli_Click(object sender, EventArgs e)
@@ -57,16 +57,16 @@ namespace TA_RealEstate_Kel11
             this.Hide();
         }
 
-        private void LaporanPenyewaan_Load(object sender, EventArgs e)
+        private void bunifuTileButton1_Click(object sender, EventArgs e)
         {
-            this.reportViewer1.RefreshReport();
+            MenuManager manager = new MenuManager();
+            manager.Show();
+            this.Hide();
         }
 
-        private void btnLihat_Click(object sender, EventArgs e)
+        private void btnX_Click(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'DataSetPenyewaan.Penyewaan' table. You can move, or remove it, as needed.
-            this.PenyewaanTableAdapter.Fill(this.DataSetPenyewaan.Penyewaan, txtID.Text);
-            this.reportViewer1.RefreshReport();
+            Application.Exit();
         }
     }
 }

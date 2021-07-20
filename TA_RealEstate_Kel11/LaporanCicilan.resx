@@ -175,7 +175,7 @@
         gg==
 </value>
   </data>
-  <data name="btnPDF.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btnLihat.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIcAAAAkCAYAAACjbylKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH1SURBVHhe7dutSwRBHIdx/yKbyWaymcRySYMIBi1aNJgM
@@ -190,19 +190,13 @@
         SUVORK5CYII=
 </value>
   </data>
-  <data name="btnExcel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIcAAAAkCAYAAACjbylKAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH1SURBVHhe7dutSwRBHIdx/yKbyWaymcRySYMIBi1aNJgM
-        Cr6EC8IFgyJoODBcEkQ8EA0iIsqFE4QLKqLIhUPDyDPuLLfc/bbfzvcDC3K+lHmYmZ1dh5yIQXGISXGI
-        SXGISXGISXGIKTeOzu+Pqz3W3dLpjps5WnPje/NueGNK1wBfjCFjuVDddNX7c/fdaSej3cuM47J56/8Q
-        YRDIzcuDa329Jd+VQcUYMpZnjWu3Wiv7MSaSfnrioCR+ae5k3b23P5NPpajyxjsTBz84ub9sliTFxUpR
-        OljJrA6ZOChIYcSL5Yb9SJDGQTlMLRK37YtDV7mq+q99HNyVsDHRHkNoga1F86P1HwdLCUuKCJg5mEF8
-        HNzzcmsjgqfXZz97+DgmKot+GhEBS8vIVuk/jtHd6dyTMokPp6k+Dr4Q6aY4xKQ4xJTGweaDTYhIkMbB
-        AZieuEq3NA6OzTk+FwHHGhxv+DjCiZgIwom5j4MlhVK07xCEE3MfB8r1Y39J3MJroUjjYNbgWf5dq5F8
-        IrHhqTwrSDgtT+MAG5HwuFbiQhhMDrzwE2TiADMHgYQXPqT42F8wY3SHgZ44wBLD3QslsXPVS0DFw9IR
-        9hdsQPs9eO0bR0BJ3NKMlWf9oYiu4lw8iQ//dmLJjUPipjjEpDjEpDjEpDjE4Nwfxox5I4ynjtAAAAAA
-        SUVORK5CYII=
-</value>
-  </data>
+  <metadata name="CicilanBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>147, 17</value>
+  </metadata>
+  <metadata name="DataSetCicilan.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="CicilanTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>313, 17</value>
+  </metadata>
 </root>

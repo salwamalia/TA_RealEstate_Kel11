@@ -34,9 +34,10 @@
             this.bunifuTileButton1 = new Bunifu.Framework.UI.BunifuTileButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLapCicil = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapSewa = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLapBeli = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLogout = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuGradientPanel1.SuspendLayout();
             this.bunifuGradientPanel2.SuspendLayout();
             this.SuspendLayout();
@@ -123,7 +124,8 @@
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel2.Controls.Add(this.bunifuFlatButton1);
+            this.bunifuGradientPanel2.Controls.Add(this.btnLogout);
+            this.bunifuGradientPanel2.Controls.Add(this.btnLapCicil);
             this.bunifuGradientPanel2.Controls.Add(this.btnLapSewa);
             this.bunifuGradientPanel2.Controls.Add(this.btnLapBeli);
             this.bunifuGradientPanel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -137,41 +139,41 @@
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(232, 627);
             this.bunifuGradientPanel2.TabIndex = 1;
             // 
-            // bunifuFlatButton1
+            // btnLapCicil
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Logout";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = null;
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 98);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(232, 49);
-            this.bunifuFlatButton1.TabIndex = 2;
-            this.bunifuFlatButton1.Text = "Logout";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.Black;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btnLapCicil.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLapCicil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLapCicil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLapCicil.BorderRadius = 0;
+            this.btnLapCicil.ButtonText = "Laporan Cicilan";
+            this.btnLapCicil.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLapCicil.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnLapCicil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLapCicil.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLapCicil.Iconimage = null;
+            this.btnLapCicil.Iconimage_right = null;
+            this.btnLapCicil.Iconimage_right_Selected = null;
+            this.btnLapCicil.Iconimage_Selected = null;
+            this.btnLapCicil.IconMarginLeft = 0;
+            this.btnLapCicil.IconMarginRight = 0;
+            this.btnLapCicil.IconRightVisible = true;
+            this.btnLapCicil.IconRightZoom = 0D;
+            this.btnLapCicil.IconVisible = true;
+            this.btnLapCicil.IconZoom = 90D;
+            this.btnLapCicil.IsTab = false;
+            this.btnLapCicil.Location = new System.Drawing.Point(0, 98);
+            this.btnLapCicil.Name = "btnLapCicil";
+            this.btnLapCicil.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLapCicil.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.btnLapCicil.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLapCicil.selected = false;
+            this.btnLapCicil.Size = new System.Drawing.Size(232, 49);
+            this.btnLapCicil.TabIndex = 2;
+            this.btnLapCicil.Text = "Laporan Cicilan";
+            this.btnLapCicil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLapCicil.Textcolor = System.Drawing.Color.Black;
+            this.btnLapCicil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLapCicil.Click += new System.EventHandler(this.btnLapCicil_Click);
             // 
             // btnLapSewa
             // 
@@ -245,6 +247,42 @@
             this.btnLapBeli.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLapBeli.Click += new System.EventHandler(this.btnLapBeli_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Activecolor = System.Drawing.Color.Transparent;
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnLogout.BorderRadius = 0;
+            this.btnLogout.ButtonText = "Log out";
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.DisabledColor = System.Drawing.Color.Transparent;
+            this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnLogout.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLogout.Iconimage = null;
+            this.btnLogout.Iconimage_right = null;
+            this.btnLogout.Iconimage_right_Selected = null;
+            this.btnLogout.Iconimage_Selected = null;
+            this.btnLogout.IconMarginLeft = 0;
+            this.btnLogout.IconMarginRight = 0;
+            this.btnLogout.IconRightVisible = true;
+            this.btnLogout.IconRightZoom = 0D;
+            this.btnLogout.IconVisible = true;
+            this.btnLogout.IconZoom = 90D;
+            this.btnLogout.IsTab = false;
+            this.btnLogout.Location = new System.Drawing.Point(0, 147);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnLogout.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnLogout.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLogout.selected = false;
+            this.btnLogout.Size = new System.Drawing.Size(232, 49);
+            this.btnLogout.TabIndex = 3;
+            this.btnLogout.Text = "Log out";
+            this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogout.Textcolor = System.Drawing.Color.Black;
+            this.btnLogout.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // MenuManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,7 +310,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnLapBeli;
         private Bunifu.Framework.UI.BunifuTileButton bunifuTileButton1;
         private Bunifu.Framework.UI.BunifuFlatButton btnLapSewa;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLapCicil;
         private Bunifu.Framework.UI.BunifuThinButton2 btnX;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLogout;
     }
 }
